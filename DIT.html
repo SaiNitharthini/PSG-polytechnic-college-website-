@@ -1,0 +1,2400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Information Technology Department</title>
+
+<style>
+/* === GLOBAL STYLE (MATCHED) === */
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;
+margin:0;
+background:#fff;
+color:#1A1A1A;
+}
+
+.navbar{
+background:#1c1c1c;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items: center;
+}
+
+.logo{
+color:white;
+font-weight:600;
+cursor:pointer;
+font-size: 20px;
+}
+
+.menu{display:flex;gap:15px;flex-wrap:wrap;}
+.menu a{color:#ddd;text-decoration:none;cursor:pointer;font-size:13px;transition:0.3s;}
+.menu a:hover{color:#C5A267}
+
+.hero{
+/* DCE Style Background Added */
+background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.96)),
+url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97'); 
+background-size:cover;
+padding:100px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-family:Georgia;
+font-size:45px;
+margin:0;
+}
+
+.divider{
+width:80px;
+height:3px;
+background:#C5A267;
+margin:20px auto;
+}
+
+.section{
+padding:60px 40px;
+max-width:1100px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-family:Georgia;
+font-size:35px;
+margin-bottom:40px;
+}
+
+/* === ABOUT BOX === */
+.about-box{
+background:#fafafa;
+padding:25px;
+border:1px solid #eee;
+line-height:1.7;
+}
+
+/* === FACULTY === */
+.faculty-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.faculty-card{
+border:1px solid #eee;
+padding:20px;
+text-align:center;
+background:white;
+transition: 0.3s;
+cursor: pointer;
+}
+
+.faculty-card:hover {
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+border-color: #C5A267;
+}
+
+/* Faculty Name Gold Colour (DCE Style) */
+.faculty-card h4{
+color:#C5A267;
+margin:10px 0 5px;
+font-size:1.1rem;
+}
+
+/* Faculty Image Circle Frame */
+.faculty-img{
+width:100px;
+height:100px;
+border-radius:50%;
+border:3px solid #C5A267;
+margin-bottom:10px;
+object-fit: cover;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* === TABLE === */
+table{
+width:100%;
+max-width:1100px;
+margin:20px auto;
+border-collapse:collapse;
+}
+th,td{
+border:1px solid #ddd;
+padding:10px;
+}
+
+th{
+background:#C5A267;
+color:white;
+}
+
+/* === TABS === */
+.course-tabs, .activity-tabs{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:30px;
+border-bottom:3px solid #eee;
+padding-bottom:8px;
+}
+
+.course-tabs button, .activity-tabs button{
+padding:10px 18px;
+border:1px solid #ddd;
+background:#f7f7f7;
+cursor:pointer;
+}
+
+.course-tabs button.active, .activity-tabs button.active{
+background:#C5A267;
+color:white;
+}
+
+/* === SEM DROPDOWN === */
+.sem-dropdown{
+margin-top:20px;
+border:1px solid #ddd;
+}
+
+.sem-head{
+padding:15px;
+background:#C5A267;
+color:white;
+cursor:pointer;
+font-weight: bold;
+}
+
+.sem-body{
+display:none;
+padding:15px;
+}
+
+/* === FACILITY === */
+.facility-card{
+border:1px solid #ddd;
+margin-top:15px;
+cursor:pointer;
+}
+
+.facility-title{
+background:#C5A267;
+color:white;
+padding:12px;
+}
+
+.facility-body{
+display:none;
+padding:15px;
+background:#fafafa;
+line-height: 1.6;
+}
+.activity-table td img {
+    display: block;
+    margin: 0 auto;
+}
+.activity-table td .activity-img{
+    width:140px;
+    height:100px;
+    object-fit:cover;
+    border-radius:6px;
+    margin:4px;
+    display:inline-block;
+}
+/* Academic Frame for New Sections */
+.academic-frame{
+max-width:950px;
+margin:40px auto;
+border:1px solid #e5e5e5;
+background:#fff;
+padding:30px;
+box-shadow:0 4px 14px rgba(0,0,0,.04);
+}
+
+/* === CONTACT SECTION === */
+.contact-container {
+    background: #fafafa;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+/* === FOOTER === */
+footer{
+background:#F5F5F5;
+padding:25px;
+text-align:center;
+margin-top:40px;
+color: #888;
+}
+.achievement-tabs{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:30px;
+border-bottom:3px solid #eee;
+padding-bottom:8px;
+}
+
+.achievement-tabs button{
+padding:10px 18px;
+border:1px solid #ddd;
+background:#f7f7f7;
+cursor:pointer;
+}
+
+.achievement-tabs button.active{
+background:#C5A267;
+color:#fff;
+}
+
+.batch-title{
+    max-width:1100px;
+    margin:40px auto 15px;
+    font-family:Georgia;
+    font-size:34px;
+    font-weight:bold;
+}
+
+.activity-table{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto 35px;
+    border-collapse:collapse;
+}
+
+.activity-table td{
+    vertical-align:middle;
+}
+
+.activity-img{
+    width:220px;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+.activity-table td:last-child{
+    width:240px;
+    text-align:center;
+}
+.footer-wrapper{
+    max-width:1100px;
+    margin:0 auto 20px auto;
+}
+
+.footer-wrapper footer{
+    background:#1c1c1c;
+    color:#fff;
+    text-align:center;
+    padding:18px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<div class="logo">PSG POLYTECHNIC COLLEGE</div>
+<div class="menu">
+    <a href="#">Home</a>
+    <a href="#admission">Admission</a>
+    <a href="#examination">Examination</a>
+    <a href="#campus">Campus</a>
+    <a href="#union">Students Union</a>
+    <a href="#alumni">Alumni</a>
+    <a href="#career">Career</a>
+    <a href="#helpdesk">Helpdesk</a>
+</div>
+</div>
+
+<div class="hero">
+<h1>Information Technology</h1>
+<div class="divider"></div>
+<p>Students Transformed to Succeeders</p>
+</div>
+
+<div class="section">
+
+<h2 class="section-title">About Department</h2>
+<div class="about-box">
+The Department of Information Technology was established in the year 2006 with a view to develop quality engineers to meet the current trends in the emerging world of IT.
+</div>
+
+<h2 class="section-title">Vision</h2>
+<p style="text-align:center;">Department of Information Technology aspires to be a pioneer in the field of Information Technology to provide technological support to the industries towards their growth and development of the society.</p>
+
+<h2 class="section-title">Mission</h2>
+<p>The mission of Department of Information Technology is to provide curriculum that facilitate student centered and laboratory based learning on information technologies that are:</p>
+<ul>
+<li>M1: Relevant to their lives and career</li>
+<li>M2: Valuable in terms of content and competencies</li>
+<li>M3: Connected to the needs of industry</li>
+</ul>
+
+<h2 class="section-title">Faculty</h2>
+
+<div class="faculty-grid">
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436130')">
+<img src="https://imgh.in/host/1pv3pc" class="faculty-img" alt="Faculty">
+<h4>Dr.S.Sasikala, M.E (Tech) IT</h4>
+<p>HoD In-Charge</p>
+<p>28 yrs Teaching | 3 yr Industry</p>
+<p>Applied Electronics</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436130')">
+<img src="https://imgh.in/host/why149" class="faculty-img" alt="Faculty">
+<h4>Ms. A. Haritha Deepthi, M.E (Tech) IT</h4>
+<p>Lecturer</p>
+<p>16 yrs Teaching | 1 yr Industry</p>
+<p>RDBMS, Cyber Security, Network Security</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436142')">
+<img src="https://imgh.in/host/fr2lgl" class="faculty-img" alt="Faculty">
+<h4>Ms. G. Aishwaryalakshmi, M.Tech(IT)</h4>
+<p>Lecturer</p>
+<p>9 yrs Teaching</p>
+<p>IoT, Data Mining, Networks</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436132')">
+<img src="https://imgh.in/host/78d9p7" class="faculty-img" alt="Faculty">
+<h4>Ms. R. Annie Karunya, M.E (CSE)</h4>
+<p>Lecturer</p>
+<p>4.5 yrs Teaching</p>
+<p>Cloud Computing, Information Security</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/472129')">
+<img src="https://imgh.in/host/1jl9f0" class="faculty-img" alt="Faculty">
+<h4>Mr. N. Ravi, B.E(CSE)</h4>
+<p>Lecturer</p>
+<p>6 yrs Teaching | 3 yrs Industry</p>
+<p>Network Security, Programming</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/funvvt" class="faculty-img" alt="Faculty">
+<h4>Mr. Y. Anandaraj, B.E</h4>
+<p>Instructor</p>
+<p>10 yrs Teaching | 7.7 yrs Industry</p>
+<p>Auto CAD</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/tcypxe" class="faculty-img" alt="Faculty">
+<h4>Ms. B. Shivapushpa, B.E</h4>
+<p>Instructor</p>
+<p>0.5 yrs Teaching | 1 yr Industry</p>
+<p>Python, Software Methodologies</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/ou0gom" class="faculty-img" alt="Faculty">
+<h4>Ms. S. Jasmine, B.E</h4>
+<p>Instructor</p>
+<p>6 yrs Teaching </p>
+<p>C , Web Development and python</p> 
+</div>
+<div class="faculty-card">
+<img src="https://imgh.in/host/ihsdba" class="faculty-img" alt="Faculty">
+<h4>Ms. S. Gayathri, B.E</h4>    
+<p>Junior Assistant</p>
+<p>4 yrs experience</p>
+<p>MS Office , Office Automation </p> 
+</div>
+</div>
+
+<h2 class="section-title">Guest Professor</h2>
+
+<div class="faculty-grid">
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/sw96s5" class="faculty-img" alt="Guest Professor">
+<h4>Prof. Oscar Del Rio</h4>
+<p>Guest Professor</p>
+<p>Director</p>
+<p>INTO Hofstra University</p>
+<p>California State University – Fullerton,<br>Hempstead, New York, United States</p>
+</div>
+
+</div>
+
+<h2 class="section-title">Corporate Advisory Board</h2>
+
+<div class="faculty-grid">
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/tta9ac" class="faculty-img" alt="Corporate Advisor">
+<h4>Mr. Ramesh Kalyan</h4>
+<p>Director</p>
+<p>Cognizant, Coimbatore</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/1ihd8u" class="faculty-img" alt="Corporate Advisor">
+<h4>Mr. Sanatanan Muralidaran</h4>
+<p>Vice President</p>
+<p>Merkle, Coimbatore</p>
+</div>
+
+</div>
+
+<h2 class="section-title">Course Structure</h2>
+
+<div class="course-tabs">
+<button class="active" onclick="showTab('po',this)">PO</button>
+<button onclick="showTab('pso',this)">PSO</button>
+<button onclick="showTab('peo',this)">PEO</button>
+</div>
+
+<div id="po">
+<table>
+<tr><th>Code</th><th>Description</th></tr>
+<tr><td>PO1</td><td>Basic and Discipline Specific Knowledge: Apply knowledge of basic mathematics, science and engineering fundamentals to solve engineering problems.</td></tr>
+<tr><td>PO2</td><td>Problem Analysis: Identify and analyse well-defined engineering problems using codified standard methods.</td></tr>
+<tr><td>PO3</td><td>Design / Development of Solutions: Design solutions for well-defined technical problems and systems components.</td></tr>
+<tr><td>PO4</td><td>Engineering Tools, Experimentation and Testing: Apply modern engineering tools and appropriate techniques.</td></tr>
+<tr><td>PO5</td><td>Engineering Practices for Society: Apply appropriate technology in context of society, sustainability, and ethics.</td></tr>
+<tr><td>PO6</td><td>Project Management: Use engineering management principles individually or as a team member.</td></tr>
+<tr><td>PO7</td><td>Life-long Learning: Ability to analyse individual needs and engage in updating in technological changes.</td></tr>
+</table>
+</div>
+
+<div id="pso" style="display:none">
+    <table>
+        <tr><th>Code</th><th>Description</th></tr>
+        <tr><td>PSO1</td><td>Acquire detailed knowledge on the current trends and issues in IT and develop skills in new programming environments.</td></tr>
+        <tr><td>PSO2</td><td>Analyze, design and develop software systems applying current technical concepts in information management and networking.</td></tr>
+    </table>
+</div>
+
+<div id="peo" style="display:none">
+    <table>
+        <tr><th>Code</th><th>Description</th></tr>
+        <tr><td>PEO1</td><td>Excel as an IT professional with proficiency in understanding and designing solutions to real time challenges.</td></tr>
+        <tr><td>PEO2</td><td>Have the ability to function effectively on teams to accomplish a common goal.</td></tr>
+        <tr><td>PEO3</td><td>Aware of the social responsibilities in building the society.</td></tr>
+    </table>
+</div>
+
+<h2 class="section-title">Semester Structure (2024 Scheme)</h2>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('s1_24')">Semester 1</div>
+<div class="sem-body" id="s1_24">
+<table>
+<tr><th>Theory</th><th>Practicum/Practicals</th><th>Audit</th></tr>
+<tr><td>PHYSICS</td><td>APPLIED ENGLISH</td><td>INTEGRATED LEARNING EXPERIENCE-I</td></tr>
+<tr><td>CHEMISTRY</td><td>PHYSICS LABORATORY</td><td></td></tr>
+<tr><td>BASIC MATHEMATICS</td><td>CHEMISTRY LABORATORY</td><td></td></tr>
+<tr><td>PROBLEM SOLVING AND C</td><td>C PROGRAMMING LABORATORY</td><td></td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('s2_24')">Semester 2</div>
+<div class="sem-body" id="s2_24">
+<table>
+<tr><th>Theory</th><th>Practicum/Practicals</th><th>Audit</th></tr>
+<tr><td>CALCULUS AND ITS APPLICATIONS</td><td>PYTHON PROGRAMMING</td><td>INTEGRATED LEARNING EXPERIENCE-II</td></tr>
+<tr><td>APPLIED PHYSICS</td><td>APPLIED PHYSICS LABORATORY</td><td></td></tr>
+<tr><td>CHEMISTRY OF ELECTRONIC MATERIALS</td><td>CHEMISTRY LABORATORY</td><td></td></tr>
+<tr><td>TECHNICAL MATHEMATICS</td><td>ENGINEERING GRAPHICS</td><td></td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('s3_24')">Semester 3</div>
+<div class="sem-body" id="s3_24">
+<table>
+<tr><th>Theory</th><th>Practicum/Practicals</th><th>Audit</th></tr>
+<tr><td>STATISTICS AND PROBABILITY</td><td>INTERNET TECHNOLOGIES LAB</td><td>INTEGRATED LEARNING EXPERIENCE-III</td></tr>
+<tr><td>DATA STRUCTURES</td><td>DATA STRUCTURES LAB</td><td></td></tr>
+<tr><td>PRINCIPLES OF DATABASES</td><td>DBMS LABORATORY</td><td></td></tr>
+<tr><td>DIGITAL LOGIC CIRCUIT DESIGN</td><td>DIGITAL LOGIC LAB</td><td></td></tr>
+<tr><td></td><td>MOBILE TROUBLESHOOTING LAB</td><td></td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('s4_24')">Semester 4</div>
+<div class="sem-body" id="s4_24">
+<table>
+<tr><th>Theory</th><th>Practicum/Practicals</th><th>Audit</th></tr>
+<tr><td>OPERATING SYSTEMS</td><td>ANIMATION & VFX</td><td>INTEGRATED LEARNING EXPERIENCE-IV</td></tr>
+<tr><td>SOFTWARE ARCHITECTURES</td><td>MACHINE LEARNING LAB</td><td></td></tr>
+<tr><td>JAVA PROGRAMMING</td><td>SOFTWARE TESTING LAB</td><td></td></tr>
+<tr><td>MACHINE LEARNING</td><td>JAVA LABORATORY</td><td></td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('s5_24')">Semester 5</div>
+<div class="sem-body" id="s5_24">
+<table>
+<tr><th>Theory</th><th>Practicum/Practicals</th><th>Audit</th></tr>
+<tr><td>COMPUTER NETWORKS</td><td>IOT AUTOMATION</td><td>INTEGRATED LEARNING EXPERIENCE-V</td></tr>
+<tr><td>CLOUD COMPUTING & SECURITY</td><td>NETWORKS LAB</td><td></td></tr>
+<tr><td>ELECTIVE THEORY - I</td><td>CLOUD SECURITY LAB</td><td></td></tr>
+<tr><td></td><td>MINI PROJECT</td><td></td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('s6_24')">Semester 6</div>
+<div class="sem-body" id="s6_24">
+<table>
+<tr><th>Theory</th><th>Practicum/Practicals</th><th>Audit</th></tr>
+<tr><td>CYBER SECURITY & FORENSICS</td><td>DRONE SYSTEM DESIGN</td><td>INTEGRATED LEARNING EXPERIENCE-VI</td></tr>
+<tr><td>AUGMENTED & VIRTUAL REALITY</td><td>CYBER SECURITY TOOLS LAB</td><td></td></tr>
+<tr><td>ELECTIVE THEORY - II</td><td>AVR LABORATORY</td><td></td></tr>
+<tr><td></td><td>PROJECT WORK</td><td></td></tr>
+</table>
+</div>
+</div>
+<h2 class="section-title">Facilities</h2>
+
+<div class="facility-card" onclick="toggleFacility('f1')">
+<div class="facility-title">PSG Center of Excellence in Drones/UAV Research</div>
+<div class="facility-body" id="f1">
+<div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:15px 0;">
+
+<img src="https://i.postimg.cc/g28w8C6Y/UAVRearch1.jpg" alt="Drone Lab" style="width:48%;max-width:350px;border-radius:8px;">
+
+<img src="https://i.postimg.cc/x13zWrjv/image.png" alt="UAV Research" style="width:48%;max-width:350px;border-radius:8px;">
+
+</div>
+
+<p>
+Established with Jet Aerospace Aviation Research Center. Equipped with latest hardware and simulation software for Drone and UAV projects. Lab In-Charge: Mr. N. Ravi.
+</p>
+</div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f2')">
+<div class="facility-title">Information Technology Laboratory</div>
+<div class="facility-body" id="f2">
+<img src="https://i.postimg.cc/HLJTb5Nx/itlab.jpg" alt="IT Laboratory" style="width:100%;max-width:500px;display:block;margin:15px auto;border-radius:8px;">
+<p>Acquire practical exposure in programming languages and networking. Used for curriculum and short-term training. Lab In-Charge: Ms. A. Haritha Deepthi.</p>
+</div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f3')">
+<div class="facility-title">Industry Supported IT Based Automation Lab</div>
+<div class="facility-body" id="f3">
+<img src="https://i.postimg.cc/x1Z2j8dV/DIT-LOT-LABimage.png" alt="Automation Lab" style="width:100%;max-width:500px;display:block;margin:15px auto;border-radius:8px;">
+<p>Powered by RDL Technologies. Focuses on IoT and Embedded System design for smart applications. Lab In-Charge: Ms. G. Aishwaryalakshmi.</p>
+</div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f4')">
+<div class="facility-title">Industry Powered Laboratories</div>
+<div class="facility-body" id="f4">
+<p>Includes Mobile Troubleshooting (IC-Fix), Immersive Tech (Wooe Reality), Robotics & AI (i-Robochakra), and Humanoid Lab (Robomiracle).</p>
+</div>
+</div>
+<h2 class="section-title">Activities</h2>
+
+<div class="activity-tabs">
+    <button class="active" onclick="showActivity('mou', this)">MoU Signed</button>
+    <button onclick="showActivity('awards', this)">Awards</button>
+    <button onclick="showActivity('association', this)">Association</button>
+    <button onclick="showActivity('training', this)">Training</button>
+    <button onclick="showActivity('departmental', this)">Departmental Activities</button>
+</div>
+</div>
+<div id="mou">
+<table class="activity-table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Collaborating Organization</th>
+            <th>Date</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>1</td>
+            <td>ICFIX Services, Chennai.</td>
+            <td>27 Jan, 2023</td>
+            <td>
+                <a href="images/mou/mou1.jpg" target="_blank">
+                    <img src="https://imgh.in/host/ymzx14" alt="MoU 1" class="activity-img">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>PSG College of Pharmacy, Coimbatore.</td>
+            <td>09 Nov, 2022</td>
+            <td>
+                <a href="images/mou/mou2.jpg" target="_blank">
+                    <img src="https://imgh.in/host/0so5dg" alt="MoU 2" class="activity-img">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Digital Oriented Technology, Coimbatore.</td>
+            <td>17 Sep, 2022</td>
+            <td>
+                <a href="images/mou/mou3.jpg" target="_blank">
+                    <img src="https://imgh.in/host/fy300l" alt="MoU 3" class="activity-img">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>MoU signed between Department of Information Technology, PSG PTC and ATAL INCUBATION CENTER – PONDICHERRY ENGINEERING COLLEGE FOUNDATION (AIC-PECF).</td>
+            <td>08 Jul, 2020</td>
+            <td>
+                <a href="images/mou/mou4.jpg" target="_blank">
+                    <img src="https://imgh.in/host/n17kmy" alt="MoU 4" class="activity-img">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>PRIMORIS SYSTEMS INDIA PVT. LTD., Coimbatore.</td>
+            <td>16 Mar, 2020</td>
+            <td>
+                <a href="images/mou/mou5.jpg" target="_blank">
+                    <img src="https://imgh.in/host/nkz4vo" alt="MoU 5" class="activity-img">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>JET Aerospace Aviation Research Centre, Palakkad, Kerala.</td>
+            <td>14 Sep, 2019</td>
+            <td>
+                <a href="images/mou/mou6.jpg" target="_blank">
+                    <img src="https://imgh.in/host/8i37a6" alt="MoU 6" class="activity-img">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>Mindnotix Technologies Pvt. Ltd., Coimbatore.</td>
+            <td>06 Sep, 2019</td>
+            <td>
+                <a href="images/mou/mou7.jpg" target="_blank">
+                    <img src="https://imgh.in/host/4gqike" alt="MoU 7" class="activity-img">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td>Sandfits Foundries Pvt. Ltd. (SANDFITS), Coimbatore.</td>
+            <td>28 Jul, 2019</td>
+            <td>
+                <a href="images/mou/mou8.jpg" target="_blank">
+                    <img src="https://imgh.in/host/fa5u70" alt="MoU 8" class="activity-img">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>Campus Images, Coimbatore.</td>
+            <td>07 Jul, 2019</td>
+            <td>
+                <a href="images/mou/mou9.jpg" target="_blank">
+                    <img src="https://imgh.in/host/yfzrhn" alt="MoU 9" class="activity-img">
+                </a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+</div>
+
+<div id="awards" style="display:none;">
+
+<table class="activity-table">
+    <thead>
+        <tr>
+            <th>Faculty</th>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mr. A. Kathiresan</td>
+            <td>Best NCC Officer</td>
+            <td>-</td>
+            <td>
+            <a href="https://imgh.in/host/yabkf9" target="_blank">
+    <img src="https://imgh.in/host/yabkf9"
+         class="activity-img"
+         alt="Best NCC Officer Award">
+</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+<div id="association" style="display:none;">
+
+<table class="activity-table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Association Activity</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>1</td>
+            <td><a href="https://www.psgpolytech.ac.in/dept/IT_AssociationActivities_2023.pdf" target="_blank">Association Activities for the Year 2022–2023</a></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td><a href="https://www.psgpolytech.ac.in/dept/IT-ASSOCIATION%20ACTIVITIES2022.pdf" target="_blank">Association Activities for the Year 2021–2022</a></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td><a href="https://www.psgpolytech.ac.in/dept/assoact20_21.pdf" target="_blank">Association Activities for the Year 2020–2021</a></td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td><a href="https://www.psgpolytech.ac.in/dept/offbearacye20_21.pdf" target="_blank">Office Bearers for the Academic Year 2020–2021</a></td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td><a href="https://www.psgpolytech.ac.in/dept/offbearacye19_20.pdf" target="_blank">Office Bearers for the Academic Year 2019–2020</a></td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td><a href="https://www.psgpolytech.ac.in/dept/assoact19_20.pdf" target="_blank">Association Activities for the Year 2019–2020</a></td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td><a href="https://www.psgpolytech.ac.in/dept/offbearacye18_19.pdf" target="_blank">Office Bearers for the Academic Year 2018–2019</a></td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td><a href="https://www.psgpolytech.ac.in/dept/assoact18_19.pdf" target="_blank">Association Activities for the Year 2018–2019</a></td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td><a href="https://www.psgpolytech.ac.in/dept/YAM.pdf" target="_blank">Young Alumni Meet</a></td>
+        </tr>
+
+    </tbody>
+</table>
+
+</div>
+<div id="training" style="display:none;">
+
+<table class="activity-table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Date</th>
+            <th>Topic</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>1</td>
+            <td>04 Feb 2023</td>
+            <td>Computer Course for PSG College of Pharmacy Student</td>
+            <td>
+                <a href="images/training/training1.jpg" target="_blank">
+                    <img src="https://imgh.in/host/ghswgr" class="activity-img" alt="Training 1">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>03 Feb 2023</td>
+            <td>Inhouse Program to PSG High School, Vedapatti</td>
+            <td>
+                <a href="images/training/training2.jpg" target="_blank">
+                    <img src="https://imgh.in/host/olmeni" class="activity-img" alt="Training 2">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>28 Jan 2023</td>
+            <td>Hands on Training on Mobile Phone and Laptop Servicing</td>
+            <td>
+                <a href="images/training/training3.jpg" target="_blank">
+                    <img src="https://imgh.in/host/ujof4i" class="activity-img" alt="Training 3">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>21 May 2022</td>
+            <td>Interactive Innovative Training for IoT</td>
+            <td>
+                <a href="images/training/training4.jpg" target="_blank">
+                    <img src="https://imgh.in/host/13ky8j" class="activity-img" alt="Training 4">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>29 Apr 2022</td>
+            <td>Interactive Innovative Laboratory – Cloud Computing</td>
+            <td>
+                <a href="images/training/training5.jpg" target="_blank">
+                    <img src="https://imgh.in/host/9hcs5b" class="activity-img" alt="Training 5">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>20 Mar 2022</td>
+            <td>Interactive Innovative Laboratory – Mobile App Development</td>
+            <td>
+                <a href="images/training/training6.jpg" target="_blank">
+                    <img src="https://imgh.in/host/ie97il" class="activity-img" alt="Training 6">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>18 Apr 2022</td>
+            <td>Interactive Innovative Laboratory – Embedded System Design</td>
+            <td>
+                <a href="images/training/training7.jpg" target="_blank">
+                    <img src="https://imgh.in/host/36grfy" class="activity-img" alt="Training 7">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td>26 Mar 2022</td>
+            <td>Interactive Innovative Laboratory – PSG FM Radio Station</td>
+            <td>
+                <a href="images/training/training8.jpg" target="_blank">
+                    <img src="https://imgh.in/host/fteimp" class="activity-img" alt="Training 8">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>25 Mar 2022</td>
+            <td>Interactive Innovative Laboratory – Open Source</td>
+            <td>
+                <a href="images/training/training9.jpg" target="_blank">
+                    <img src="https://imgh.in/host/t0v5tb" class="activity-img" alt="Training 9">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>10</td>
+            <td>12 Mar 2022</td>
+            <td>Outbound Training & Experiential Learning</td>
+            <td>
+                <a href="images/training/training10.jpg" target="_blank">
+                    <img src="https://imgh.in/host/efshu7" class="activity-img" alt="Training 10">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>11</td>
+            <td>11 Mar 2022</td>
+            <td>Unlock Opportunities in Government Sector</td>
+            <td>
+                <a href="images/training/training11.jpg" target="_blank">
+                    <img src="https://imgh.in/host/0ih783" class="activity-img" alt="Training 11">
+                </a>
+            </td>
+        </tr>
+
+      <tr>
+    <td>12</td>
+    <td>09–10 Mar 2022</td>
+    <td>Mobile Application Development – N School</td>
+    <td>
+        <a href="images/training/training12.jpg" target="_blank">
+            <img src="https://imgh.in/host/gj564b"
+                 class="activity-img"
+                 alt="Training 12">
+        </a>
+    </td>
+</tr>
+
+<tr>
+    <td>13</td>
+    <td>07–08 Mar 2022</td>
+    <td>Workshop on Flash – Clusters Media College, Coimbatore</td>
+    <td>
+        <a href="images/training/training13.jpg" target="_blank">
+            <img src="https://imgh.in/host/kxvnyr"
+                 class="activity-img"
+                 alt="Training 13">
+        </a>
+    </td>
+</tr>
+
+    </tbody>
+</table>
+
+</div>
+
+<div id="departmental" style="display:none;">
+
+<table class="activity-table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Departmental Activities</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>1</td>
+            <td>
+                <a href="https://www.psgpolytech.ac.in/dept/images/DIT/DIT-DepartmentalActivities-2022-23.pdf" target="_blank">
+                    Departmental Activities During 2022–2023
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>
+                <a href="https://www.psgpolytech.ac.in/dept/images/DIT/DIT%20Departmental%20Activities%202021-22.pdf" target="_blank">
+                    Departmental Activities During 2021–2022
+                </a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+</div>
+<h2 class="section-title">Students Achievements</h2>
+
+<div class="achievement-tabs">
+    <button class="active" onclick="showAchievement('internship',this)">Internship</button>
+    <button onclick="showAchievement('industrial',this)">Industrial Visit</button>
+    <button onclick="showAchievement('outgoing',this)">Best Outgoing Student Award</button>
+    <button onclick="showAchievement('project',this)">Best Project Awards</button>
+</div>
+
+<div id="internship">
+
+<h3 class="batch-title">Batch 2020–2023</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Description</th>
+<th>Image</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>
+Student L. Krishan Kumar (20DI17) underwent the Internship Training at
+Decathlon Sports India Pvt. Ltd., Bangalore from 08.04.2022 to 13.04.2022.
+</td>
+<td>
+<a href="images/internship/internship1.jpg" target="_blank">
+<img src="https://imgh.in/host/1zp5jo" class="activity-img" alt="Internship">
+</a>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<h3 class="batch-title">Batch 2018–2021</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Description</th>
+<th>Image</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>
+The following 2018–2021 Batch (Second Year) students attended the
+two weeks Internship Training Programme at Glasgow Caledonian University,
+Scotland, UK from 15.07.2019 to 03.08.2019.
+</td>
+<td>
+<a href="images/internship/internship2.jpg" target="_blank">
+<img src="https://imgh.in/host/ke1b2p" class="activity-img" alt="Internship">
+</a>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<h3 class="batch-title">Batch 2017–2020</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Description</th>
+<th>Image</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>
+2017–2020 batch students S. Ashfaqahamed, K. Gowthaman,
+S. Kiran, Nirmal Jose and Vikash attended the
+two-day "Internship cum Polymeet Event Training"
+organized by JET Aerospace Aviation Research Centre,
+Palakkad on 29.01.2020 and 30.01.2020.
+</td>
+<td>
+<a href="images/internship/internship3.jpg" target="_blank">
+<img src="https://imgh.in/host/ld058g" class="activity-img" alt="Internship">
+</a>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<h3 class="batch-title">Batch 2016–2019</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>S.No</th>
+<th>Description</th>
+<th>Image</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td>
+The following 2016–2019 batch students underwent a
+two-month short-term Internship Training Programme at
+M/S Vaanam Technologies Pvt. Ltd., Coimbatore from
+05.02.2018 to 06.04.2018.
+</td>
+<td>
+<a href="images/internship/internship4.jpg" target="_blank">
+<img src="https://imgh.in/host/ru7pdk" class="activity-img" alt="Internship">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>
+Internship Training Programme at Glasgow Caledonian University.
+Students Nikhil T.K (17DI19), Niranjan V. (17DI20) and
+Srinath S. (17DI31) attended the two-week Internship
+Training Programme at Glasgow Caledonian University,
+Scotland, UK from 16.07.2018 to 02.08.2018.
+</td>
+<td>
+<a href="images/internship/internship5.jpg" target="_blank">
+<img src="https://imgh.in/host/spymho" class="activity-img" alt="Internship">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>
+The following 2016–2019 batch students attended a
+six-month Internship Training Programme at
+M/s Contraptions Engineering Solution, Coimbatore,
+every Thursday from 30.08.2018 to 28.02.2019.
+</td>
+<td>
+<a href="images/internship/internship6.jpg" target="_blank">
+<img src="https://imgh.in/host/n36p8q" class="activity-img" alt="Internship">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>
+The following 2016–2019 batch students completed
+Mini Projects during the Internship period.
+The Mini Projects are useful in various fields.
+</td>
+<td>
+<a href="images/internship/internship7.jpg" target="_blank">
+<img src="https://imgh.in/host/lt6vsa" class="activity-img" alt="Internship">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>
+The following 2016–2019 batch students completed
+Mini Projects during the Internship period.
+</td>
+<td>
+<a href="images/internship/internship8.jpg" target="_blank">
+<img src="https://imgh.in/host/rhwt0m" class="activity-img" alt="Internship">
+</a>
+</td>
+</tr>
+
+
+</tbody>
+</table>
+</div>
+<div id="industrial" style="display:none;">
+
+<h3 class="batch-title">Batch 2021–2024</h3>
+
+<table class="activity-table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>1</td>
+            <td>
+                Second year 18 students (2021–2024 batch) underwent an Educational Tour to
+                <strong>M/s Ashok Leyland, Hosur Unit</strong> on
+                <strong>30.09.2022</strong> and <strong>01.10.2022</strong>.
+            </td>
+            <td>
+                <a href="https://imgh.in/host/industrial1" target="_blank">
+                    <img src="https://imgh.in/host/x1b8bg"
+                         class="activity-img"
+                         alt="Industrial Visit 1">
+                </a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+<h3 class="batch-title">Batch 2020–2023</h3>
+
+<table class="activity-table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>2</td>
+            <td>
+                Final year 18 students (2020–2023 batch) underwent an Educational Tour at
+                <strong>M/s NestSoft</strong>, Kaloor, Kochi Industrial Estate
+                from <strong>03.09.2022</strong> to <strong>04.09.2022</strong>.
+            </td>
+            <td>
+                <a href="https://imgh.in/host/industrial2" target="_blank">
+                    <img src="https://imgh.in/host/perx9z"
+                         class="activity-img"
+                         alt="Industrial Visit 2">
+                </a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+<h3 class="batch-title">Batch 2019–2022</h3>
+
+<table class="activity-table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>3</td>
+            <td>
+                Final year 34 students (2019–2022 batch) went on a one-day Educational Tour
+                to <strong>Radio Astronomy Centre, Ooty</strong> on
+                <strong>06.05.2022</strong>.
+            </td>
+            <td>
+                <a href="https://imgh.in/host/industrial3" target="_blank">
+                    <img src="https://imgh.in/host/9int1n"
+                         class="activity-img"
+                         alt="Industrial Visit 3">
+                </a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+<h3 class="batch-title">Batch 2017–2020</h3>
+
+<table class="activity-table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>4</td>
+            <td>
+                Twenty-four students of the 2017–2020 batch went on an Educational Tour to
+                <strong>Spectrum Softtech Solutions (P) Ltd., Kochi</strong>
+                from <strong>21.02.2020</strong> to <strong>23.02.2020</strong>.
+            </td>
+            <td>
+                <a href="https://imgh.in/host/industrial4" target="_blank">
+                    <img src="https://imgh.in/host/jeh429"
+                         class="activity-img"
+                         alt="Industrial Visit 4">
+                </a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+<h3 class="batch-title">Batch 2016–2019 &amp; 2017–2020</h3>
+
+<table class="activity-table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>5</td>
+            <td>
+                A total of 51 students from the 2016–2019 and 2017–2020 batches
+                went on an Educational Tour to
+                <strong>ANI Farms, Mysore</strong>
+                from <strong>25.01.2019</strong> to <strong>27.01.2019</strong>.
+            </td>
+            <td>
+                <a href="https://imgh.in/host/industrial5" target="_blank">
+                    <img src="https://imgh.in/host/s69gmo"
+                         class="activity-img"
+                         alt="Industrial Visit 5">
+                </a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+</div>
+<div id="outgoing" style="display:none;">
+
+<h3 class="batch-title">Award for the Year 2021–2024</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>Name of the Award</th>
+<th>Name of the Student</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Best Outgoing Student for Department 2021–2024</td>
+<td>Sharvesh K (22IH08)</td>
+<td><a href="#"><img src="https://imgh.in/host/y098nl" class="activity-img" alt=""></a></td>
+</tr>
+
+<tr>
+<td>Best Outgoing Student for Alumni 2021–2024</td>
+<td>Arisudan J (21DI03)</td>
+<td><a href="#"><img src="https://imgh.in/host/l2jabl" class="activity-img" alt=""></a></td>
+</tr>
+
+<tr>
+<td>Achiever Award for Department 2021–2024</td>
+<td>Jithendiraa S (21DI12)</td>
+<td><a href="#"><img src="https://imgh.in/host/biyt8f" class="activity-img" alt=""></a></td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+<h3 class="batch-title">Award for the Year 2022–2023</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>Name of the Award</th>
+<th>Name of the Student</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Best Outgoing Student for Department 2023–2024</td>
+<td>Bharath Raj S (20DI05)</td>
+<td><a href="#"><img src="https://imgh.in/host/eutj3m" class="activity-img" alt=""></a></td>
+</tr>
+
+<tr>
+<td>Achiever Award 2023 (Best Outgoing Student for Alumni)</td>
+<td>Jayavarshan V (20DI12)</td>
+<td><a href="#"><img src="https://imgh.in/host/udw4id" class="activity-img" alt=""></a></td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+<h3 class="batch-title">Award for the Year 2021–2022</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>Name of the Award</th>
+<th>Name of the Student</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Best Outgoing Student for Department 2021–2022</td>
+<td>Ranjith S (19DI28)</td>
+<td><a href="#"><img src="https://imgh.in/host/6fr9wb" class="activity-img" alt=""></a></td>
+</tr>
+
+<tr>
+<td>Best Outgoing Student for Alumni 2021–2022</td>
+<td>John K Simon (19DI12)</td>
+<td><a href="#"><img src="https://imgh.in/host/shw5s3" class="activity-img" alt=""></a></td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+<h3 class="batch-title">Award for the Year 2020–2021</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>Name of the Award</th>
+<th>Name of the Student</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Best Outgoing Student for Department 2020–2021</td>
+<td>PRASAD P (18DI17)</td>
+<td><a href="#"><img src="https://imgh.in/host/f4iyrx" class="activity-img" alt=""></a></td>
+</tr>
+
+<tr>
+<td>Best Outgoing Student for Alumni 2020–2021</td>
+<td>AKSHAYKUMAR S (18DI02)</td>
+<td><a href="#"><img src="https://imgh.in/host/ud1ufq" class="activity-img" alt=""></a></td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+<h3 class="batch-title">Award for the Year 2019–2020</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>Name of the Award</th>
+<th>Name of the Student</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Best Outgoing Student for Department 2019–2020</td>
+<td>D. Divya (17DI07)</td>
+<td><a href="#"><img src="https://imgh.in/host/e3cu4t" class="activity-img" alt=""></a></td>
+</tr>
+
+<tr>
+<td>Best Outgoing Student for Alumni 2019–2020</td>
+<td>V. M. Aswin Vishal Kumar (17DI06)</td>
+<td><a href="#"><img src="https://imgh.in/host/itlmyx" class="activity-img" alt=""></a></td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+<h3 class="batch-title">Award for the Year 2018–2019</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>Name of the Award</th>
+<th>Name of the Student</th>
+<th>Image</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Best Outgoing Student for Department 2019</td>
+<td>N. Samritha (16DI24)</td>
+<td><a href="#"><img src="https://imgh.in/host/d5igso" class="activity-img" alt=""></a></td>
+</tr>
+
+<tr>
+<td>Best Outgoing Student for Alumni 2019</td>
+<td>C. Srinath (16DI30)</td>
+<td><a href="#"><img src="https://imgh.in/host/5xn806" class="activity-img" alt=""></a></td>
+</tr>
+
+<tr>
+<td>Best Sports Woman Award 2019</td>
+<td>B. Ahalya (16DI01)</td>
+<td><a href="#"><img src="https://imgh.in/host/9oc3x5" class="activity-img" alt=""></a></td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+
+<div id="project" style="display:none;">
+
+<table class="activity-table">
+    <thead>
+        <tr>
+            <th>Title of the Project</th>
+            <th>Guide</th>
+            <th>Year</th>
+            <th>Students</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>An Intelligent Autonomous Delivery Robot – The Indian Little Indian Last Mile</td>
+            <td>Ms. A. Haritha Deepthi</td>
+            <td>2021–2024</td>
+            <td>Vikram S (21DI30), Santhosh B (21DI22), Sharvesh K (22IH08)</td>
+            <td>
+                <a href="https://imgh.in/host/project1" target="_blank">
+                    <img src="https://imgh.in/host/3ookd8"
+                         class="activity-img"
+                         alt="Project 1">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>PC Steering Wheel Controller Simulation</td>
+            <td>Mr. A. Kathiresan</td>
+            <td>2022–2023</td>
+            <td>Aravind P (20DI02), Poorvish M (20DI20), Sanjay Kumar P (20DI25)</td>
+            <td>
+                <a href="https://imgh.in/host/project2" target="_blank">
+                    <img src="https://imgh.in/host/4mnc5c"
+                         class="activity-img"
+                         alt="Project 2">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>IoT Based Medicine Gallipot</td>
+            <td>Ms. R. Uma</td>
+            <td>2020–2021</td>
+            <td>J. Srinithi (18DI34), L. Thilothana (18DI39)</td>
+            <td>
+                <a href="https://imgh.in/host/project3" target="_blank">
+                    <img src="https://imgh.in/host/kq834r"
+                         class="activity-img"
+                         alt="Project 3">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Automated Self-Navigated Dustbin Dispensary System</td>
+            <td>Mr. A. Kathiresan</td>
+            <td>2019–2020</td>
+            <td>S. Aravind (17DI03), N. Hariharan (17DI11), V. Naveen Balaji (17DI16)</td>
+            <td>
+                <a href="https://imgh.in/host/project4" target="_blank">
+                    <img src="https://imgh.in/host/u2otm0"
+                         class="activity-img"
+                         alt="Project 4">
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Smart System for Monitoring Traffic Rule Violation and Analyzing Accident Using a Black Box</td>
+            <td>Mr. A. Kathiresan</td>
+            <td>2018–2019</td>
+            <td>Mohamed Shafeer Rahuman (16DI17), V. M. Rahul (16DI23), R. Shriraam (16DI28)</td>
+            <td>
+                <a href="https://imgh.in/host/project5" target="_blank">
+                    <img src="https://imgh.in/host/2w9c0o"
+                         class="activity-img"
+                         alt="Project 5">
+                </a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+</div>
+<h2 class="section-title">Placement, Publications &amp; Special Awards</h2>
+
+<div class="achievement-tabs">
+    <button class="active" onclick="showPlacement('special',this)">Special Awards</button>
+    <button onclick="showPlacement('other',this)">Other Awards</button>
+    <button onclick="showPlacement('paper',this)">Paper Publications</button>
+    <button onclick="showPlacement('placement',this)">Placement</button>
+</div>
+
+<div id="special">
+
+<table class="activity-table">
+
+<thead>
+<tr>
+<th>Award</th>
+<th>Description</th>
+<th>Image</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>First Rank Holder Award 2021–2024</td>
+<td>
+The 2021–2024 batch student <b>Jeikeshav S (21DI10)</b> received the
+Department First Rank Holder Award in the academic year 2023–2024.
+</td>
+<td>
+<a href="https://imgh.in/host/special1" target="_blank">
+<img src="https://imgh.in/host/8a4i1f"
+class="activity-img">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>First Rank Holder Award 2020–2023</td>
+<td>
+The 2020–2023 batch student <b>Sathish Kumar M P (20DI26)</b>
+received the Department First Rank Holder Award in the academic year
+2022–2023.
+</td>
+<td>
+<a href="https://imgh.in/host/special2" target="_blank">
+<img src="https://imgh.in/host/91uwmi"
+class="activity-img">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>First Rank Holder Award 2021–2022</td>
+<td>
+The 2019–2022 batch student <b>Kamal J (20IH01)</b>
+received the Department First Rank Holder Award in the academic year
+2021–2022 on 10.09.2022.
+</td>
+<td>
+<a href="https://imgh.in/host/special3" target="_blank">
+<img src="https://imgh.in/host/23pmxl"
+class="activity-img">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>Runner Up at District Skill Competition 2020</td>
+<td>
+2017–2020 batch student <b>Naveen B (17DI15)</b> and
+2019–2022 batch student <b>Kaja Mohaidheen I (19DI13)</b>
+won the Runner Up Award at the District Skill Competition 2020,
+organized by TNSDC and the District Administration,
+Coimbatore on 31.01.2020.
+</td>
+<td>
+<a href="https://imgh.in/host/special4" target="_blank">
+<img src="https://imgh.in/host/245gc9"
+class="activity-img">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>Best Student Performer of Music 2020</td>
+<td>
+2017–2020 batch student <b>Ashfaq Ahamed S (17DI05)</b>
+received the Best Male Singer Award from
+PSG Kadambari Carnatic Music Festival on 06.01.2020.
+</td>
+<td>
+<a href="https://imgh.in/host/special5" target="_blank">
+<img src="https://imgh.in/host/w6c6h9"
+class="activity-img">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>First Rank Holder Award 2019–2020</td>
+<td>
+The 2017–2020 batch student <b>Divya D (17DI07)</b>
+received the Department First Rank Holder Award in the academic year
+2019–2020.
+</td>
+<td>
+<a href="https://imgh.in/host/special6" target="_blank">
+<img src="https://imgh.in/host/qk4l6f"
+class="activity-img">
+</a>
+</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div id="other" style="display:none;">
+
+<table class="activity-table">
+
+<thead>
+<tr>
+<th>Award</th>
+<th>Description</th>
+<th>Image</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Quiz, Reverse Reading &amp; Zig Zag Reading</td>
+<td>
+Shrickar Nagendra Kumar (20DI27) won the <b>3rd Place</b> in the
+NDLI Club Activity held on <b>23.04.2022</b>.
+</td>
+<td>
+<a href="https://imgh.in/host/other1" target="_blank">
+<img src="https://imgh.in/host/kqhbtq" class="activity-img" alt="Other Award 1">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>National Level Technical Symposium (SANTEKFEST-2K22)</td>
+<td>
+Lakshmandev V K (21DI15) and Vivin D (21DI31) won
+<b>2nd Place</b> in the National Level Technical Symposium
+(SANTEKFEST-2K22) on <b>30.04.2022</b>.
+</td>
+<td>
+<a href="https://imgh.in/host/other2" target="_blank">
+<img src="https://imgh.in/host/lk6tbu" class="activity-img" alt="Other Award 2">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>National Level Technical Symposium (SANTEKFEST-2K22)</td>
+<td>
+Thulasidhar R (21DI28) and Yashvardhan S (21DI32)
+won <b>3rd Place</b> in the National Level Technical Symposium
+(SANTEKFEST-2K22) on <b>30.04.2022</b>.
+</td>
+<td>
+<a href="https://imgh.in/host/other3" target="_blank">
+<img src="https://imgh.in/host/0hwitb" class="activity-img" alt="Other Award 3">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>2nd AICTE–ECI–IEST Vishwakarma Awards</td>
+<td>
+2017–2020 batch students V. Niranjan (17DI20) and
+S. Srinath (17DI31) attended and participated in the
+2nd AICTE–ECI–IEST Vishwakarma Awards held at
+AICTE Quarters, New Delhi on <b>20th &amp; 21st January 2019</b>.
+</td>
+<td>
+<a href="https://imgh.in/host/other4" target="_blank">
+<img src="https://imgh.in/host/vnbq2y" class="activity-img" alt="Other Award 4">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>National Innovation Talent Contest for Polytechnics (NITCP)</td>
+<td>
+2016–2019 batch students R. Bharathiraja, M. Kirubaharan,
+M. Mohamed Shafeer Rahman, T. Mohanaprasanth,
+E. Prajeeth and V. M. Rakul participated in the
+National Innovation Talent Contest for Polytechnics
+held at Kolkata on <b>23rd &amp; 24th February 2019</b>.
+</td>
+<td>
+<a href="https://imgh.in/host/other5" target="_blank">
+<img src="https://imgh.in/host/ks0pjy" class="activity-img" alt="Other Award 5">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>Paper Presentation</td>
+<td>
+2017–2020 batch students Divya D (17DI07),
+Jeevika A (17DI12) and Jesheenaa A (17DI13)
+presented the project
+<b>"Automatic Multipurpose Ration Dispenser Machine"</b>
+at CIT College, Coimbatore on
+<b>28th &amp; 29th August 2019</b>.
+</td>
+<td>
+<a href="https://imgh.in/host/other6" target="_blank">
+<img src="https://imgh.in/host/4o0s0c" class="activity-img" alt="Other Award 6">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>13th State Level Technical Symposium (SPCGUSTO 19)</td>
+<td>
+Divya D, Jeevika A and Jesheenaa A won
+<b>First Prize</b> for the project
+<b>"Automatic Multipurpose Ration Dispenser Machine"</b>
+at SCAD Polytechnic College, Cheranmahadevi,
+Tirunelveli on <b>05.09.2019</b>.
+</td>
+<td>
+<a href="https://imgh.in/host/other7" target="_blank">
+<img src="https://imgh.in/host/nwcd43" class="activity-img" alt="Other Award 7">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>Conference – State of Art Technologies &amp; Its Impact on Transforming the World</td>
+<td>
+2017–2020 batch students Divya D, Jeevika A,
+Jesheenaa A, V. M. Ashwin Vishal Kumar,
+S. Gopalakrishnan, B. Sandeep and
+S. Ashfaq Ahamed attended the conference organized by
+Kodaikanal Christian College on
+<b>19.09.2019</b>.
+</td>
+<td>
+<a href="https://imgh.in/host/other8" target="_blank">
+<img src="https://imgh.in/host/cntj8n" class="activity-img" alt="Other Award 8">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>MEME TIME Event – ELEMENTS 2K19</td>
+<td>
+2018–2021 batch students Bharathsrinath S (18DI04)
+and Manojkumar K. S (18DI14) won
+<b>1st Place</b> in the MEME TIME Event conducted by
+Sri Ramakrishna Engineering College on
+<b>25th September 2019</b>.
+</td>
+<td>
+<a href="https://imgh.in/host/other9" target="_blank">
+<img src="https://imgh.in/host/27eqwp" class="activity-img" alt="Other Award 9">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>National Level Poly-Tech Fest &amp; Project Expo – YUKTI 2020</td>
+<td>
+2017–2020 batch students Divya D,
+Jeevika A, Jesheenaa A and R. Sandhiya won
+<b>First Prize</b> in the National Level Poly-Tech Fest &
+Project Expo – YUKTI 2020 (Paper Presentation)
+held at CMS College of Engineering &amp; Technology,
+Velanthavalam on <b>04.03.2020</b>.
+</td>
+<td>
+<a href="https://imgh.in/host/other10" target="_blank">
+<img src="https://imgh.in/host/llvm8g" class="activity-img" alt="Other Award 10">
+</a>
+</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+<div id="paper" style="display:none;">
+
+<table class="activity-table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Students Paper Publications</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>1</td>
+            <td>
+                <a href="https://www.psgpolytech.ac.in/dept/paper%20publication.pdf" target="_blank">
+                    Students Paper Publications
+                </a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+</div>
+<div id="placement" style="display:none;">
+
+<h3 class="batch-title">For the Year 2021–2022</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>Name of the Students</th>
+<th>Company</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>R. Ajay (20DI01), R. Divya Prakash (20DI06)</td>
+<td>Procyon TechSolutions Pvt. Ltd., Bengaluru</td>
+</tr>
+
+<tr>
+<td>P. Aravind (20DI02), T. Siva (20DI28)</td>
+<td>Ikasle Group</td>
+</tr>
+
+<tr>
+<td>S. Sanjay Prabhu (21IH01)</td>
+<td>Aloha Tech Ventures</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<h3 class="batch-title">For the Year 2020–2021</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>Name of the Students</th>
+<th>Company</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>S. Akshykumar (18DI02), S. Bharath Srinath (18DI04), K. Divya Shree (18DI08)</td>
+<td>RND Soft Private Limited</td>
+</tr>
+
+<tr>
+<td>R. Dhanush (18DI06)</td>
+<td>TLXTECH Solutions Pvt. Ltd.</td>
+</tr>
+
+<tr>
+<td>S. Ganesh Kumar (18DI09)</td>
+<td>Fine Way Technologies</td>
+</tr>
+
+<tr>
+<td>K. S. Manoj Kumar (18DI14)</td>
+<td>Infosys</td>
+</tr>
+
+<tr>
+<td>M. Mugundhan (18DI16)</td>
+<td>Shlok Information Systems India Private Limited</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<h3 class="batch-title">For the Year 2019–2020</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>Name of the Students</th>
+<th>Company</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>S. Shareka (18IH03)</td>
+<td>iGenius Artificial Intelligence Service Pvt. Ltd.</td>
+</tr>
+
+<tr>
+<td>R. Soundharya (17DI30), R. Sandhiya (17DI28)</td>
+<td>Scoto Systec Private Ltd.</td>
+</tr>
+
+</tbody>
+</table>
+
+
+<h3 class="batch-title">For the Year 2018–2019</h3>
+
+<table class="activity-table">
+<thead>
+<tr>
+<th>Name of the Students</th>
+<th>Company</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Boja Prasanth R (16DI05)</td>
+<td>Hanudev Info Park Private Limited</td>
+</tr>
+
+<tr>
+<td>S. Hickmathullah (16DI08), Jerom Josaph A (16DI09), Kaushic K (16DI11)</td>
+<td>Vertex Solution</td>
+</tr>
+
+<tr>
+<td>M. Kirubaharan (16DI12)</td>
+<td>Sri WebEo</td>
+</tr>
+
+<tr>
+<td>Shibu R (16DI26)</td>
+<td>Info Gnana</td>
+</tr>
+
+<tr>
+<td>P. Mohanraj (17IH04)</td>
+<td>Miru Home Apparels</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+<h2 class="section-title">Faculty Awards &amp; Events Organised</h2>
+
+<div class="achievement-tabs">
+    <button class="active" onclick="showFaculty('facultyaward',this)">Faculty Awards</button>
+    <button onclick="showFaculty('events',this)">Events Organised</button>
+    <button onclick="showFaculty('conference',this)">Conference Organised</button>
+</div>
+<div id="facultyaward">
+
+<table class="activity-table">
+
+<thead>
+<tr>
+<th>Award</th>
+<th>Description</th>
+<th>Image</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Best NCC Officer Award</td>
+
+<td>
+Mr. A. Kathiresan received the
+<strong>Best NCC Officer Award</strong>
+on <strong>02.08.2023</strong>.
+</td>
+
+<td>
+<a href="https://imgh.in/host/faculty1" target="_blank">
+<img src="https://imgh.in/host/29spuy"
+class="activity-img"
+alt="Faculty Award">
+</a>
+</td>
+
+</tr>
+
+<tr>
+
+<td>Best NCC Officer Award</td>
+
+<td>
+Mr. A. Kathiresan received the
+<strong>Best NCC Officer Award</strong>
+from Coimbatore Group NCC
+by DG NCC Chennai.
+</td>
+
+<td>
+<a href="https://imgh.in/host/faculty2" target="_blank">
+<img src="https://imgh.in/host/c6b2vu"
+class="activity-img"
+alt="Faculty Award">
+</a>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div id="events" style="display:none;">
+
+<table class="activity-table">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Event Organised</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>1</td>
+            <td>
+                <a href="https://www.psgpolytech.ac.in/dept/Workshop%20organised.pdf" target="_blank">
+                    Events Organised
+                </a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+</div>
+<div id="conference" style="display:none;">
+
+<table class="activity-table">
+
+    <thead>
+        <tr>
+            <th style="width:15%;">Date</th>
+            <th>Description</th>
+            <th style="width:35%;">Images</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>02-09-2022</td>
+
+            <td>
+                National Level Conference &amp; Poster Presentation on
+                <strong>Emerging Trends in Defence, Agriculture and Artificial Intelligence Sector</strong>.
+            </td>
+
+            <td style="text-align:center;">
+
+                <a href="https://imgh.in/host/conference1" target="_blank">
+                    <img src="https://imgh.in/host/ofpjts"
+                         class="activity-img"
+                         alt="Conference 1">
+                </a>
+
+                <a href="https://imgh.in/host/conference2" target="_blank">
+                    <img src="https://imgh.in/host/zi1uq3"
+                         class="activity-img"
+                         alt="Conference 2">
+                </a>
+
+                <a href="https://imgh.in/host/conference3" target="_blank">
+                    <img src="https://imgh.in/host/xjdhuu"
+                         class="activity-img"
+                         alt="Conference 3">
+                </a>
+
+            </td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+</div>
+</body>
+<div style="max-width:1100px;margin:60px auto;border:1px solid #ddd;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08);">
+
+<div style="background:#C5A267;color:#fff;text-align:center;padding:15px;font-size:30px;font-weight:bold;font-family:Georgia;">
+CONTACT US
+</div>
+
+<div style="padding:35px;text-align:center;line-height:1.8;">
+
+<h3 style="margin-bottom:5px;">Dr.S.Sasikala , M.E (TECH) IT</h3>
+<p>HoD in charge</p>
+<p>Department of Information Technology</p>
+<p>PSG Polytechnic College</p>
+<p>Peelamedu, Coimbatore - 641004</p>
+<p>Tamil Nadu, India</p>
+
+</div>
+</div>
+
+
+<div class="footer-wrapper">
+    <footer>
+        Designed and Developed by PSG Polytechnic College | © 2026 All Rights Reserved.
+    </footer>
+</div>
+
+<script>
+function showTab(tab, el){
+document.getElementById("po").style.display="none";
+document.getElementById("pso").style.display="none";
+document.getElementById("peo").style.display="none";
+document.getElementById(tab).style.display="block";
+let btns=document.querySelectorAll(".course-tabs button");
+btns.forEach(b=>b.classList.remove("active"));
+el.classList.add("active");
+}
+
+function toggleSem(id){
+let x=document.getElementById(id);
+x.style.display = (x.style.display=="block") ? "none":"block";
+}
+
+function toggleFacility(id){
+let x=document.getElementById(id);
+x.style.display = (x.style.display=="block") ? "none":"block";
+}
+
+function showActivity(id, btn){
+
+const tabs = [
+    "mou",
+    "awards",
+    "association",
+    "training",
+    "departmental"
+];
+
+    tabs.forEach(function(tab){
+        document.getElementById(tab).style.display="none";
+    });
+
+    document.getElementById(id).style.display="block";
+
+    document.querySelectorAll(".activity-tabs button").forEach(function(button){
+        button.classList.remove("active");
+    });
+
+    btn.classList.add("active");
+}
+function showAchievement(tab, btn){
+
+    const tabs = [
+        "internship",
+        "industrial",
+        "outgoing",
+        "project"
+    ];
+
+    tabs.forEach(function(id){
+        document.getElementById(id).style.display="none";
+    });
+
+    document.getElementById(tab).style.display="block";
+
+    document.querySelectorAll(".achievement-tabs button").forEach(function(button){
+        button.classList.remove("active");
+    });
+
+    btn.classList.add("active");
+}
+function showPlacement(tab, btn){
+
+    const tabs=[
+        "special",
+        "other",
+        "paper",
+        "placement"
+    ];
+
+    tabs.forEach(function(id){
+        document.getElementById(id).style.display="none";
+    });
+
+    document.getElementById(tab).style.display="block";
+
+    document.querySelectorAll(".achievement-tabs button").forEach(function(button){
+        button.classList.remove("active");
+    });
+
+    btn.classList.add("active");
+}
+function showFaculty(tab, btn){
+
+    const tabs = [
+        "facultyaward",
+        "events",
+        "conference"
+    ];
+
+    tabs.forEach(function(id){
+        document.getElementById(id).style.display = "none";
+    });
+
+    document.getElementById(tab).style.display = "block";
+
+    document.querySelectorAll(".faculty-tabs button").forEach(function(button){
+        button.classList.remove("active");
+    });
+
+    btn.classList.add("active");
+}
+
+</script>
+
+</body>
+</html>

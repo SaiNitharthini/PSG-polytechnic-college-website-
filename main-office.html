@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Main Office</title>
+
+<style>
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial;
+background:#f4f4f4;
+margin:0;
+}
+
+/* Updated Top Bar to Black with Menu */
+.navbar{
+background:#1c1c1c;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items: center;
+color: white;
+}
+
+.logo{
+font-weight:600;
+cursor:pointer;
+font-size: 20px;
+}
+
+.menu{display:flex;gap:15px;flex-wrap:wrap;}
+.menu a{color:#ddd;text-decoration:none;cursor:pointer;font-size:13px;transition:0.3s;}
+.menu a:hover{color:#C5A267}
+
+/* DCE Style Hero Background Added */
+.hero{
+background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.96)),
+url('https://images.unsplash.com/photo-1497366216548-37526070297c'); 
+background-size:cover;
+background-position: center;
+padding:80px 20px;
+text-align:center;
+border-bottom: 1px solid #eee;
+}
+
+.hero h1{
+font-family:Georgia, serif;
+font-size:40px;
+margin:0;
+color: #1a1a1a;
+}
+
+.divider{
+width:80px;
+height:3px;
+background:#C5A267;
+margin:15px auto;
+}
+
+.section-title{
+text-align:center;
+margin:40px 0 10px;
+font-size:30px;
+font-family: Georgia, serif;
+}
+
+.staff-frame{
+max-width:1100px;
+margin:30px auto;
+background:white;
+padding:30px;
+box-shadow:0 4px 14px rgba(0,0,0,.08);
+}
+
+.staff-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.staff-card{
+border:1px solid #e5e5e5;
+padding:25px;
+text-align:center;
+cursor:pointer;
+transition:.3s;
+background:#fff;
+}
+
+.staff-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+border-color:#C5A267;
+}
+
+.staff-img{
+width:110px;
+height:110px;
+border-radius:50%;
+background:#ddd;
+margin:auto; 
+margin-bottom:15px;
+border:4px solid #C5A267;
+overflow: hidden;
+}
+.staff-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Makes the image fill the circle */
+      object-position: center 20%;
+    display: block;
+}
+
+/* Staff Name Gold Colour (DCE Style) */
+.staff-name{
+font-weight:700;
+margin-bottom:5px;
+color: #C5A267;
+}
+
+.staff-role{
+color:#777;
+font-size:14px;
+}
+
+.staff-body{
+display:none;
+margin-top:10px;
+font-size:14px;
+color:#444;
+line-height:1.6;
+}
+
+/* Styling for New Info Sections */
+.info-box{
+background:#fafafa;
+padding:25px;
+border:1px solid #eee;
+line-height:1.7;
+max-width: 1050px;
+margin: 20px auto;
+}
+
+.academic-frame{
+max-width:1050px;
+margin:40px auto;
+border:1px solid #e5e5e5;
+background:#fff;
+padding:30px;
+box-shadow:0 4px 14px rgba(0,0,0,.04);
+}
+
+footer{
+background:#F5F5F5;
+padding:25px;
+text-align:center;
+margin-top:40px;
+color: #888;
+font-size: 14px;
+}
+
+</style>
+
+<script>
+function toggleStaff(id){
+let x=document.getElementById(id);
+if(x){
+    x.style.display = x.style.display=="block" ? "none":"block";
+}
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo">PSG POLYTECHNIC COLLEGE</div>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#admission">Admission</a>
+        <a href="#examination">Examination</a>
+        <a href="#campus">Campus</a>
+        <a href="#union">Students Union</a>
+        <a href="#alumni">Alumni</a>
+        <a href="#career">Career</a>
+        <a href="#helpdesk">Helpdesk</a>
+    </div>
+</div>
+
+<div class="hero">
+    <h1>Main Office Administration</h1>
+    <div class="divider"></div>
+    <p>Ensuring Administrative Excellence and Student Support</p>
+</div>
+
+<div class="section-title">Office Staff Members</div>
+
+<div class="staff-frame">
+<div class="staff-grid">
+
+<div class="staff-card" onclick="toggleStaff('s1')">
+<div class="staff-img">
+   <img src="https://i.postimg.cc/PLyS17J7/palani-os.jpg" alt="Staff">
+</div>
+<div class="staff-name">Mr. K.N. Palaniswamy</div>
+<div class="staff-role">Office Superintendent</div>
+<div class="staff-body" id="s1">B.Sc</div>
+</div>
+
+<div class="staff-card" onclick="toggleStaff('s2')">
+<div class="staff-img">
+    <img src="https://i.postimg.cc/4YTPqGhh/sarada-a.jpg" alt="Staff Photo">
+</div>
+<div class="staff-name">Ms. S. Saradadevi</div>
+<div class="staff-role">Assistant</div>
+<div class="staff-body" id="s2">B.Com</div>
+</div>
+
+<div class="staff-card" onclick="toggleStaff('s3')">
+<div class="staff-img">
+    <img src="https://i.postimg.cc/z360wKzc/rani-ja.jpg" alt="Staff Photo">
+</div>
+<div class="staff-name">Ms. N. Rani</div>
+<div class="staff-role">Junior Assistant (SG)</div>
+<div class="staff-body" id="s3">B.Com</div>
+</div>
+
+<div class="staff-card" onclick="toggleStaff('s4')">
+<div class="staff-img">
+    <img src="https://i.postimg.cc/jCmZ6Pxg/murugesan-sk.jpg" alt="Staff Photo">
+</div>
+<div class="staff-name">Mr. M. Murugesan</div>
+<div class="staff-role">Store Keeper</div>
+</div>
+
+<div class="staff-card" onclick="toggleStaff('s5')">
+<div class="staff-img">
+    <img src="https://i.postimg.cc/w3Z05Lq0/backya-ja.jpg" alt="Staff Photo">
+</div>
+<div class="staff-name">Ms. R. Bhagyalakshmi</div>
+<div class="staff-role">Junior Assistant</div>
+<div class="staff-body" id="s5">M.Com</div>
+</div>
+
+<div class="staff-card" onclick="toggleStaff('s6')">
+<div class="staff-img">
+    <img src="https://i.postimg.cc/QFrmwDW1/senthil-ja.jpg" alt="Staff Photo">
+</div>
+<div class="staff-name">Mr. K. Senthil Kumar</div>
+<div class="staff-role">Junior Assistant</div>
+<div class="staff-body" id="s6">BBM</div>
+</div>
+
+<div class="staff-card" onclick="toggleStaff('s7')">
+<div class="staff-img">
+    <img src="https://i.postimg.cc/fkpB7mzg/kavitha-ja.jpg" alt="Staff Photo">
+</div>
+<div class="staff-name">Ms. V. Kavitha</div>
+<div class="staff-role">Junior Assistant</div>
+<div class="staff-body" id="s7">M.Com, D.Com</div>
+</div>
+
+<div class="staff-card" onclick="toggleStaff('s8')">
+<div class="staff-img">
+    <img src="https://i.postimg.cc/0yz462kt/Shanthi-ja.jpg" alt="Staff Photo">
+</div>
+<div class="staff-name">Ms. M. Shanthi</div>
+<div class="staff-role">Junior Assistant</div>
+</div>
+
+<div class="staff-card" onclick="toggleStaff('s9')">
+<div class="staff-img">
+    <img src="https://i.postimg.cc/0zqnFvJK/revathi-oa.jpg" alt="Staff Photo">
+</div>
+<div class="staff-name">Ms. S. Revathi</div>
+<div class="staff-role">Junior Assistant</div>
+</div>
+
+<div class="staff-card" onclick="toggleStaff('s10')">
+<div class="staff-img">
+    <img src="https://i.postimg.cc/rz3QGxVh/karthig-oa.jpg" alt="Staff Photo">
+</div>
+<div class="staff-name">Mr. M. Karthigairaja</div>
+<div class="staff-role">Junior Assistant</div>
+</div>
+
+</div>
+</div>
+
+
+<footer>
+    Designed And Developed by PSG PTC . Copyright © 2026. All Rights Reserved.
+</footer>
+
+</body>
+</html>

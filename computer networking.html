@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSG Polytechnic | Computer Networking</title>
+
+<style>
+
+.dept-title{
+background:#C5A267;
+color:white;
+padding:12px 18px;
+font-weight:700;
+letter-spacing:.5px;
+}
+
+.dept-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
+padding:20px;
+background:#fafafa;
+}
+
+.dept-card{
+background:white;
+border:1px solid #e5e5e5;
+padding:16px;
+font-size:15px;
+font-weight:600;
+transition:.3s;
+cursor:pointer;
+}
+
+.dept-card:hover{
+border-color:#C5A267;
+box-shadow:0 6px 18px rgba(0,0,0,.12);
+transform:translateY(-4px);
+}
+
+
+.contact-section{
+margin-top:60px;
+background:#f4f4f4;
+padding:40px 0;
+}
+
+.contact-frame{
+max-width:950px;
+margin:auto;
+background:white;
+padding:35px;
+text-align:center;
+border:1px solid #e5e5e5;
+box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
+.contact-frame h2{
+background:#C5A267;
+color:white;
+padding:12px;
+margin:-35px -35px 25px -35px;
+font-size:20px;
+letter-spacing:.5px;
+}
+
+.contact-frame p{
+line-height:1.8;
+font-size:15px;
+color:#444;
+}
+
+.footer-note{
+margin-top:20px;
+font-size:13px;
+color:#777;
+}
+
+
+/* ⭐ Academic content frame like PO PSO PEO */
+.academic-frame{
+max-width:950px;
+margin:40px auto;
+border:1px solid #e5e5e5;
+background:#fff;
+padding:30px;
+box-shadow:0 4px 14px rgba(0,0,0,.04);
+}
+
+
+.facility-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.facility-card{
+border:1px solid #ddd;
+cursor:pointer;
+background:white;
+transition:.3s;
+border-radius:6px;
+overflow:hidden;
+margin-bottom:20px;
+}
+
+.facility-card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.facility-title{
+background:#C5A267;
+color:white;
+padding:14px;
+font-weight:600;
+}
+
+.facility-body{
+display:none;
+padding:25px;
+background:#fafafa;
+text-align:center;
+line-height:1.8;
+}
+
+.facility-body img{
+display:block;
+margin:0 auto 20px;
+width:100%;
+max-width:450px;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+border:none;           /* Removes the golden border */
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.faculty-img{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #C5A267;
+margin-bottom:12px;
+background:#e9ecef;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;
+margin:0;
+background:#fff;
+color:#1A1A1A;
+}
+
+.navbar{
+background:#1c1c1c;
+padding:18px 40px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+color:white;
+font-size:20px;
+cursor:pointer;
+font-weight:600;
+letter-spacing:.5px;
+}
+
+/* Updated Menu gap for many links */
+.menu{display:flex;gap:15px;flex-wrap:wrap;}
+.menu a{color:#ddd;text-decoration:none;cursor:pointer; font-size: 14px;}
+.menu a:hover{color:#C5A267}
+
+.hero{
+background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.96)),
+url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a');
+background-size:cover;
+padding:100px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-family:Georgia;
+font-size:50px;
+margin:0;
+}
+
+.divider{
+width:90px;
+height:3px;
+background:#C5A267;
+margin:20px auto;
+}
+
+.section{
+padding:70px 40px;
+max-width:1150px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-family:Georgia;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.about-box{
+background:#fafafa;
+padding:30px;
+border:1px solid #eee;
+line-height:1.7;
+margin-bottom:40px;
+}
+
+.faculty-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.faculty-card{
+border:1px solid #eee;
+padding:20px;
+background:white;
+border-radius:8px;
+transition:0.2s;
+cursor:pointer;
+}
+
+.faculty-card:hover{
+border-color:#C5A267;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transform:translateY(-4px);
+}
+
+.faculty-card h4{
+color:#C5A267;
+margin:0 0 8px;
+font-size:1.1rem;
+}
+
+/* Activity Tables */
+table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+    margin-bottom:30px;
+}
+
+table th,
+table td{
+    padding:15px;
+    border:1px solid #ddd;
+    vertical-align:middle;
+    word-wrap:break-word;
+}
+
+table th{
+    background:#C5A267;
+    color:#fff;
+    text-align:left;
+}
+
+/* Image Column */
+table th:last-child,
+table td:last-child{
+    width:400px;
+    text-align:center;
+}
+
+.project-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.project-table th,
+.project-table td{
+    padding:15px;
+    border:1px solid #ddd;
+    vertical-align:middle;
+}
+
+.activity-img{
+    width:350px;
+    height:240px;
+    object-fit:contain;
+    object-position:center;
+    background:#fff;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+.activity-img:hover{
+    box-shadow:0 8px 18px rgba(0,0,0,.2);
+}
+.sem-body table td[rowspan]{
+vertical-align:middle;
+text-align:center;
+background:#fafafa;
+}
+
+th{
+background:#C5A267;
+color:white;
+}
+
+/* Contact Section */
+
+.contact-section{
+    width:95%;
+    margin:35px auto;
+    background:#f8f8f8;
+}
+
+.contact-title{
+    background:#c8a566;
+    text-align:center;
+    padding:12px 0;
+}
+
+.contact-title h2{
+    color:#fff;
+    margin:0;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.contact-content{
+    text-align:center;
+    padding:28px 15px;
+}
+
+.contact-content h3{
+    margin:0 0 15px;
+    font-size:18px;
+    font-weight:700;
+}
+
+.contact-content p{
+    margin:6px 0;
+    font-size:15px;
+    line-height:1.6;
+    color:#333;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-section{
+    width:95%;
+    margin:40px auto 35px;
+    background:#f7f7f7;
+}
+
+.contact-title{
+    background:#c9a663;
+    padding:12px 0;
+    text-align:center;
+}
+
+.contact-title h2{
+    margin:0;
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+.contact-content{
+    text-align:center;
+    padding:45px 20px 55px;
+}
+
+.contact-content h3{
+    margin:0 0 22px;
+    font-size:18px;
+    font-weight:700;
+    color:#111;
+}
+
+.contact-content p{
+    margin:10px 0;
+    font-size:16px;
+    color:#222;
+    line-height:1.5;
+}
+
+.contact-content strong{
+    font-weight:700;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    width:95%;
+    margin:0 auto 25px;
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:16px 15px;
+    font-size:15px;
+    font-weight:500;
+}
+.course-tabs{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:30px;
+border-bottom:3px solid #e5e5e5;
+padding-bottom:8px;
+background:none;
+flex-wrap:wrap;
+}
+
+.course-tabs button{
+padding:12px 22px;
+border:1px solid #ddd;
+background:#f7f7f7;
+color:#333;
+font-weight:600;
+cursor:pointer;
+letter-spacing:.5px;
+border-radius:4px 4px 0 0;
+transition:.3s;
+}
+
+.course-tabs button:hover{
+background:#eee;
+}
+
+.course-tabs button.active{
+background:#C5A267;
+color:white;
+border-color:#C5A267;
+}
+.sem-dropdown{
+margin-top:25px;
+border:1px solid #ddd;
+background:#fafafa;
+border-radius:8px;
+overflow:hidden;
+}
+
+.sem-head{
+padding:15px;
+font-weight:600;
+cursor:pointer;
+background:#C5A267;
+color:white;
+}
+
+.sem-body{
+display:none;
+padding:20px;
+background:#fff;
+}
+
+.award-card{
+background:#fff8e7;
+border-left:5px solid #C5A267;
+padding:20px;
+margin:20px 0;
+border-radius:8px;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+<div class="logo" onclick="goHome()">PSG POLYTECHNIC COLLEGE</div>
+<div class="menu">
+<a onclick="goHome()">Home</a>
+<a href="#admission">Admission</a>
+<a href="#examination">Examination</a>
+<a href="#campus">Campus</a>
+<a href="#union">Union</a>
+<a href="#alumni_sec">Alumni</a>
+<a href="#career">Career</a>
+<a href="#helpdesk">Helpdesk</a>
+</div>
+</div>
+
+<div id="networkingPage">
+<div class="hero">
+<h1>Computer Networking</h1>
+<div class="divider"></div>
+<p>Connecting the Future | Since 1998</p>
+</div>
+
+<div class="section">
+
+<h2 class="section-title">About Department</h2>
+<div class="about-box">
+The Department of Computer Networking was started in the year 1998 and accredited by NBA in the year 2011. This Department offers 3 years Diploma Programme in Computer Networking. The Department is well equipped with separate Computer Hardware, Computer Networking and Wireless Networks Laboratories with experienced faculty members. Text books, References and Journals are present in the department library for the reference of students and faculty members. The department organizes various continuing education Programmes for students and Industrialists.
+</div>
+<h2 class="section-title">Vision</h2>
+<p>The Department aspires to be a frontier in the area of Computer Networking and be recognized as a leading source of sculpting most promising Network Professionals and Entrepreneurs for Industries and Society.</p>
+
+<h2 class="section-title">Mission</h2>
+<ul style="line-height:1.8">
+<li>M1: To acquire technical exposure in the area of Computer Networking</li>
+<li>M2: To administrate, manage the latest techniques in the field of Computer Networking</li>
+<li>M3: To hone their skills to compete in the global market pace.</li>
+</ul>
+
+<h2 class="section-title">Students transformed to Succeeders</h2>
+<div class="about-box" style="text-align:center; font-size:18px; color:#C5A267;">
+🌟 Empowering Future Network Professionals 🌟
+</div>
+
+<h2 class="section-title">Faculty</h2>
+<div class="faculty-grid">
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436133', '_blank')">
+<img src="https://i.postimg.cc/vDF5rNJH/Brindha.jpg" class="faculty-img">
+<h4>Dr. S. Brindha, M.E, Ph.D</h4>
+<p><strong>Senior Lecturer, HoD</strong></p>
+<p>Teaching Experience: 25 years</p>
+<p>No. of Journal Publications: 50</p>
+<p>Area: Linux Administration, Data Communication, Network Security, Ethical Hacking</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436134', '_blank')">
+<img src="https://i.postimg.cc/tCQrtStH/Priya.jpg" class="faculty-img">
+<h4>Ms. D. Priya, M.E (Applied Electronics)</h4>
+<p>Lecturer (Selection Grade)</p>
+<p>Teaching Experience: 25 years</p>
+<p>No. of Journal Publications: 10</p>
+<p>Area: TCP/IP Networking, Enterprise Networking, Wireless Networks, Server Administration</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/ZqMH9VK7/Abirami.jpg" class="faculty-img">
+<h4>Ms. P. Abirami, M.E (Applied Electronics), (Ph.D)</h4>
+<p>Lecturer</p>
+<p>Teaching Experience: 18 years</p>
+<p>No. of Journal Publications: 15</p>
+<p>Area: Microprocessor, Data Structures, Network Security, IoT, AI, Machine Learning</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436137', '_blank')">
+<img src="https://i.postimg.cc/NFhxDFX3/Sountharia.jpg" class="faculty-img">
+<h4>Ms. I.N. Sountharia, M.E (CSE), (Ph.D)</h4>
+<p>Lecturer</p>
+<p>Teaching Experience: 2 Years</p>
+<p>No. of Journal Publications: 4</p>
+<p>Area: Operating Systems, Cryptography, Java, Cloud Computing, AI, C# .Net</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436138', '_blank')">
+<img src="https://i.postimg.cc/SQ8dsL05/Rajeshwari.jpg" class="faculty-img">
+<h4>Ms. T. Rajeshwari, B.E (CSE)</h4>
+<p>Lecturer</p>
+<p>Teaching: 2 Years | Industry: 4.5 years</p>
+<p>No. of Journal Publications: 3</p>
+<p>Area: DBMS, Operating Systems, Java, C, Multimedia, C# .Net, Data Structures</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/Gm3xqZB0/Dhamayanthi.jpg" class="faculty-img">
+<h4>Ms. A. Dhamayanthi, B.E (CSE)</h4>
+<p>Lecturer</p>
+<p>Teaching Experience: 3 Years</p>
+<p>No. of Journal Publications: 1</p>
+<p>Area: C, Data Structures, C++, Java, C#.net, RDBMS, Web Technology, Data Mining</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/63Zr8KP8/Thamaraiselvi.jpg" class="faculty-img">
+<h4>Ms. K. Thamaraiselvi, M.E., Ph.D(Pursuing)</h4>
+<p>Lecturer</p>
+<p>Teaching: 8 Years | Industry: 1 Year</p>
+<p>No. of Journal Publications: 12</p>
+<p>Area: Cryptography, Object Oriented Programming, Python, Information Security, C#.net</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/jSjyzP1B/Swathi.jpg" class="faculty-img">
+<h4>Ms. G. Swathi, B.Tech (AI & DS)</h4>
+<p>Lecturer</p>
+<p>Teaching Experience: 1 Year</p>
+<p>No. of Journal Publications: 2</p>
+<p>Area: Artificial Intelligence, Data Science, Machine Learning, C, Python</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/XvRFShvJ/Karpaga.jpg" class="faculty-img">
+<h4>Ms. V. Karpaga Varshini, B.Tech (AI & DS)</h4>
+<p>Lecturer</p>
+<p>No. of Journal Publications: 1</p>
+<p>Area: AI, Data Science, Cloud Computing, DevOps, Machine Learning, Python</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/bwMSkMkD/Divya.jpg" class="faculty-img">
+<h4>Ms. M. Divya, B.Tech (IT)</h4>
+<p>Lecturer</p>
+<p>No. of Journal Publications: 2</p>
+<p>Area: AI, Data Science, Machine Learning, Java, Python, Database</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/Wb1dKj7J/Subhashini.jpg" class="faculty-img">
+<h4>Ms. N. Subhashini, M.E.</h4>
+<p>Lecturer</p>
+<p>No. of Journal Publications: 2</p>
+<p>Area: Wireless Sensor Networks</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/RVpLpgwq/Saravanakumar.jpg" class="faculty-img">
+<h4>Mr. V. Saravanakumar, B.E</h4>
+<p>Instructor</p>
+<p>Teaching Experience: 18 years</p>
+<p>Area: Computer Hardware, Computer Networks, Server Administration, WAN, DBMS, C Programming</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/dV7mbGBc/Reegesh.jpg" class="faculty-img">
+<h4>Mr. T. Reegesh, B.E</h4>
+<p>Instructor</p>
+<p>Teaching Experience: 11 years</p>
+<p>Area: Cloud Computing, AWS, Azure, Cloud Security, AI, ML, Data Science, Python, CCNA, MCSA, Redhat Linux</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/FK3bRm8c/Vijayajothi.png" class="faculty-img">
+<h4>Ms. U. Vijayajothi, M.Sc(CS), B.Ed.</h4>
+<p>Technical Assistant</p>
+<p>Teaching Experience: 7 years</p>
+<p>Area: Computer Hardware, Data Structures, C, Multimedia, Web Designing, Java, IoT, C# .Net</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/VsDq5KGj/kamala.jpg" class="faculty-img">
+<h4>Ms S Kamala, DCE</h4>
+<p>Technical Assistant</p>
+<p>Teaching Experience: 3 years</p>
+<p>Area: C Programming, Multimedia, DBMS, Data Structures</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/0yJDWP8Z/Nandhini.jpg" class="faculty-img">
+<h4>Ms. M. Nandhini, B.Sc(CS)</h4>
+<p>Technical Assistant</p>
+<p>Area: Computer Hardware, Computer Networks, Python, Java, C Programming</p>
+</div>
+<div class="faculty-card">
+<img src="https://i.postimg.cc/nzTDjLkn/Uvasri.jpg" class="faculty-img">
+<h4>Ms. R. Uvasri, B.Com(PA), M.com</h4>
+<p>Junior Assistant</p>
+<p>Area: Commerce (Accounting)</p>
+</div>
+
+</div>
+
+<h2 class="section-title">Course Structure</h2>
+<div class="course-tabs">
+<button class="active" onclick="showCourseTab('po')">PROGRAMME OUTCOMES</button>
+<button onclick="showCourseTab('peo')">PROGRAMME EDUCATIONAL OBJECTIVES</button>
+</div>
+<div class="course-content" id="po">
+<table>
+<tr><th style="width:90px">PO No</th><th>Programme Outcomes</th></tr>
+<tr><td>PO1</td><td>Basic and Discipline specific knowledge: Apply knowledge of basic mathematics, science and engineering fundamentals and engineering specialization to solve the engineering problems.</td></tr>
+<tr><td>PO2</td><td>Problem analysis: Identify and analyse well defined engineering problems using codified standard methods.</td></tr>
+<tr><td>PO3</td><td>Design/ development of solutions: Design solutions for well-defined technical problems and assist with the design of systems components or processes to meet specified needs.</td></tr>
+<tr><td>PO4</td><td>Engineering Tools, Experimentation and Testing: Apply modern engineering tools and appropriate technique to conduct standard tests and measurements.</td></tr>
+<tr><td>PO5</td><td>Engineering practices for society, sustainability and environment: Apply appropriate technology in context of society, sustainability, environment and ethical practices.</td></tr>
+<tr><td>PO6</td><td>Project Management: Use engineering management principles individually, as a team member or a leader to manage projects and effectively communicate about well - defined engineering activities.</td></tr>
+<tr><td>PO7</td><td>Life-long learning: Ability to analyse individual needs and engage in updating in the context of technological changes.</td></tr>
+</table>
+</div>
+<div class="course-content" id="peo" style="display:none">
+<table>
+<tr><th style="width:90px">PEO No</th><th>Programme Educational Objectives</th></tr>
+<tr><td>PEO1</td><td>To produce skilled networking professionals capable of designing, implementing and managing computer networks in diverse industries.</td></tr>
+<tr><td>PEO2</td><td>To develop expertise in emerging technologies like cloud computing, IoT, network security and wireless communication.</td></tr>
+<tr><td>PEO3</td><td>To prepare students for higher education, entrepreneurship and lifelong learning in the dynamic field of networking.</td></tr>
+</table>
+</div>
+
+<h2 class="section-title">2024 SCHEME - DAM (Syllabus can be downloaded at intranet.psgpolytech)</h2>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('dam1')">Semester 1</div><div class="sem-body" id="dam1"><table><tr><th>THEORY</th><th>PRACTICUM</th><th>PRACTICALS</th><th>AUDIT COURSE</th></tr><tr><td>PHYSICS</td><td rowspan="4">Applied English</td><td>PHYSICS LABORATORY</td><td rowspan="4">Integrated Learning Experience - I</td></tr><tr><td>CHEMISTRY</td><td>CHEMISTRY LABORATORY</td></tr><tr><td>BASIC MATHEMATICS</td><td>PROBLEM SOLVING AND C PROGRAMMING LABORATORY</td></tr><tr><td>PROBLEM SOLVING AND C PROGRAMMING</td><td>–</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('dam2')">Semester 2</div><div class="sem-body" id="dam2"><table><tr><th>THEORY</th><th>PRACTICUM</th><th>PRACTICALS</th><th>AUDIT COURSE</th></tr><tr><td>CALCULUS AND ITS APPLICATIONS</td><td rowspan="4">Programming in Python</td><td>APPLIED PHYSICS LABORATORY</td><td rowspan="4">Integrated Learning Experience-II</td></tr><tr><td>APPLIED PHYSICS</td><td>ENGINEERING CHEMISTRY LABORATORY</td></tr><tr><td>CHEMISTRY OF ELECTRONIC MATERIALS</td><td>COMPUTER GRAPHICS AND ANIMATION LABORATORY</td></tr><tr><td>LINEAR ALGEBRA</td><td>–</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('dam3')">Semester 3</div><div class="sem-body" id="dam3"><table><tr><th>THEORY</th><th>PRACTICUM</th><th>PRACTICALS</th><th>AUDIT COURSE</th></tr><tr><td>STATISTICS AND PROBABILITY MODELS</td><td rowspan="4">R Programming Laboratory</td><td>DIGITAL IMAGE PROCESSING TECHNIQUES</td><td rowspan="4">Integrated Learning Experience-III</td></tr><tr><td>ARTIFICIAL INTELLIGENCE</td><td>ARTIFICIAL INTELLIGENCE LABORATORY</td></tr><tr><td>DATABASE SYSTEMS</td><td>DATA STRUCTURES LABORATORY</td></tr><tr><td>DATA STRUCTURES</td><td>DATABASE SYSTEMS LABORATORY</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('dam4')">Semester 4</div><div class="sem-body" id="dam4"><table><tr><th>THEORY</th><th>PRACTICUM</th><th>PRACTICALS</th><th>AUDIT COURSE</th></tr><tr><td>COMPUTER NETWORKING ESSENTIALS</td><td rowspan="4">Advanced Internet Programming</td><td>COMPUTER NETWORKING ESSENTIALS LABORATORY</td><td rowspan="4">Integrated Learning Experience-IV</td></tr><tr><td>OPERATING SYSTEMS</td><td>JAVA PROGRAMMING LABORATORY</td></tr><tr><td>JAVA PROGRAMMING</td><td>DATA ANALYTICS LABORATORY</td></tr><tr><td>DATA ANALYTICS</td><td>ADVANCED COMMUNICATION SKILLS LABORATORY</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('dam5')">Semester 5</div><div class="sem-body" id="dam5"><table><tr><th>THEORY</th><th>PRACTICUM</th><th>PRACTICALS</th><th>AUDIT COURSE</th></tr><tr><td>MACHINE LEARNING</td><td rowspan="3">Artificial Intelligence of Things</td><td>MACHINE LEARNING LABORATORY</td><td rowspan="3">Integrated Learning Experience-V</td></tr><tr><td>CRYPTOGRAPHIC FOUNDATIONS FOR CYBER SECURITY</td><td>DEVOPS LABORATORY</td></tr><tr><td>ELECTIVE THEORY- I</td><td>MINI PROJECT</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('dam6')">Semester 6</div><div class="sem-body" id="dam6"><table><tr><th>THEORY</th><th>PRACTICUM</th><th>PRACTICALS</th><th>AUDIT COURSE</th></tr><tr><td>DEEP LEARNING CONCEPTS</td><td rowspan="3">3D Design using Augmented Reality / Virtual Reality</td><td>DEEP LEARNING LABORATORY</td><td rowspan="3">Integrated Learning Experience-VI</td></tr><tr><td>NATURAL LANGUAGE PROCESSING</td><td>NATURAL LANGUAGE PROCESSING LABORATORY</td></tr><tr><td>ELECTIVE THEORY- II</td><td>PROJECT WORK AND VIVA VOCE</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('damElective')">Elective Courses</div><div class="sem-body" id="damElective"><table><tr><th>ELECTIVE COURSES (Two Theory to be opted)</th></tr><tr><td>CLOUD COMPUTING</td></tr><tr><td>BIG DATA FRAMEWORK</td></tr><tr><td>BLOCKCHAIN AND ITS APPLICATIONS</td></tr><tr><td>BIOMETRIC SYSTEMS</td></tr><tr><td>VIRTUAL COMPUTING</td></tr><tr><td>DATA WAREHOUSING AND DATA MINING TECHNIQUES</td></tr><tr><td>DEVOPS AND FULL STACK DEVELOPMENT</td></tr><tr><td>MACHINE LEARNING OPERATIONS</td></tr></table></div></div>
+
+<h2 class="section-title">2021 Scheme (Syllabus can be downloaded at intranet.psgpolytech)</h2>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('net1')">Semester 1</div><div class="sem-body" id="net1"><table><tr><th>THEORY</th><th>PRACTICUM</th><th>PRACTICALS</th><th>AUDIT COURSE</th></tr><tr><td>Engineering Mathematics -I</td><td rowspan="5">–</td><td>PHYSICS LABORATORY</td><td rowspan="5">–</td></tr><tr><td>PHYSICS</td><td>CHEMISTRY LABORATORY</td></tr><tr><td>CHEMISTRY</td><td>PROBLEM SOLVING AND C PROGRAMMING LABORATORY</td></tr><tr><td>ENGLISH</td><td>INPLANT TRAINING</td></tr><tr><td>PROBLEM SOLVING AND C PROGRAMMING</td><td>PHYSICAL EDUCATION I*</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('net2')">Semester 2</div><div class="sem-body" id="net2"><table><tr><th>THEORY</th><th>PRACTICUM</th><th>PRACTICALS</th><th>AUDIT COURSE</th></tr><tr><td>ENGINEERING MATHEMATICS -II</td><td rowspan="5">–</td><td>APPLIED PHYSICS LABORATORY</td><td rowspan="5">–</td></tr><tr><td>CALCULUS AND ITS APPLICATIONS</td><td>ENGINEERING CHEMISTRY LABORATORY</td></tr><tr><td>APPLIED PHYSICS</td><td>COMPUTER GRAPHICS AND ANIMATION LABORATORY</td></tr><tr><td>CHEMISTRY OF ELECTRONIC MATERIALS</td><td>COMMUNICATIVE ENGLISH LABORATORY</td></tr><tr><td>BASIC ENGINEERING GRAPHICS</td><td>PHYSICAL EDUCATION II*</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('net3')">Semester 3</div><div class="sem-body" id="net3"><table><tr><th>THEORY</th><th>PRACTICUM</th><th>PRACTICALS</th><th>AUDIT COURSE</th></tr><tr><td>STATISTICS AND PROBABILITY MODELS</td><td rowspan="5">–</td><td>PRINCIPLES OF DIGITAL ELECTRONICS LABORATORY</td><td rowspan="5">–</td></tr><tr><td>PRINCIPLES OF DIGITAL ELECTRONICS</td><td>DATA COMMUNICATION AND NETWORKS LABORATORY</td></tr><tr><td>DATA COMMUNICATION AND NETWORKS</td><td>DATA STRUCTURES LABORATORY</td></tr><tr><td>DATA STRUCTURES</td><td>COMPUTER HARDWARE AND TROUBLESHOOTING LABORATORY</td></tr><tr><td>-</td><td>TECHNICAL COMMUNICATION LABORATORY</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('net4')">Semester 4</div><div class="sem-body" id="net4"><table><tr><th>THEORY</th><th>PRACTICUM</th><th>PRACTICALS</th><th>AUDIT COURSE</th></tr><tr><td>TCP/IP NETWORKING</td><td rowspan="5">–</td><td>TCP/IP NETWORKING LABORATORY</td><td rowspan="5">–</td></tr><tr><td>OPERATING SYSTEMS</td><td>DATABASE SYSTEMS LABORATORY</td></tr><tr><td>DATABASE SYSTEMS</td><td>MICROPROCESSOR AND MICROCONTROLLER LABORATORY</td></tr><tr><td>MICROPROCESSOR AND MICROCONTROLLER</td><td>PROGRAMMING PRACTICES USING PYTHON</td></tr><tr><td>-</td><td>ADVANCED INTERNET PROGRAMMING LABORATORY<br>INTERNSHIP#</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('net5')">Semester 5</div><div class="sem-body" id="net5"><table><tr><th>THEORY</th><th>PRACTICUM</th><th>PRACTICALS</th><th>AUDIT COURSE</th></tr><tr><td>WIDE AREA NETWORKS</td><td rowspan="5">–</td><td>ENTERPRISE NETWORKING AND AUTOMATION LABORATORY</td><td rowspan="5">–</td></tr><tr><td>JAVA PROGRAMMING</td><td>JAVA PROGRAMMING LABORATORY</td></tr><tr><td>ELECTIVE THEORY I</td><td>ADVANCED ROUTING LABORATORY</td></tr><tr><td>-</td><td>DIGITAL ASSET MANAGEMENT LABORATORY</td></tr><tr><td>-</td><td>MINI PROJECT AND ENTREPRENEURSHIP</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('net6')">Semester 6</div><div class="sem-body" id="net6"><table><tr><th>THEORY</th><th>PRACTICUM</th><th>PRACTICALS</th><th>AUDIT COURSE</th></tr><tr><td>WIRELESS NETWORKS</td><td rowspan="5">–</td><td>WIRELESS NETWORKS LABORATORY</td><td rowspan="5">–</td></tr><tr><td>NETWORK SECURITY</td><td>ETHICAL HACKING AND NETWORK DEFENSE LABORATORY</td></tr><tr><td>ELECTIVE THEORY II</td><td>MOBILE APPLICATION DEVELOPMENT LABORATORY</td></tr><tr><td>-</td><td>LINUX ADMINISTRATION LABORATORY</td></tr><tr><td>-</td><td>PROJECT WORK AND VIVA VOCE</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('netElective')">Elective Courses</div><div class="sem-body" id="netElective"><table><tr><th>ELECTIVE COURSES (Two Theory to be opted)</th></tr><tr><td>CLOUD COMPUTING</td></tr><tr><td>INTERNET OF THINGS</td></tr><tr><td>ARTIFICIAL INTELLIGENCE</td></tr><tr><td>BIG DATA FRAMEWORK</td></tr><tr><td>BLOCKCHAIN AND ITS APPLICATIONS</td></tr><tr><td>BIOMETRIC SYSTEMS</td></tr><tr><td>VIRTUAL COMPUTING</td></tr><tr><td>AUGMENTED REALITY AND VIRTUAL REALITY</td></tr><tr><td>5G COMMUNICATION NETWORKS</td></tr><tr><td>DATA WAREHOUSING AND DATA MINING</td></tr></table></div></div>
+
+<h2 class="section-title">Facilities</h2>
+
+<div class="facility-card" onclick="toggleFacility('f1')">
+<div class="facility-title">COMPUTER NETWORKING LAB</div>
+<div class="facility-body" id="f1">
+
+    <img src="https://i.postimg.cc/YCchSg7c/COMPUTER-NETWORKING-LAB.jpg"
+         alt="Computer Networking Lab">
+
+    <p>
+        This laboratory provides the students hands-on experience on installing
+        and configuring networks, network operating systems and is highly
+        equipped with modernized equipment funded through MODROBS with network
+        devices like Firewall and Router. This enhancement helps in imparting
+        the latest practical skills in Network Security, Installing NOS and
+        integration of different network topologies using Cisco and Microsoft
+        technologies.
+    </p>
+
+</div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f2')">
+<div class="facility-title">PSG-ETS IoT LABORATORY</div>
+<div class="facility-body" id="f2">
+    <img src="https://i.postimg.cc/k4h5PRsp/PSG-ETS-Io-T-Laboratory-photo.jpg"
+         alt="ETS IOT Lab">
+<p>PSG- ETS IoT Laboratory is associated with Industry M/s Enthu technology solutions India Pvt Ltd. They sponsored cloud services worth Rupees Ninety Thousand for IoT data services and APIs. Internet of things is the future of connectivity. This laboratory provides the students hands-on experience in Internet of Things (IoT) is the network of physical objects or 'things' embedded with electronics, software, sensors, and connectivity to enable objects to exchange data. IoT allows direct integration between the physical world and computer-based systems, helping to connect people, processes and devices.</p>
+</div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f3')">
+<div class="facility-title">WIRELESS NETWORKS LAB</div>
+<div class="facility-body" id="f3">
+ <img src="https://i.postimg.cc/DyGwRZXm/Wireless-Networks-Laboratory.jpg"
+         alt="wireless Lab">   
+<p>This lab is equipped to cater to the needs of students to execute experiments on wireless networks. The Laboratories provide facilities for the students to acquire more knowledge on wireless devices to understand different technologies involved in wireless communication. The laboratory can also be used for air protocols like GSM, CDMA etc. wireless LAN, Bluetooth, client side and network side Wireless Equipments.</p>
+</div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f4')">
+<div class="facility-title">AR/VR LAB</div>
+<div class="facility-body" id="f4">
+<img src="https://i.postimg.cc/kgFXXpwB/ARVR-LAB-1.jpg"
+         alt="ar vr Lab">   
+    <p>
+This lab provides students to explore the cutting – edge technologies of Augmented Reality (AR) & Virtual Reality (VR) and their applications across various fields. It fosters innovation, encourages hands-on learning AR&VR, and helps bridge the gap between the digital virtual world and physical worlds. The technologies and tools used are Unity 3D with VR/AR plugins, and hardware like VR headsets, software like Blender (3D modelling), Adobe Suite, etc. This lab plays an integral role in preparing the students to shape the future of these transformative technologies.
+</p>
+</div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f5')">
+<div class="facility-title">AI LAB</div>
+<div class="facility-body" id="f5">
+<img src="https://i.postimg.cc/BvmS2Prt/AILAB.jpg"
+         alt="ai Lab">   
+<p>
+AI lab provides a hands-on learning environment where students can explore the possibilities of AI and develop critical thinking, problem-solving, and coding skills. This lab is dedicated to exploring and developing technologies that allow machines to think, learn, and perform tasks that would normally require human intelligence. In an AI lab, students create and improve technologies that can understand speech, recognize images, make decisions, and even play games, and also introduce students to the exciting field of AI and inspire them to think about how AI can be used to solve real-world problems. Additionally, AI lab prepare students for future careers in technology, engineering, and research, which are some of the fastest-growing fields like Machine Learning, NLP(Natural Language Processing), Computer vision and Robotics.
+</p></div>
+</div>
+
+<h2 class="section-title">Achievements</h2>
+
+<div class="academic-frame">
+<div class="course-tabs">
+<button class="active" onclick="showAchTab('association')">Association Activities</button>
+<button onclick="showAchTab('mou')">MOU Signed</button>
+<button onclick="showAchTab('alumni')">Alumni</button>
+</div>
+
+<div class="course-content" id="association">
+<h3>Year 2025-2026</h3>
+<table><tr><th>S.No</th><th>Date</th><th>Association Activity / Chief guest</th> <th>Images</th></tr>
+<tr><td>1</td><td>11.3.2026</td><td>Guest Lecture on How to Strive to Thrive in IT Industry - Ms.Kavitha Seerappan, Director</td>  <td>
+            <img src="https://i.postimg.cc/GmbL51n5/2025-26-1.jpg" class="activity-img">
+        </td></tr>
+<tr><td>2</td><td>23.2.2026</td><td>AI-Powered future: Building Careers in Tech Beyond Coding - Mr. Ramanathan Alagappan, Founder</td>
+    <td> <img src="https://i.postimg.cc/SxQBFSTd/2025-26-2.jpg" class="activity-img"></td></tr>
+<tr><td>3</td><td>10.9.2025</td><td>Guest Lecture on “AI Tools” - Deepak Ravikumar, CEO & CO Founder, Learn Like</td><td> <img src="https://i.postimg.cc/ZqXY5BXJ/2025-26-3.jpg" class="activity-img"></td></tr>
+<tr><td>4</td><td>10.9.2025</td><td>Guest Lecture on “Basic Concepts Of C Programming” - Deepak Ravikumar, CEO & CO Founder, Learn Like</td><td> <img src="https://i.postimg.cc/2SKr0Lk3/2025-26-4.jpg" class="activity-img"></td></tr>
+<tr><td>5</td><td>07.8.2025</td><td>Inauguration cum Guest Lecture on “The Power Of Persistence: Engineering A Life of Purpose” - Ms Preetha S Priyadarsini, MD & CEO, Richmond Talent Solutions Pvt Ltd</td><td> <img src="https://i.postimg.cc/9MG2XxGv/2025-26-5.jpg" class="activity-img"></td></tr>
+<h3>Year 2024-2025</h3>
+<table><tr><th>S.No</th><th>Date</th><th>Association Activity / Chief guest</th> <th>images</th></tr>
+<tr><td>1</td><td>26.3.2025</td><td>Valedictory cum Guest Lecture on “Decentralized Pravate Infrastructure Network (Depin)” - Ms. Ponsana David, CEO, Thai Green Power Solution Company Limited, Thailand</td><td> <img src="https://i.postimg.cc/N0Crtk60/2024-25-4.jpg" class="activity-img"></td></tr>
+<tr><td>2</td><td>18.02.2025</td><td>Guest Lecture on “BE Cybersafe” - Ms. Daniella Sankar, Data Protection and Privacy Consultant</td><td> <img src="https://i.postimg.cc/d03L5Zzx/2024-25-5.jpg" class="activity-img"></td></tr>
+<tr><td>3</td><td>18.02.2025</td><td>Guest Lecture on “AI in Software Engineering” - Ms. Priya Sundararaj, Managing Partner at Edurace Overseas,Coimbatore</td><td> <img src="https://i.postimg.cc/MTRZL7dp/2024-25-6.jpg" class="activity-img"></td></tr>
+<tr><td>4</td><td>31.01.2025</td><td>Young Alumni Meet: Guest Lecture on “Smart Security Systems” - Mr.R.Pakiyaraj, Proprietors, Bharath Computers</td><td> <img src="https://i.postimg.cc/cChWqX3c/2024-25-7.jpg" class="activity-img"></td></tr>
+<tr><td>5</td><td>31.01.2025</td><td>Young Alumni Meet: Guest Lecture on “The future of networking: Trends and innovations in 2025” - Ms.Sugapriya Madhan, Senior Technical Trainer, Sophos Technologies Pvt. Ltd</td><td> <img src="https://www.psgpolytech.ac.in/dept/images/DCN/assoc/2024-25_8.jpg" class="activity-img"></td></tr>
+<tr><td>6</td><td>02.09.2024</td><td>Guest Lectureon “Exploring the Application and Impact of Programming in Industry” - Mr.Joanish Muthu, Software Developer, IBM</td><td> <img src="https://i.postimg.cc/qRXVnj1t/2024-25-9.jpg" class="activity-img"></td></tr>
+<tr><td>7</td><td>08.08.2024</td><td>Guest Lecture on “Cloud AWS Component” - Mr.B.Raghu, Director, Elrafact Technology Solutions</td><td> <img src="https://i.postimg.cc/NfPh1ykR/2024-25-10.jpg" class="activity-img"></td></tr>
+<tr><td>8</td><td>02.08.2024</td><td>Inauguration cum Guest Lecture on “AI Revolution: Unleashing the Future” - Mr.B.GouthamSabaries, Senior Software Engineer, Tech Mahindra Ltd, Chennai.</td><td> <img src="https://i.postimg.cc/G3q6CBVR/2024-25-11.jpg" class="activity-img"></td></tr>
+</table>
+
+<h3>Year 2023-2024</h3>
+<table><tr><th>S.No</th><th>Date</th><th>Association Activity / Chief guest</th> <th>Image</th></tr>
+<tr><td>1</td><td>26.02.2024</td><td>Guest Lecture on Industrial IoT - Mr. Arun Rajpandian, Regional Director, Maxbyte Technologies Services Pvt Ltd</td><td> <img src="https://i.postimg.cc/rsmnmJ3q/2024-1-1-1.jpg" class="activity-img"></td></tr>
+<tr><td>2</td><td>22.03.2024</td><td>Valedictory cum Guest Lecture on Cloud Computing - Mr. Mohamed Ali, Managing Director, UBX Cloud Pvt. Ltd.</td><td> <img src="https://i.postimg.cc/t4PrY7Sx/2024-1-1-2.jpg" class="activity-img"></td></tr>
+</table>
+
+<h3>Year 2022-2023</h3>
+<table><tr><th>S.No</th><th>Date</th><th>Association Activity / Chief guest</th><th>Image</th></tr>
+<tr><td>1</td><td>11.7.2023</td><td>Guest Lecture on "Full Stack Development" - Ms. A. Poornima, HR & Ops, Sprout Brighter Tomorrow</td><td> <img src="https://i.postimg.cc/HxP0SCZf/2023-1-1-1.jpg" class="activity-img"></td></tr>
+<tr><td>2</td><td>24.7.2023</td><td>Guest Lecture on "Machine Learning" - Dr. C.S. Saravanakumar, Senior Architect, Bosch Global Software Technologies</td><td> <img src="https://i.postimg.cc/ZKzyfYFz/2023-1-1-2.jpg" class="activity-img"></td></tr>
+<tr><td>3</td><td>14.9.2023</td><td>Guest Lecture on "Advanced Networking" - Mr. K.V. Vaidhyabalaji, Senior System Analyst, Refinement Software Solutions</td><td> <img src="https://i.postimg.cc/2yR3XTWq/2023-1-1-3.jpg" class="activity-img"></td></tr>
+<tr><td>4</td><td>10.10.2022</td><td>Inaugural Function, Enterprenership - Mr.V.N.Muruganandam, Managing Director-Vashini Agro Pvt.Ltd, Coimbatore.</td><td> <img src="https://i.postimg.cc/0Qmymm4q/22-23-1-1-1.jpg" class="activity-img"></td></tr>
+<tr><td>5</td><td>11.11.2022</td><td>Knowledge Connect,Applications of IoT - Mr.R.Jagadesswaran,Technical Engineer, Enthu Technology Solution Pvt. Ltd</td><td> <img src="https://i.postimg.cc/CLwxBRsY/22-23-1-1-2.jpg" class="activity-img"></td></tr>
+<tr><td>6</td><td>11.12.2022</td><td>Knowledge Connect,Preneueship - Mr.Sarath Singh Raja,Founder, Lawpoc Systems Pvt.Ltd</td><td> <img src="https://i.postimg.cc/5ybbCrvw/22-23-1-1-3.jpg" class="activity-img"></td></tr>
+<tr><td>7</td><td>01.04.2022</td><td>How to plan for startup and Legal & Ethical steps - Mr.G.Jeevanantham, Founder and CEO, Jasper keyplay,coimbatore.</td><td> <img src="https://i.postimg.cc/qMBpB9pG/22-23-1-1-4.jpg" class="activity-img"></td></tr>
+<tr><td>8</td><td>10.12.2022</td><td>Knowledge Connect,Placement preparation - Ms.Keerthanaa J, PhonePe, Bangalore.</td><td> <img src="https://i.postimg.cc/cLY9pLPL/22-23-1-1-5.jpg" class="activity-img"></td></tr>
+<tr><td>9</td><td>10.12.2022</td><td>Knowledge Connect,Placement preparation - Mr.Harish N R,Financial Analyst, Deloitte India</td><td> <img src="https://i.postimg.cc/nzL1hFSq/22-23-1-1-6.jpg" class="activity-img"></td></tr>
+<tr><td>10</td><td>21.01.2022</td><td>Knowledge Connect,5G Technology - Mr.S.S.Priyadharshini,Software Engineer, Cisco Systems</td><td> <img src="https://i.postimg.cc/L8Mw6Ptb/22-23-1-1-7.jpg" class="activity-img"></td></tr>
+<tr><td>11</td><td>28.01.2022</td><td>Knowledge Connect,Cyber Security - Mr.Stevenpanovski,President, UBX Cloud Inc.</td><td> <img src="https://i.postimg.cc/9QVgjh2G/22-23-1-1-8.jpg" class="activity-img"></td></tr>
+<tr><td>12</td><td>28.01.2022</td><td>Knowledge Connect,Cyber Security - Mr.Mohamed Ali,Managing Director, UBX Cloud Inc.</td><td> <img src="https://i.postimg.cc/QMYf5KTS/22-23-1-1-9.jpg" class="activity-img"></td></tr>
+<tr><td>13</td><td>03.02.2022</td><td>Knowledge Connect,Path to Success - Mr.Sarveshwaran, Throne Developer LLP CEO.</td><td> <img src="https://i.postimg.cc/k52x012s/22-23-1-1-10.jpg" class="activity-img"></td></tr>
+<tr><td>14</td><td>03.02.2022</td><td>Knowledge Connect,Virutualization VDI - Mr.Vignesh, Technology Suport L2, BlackRock</td><td> <img src="https://i.postimg.cc/QMYf5KTS/22-23-1-1-9.jpg" class="activity-img"></td></tr>
+<tr><td>15</td><td>11.02.2022</td><td>Knowledge Connect,Cloud Governance - Mr.Gowthamraj mohanraj,Senior Software Engineer, HCL Technologies.</td><td> <img src="https://i.postimg.cc/xdmXGWJN/22-23-1-1-12.jpg" class="activity-img"></td></tr>
+<tr><td>16</td><td>11.02.2022</td><td>Knowledge Connect,Self Esteem as a key to Success - Mr.HarishK.Manohar,Associate Technical Consultant, Storage and Datacenter Operations, Betsol</td><td> <img src="https://i.postimg.cc/MTWjW9Hz/22-23-1-1-14.jpg" class="activity-img"></td></tr>
+<tr><td>18</td><td>16.02.2022</td><td>Knowledge Connect, Python Automation - Mr.R.Madhankumar & Ms.RamyaMathi L, Python Trainer, Refinement Software Solution Pvt Ltd, Coimbatore</td><td> <img src="https://i.postimg.cc/BQ8PQLS4/22-23-1-1-15.jpg" class="activity-img"></td></tr>
+</table>
+
+<h3>Year 2021-2022</h3>
+
+<table>
+<tr>
+<th>S.No</th>
+<th>Date</th>
+<th>Association Activity / Chief Guest</th>
+<th>Image</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>12.11.2021</td>
+<td>Guest Lecture on IT and Networking - Dr. P. Narayanasamy, Dean, Network Maintenance Cell, PSG College of Technology</td>
+<td><img src="https://imgh.in/host/8sepuk" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>13.11.2021</td>
+<td>Webinar on Veeam Backup Tool - S. Yuvaraaj Kumar, Senior Engineer, UBX Cloud, Bangalore</td>
+<td><img src="https://i.postimg.cc/C591f7h8/1-1-2.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>18.12.2021</td>
+<td>Quantum Science Polyfest</td>
+<td><img src="https://i.postimg.cc/k44X1zD8/1-1-3.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>01.04.2022</td>
+<td>How to Plan for Startup and Legal & Ethical Steps - Mr. G. Jeevanantham, Founder & CEO, Jasper Keyplay, Coimbatore</td>
+<td><img src="https://i.postimg.cc/dVjyzMQN/1-1-4.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>19.03.2022</td>
+<td>Alumni Congress 2022 Webinar - Mr. Gowtham Kumar (ANZ Banking Group) & Mr. S. Vignesh (Juniper Networks)</td>
+<td><img src="https://i.postimg.cc/pLCmsDkD/1-1-5.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>12.05.2022</td>
+<td>Guest Lecture on Linux Server - Mr. K.V. Vaidhya Balaji, Tech Lead, Refinement Software Solutions</td>
+<td><img src="https://i.postimg.cc/sXkxMKDv/1-1-6.png"class="activity-img"></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>20.05.2022</td>
+<td>Guest Lecture on Blockchain - Mr. K.S. Kishoregoutham, Program Co-ordinator, BBN Information Data Systems</td>
+<td><img src="https://i.postimg.cc/DyKmFCMH/1-1-7.png" class="activity-img"></td>
+</tr>
+
+</table>
+
+
+<h3>Year 2020-2021</h3>
+
+<table>
+<tr>
+<th>S.No</th>
+<th>Date</th>
+<th>Association Activity / Chief Guest</th>
+<th>Image</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>18.07.2020</td>
+<td>Skills We Need to Develop for Stepping into IT Industry - Ms. V. Jayagowri</td>
+<td><img src="https://i.postimg.cc/WzVjRy1M/1-1-8.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>29.08.2020 – 03.09.2020</td>
+<td>Introduction to Big Data and Engineering - Mr. K. Vinoo Kumar, Mr. Harish K. Manohar, Mr. S. Nagarajan, Ms. N. Ravitha Rajalakshmi & Mr. M. Ritwik</td>
+<td><img src="https://i.postimg.cc/SsFb8PC0/1-1-9.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>06.11.2020</td>
+<td>Career Opportunities in Computer Networking - Mr. Samdeep Soman, Founder, Future Edu, Bangalore</td>
+<td><img src="https://i.postimg.cc/0jV4tXMq/1-1-10.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>28.11.2020</td>
+<td>Debate (POLYFEST)</td>
+<td><img src="https://i.postimg.cc/BnLzggqn/1-1-11.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>01.04.2021</td>
+<td>Amazon Cloud Server - Mr. Jinu John, Solution Advisor in Amazon Cloud Domain for a Japan-based MNC</td>
+<td><img src="https://i.postimg.cc/0QfXQXCp/1-1-12.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>01.04.2021</td>
+<td>IoT Application & Its Simple Demo (Humidity / Ultrasonic Sensor) on the Network Server - Mr. Abin Satheesan, Technical Engineer, Enthu Technology Solutions India Pvt. Ltd., Coimbatore</td>
+<td><img src="https://i.postimg.cc/c1F5GjC0/1-1-13.png" class="activity-img"></td>
+</tr>
+
+</table>
+
+
+<h3>Year 2019-2020</h3>
+
+<table>
+<tr>
+<th>S.No</th>
+<th>Date</th>
+<th>Association Activity / Chief Guest</th>
+<th>Image</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>10.07.2019</td>
+<td>Inaugural Guest Lecture on "Hiring Trends in Cyber Security" - Ms. S. Meena Gayathri, Head - Human Resources, Cyber Security Lakhshya Lab</td>
+<td><img src="https://i.postimg.cc/zfYxkYtW/1-1-14.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>27.08.2019</td>
+<td>Inaugural Guest Lecture on "Implementing Active Directory Domain Services & Group Policy" - Ms. Vaidhiya Balaji, System Analyst, Refinement Software Solutions</td>
+<td><img src="https://i.postimg.cc/FRDGmd92/1-1-15.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>06.09.2019</td>
+<td>One Day Workshop on "Problem Solving Using Python" - Mr. Sundeep Agarwal, Senior Technical Consultant, Analog Devices</td>
+<td><img src="https://i.postimg.cc/BnHgbwSn/1-1-16.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>29.01.2020</td>
+<td>Guest Lecture on "Connected Machines" - Mr. Muthu Vangaliappan, Chief Executive Officer, Katomaran Technologies</td>
+<td><img src="https://i.postimg.cc/fyV7N8qT/1-1-17.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>17.02.2020</td>
+<td>One Day Workshop on "Multimedia Workshop" - Ms. Sapna Agarwal, Business Development Manager, APEX Multimedia</td>
+<td><img src="https://i.postimg.cc/7Z83FM38/1-1-18.png" class="activity-img"></td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="course-content" id="mou" style="display:none">
+
+<p><strong>Industry Collaborations:</strong> Cisco Networking Academy, Microsoft, and various IT industries for student training, internships and skill development programs.</p>
+
+<table>
+
+<tr>
+<th>Date / Year</th>
+<th>Industry Partner</th>
+<th>Image</th>
+</tr>
+
+<tr>
+<td>23.02.2026</td>
+<td>Noukha Technologies</td>
+<td><img src="https://i.postimg.cc/3wyDWkCn/MOU-Noukha-Technologies.jpg" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>31.08.2024</td>
+<td>Thai Green Power Solution India Pvt. Ltd.</td>
+<td><img src="https://i.postimg.cc/hG7fcHKB/Thai-Green-Power-Solution.jpg" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>16.04.2024</td>
+<td>App Innovation Technologies Pvt. Ltd.</td>
+<td><img src="https://i.postimg.cc/52XtSZYV/1-3-1.jpg" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>13.09.2023</td>
+<td>MAXBYTE Technologies Private Limited, Coimbatore</td>
+<td><img src="https://i.postimg.cc/pr02DZPT/1-2-1.jpg" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>28.01.2023</td>
+<td>UBX Cloud Pvt. Ltd.</td>
+<td><img src="https://i.postimg.cc/LsdmBhFj/22-23-1-2-1-Mo-U-SIGN.jpg" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>17.02.2022</td>
+<td>Bharath Block Chain Information Data Systems, USA</td>
+<td><img src="https://i.postimg.cc/bJp8WMJB/1-2-1.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>10.02.2020</td>
+<td>Enthu Technology Solutions India Pvt. Ltd., Coimbatore</td>
+<td><img src="https://i.postimg.cc/RVNmkwM7/1-2-2.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>31.10.2019</td>
+<td>eCAPS Computers India (P) Ltd., Coimbatore</td>
+<td><img src="https://i.postimg.cc/W3NLXkW8/1-2-3.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>01.03.2019</td>
+<td>NetCon Technologies India Pvt. Ltd., Coimbatore</td>
+<td><img src="https://i.postimg.cc/RhYkSbMT/1-2-4.png" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>25.04.2017</td>
+<td>Achme Communication, Coimbatore</td>
+<td><img src="https://i.postimg.cc/fT6G1Fqm/1-2-5.png" class="activity-img"></td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="course-content" id="alumni" style="display:none">
+
+<p><strong>Notable Alumni:</strong> Our alumni are placed in leading organizations. Regular alumni meets and knowledge connect sessions are organized for mentoring current students.</p>
+
+<table>
+
+<tr>
+<th>S.No</th>
+<th>Name</th>
+<th>Organization</th>
+<th>Image</th>
+</tr>
+
+<tr><td>1</td><td>Vivek Bernard</td><td>HIS Markit – Software Plumbing</td><td><img src="https://imgh.in/host/w7492f" class="activity-img"></td></tr>
+
+<tr><td>2</td><td>Yamuna Jayabalan</td><td>AWS Certified Solutions Architect – Senior Data Engineer</td><td><img src="https://imgh.in/host/ovyui3" class="activity-img"></td></tr>
+
+<tr><td>3</td><td>R. Mathankumar</td><td>Microsoft – Software Engineer</td><td><img src="https://imgh.in/host/62kt86" class="activity-img"></td></tr>
+
+<tr><td>4</td><td>Prabhu Durai</td><td>Cognizant – IT Infra Specialist</td><td><img src="https://imgh.in/host/gbmvc8" class="activity-img"></td></tr>
+
+<tr><td>5</td><td>Natchathra Partheepan</td><td>Sr. Unified Communications & Telehealth Engineer at Stanford Children's Health</td><td><img src="https://imgh.in/host/lng70x" class="activity-img"></td></tr>
+
+<tr><td>6</td><td>K.S. Sarath Singh Raja</td><td>Entrepreneur, Product Management & Business Management</td><td><img src="https://imgh.in/host/wx4my8" class="activity-img"></td></tr>
+
+<tr><td>7</td><td>Sudha Rajesh</td><td>Ericsson India – Area Delivery Manager</td><td><img src="https://imgh.in/host/eiugs7" class="activity-img"></td></tr>
+
+<tr><td>8</td><td>Rafic Zakkriah</td><td>Assistant Vice President at State Street</td><td><img src="https://imgh.in/host/0whqdt" class="activity-img"></td></tr>
+
+<tr><td>9</td><td>Sabari Prasadh</td><td>Cisco – Technical Consulting Engineer</td><td><img src="https://imgh.in/host/ubpvuv" class="activity-img"></td></tr>
+
+<tr><td>10</td><td>Mukunthan Doraiswamy</td><td>Enterprise Tech Architect – Cloud at Baptist Health South Florida</td><td><img src="https://imgh.in/host/jspiym" class="activity-img"></td></tr>
+
+<tr><td>11</td><td>Abinaya Radhakrishnan</td><td>Product Owner – Agile Business Analyst</td><td><img src="https://imgh.in/host/tju8hp" class="activity-img"></td></tr>
+
+<tr><td>12</td><td>Gokulnath Baskaran</td><td>Cognizant – Network Architect</td><td><img src="https://imgh.in/host/fp8gbd" class="activity-img"></td></tr>
+
+<tr><td>13</td><td>Harish K. Manohar</td><td>BETSOL – Associate Technical Consultant</td><td><img src="https://imgh.in/host/iulq2y" class="activity-img"></td></tr>
+
+<tr><td>14</td><td>Mahalakshmi Dilipkumar</td><td>Tata Consultancy Services – Associate Consultant</td><td><img src="https://imgh.in/host/97yggq" class="activity-img"></td></tr>
+
+<tr><td>15</td><td>Manoharan Sundaramoorthy</td><td>Arrcus, Inc. – Software Engineer</td><td><img src="https://imgh.in/host/z1e965" class="activity-img"></td></tr>
+
+<tr><td>16</td><td>Vignesh Kumar</td><td>Nutanix – Sr. Systems Reliability Engineer</td><td><img src="https://imgh.in/host/re269h" class="activity-img"></td></tr>
+
+</table>
+
+</div>
+
+<h2 class="section-title">Students Achievements</h2>
+<div class="academic-frame">
+<div class="course-tabs">
+<button class="active" onclick="showStudTab('bestOutgoing')">Best Outgoing Student Award</button>
+<button onclick="showStudTab('bestProject')">Best Project Award & Placements</button>
+<button onclick="showStudTab('publications')">Journal Publications</button>
+</div>
+
+<div class="course-content" id="bestOutgoing">
+<h3>Year 2025-2026</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Award</th><th>Name of the Student</th><th>Image</th></tr>
+<tr><td>1.</td><td>Best out going Student for Department 2025-2026 (DCN)</td><td>Abinav Sainaath Mahendiran (23DC02)</td><td><img src="https://imgh.in/host/2upy8m"></td></tr>
+<tr><td>2.</td><td>Best out going Student for Alumni 2025-2026 (DCN)</td><td>Akash S (23DC04)</td><td><img src="https://imgh.in/host/m6wr5v"></td></tr>
+<tr><td>3.</td><td>Best out going Student for Department 2025-2026 (DAM)</td><td>Lokesh P D (23DR26)</td><td><img src="https://imgh.in/host/e6icrg"></td></tr>
+<tr><td>4.</td><td>Best out going Student for Alumni 2025-2026 (DAM)</td><td>Jaisurya S (23DR21)</td><td><img src="https://imgh.in/host/wfec4t"></td></tr>
+</table>
+
+<h3>Year 2024-2025</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Award</th><th>Name of the Student</th><th>Image</th></tr>
+<tr><td>1.</td><td>Best out going Student for Department 2024-2025</td><td>Naren M K(22DC31)</td><td><img src="https://imgh.in/host/fxzi43"></td></tr>
+<tr><td>2.</td><td>Best out going Student for Alumni 2024-2025</td><td>Jayvikram D (22DC21)</td><td><img src="https://imgh.in/host/l0zfzd"></td></tr>
+</table>
+
+<h3>Year 2023-2024</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Award</th><th>Name of the Student</th><th>Image</th></tr>
+<tr><td>1.</td><td>Best out going Student for Department 2023-2024</td><td>Ms.V.S.Jayani(21DC06)</td><td><img src="https://imgh.in/host/d3ga5j"></td></tr>
+<tr><td>2.</td><td>Best out going Student for Alumni 2023-2024</td><td>Mr.K.B.Sriraam(21DC19)</td><td><img src="https://imgh.in/host/gy0hdd"></td></tr>
+</table>
+
+<h3>Year 2022-2023</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Award</th><th>Name of the Student</th><th>Image</th></tr>
+<tr><td>1.</td><td>Best out going Student for Department 2022-2023</td><td>Dhanush M (20DC06)</td><td><img src="https://imgh.in/host/utic1k"></td></tr>
+<tr><td>2.</td><td>Best out going Student for Alumni 2022-2023</td><td>Balaji Shreyan K (19DC08)</td><td><img src="https://imgh.in/host/6wzala"></td></tr>
+</table>
+
+<h3>Year 2021-2022</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Award</th><th>Name of the Student</th><th>Image</th></tr>
+<tr><td>1.</td><td>Best out going Student for Department 2021-2022</td><td>Aishwarya R (19DC01)</td><td><img src="https://imgh.in/host/m2uxie"></td></tr>
+<tr><td>2.</td><td>Best out going Student for Alumni 2021-2022</td><td>Harshal Ram R V (19DC08)</td><td><img src="https://imgh.in/host/r6fjlg"></td></tr>
+</table>
+
+<h3>Year 2020-2021</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Award</th><th>Name of the Student</th><th>Image</th></tr>
+<tr><td>1.</td><td>Best out going Student for Department 2020-2021</td><td>Shrutika Pawar S (18DC25)</td><td><img src="https://imgh.in/host/rfjacs"></td></tr>
+<tr><td>2.</td><td>Best out going Student for Alumni 2020-2021</td><td>Sowmiya R (19CH02)</td><td><img src="https://imgh.in/host/xcbnio"></td></tr>
+</table>
+
+<h3>Year 2019-2020</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Award</th><th>Name of the Student</th><th>Image</th></tr>
+<tr><td>1.</td><td>Best out going Student for Department 2019-2020</td><td>Keerthanaa J (17DC13)</td><td><img src="https://imgh.in/host/pdcc09"></td></tr>
+<tr><td>2.</td><td>Best out going Student for Alumni 2019-2020</td><td>Jai Jansi.A (17DC11)</td><td><img src="https://imgh.in/host/2ys6la"></td></tr>
+</table>
+
+<h3>Year 2018-2019</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Award</th><th>Name of the Student</th><th>Image</th></tr>
+<tr><td>1.</td><td>Best out going Student for Department 2018-2019</td><td>Dharani Dharan K R (16DC05)</td><td><img src="https://imgh.in/host/1df0dy"></td></tr>
+<tr><td>2.</td><td>Best out going Student for Alumni 2018-2019</td><td>V P Srikanth (16DC27)</td><td><img src="https://imgh.in/host/36lu48"></td></tr>
+</table>
+</div>
+
+<div class="course-content" id="bestProject" style="display:none">
+<h3>Best Project Awards</h3>
+<table class="project-table">
+
+<tr>
+    <th>S.No</th>
+    <th>Title of the Project</th>
+    <th>Guide</th>
+    <th>Year</th>
+    <th>Students</th>
+    <th>Image</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>Block Chain Based Mobile Wallet for Money Transfer</td>
+    <td>Dr. S. Brindha</td>
+    <td>2025-2026 (DCN)</td>
+    <td>
+        Abinav Sainaath Mahendiran (23DC02)<br>
+        Kannans S R (23DC22)<br>
+        Kowshik R (23DC24)<br>
+        Sriram Adithya D (23DC44)<br>
+        Vishwanth Y (23DC52)
+    </td>
+    <td><img src="https://imgh.in/host/wevfzd" class="activity-img" alt="Project 1"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td>Innovative Water Management for Real-Time Solution using LoRa Enabled IoT</td>
+    <td>Ms. P. Abirami</td>
+    <td>2025-2026 (DAM)</td>
+    <td>
+        Akilesh D (23DR03)<br>
+        Darshan S (23DR12)<br>
+        Harish Pranav V (23DR19)<br>
+        Jaisurya S (23DR21)<br>
+        Lokesh P D (23DR26)
+    </td>
+    <td><img src="https://imgh.in/host/a0y5vy" class="activity-img" alt="Project 2"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>IoT-Driven Water Management Solutions for Sustainable Development in Residential Areas</td>
+    <td>Ms. P. Abirami</td>
+    <td>2024-2025</td>
+    <td>
+        Arjuna S<br>
+        Dharaneesh J M<br>
+        Dhileep V
+    </td>
+    <td><img src="https://imgh.in/host/c68fil" class="activity-img" alt="Project 3"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td>Voice-Driven Diverse Video Generation</td>
+    <td>Ms. P. Abirami</td>
+    <td>2023-2024</td>
+    <td>
+        Mukil T M<br>
+        Nitin Kumar K<br>
+        Sadhana T<br>
+        Sriraam K B
+    </td>
+    <td><img src="https://imgh.in/host/afk9y9" class="activity-img" alt="Project 4"></td>
+</tr>
+
+<tr>
+    <td>5</td>
+    <td>AI Based Night Vision Patrol</td>
+    <td>Ms. T.P. Kamatchi</td>
+    <td>2022-2023</td>
+    <td>
+        K. Balaji Shreyan (20DC05)<br>
+        M. Dhanush (20DC06)<br>
+        A. Ranjith (20DC16)
+    </td>
+    <td><img src="https://imgh.in/host/xbq935" class="activity-img" alt="Project 5"></td>
+</tr>
+
+<tr>
+    <td>6</td>
+    <td>Third Eye AI Based Augmented Reality</td>
+    <td>Ms. T.P. Kamatchi</td>
+    <td>2021-2022</td>
+    <td>
+        Divith M J (19DC05)<br>
+        Mukil Aadhithian M S (19DC14)
+    </td>
+    <td><img src="https://imgh.in/host/xpkmix" class="activity-img" alt="Project 6"></td>
+</tr>
+
+<tr>
+    <td>7</td>
+    <td>Intelligent Machine Learning Based Phishing Detection</td>
+    <td>Dr. S. Brindha</td>
+    <td>2020-2021</td>
+    <td>
+        M. Narmatha (18DC16)<br>
+        S. Poojhaa (18DC17)<br>
+        R. Sowmiya (19CH02)
+    </td>
+    <td><img src="https://imgh.in/host/dzztdu" class="activity-img" alt="Project 7"></td>
+</tr>
+
+<tr>
+    <td>8</td>
+    <td>Heuristic Approach to Intrusion Detection System</td>
+    <td>Ms. P. Abirami</td>
+    <td>2019-2020</td>
+    <td>
+        Arjun V (17DC04)<br>
+        Mohammed Sohail P (17DC17)<br>
+        Logesh B (18CH01)
+    </td>
+    <td><img src="https://imgh.in/host/wleequ" class="activity-img" alt="Project 8"></td>
+</tr>
+
+<tr>
+    <td>9</td>
+    <td>Digital Assistant System for Education Management</td>
+    <td>Dr. S. Brindha</td>
+    <td>2018-2019</td>
+    <td>
+        Maria Nirmal L (15DC11)<br>
+        Dharani Dharan K. R (16DC05)<br>
+        Julian Samraj S. J (16DC12)
+    </td>
+    <td><img src="https://imgh.in/host/tswt9e" class="activity-img" alt="Project 9"></td>
+</tr>
+
+</table>
+<h3 style="margin-top:40px;">Placements</h3>
+
+<h3>Year 2025-2026</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Student placed</th><th>Enrollment No.</th><th>Name of The Employer</th></tr>
+<tr><td>1.</td><td>S. Fathima Begam</td><td>23DC12</td><td>ALSTOM Transport INDIA Ltd, Coimbatore</td></tr>
+<tr><td>2.</td><td>M. Kavya Harini</td><td>24RH05</td><td>Visteon, Coimbatore</td></tr>
+<tr><td>3.</td><td>M. Keerthika</td><td>23DR25</td><td>ALSTOM Transport INDIA Ltd, Coimbatore</td></tr>
+</table>
+
+<h3>Year 2024-2025</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Student placed</th><th>Enrollment No.</th><th>Name of The Employer</th></tr>
+<tr><td>1.</td><td>Arjuna S</td><td>22DC05</td><td>Agnikul Cosmos</td></tr>
+<tr><td>2.</td><td>Sudhagar C</td><td>22DC48</td><td>Enet solutions, coimbatore</td></tr>
+</table>
+
+<h3>Year 2023-2024</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Student placed</th><th>Enrollment No.</th><th>Name of The Employer</th></tr>
+<tr><td>1.</td><td>Dinakar S</td><td>21DC04</td><td>UBX CLOUD</td></tr>
+<tr><td>2.</td><td>Durga Priyadarshini T</td><td>21DC05</td><td>PSG College of Technology</td></tr>
+<tr><td>3.</td><td>Madhavan A</td><td>20DC09</td><td>ESSILOR INDIA LENS PVT LTD</td></tr>
+<tr><td>4.</td><td>Samaya</td><td>21DC15</td><td>Sureti imf Private Limited</td></tr>
+</table>
+
+<h3>Year 2022-2023</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Student placed</th><th>Enrollment No.</th><th>Name of The Employer</th></tr>
+<tr><td>1.</td><td>R.Gokulakannan</td><td>20DC08</td><td>IMPEL Ferrocast Private Limited</td></tr>
+</table>
+
+<h3>Year 2021-2022</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Student placed</th><th>Enrollment No.</th><th>Name of The Employer</th></tr>
+<tr><td>1.</td><td>Divith M J</td><td>19DC05</td><td>Dotworld Technologies</td></tr>
+<tr><td>2.</td><td>Karan Babu B</td><td>19DC10</td><td>Technostore</td></tr>
+<tr><td>3.</td><td>Karthikeyan T</td><td>19DC11</td><td>Quadra Systems</td></tr>
+<tr><td>4.</td><td>Lakshmipriya N</td><td>19DC12</td><td>Visual Infomedia</td></tr>
+<tr><td>5.</td><td>Mubashira Khatoon M</td><td>19DC13</td><td>Birlasoft</td></tr>
+<tr><td>6.</td><td>Pavithran P</td><td>19DC17</td><td>Procyon TechSolutions Pvt Ltd.</td></tr>
+<tr><td>7.</td><td>Ragavi N V</td><td>19DC18</td><td>Birlasoft</td></tr>
+</table>
+
+<h3>Year 2020-2021</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Student placed</th><th>Enrollment No.</th><th>Name of The Employer</th></tr>
+<tr><td>1.</td><td>Chellina A S</td><td>18DC06</td><td>Infosys,Mysore</td></tr>
+<tr><td>2.</td><td>Senoj B</td><td>18DC24</td><td>Infosys,Mysore</td></tr>
+</table>
+
+<h3>Year 2019-2020</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Student placed</th><th>Enrollment No.</th><th>Name of The Employer</th></tr>
+<tr><td>1.</td><td>Nandhini.G</td><td>17DC18</td><td>Operating Engineer, Avery Dennison</td></tr>
+<tr><td>2.</td><td>Gowtham.G</td><td>17DC08</td><td>Junior Automation Engineer, Techno Store</td></tr>
+<tr><td>3.</td><td>Gowtham K</td><td>16DC10</td><td>VertxSolutions,Chennai - 83</td></tr>
+<tr><td>4.</td><td>Kesavan S</td><td>16DC14</td><td>Procain Consulting & Services Private Limited, Bangalore</td></tr>
+</table>
+
+<h3>Year 2017-2018</h3>
+<table>
+<tr><th>S.No</th><th>Name of the Student placed</th><th>Enrollment No.</th><th>Name of The Employer</th></tr>
+<tr><td>1.</td><td>S.Seenivasan</td><td>15DC20</td><td>Zoom Vision e Seva Center, Coimbatore</td></tr>
+<tr><td>2.</td><td>S.Santhosh Kumar</td><td>16CH04</td><td>G2 Technologies, Coimbatore</td></tr>
+</table>
+</div>
+
+<div class="course-content" id="publications" style="display:none">
+<h3>Year 2025-2026</h3>
+<table>
+<tr><th>S.No</th><th>Author’s Name</th><th>Title of the publication</th><th>Journal Name</th><th>Volume No & Publication Date</th></tr>
+<tr><td>1.</td><td>Dr Brindha S<br>Ms A Dhamayanthi<br>Mr. Aswath S<br>Mr. Rajpriyan I<br>Mr. Vibenlal S S<br>Mr.YuvanNithish S N<br>Mr. Giridhar M</td><td>Smart Turf Management System: A Web – Based Automation Solution for Cricket Turf Operations</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>ISSN: 2582-3930 Volume: 09 Issue: 11 SJIF Rating: 8.586 , Nov 2025</td></tr>
+<tr><td>2.</td><td>Dr Brindha S<br>Ms. KarpagaVarshini<br>Ms. Megavarshini D<br>Ms. Akshara M<br>Ms. Akshaya V S<br>Ms. Fathima Begum S<br>Ms. Lakshana R</td><td>Smart and Secure Video Surveillance System with Quantum Cryptography</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>ISSN: 2582-3930, Volume: 09 Issue: 12 SJIF Rating: 8.586 , Dec 2025</td></tr>
+<tr><td>3.</td><td>Dr Brindha S<br>Ms. KarpagaVarshini<br>Mr. Mukesh P<br>Mr. Nandha K<br>Mr. Nishit V P<br>Mr.Pragadeeshwaran S<br>Mr. Kiruthikraj S S</td><td>AI-Powered Real-Time Multilingual Speech Translation with Voice Cloning</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>ISSN: 2582-3930, Volume: 09 Issue: 12 SJIF Rating: 8.586 , Dec 2025</td></tr>
+<tr><td>4.</td><td>Dr.S.Brindha<br>Ms I N Sountharia<br>Mr Sri Darshan S B<br>Ms JothiPrabha V K<br>Mr Sumith P</td><td>A Multilingual Low- Bandwidth Healthcare Platform with OfflineMedical Records and AI-Powered Symptom Assessment for Rural India”</td><td>International Journal of Recent Development in Engineering and Technology IJRDET</td><td>E-ISSN:23476435, Volume 14,, Issue 12, December – 2025</td></tr>
+<tr><td>5.</td><td>Dr.S.Brindha<br>MS.G.Swathi<br>Mr. Kavin S S<br>Mr. Eshan Almighty R<br>Mr. Hrithikesh S<br>Mr.Rishikesh K<br>Mr.Venkata Krishnan S</td><td>Blockchain for Transparency and Traceability in Agri-food supply chain</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>ISSN: 2582-3930, Volume: 10 Issue: 01 SJIF Rating: 8.586 , Jan 2026</td></tr>
+<tr><td>6.</td><td>Dr Brindha S<br>Ms.Sountharia I N<br>Mr.Sumith.P<br>Mr. Sri Darshan S.B<br>Ms.Jyothiprabha. VK</td><td>A Multilingual Low-Bandwidth Healthcare Platform with Offline Medical Records and AI-Powered Symptom Assessment for Rural India</td><td>International Journal of Recent Development in Engineering and Technology (IJRDET)</td><td>ISSN 2347-6435, Volume 14, Issue 12, Jan 2026</td></tr>
+<tr><td>7.</td><td>Dr.S.Brindha<br>Ms.K.Thamaraiselvi<br>Mr.Rakesh CR<br>Mr.Harrish BS<br>Mr.Hassana M<br>Mr.Johnknox<br>Mr.Wesley C<br>Mr.Aswin R</td><td>AI Based Network Fault Detection Prediction and Management System</td><td>International Journal of Science and Research Archive</td><td>ISSN: 2582-8185 Volume 18 Issue: 01 Impact Factor 8.2, Jan 2026</td></tr>
+<tr><td>8.</td><td>Dr S.Brindha<br>Ms.N.Subhashini<br>Ms. Harini P<br>Ms. Dharshini S R<br>Ms. Keerthika M<br>Ms. Pranisa R<br>Ms. Shalva S</td><td>Interactive 2D Virtual Try-On System with Manual Dress Fitting and Image Overlay</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>ISSN: 2582-3930 Volume: 10 Issue: 01 SJIF Rating: 8.586, Jan 2026</td></tr>
+<tr><td>9.</td><td>Dr Brindha S<br>Ms.N.Subhashini<br>Mr. NikilVardhan V<br>Mr. Kapishkumar .P<br>Mr. Jayawanth J<br>Ms. Kanishkka B<br>Ms. Gopikashree R<br>Ms. BalaSwathi S</td><td>AI-Powered Smart Tourist Safety System with Geo-Fencing and Blockchain Identity</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>Volume: 10 Issue: 01 SJIF Rating: 8.586 ISSN: 2582-3930, Jan 2026</td></tr>
+<tr><td>10.</td><td>Dr Brindha S<br>Ms. Swathi G<br>Mr. Sanjay Balaji S<br>Mr. Manas A S<br>Mr. SevithPraman M<br>Ms.Tejasshree S</td><td>Automated Storage and Retrieval System in Medical Field</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>Volume: 10 Issue: 02 Feb - 2026 SJIF Rating: 8.659 ISSN: 2582-3930</td></tr>
+<tr><td>11.</td><td>Dr Brindha S<br>Ms Divya M<br>Mr Kalaiventhan S<br>Mr Srinath JK<br>Mr Rupeshwar V<br>Mr Ganesh Priyan S<br>Mr Harieesh Ramesh</td><td>Digital Twin based Visualization Framework for Computer System Monitoring</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>Volume: 10 Issue: 02, ISSN: 2582-3930, SJIF Rating: 8.659, Feb - 2026</td></tr>
+<tr><td>12.</td><td>Dr. S. Brindha, Ms. T. Rajeshwari, Mr. N. Balaji, Ms. MB. Bhooshita, Mr. R. Gowri Shankar</td><td>Neural Networks for Predictive Maintenance in Manufacturing An Adaptive Spatiotemporal Attention Framework</td><td>International Journal of Creative Research Thoughts (IJCRT)</td><td>Volume 14, Issue 2 February 2026 | ISSN: 2320-2882</td></tr>
+<tr><td>13.</td><td>Dr Brindha S<br>Ms. Divya M<br>Ms. Harshitha V<br>Mr. Sreeharan M,<br>Mr. Sriramparthasarathi S</td><td>Vehicle Tracking and Tint Violation Detection, System using RFID and AI-Based ANPR</td><td>International Journal of Engineering Research & Technology (IJERT)</td><td>ISSN: 2278-0181, Vol. 15 Issue 02 , February - 2026</td></tr>
+<tr><td>14.</td><td>Dr.Brindhas<br>Ms. Sounthariya I N<br>Mr. Chriswin K M<br>Mr. Hakshithyuvaraj MS<br>Mr. Mohammed Hareef M<br>Mr. Pranavvarshan K K,<br>Mr. Sanjay K</td><td>IGNITE-Immersive Game Navigation and Interaction In 3D VR Environment</td><td>International Journal of Engineering Research & Technology (IJERT)</td><td>ISSN: 2278-0181, Vol. 15 Issue 02 , February - 2026</td></tr>
+<tr><td>15.</td><td>Dr.Brindha S<br>Ms. Dhamayanthi A<br>Mr. Aswath S<br>Mr. Rajpriyan I<br>Mr. Vibenlal S S<br>Mr.Yuvan Nithish S N<br>Mr. Giridhar M</td><td>Smart Turf Booking and Lighting Control</td><td>International Journal of Engineering Research & Technology (IJERT)</td><td>Vol. 15 Issue 03, ISSN: 2278-0181, March - 2026</td></tr>
+<tr><td>16.</td><td>Dr.Brindha S<br>Ms.Thamaraiselvi K<br>Mr. AliasgarPatni K<br>Mr. AshwinChakarawarthy G.P<br>Mr. Logeswaran P<br>Mr. Prasana Kumar K<br>Mr. Sharvesh S</td><td>GENRATIVE AI BASED VIRTUAL ASSISTANT FOR CAMPUS SUPPORT</td><td>INTERNATIONAL JOURNAL OF NOVEL RESEARCH AND DEVELOPMENT (IJNRD)</td><td>Volume 11, Issue 4, April 2026, ISSN: 2456-4184</td></tr>
+<tr><td>17.</td><td>Dr.Brindha S<br>Ms. Dhamayanthi A<br>Mr.Abilash G<br>Mr.Dhanusabarishwaran G<br>Mr.Divyesh M<br>Mr.Praneesh K<br>Mr.SivaSankaran E</td><td>AI Driven Multi Modal Authentication Using Hand Motion Pins and Iris Biometric Using CNN</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>Volume 10, Issue 4, April 2026, ISSN: 2582-3930</td></tr>
+</table>
+
+<h3>Year 2024-2025</h3>
+<table>
+<tr><th>S.No</th><th>Author’s Name</th><th>Title of the publication</th><th>Journal Name</th><th>Volume No & Publication Date</th></tr>
+<tr><td>1.</td><td>Dr.S.Brindha<br>Ms.T.Rajeshwari<br>Mr.N.Balaji<br>Mr.G.Cyril Samson<br>Mr.P.L.Krithick<br>Mr.K.Gokul</td><td>Green City AIOT: Intelligent urban air quality optimization</td><td>International Research Journal of Engineering and Technology (IRJET)</td><td>e-ISSN: 2395-0056, P-ISSN: 2395-0072, Volume: 12 Issue: 01, January - 2025</td></tr>
+<tr><td>2.</td><td>Dr.S.Brindha<br>Ms.P.Anusuya<br>Ms.F.Bernice Renita<br>Ms.S.Dhasri<br>Ms.Gayathri<br>Ms.P.S.Sivathmika Sri</td><td>Stock Market Prediction using LSTM-Attention Network</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>e-ISSN: 2582-3930, Volume:09/Issue:02, Impact Factor :8.448, Feb-2025</td></tr>
+<tr><td>3.</td><td>Dr.S.Brindha<br>Mr.D.Jayvikram<br>Mr.C.Sudhagar<br>Mr.M.Nandha Kishore<br>Mr.I.M.DeepakBabu</td><td>Secure Wireless Communication for Defense</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>e-ISSN: 2582-3930, Volume:09/Issue:03, Impact Factor :8.586, Feb-2025</td></tr>
+<tr><td>4.</td><td>Dr.S.Brindha<br>Ms.D.Priya<br>Mr.P.GokulmNath<br>Mr.C.Gopi Krishna<br>Mr.K.Jothiraj<br>Mr.H.MohammedDhanish<br>Mr.G.Suriyakrishna</td><td>Dental Carries Detection system using Machine Learning and IoT</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>e-ISSN: 2582-3930, Volume:09/Issue:02, Impact Factor :8.448, Feb-2025</td></tr>
+<tr><td>5.</td><td>Dr.S.Brindha<br>Ms.P.Abirami<br>Mr.S.Arjuna<br>Mr.J.M.Dharaneesh<br>Mr.V.Dhileep</td><td>IoT – Driven Water Management Solution for Sustainable Development in Residential</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>-ISSN: 2582-3930, Volume:06/Issue:03, Impact Factor :8.586, March-2025</td></tr>
+<tr><td>6.</td><td>Dr.S.Brindha<br>Ms.T.P.Kamatchi<br>Mr.G.Parthive<br>Mr.TamizhEniyanSaravanan<br>Mr.Niranjan Kumar Manjunathan<br>Mr.R.Namith Kumar<br>Mr.K.S.Harish Siva</td><td>Anti – Drone Protection and Surveillance for Vips in Public Spaces.</td><td>International Journal on Science and Technology (IJSAT)</td><td>-ISSN: 2229-7677, Volume:16/Issue:01, Impact Factor :8.586, March-2025</td></tr>
+<tr><td>7.</td><td>Dr.S.Brindha<br>Ms.K.Sudha<br>Mr.K.Vinith<br>Mr.M.D.Yetheesh<br>Mr.A.AswinStandly<br>Mr.G.Thanush</td><td>Enhanced Road Safety and Traffic Regulation System.</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>ISSN: 2582-3930, Volume:09/Issue:03, Impact Factor :8.586, March-2025</td></tr>
+<tr><td>8.</td><td>Dr.S.Brindha<br>Ms.K.Sudha<br>Mr.S.Amudhiniyan<br>Mr.S.Darshan<br>Mr.S.Jeganathkumar<br>Mr.S.Karthi<br>Mr.Jyothis James</td><td>Enhancing Communication between Speech and Hearing Impaired People.</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>ISSN: 2582-3930, Volume:09/Issue:02, Impact Factor :8.448, March-2025</td></tr>
+<tr><td>9.</td><td>Dr S Brindha<br>Ms.I.N.Sountharia<br>Mr.V.S.Thaneshvar<br>Mr.J.S.Jayanishanth<br>Mr.R.Rathivarman<br>Mr.R.Udaya Ganesh</td><td>Unmasking Reality: Advanced Deepfake Detection for Images and Videos.</td><td>International Journal on Science and Technology (IJSAT)</td><td>E-ISSN: 2229 7677 Volume 16, Issue 1, January – March 2025 Impact Factor: 9.88. , February-2025</td></tr>
+<tr><td>10.</td><td>Dr S Brindha<br>Ms.I.N.Sountharia<br>Mr.K.L.Vishal<br>Mr.T.G.Mouriyan<br>Mr.M.Sidharth<br>Mr.G.Aathish Kumar</td><td>Face Recognition against Adversarial Attacks</td><td>International Journal on Science and Technology (IJSAT)</td><td>E-ISSN: 2229 7677 Volume 16, Issue 1, January – March 2025 Impact Factor: 9.88., February-2025</td></tr>
+<tr><td>11.</td><td>Dr.S.Brindha<br>Ms.T.Rajeshwari<br>Mr.M.K.Naren<br>Mr.B.Jeevadharshan<br>Mr.T.Dhilip<br>Mr.S.A.Siddharth<br>Mr.K.S.Sabarish Krishna</td><td>Automated Poultry Farm Monitoring using AIoT</td><td>International Journal on Science and Technology (IJSAT)</td><td>E-ISSN: 2229 7677 Volume 16, Issue 1, January – March 2025 Impact Factor: 9.88. , February-2025</td></tr>
+<tr><td>12.</td><td>Dr.S.Brindha<br>Ms.K.Thamaraiselvi<br>Ms.A.J.Gaviya<br>Ms.B.Nithika<br>Ms.Preetha Raj<br>Ms.R.Srinithi</td><td>Eczema Predication Based on AI Model</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>ISSN: 2582-3930, Volume:09/Issue:03, Impact Factor :8.586, March-2025</td></tr>
+<tr><td>13.</td><td>Dr.S.Brindha<br>Ms.A.Dhamayanthi<br>Mr.AmishPeniel<br>Mr.V.Harish Raj</td><td>Network Based Intrusion Detection using Convolutional Neural Network</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>ISSN: 2582-3930, Volume:09/Issue:03, Impact Factor :8.586, March-2025</td></tr>
+<tr><td>14.</td><td>Dr.S.Brindha<br>Ms.I.N.Sountharia</td><td>Advancements in Optical and Laser Communication Technologies: Revolutionizing Satellite Communication for the Future</td><td>International Journal of Scientific Research in Engineering and Management (IJSREM)</td><td>ISSN: 2582-3930 , Volume: 09 Issue: 03, March-2025</td></tr>
+</table>
+
+<h3>Year 2023-2024</h3>
+<table>
+<tr><th>S.No</th><th>Author’s Name</th><th>Title of the publication</th><th>Journal Name</th><th>Volume No & Publication Date</th></tr>
+<tr><td>1.</td><td>Dr.S.Brindha<br>Mr.J.P.Amrith Jason<br>Mr.S.Tanzil<br>Mr.T.Paril</td><td>Transforming Education: Enhancing Learning with dynamic CG Videos using Blender Software</td><td>International Research Journal of Modernization in Engineering Technology and Science (IRJMETS)</td><td>e-ISSN: 2582-5208, Volume:06/Issue:04/April-2024, Impact Factor value:7.868, April-2024</td></tr>
+<tr><td>2.</td><td>Dr.S.Brindha<br>Ms.D.Priya<br>Mr.G.Nithisbala<br>Mr.K.Sivakumar</td><td>Advancements in ML-based Satellite Image Processing for Precision Agriculture Monitoring</td><td>International Research Journal of Modernization in Engineering Technology and Science(IRJMETS)</td><td>e-ISSN: 2582-5208, Volume:06/Issue:04/April-2024 , Impact Factor value:7.868, April-2024</td></tr>
+<tr><td>3.</td><td>Dr.S.Brindha<br>Ms.P.Abirami<br>Mr.T.M.Mukil<br>Mr.K.Nitin Kumar<br>Ms.T.Sadhana<br>Mr.K.B.Sriraam</td><td>Advanced Fusion of VQGAN+CLIP and SDXL for Voice-To-Video Synthesis: A Comprehensive Mathematical Exposition</td><td>International Research Journal of Modernization in Engineering Technology and Science(IRJMETS)</td><td>e-ISSN: 2582-5208, Volume:06/Issue:04/April-2024 , Impact Factor value:7.868, April-2024</td></tr>
+<tr><td>4.</td><td>Dr.S.Brindha<br>Ms.P.Abirami<br>Mr.T.M.Mukil<br>Mr.K.Nitin Kumar<br>Ms.T.Sadhana<br>Mr.K.B.Sriraam</td><td>Voice Driven Diverse Video Generation</td><td>International Research Journal of Modernization in Engineering Technology and Science(IRJMETS)</td><td>e-ISSN: 2582-5208, Volume:06/Issue:04/June-2024 , Impact Factor value:7.868, June-2024</td></tr>
+<tr><td>5.</td><td>Dr.S.Brindha<br>Ms.P.Abirami<br>Mr.V.Logesh<br>Mr.R.Thirukumaran<br>Mr.R.Poorvaj</td><td>Integrated Water Resources Management: A Comprehensive Review Across Urban, Agricultural, and Industrial Sectors.</td><td>International Research Journal of Modernization in Engineering Technology and Science(IRJMETS)</td><td>e-ISSN: 2582-5208, Volume:06/Issue:04/April-2024, Impact Factor value:7.868, April-2024</td></tr>
+<tr><td>6.</td><td>Dr.S.Brindha<br>Ms.T.P.Kamatchi<br>Mr.A.Madhavan<br>Mr.B.S.Aswin Kumar<br>Mr.R.Adhishankar</td><td>Securing Medical Dataset Using Homomorphic Encryption.</td><td>International Research Journal of Modernization in Engineering Technology and Science(IRJMETS)</td><td>e-ISSN: 2582-5208, Volume:06/Issue:04/April-2024, Impact Factor value:7.868, April-2024</td></tr>
+<tr><td>7.</td><td>Dr.S.Brindha<br>Ms.T.P.Kamatchi<br>Ms.V.S.Jayani<br>Ms.S.Sushmitha</td><td>Revolutionizing the Dealer Experience with an Intuitive Web Interface for SAP Vehicle Management System (VMS).</td><td>12th International Conference on Advanced Computing (ICoAC), Chennai, India, 2023 Publisher: IEEE</td><td>doi: 10.1109/ICoAC59537.2023.10249885, September 2023</td></tr>
+<tr><td>8.</td><td>Dr.S.Brindha<br>Ms.T.P.Kamatchi<br>Ms.V.S.Jayani<br>Ms.S.Sushmitha</td><td>Signease: Empowering Seamless Communication for The Hearing Impaired.</td><td>International Journal for Research in Applied Science & Engineering Technology (IJRASET)</td><td>Volume:12/Issue:04/April-2024, Impact Factor value:7.429, April-2024</td></tr>
+<tr><td>9.</td><td>Dr.S.Brindha<br>Ms.K.Sudha<br>Mr.E.Nikesh<br>Mr.S.Rahul<br>Mr.E.S.Shaarukeish</td><td>5G Network Slicing Optimization Using Reinforcement Learning.</td><td>International Research Journal of Modernization in Engineering Technology and Science(IRJMETS)</td><td>e-ISSN: 2582-5208, Volume:06/Issue:04/April-2024, Impact Factor value:7.868, April-2024</td></tr>
+<tr><td>10.</td><td>Dr.S.Brindha<br>Ms.I.N.Sountharia<br>Mr.S.Dinakar<br>Mr.M.Manu Sanjay<br>Mr.K.Mohana Prasad</td><td>Steganographic Synergy: AES Scrambling, FHSS Embedding, and VVC CompressionforVideoconcealment</td><td>International Research Journal of Modernization in Engineering Technology and Science(IRJMETS)</td><td>e-ISSN: 2582-5208, Volume:06/Issue:04/March-2024, Impact Factor value:7.868, March-2024</td></tr>
+<tr><td>11.</td><td>Dr.S.Brindha<br>Ms.T.Rajeshwari<br>Ms.A.T.BrajKaviya<br>Ms.T.DurgaPriyadarshini<br>Ms.V.Samaya</td><td>Data Analytics And Machine Learning In Intelligent Nutrition Systems: Transforming Health And Wellness</td><td>International Research Journal of Modernization in Engineering Technology and Science(IRJMETS)</td><td>e-ISSN: 2582-5208, Volume:06/Issue:04/January-2024 , Impact Factor value:7.868, January-2024</td></tr>
+</table>
+
+<h3>Year 2022-2023</h3>
+<table>
+<tr><th>S.No</th><th>Author’s Name</th><th>Title of the publication</th><th>Journal Name</th><th>Volume No & Publication Date</th></tr>
+<tr><td>1.</td><td>Dr.S.Brindha<br>Ms.G.Amirthavarshini (20DC04)<br>Ms.K.Rakavi (20DC15)</td><td>Blockchain Technology for Privacy Preservation in Health Care Application</td><td>International Journal of Creative Research Thoughts (IJCRT)</td><td>ISSN: 2320-2882 Volume11,Issue 6,Impact Factor value:7.97 June 2023</td></tr>
+<tr><td>2.</td><td>Dr.S.Brindha<br>Ms.D.Priya<br>Mr.T.M.Chandrasekar (21CH01)<br>Mr.M.Fasith Pathan(20DC07)<br>Mr.R.Sanjay Kumar (19DC21)</td><td>Green Energy Enabled Street Lighting System using IoT</td><td>International Journal of Creative Research Thoughts(IJCRT)</td><td>e-ISSN: 2320-2882,Vol 11 Issue 5,Impact Factor value:7.97,May 2023</td></tr>
+<tr><td>3.</td><td>Dr.S.Brindha<br>Ms.P.Abirami<br>Mr.J.Rajasenan (20DC14)<br>Mr.S.B.Vasanthkumar (20DC18)<br>Mr.S.D.Shree Harris (20DC17)</td><td>AIOT Based Smart Shopping Cart</td><td>International Journal of Creative Research Thoughts(IJCRT)</td><td>e-ISSN: 2320-2882,Vol 11 Issue 5,Impact Factor value:7.97,May 2023</td></tr>
+<tr><td>4.</td><td>Dr.S.Brindha<br>Ms.T.P.Kamatchi<br>Mr.K.Balaji Shreyan (20DC05)<br>Mr.M.Dhanush (20DC06)<br>Mr.A.Ranjith (20DC16)</td><td>AI Based Night Vision Patrol</td><td>International Journal of Innovative Research in Technology (IJIRT)</td><td>ISSN: 2349-6002,Volume 09, Issue 12,May 2023</td></tr>
+<tr><td>5.</td><td>Dr.S.Brindha,<br>Ms.K.Sudha<br>Mr.M.Pranav (20DC12)<br>Mr.R.Gokulakannan (20DC08)<br>Mr.N.Noufal (20DC11)</td><td>Interactive healthcare advisor model AI Chabot</td><td>International Journal of Creative Research Thoughts (IJCRT)</td><td>ISSN: 2320-2882 Volume11, Issue 6,Impact Factor value:7.97,June 2023</td></tr>
+</table>
+
+<h3>Year 2021-2022</h3>
+<table>
+<tr><th>S.No</th><th>Author’s Name</th><th>Title of the publication</th><th>Journal Name</th><th>Volume No & Publication Date</th></tr>
+<tr><td>1.</td><td>Dr.S.Brindha<br>Ms.T.P.Kamatchi<br>Divith M J (19DC05)<br>MukilAadhithian M S (19DC14)</td><td>The Augmented Reality Pedagogy</td><td>International Journal of Innovative Research in Technology (IJIRT)</td><td>ISSN: 2349-6002, Volume 09, Issue 1,June 2022</td></tr>
+<tr><td>2.</td><td>Dr.S.Brindha<br>Ms.T.P.Kamatchi<br>GouthamBalaji P S (19DC06)<br>Harshal Ram R V (19DC08)<br>Karthikeyan T (19DC11)</td><td>Quantum Resistant Blockchain using Post-Quantum Cryptography</td><td>International Journal of Application or Innovation in Engineering & Management (IJAIEM)</td><td>ISSN 2319-4847,Volume 11, Issue 5,May 2022</td></tr>
+<tr><td>3.</td><td>MubashiraKhatoon M (19DC13)<br>Nimrukthi S (19DC15)<br>Rajasurya E (19DC19)<br>Stenson T (19DC25)</td><td>Intelligent AI Based Voice Assistant</td><td>International Journal of Creative Research Thoughts (IJCRT)</td><td>Volume 10, Issue 6 ISSN: 2320-2882 June 2022</td></tr>
+<tr><td>4.</td><td>Dr.S.Brindha, HoD<br>Ms.D.Priya, Lecturer(SG)<br>Brindha Shree S S (19DC04)<br>Lakshmipriya N (19DC12)<br>Pavithran P (19DC17)<br>Siranjeevi Srinivasan S (19DC24)</td><td>Early Warning System to Detect Sewage Blocks and Hazardous Gases using IoT</td><td>International Journal of Creative Research Thoughts (IJCRT)</td><td>e-ISSN: 2320-2882,Vol 10 Issue 5 Impact Factor value:7.97 May 2022</td></tr>
+<tr><td>5.</td><td>Dr.S.Brindha, HoD<br>Ms.D.Priya, Lecturer(SG)<br>Gowtham S (19DC07)<br>Kaliraj M (19DC09)<br>Karan Babu B (19DC10)</td><td>Early Flood Warning System for Disaster Management</td><td>International Journal of Creative Research Thoughts (IJCRT)</td><td>e-ISSN: 2320-2882,Vol 10 Issue 5 Impact Factor value:7.97 May 2022</td></tr>
+<tr><td>6.</td><td>Dr.S.Brindha, HoD<br>Ms.P.Abirami, Lecturer<br>Aishwarya R (19DC01)<br>Ragavi N (19DC18)<br>Shriehari A C (19DC23)</td><td>Securing IoT using Blockchain</td><td>International Journal Of Innovative Research In Technology (IJIRT)</td><td>Volume 9 Issue 1 ISSN: 2349-6002 June 2022</td></tr>
+<tr><td>7.</td><td>Dr.S.Brindha, HoD<br>Ms.K.Sudha, Lecturer<br>Bala Ganesh A (19DC03)<br>Nishanth S (19DC16)<br>Vishnu Prasad N (19DC26)</td><td>IoT Based Attendance Monitoring System</td><td>International Research Journal of Engineering and Technology (IRJET)</td><td>e-ISSN: 2395-0056 Volume: 09 Issue: 06 p-ISSN: 2395-0072 June 2022</td></tr>
+</table>
+
+<h3>Year 2020-2021</h3>
+<table>
+<tr><th>S.No</th><th>Author’s Name</th><th>Title of the publication</th><th>Journal Name</th><th>Volume No & Publication Date</th></tr>
+<tr><td>1.</td><td>Dr.S.Brindha, HoD<br>M.Narmatha(18DC16)<br>S.Poojhaa(18DC17)<br>R.Sowmiya(19CH02)</td><td>Detection and Prevention of Phishing Websites</td><td>International Journal of Creative Research Thoughts</td><td>ISSN: 2320-2882 Volume 9, Issue 4, Impact Factor:7.97 April 2021</td></tr>
+<tr><td>2.</td><td>Dr.S.Brindha, HoD<br>Ms.D.Priya, Lecturer(SG)<br>R.Jeevanandan(18DC12)<br>V.Jousha Godson (18DC13)<br>R.Sathyanathan (18DC23)</td><td>AI-based face mask recognition with RFID tracking system</td><td>International Research Journal of Engineering and Technology(IRJET)</td><td>e-ISSN: 2395-0056 p-ISSN: 2395-0072 Volume: 08 Issue: 04, Impact Factor value:7.529 April 2021</td></tr>
+<tr><td>3.</td><td>Dr.S.Brindha, HoD<br>Ms.D.Priya, Lecturer(SG)<br>R.Gunachandran(18DC09)<br>D.Joyal Victor(18DC14)<br>S.Ajithkannan(19CH01)</td><td>Enhanced Mobile Application Development for plasma and mother-feed bank</td><td>International Research Journal of Engineering and Technology (IRJET)</td><td>e-ISSN: 2395-0056 p-ISSN:2395-0072 Volume 8 Issue 4, Impact Factor value:7.529 April 2021</td></tr>
+<tr><td>4.</td><td>Dr.S.Brindha, HoD<br>Ms.P.Abirami, Lecturer<br>S.Amitha(18DC01)<br>A.S.Chellina(18DC06)<br>S.Shruthika Pawar(18DC25)</td><td>Peer to Peer – Solar energy sharing using Blockchain in IoT</td><td>International Journal of Research Publication and Reviews (IJRPR)</td><td>ISSN 2582-7421 Volume 2, Issue 3 Impact Factor value:5.536 March 2021</td></tr>
+<tr><td>5.</td><td>Dr.S.Brindha, HoD<br>Ms.T.P.Kamatchi, Lecturer<br>V.Ashik Nelson(18DC02)<br>S.V.Mugundhan(18DC15)<br>V.Vaitheeshwaran(18DC26)</td><td>Intelligent Power Line Management System using IoT</td><td>International Journal of Modernization in Engineering Technology and Science</td><td>e-ISSN: 2582-5208 Volume:03/ Issue: 03/March-2021 Impact factor-5.354</td></tr>
+<tr><td>6.</td><td>Dr.S.Brindha, HoD<br>Ms.T.P.Kamatchi, Lecturer<br>R.Sathishkumar(18DC21)<br>B.Senoj(18DC24)<br>V.Gokul(18DC07)<br>N.M.Sakthy Ram(18DC20)</td><td>Fast and Accurate LiDAR semantic segmentation</td><td>International Journal of All Research Education and Scientific Methods (IJARESM)</td><td>ISSN: 2455-6211 Volume 9, Issue 4, Impact Factor:7.429 April 2021</td></tr>
+<tr><td>7.</td><td>Dr.S.Brindha, HoD<br>Ms.K.Sudha, Lecturer<br>T.Aswin(18DC03)<br>R.Charan(18DC05)<br>G.Prasanna(18DC19)</td><td>Smart Multi-parameter industry protection system</td><td>International Journal of Research Publication and Reviews (IJRPR)</td><td>ISSN 2582-7421 Volume 2, Issue 3 April 2021</td></tr>
+</table>
+
+<h3>Year 2019-2020</h3>
+<table>
+<tr><th>S.No</th><th>Author’s Name</th><th>Title of the publication</th><th>Journal Name</th><th>Volume No & Publication Date</th></tr>
+<tr><td>1.</td><td>Dr.S.Brindha, HoD<br>Aarthi P<br>Keerthanaa J<br>Sandhiyapriya A<br>Nithya S</td><td>Smart Voice Assistant for Educational Institution</td><td>International journal of Research in Engineering, Science and Management(IJRESM)</td><td>ISSN:2581-5792</td></tr>
+<tr><td>2.</td><td>Dr.S.Brindha, HoD<br>Arsaad S<br>Dinesh A<br>Vishnudarshan S</td><td>Improving password system using Block-Chain</td><td>International Research Journal of Engineering and Technology(IRJET)</td><td>e-ISSN:2395-0056 p-ISSN: 2395-0072</td></tr>
+<tr><td>3.</td><td>Dr.S.Brindha, HoD<br>Ms.D.Priya, Lecturer(SG)<br>Dineshkumar C<br>Naveen R K<br>Mukesh S</td><td>Voice Based Email for Visually Challenged People</td><td>International Research Journal of Engineering and Technology (IRJET)</td><td>e-ISSN:2395-0056 p-ISSN: 2395-0072</td></tr>
+<tr><td>4.</td><td>Dr.S.Brindha, HoD<br>Ms.D.Priya, Lecturer(SG)<br>Gowtham G<br>Karthic N<br>Manojkumar T</td><td>IoT based asset tracking system</td><td>International Research journal of Engineering and Technology(IRJET)</td><td>e-ISSN:2395-0056 p-ISSN: 2395-0072</td></tr>
+<tr><td>5.</td><td>Dr.S.Brindha, HoD<br>Ms.P.Abirami, Lecturer<br>Arjun V<br>S.V.Mugundhan(18DC15)<br>Mohammed Sohail P<br>Logesh B</td><td>Heuristic Approach to Intrusion Detection System</td><td>International Research journal of Engineering and Technology(IRJET)</td><td>e-ISSN:2395-0056 p-ISSN: 2395-0072</td></tr>
+<tr><td>6.</td><td>Dr.S.Brindha, HoD<br>Ms.P.Abirami, Lecturer<br>Harish N R<br>B.Senoj(18DC24)<br>Mohammed Ashik S<br>Saravanan K J</td><td>Facial expression recognizer using artificial intelligence</td><td>International Journal of Scientific Research in Engineering and Management</td><td>ISSN: 2582-3930</td></tr>
+<tr><td>7.</td><td>Dr.S.Brindha, HoD<br>Ms.T.P.Kamatchi, Lecturer<br>Anupama Karthiyaeni R<br>Prasanna Vadhana B<br>Priyanka Raj</td><td>Smart and Secure Healthcare System</td><td>International journal of Research in Engineering, Science and Management(IJRESM)</td><td>ISSN:2581-5792</td></tr>
+<tr><td>8.</td><td>Dr.S.Brindha, HoD<br>Ms.T.P.Kamatchi, Lecturer<br>Krishna Prasath S<br>Rajkumar J S<br>Ranjith Kumar D</td><td>Web Application for Sports Module</td><td>International Research journal of Engineering and Technology(IRJET)</td><td>e-ISSN:2395-0056 p-ISSN: 2395-0072</td></tr>
+<tr><td>9.</td><td>Dr.S.Brindha, HoD<br>Ms.K.Sudha, Lecturer<br>Anushree A<br>Jai Jansi A<br>Nandhini G</td><td>E-Commerce Website with Enhanced Security</td><td>International Research journal of Engineering and Technology(IRJET)</td><td>e-ISSN:2395-0056 p-ISSN: 2395-0072</td></tr>
+</table>
+</div>
+</div>
+
+<h2 class="section-title">Faculty Achievements</h2>
+
+<div class="academic-frame">
+
+<table>
+
+<tr>
+<th>S.No</th>
+<th>Faculty</th>
+<th>Title</th>
+<th>Month & Year</th>
+<th>Image</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Dr. S. Brindha</td>
+<td>Successfully completed 25 years of service and was honored and recognized for dedicated contributions.</td>
+<td>February 2026</td>
+<td><img src="https://imgh.in/host/42wl29" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Ms. D. Priya</td>
+<td>Successfully completed 25 years of service and was honored and recognized for dedicated contributions.</td>
+<td>February 2026</td>
+<td><img src="https://imgh.in/host/b6ad49" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Ms. P. Abirami</td>
+<td>"Singapenne" Award on Women's Day 2024 from Lions Clubs of Coimbatore Superior Kings.</td>
+<td>March 2024</td>
+<td><img src="https://imgh.in/host/1rwl8p" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Dr. S. Brindha</td>
+<td>Best Teacher Award.</td>
+<td>September 2023</td>
+<td><img src="https://imgh.in/host/je9pss" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Ms. T.P. Kamatchi</td>
+<td>Best Teacher Award from Institute of Scholars.</td>
+<td>October 2020</td>
+<td><img src="https://imgh.in/host/2z782s" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Ms. D. Priya</td>
+<td>Eminent Teacher Award from Lions Club.</td>
+<td>March 2019</td>
+<td><img src="https://imgh.in/host/nk8anm" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Dr. S. Brindha</td>
+<td>Women Achiever Award from PSG Management.</td>
+<td>March 2018</td>
+<td><img src="https://imgh.in/host/gxjkdg" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Dr. S. Brindha</td>
+<td>Best Mentor in AICTE-ECI Chatra Viswakarma Award.</td>
+<td>March 2018</td>
+<td><img src="https://imgh.in/host/rfy6v4" class="activity-img"></td>
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- Contact Section -->
+<section class="contact-section">
+
+    <div class="contact-title">
+        <h2>CONTACT US</h2>
+    </div>
+
+    <div class="contact-content">
+        <h3>Dr. S. Brindha, M.E., Ph.D.</h3>
+
+        <p>Head of the Department</p>
+
+        <p>Department of Computer Networking</p>
+
+        <p>PSG Polytechnic College</p>
+
+        <p>Peelamedu, Coimbatore - 641004</p>
+
+        <p>Tamil Nadu, India</p>
+
+        <p><strong>Email :</strong> hodcn@psgpolytech.ac.in</p>
+
+        <p><strong>Phone :</strong> +91-422-2572177</p>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+    Designed and Developed by PSG Polytechnic College |
+    © 2026 All Rights Reserved.
+</footer>
+<script>
+function showCourseTab(tab){
+document.getElementById("po").style.display="none";
+document.getElementById("peo").style.display="none";
+document.getElementById(tab).style.display="block";
+let buttons = document.querySelectorAll(".course-tabs button");
+buttons.forEach(btn => btn.classList.remove("active"));
+event.target.classList.add("active");
+}
+
+function goHome(){
+window.location.href = "departments.html";
+}
+
+function toggleSem(id){
+let x = document.getElementById(id);
+if(x) x.style.display = x.style.display == "block" ? "none" : "block";
+}
+
+function toggleFacility(id){
+let x = document.getElementById(id);
+if(x) x.style.display = x.style.display == "block" ? "none" : "block";
+}
+
+function showAchTab(tab){
+document.getElementById("association").style.display = "none";
+document.getElementById("mou").style.display = "none";
+document.getElementById("alumni").style.display = "none";
+document.getElementById(tab).style.display = "block";
+let btns = document.querySelectorAll(".academic-frame .course-tabs button");
+btns.forEach(b => b.classList.remove("active"));
+event.target.classList.add("active");
+}
+
+function showStudTab(tab){
+document.getElementById("bestOutgoing").style.display = "none";
+document.getElementById("bestProject").style.display = "none";
+document.getElementById("publications").style.display = "none";
+document.getElementById(tab).style.display = "block";
+let btns = document.querySelectorAll(".academic-frame .course-tabs button");
+btns.forEach(b => b.classList.remove("active"));
+event.target.classList.add("active");
+}
+
+// Initialize display
+document.addEventListener("DOMContentLoaded", function(){
+document.getElementById("po").style.display = "block";
+document.getElementById("peo").style.display = "none";
+document.getElementById("association").style.display = "block";
+document.getElementById("mou").style.display = "none";
+document.getElementById("alumni").style.display = "none";
+document.getElementById("bestOutgoing").style.display = "block";
+document.getElementById("bestProject").style.display = "none";
+document.getElementById("publications").style.display = "none";
+});
+</script>
+</body>
+</html>

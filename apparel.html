@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSG Polytechnic | Apparel Technology</title>
+<style>
+
+.dept-title{
+background:#C5A267;
+color:white;
+padding:12px 18px;
+font-weight:700;
+letter-spacing:.5px;
+}
+
+.dept-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
+padding:20px;
+background:#fafafa;
+}
+
+.dept-card{
+background:white;
+border:1px solid #e5e5e5;
+padding:16px;
+font-size:15px;
+font-weight:600;
+transition:.3s;
+cursor:pointer;
+}
+
+.dept-card:hover{
+border-color:#C5A267;
+box-shadow:0 6px 18px rgba(0,0,0,.12);
+transform:translateY(-4px);
+}
+
+
+.contact-section{
+margin-top:60px;
+background:#f4f4f4;
+padding:40px 0;
+}
+
+.contact-frame{
+max-width:950px;
+margin:auto;
+background:white;
+padding:35px;
+text-align:center;
+border:1px solid #e5e5e5;
+box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
+.contact-frame h2{
+background:#C5A267;
+color:white;
+padding:12px;
+margin:-35px -35px 25px -35px;
+font-size:20px;
+letter-spacing:.5px;
+}
+
+.contact-frame p{
+line-height:1.8;
+font-size:15px;
+color:#444;
+}
+
+.footer-note{
+margin-top:20px;
+font-size:13px;
+color:#777;
+}
+
+
+/* ⭐ Academic content frame like PO PSO PEO */
+.academic-frame{
+max-width:950px;
+margin:40px auto;
+border:1px solid #e5e5e5;
+background:#fff;
+padding:30px;
+box-shadow:0 4px 14px rgba(0,0,0,.04);
+}
+
+
+.facility-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.facility-card{
+border:1px solid #ddd;
+cursor:pointer;
+background:white;
+transition:.3s;
+border-radius:6px;
+overflow:hidden;
+margin-bottom:20px;
+}
+
+.facility-card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.facility-title{
+background:#C5A267;
+color:white;
+padding:14px;
+font-weight:600;
+}
+
+.facility-body{
+display:none;
+padding:25px;
+background:#fafafa;
+text-align:center;
+line-height:1.8;
+}
+
+.facility-body img{
+display:block;
+margin:0 auto 20px;
+width:100%;
+max-width:450px;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+border:none;           /* Removes the golden border */
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.faculty-img{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #C5A267;
+margin-bottom:12px;
+background:#e9ecef;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;
+margin:0;
+background:#fff;
+color:#1A1A1A;
+}
+
+.navbar{
+background:#1c1c1c;
+padding:18px 40px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+color:white;
+font-size:20px;
+cursor:pointer;
+font-weight:600;
+letter-spacing:.5px;
+}
+
+/* Updated Menu gap for many links */
+.menu{display:flex;gap:15px;flex-wrap:wrap;}
+.menu a{color:#ddd;text-decoration:none;cursor:pointer; font-size: 14px;}
+.menu a:hover{color:#C5A267}
+
+.hero{
+background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.96)),
+url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a');
+background-size:cover;
+padding:100px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-family:Georgia;
+font-size:50px;
+margin:0;
+}
+
+.divider{
+width:90px;
+height:3px;
+background:#C5A267;
+margin:20px auto;
+}
+
+.section{
+padding:70px 40px;
+max-width:1150px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-family:Georgia;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.about-box{
+background:#fafafa;
+padding:30px;
+border:1px solid #eee;
+line-height:1.7;
+margin-bottom:40px;
+}
+
+.faculty-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.faculty-card{
+border:1px solid #eee;
+padding:20px;
+background:white;
+border-radius:8px;
+transition:0.2s;
+cursor:pointer;
+}
+
+.faculty-card:hover{
+border-color:#C5A267;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transform:translateY(-4px);
+}
+
+.faculty-card h4{
+color:#C5A267;
+margin:0 0 8px;
+font-size:1.1rem;
+}
+
+/* Activity Tables */
+table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+    margin-bottom:30px;
+}
+
+table th,
+table td{
+    padding:15px;
+    border:1px solid #ddd;
+    vertical-align:middle;
+    word-wrap:break-word;
+}
+
+table th{
+    background:#C5A267;
+    color:#fff;
+    text-align:left;
+}
+
+/* Image Column */
+table th:last-child,
+table td:last-child{
+    width:400px;
+    text-align:center;
+}
+
+.project-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.project-table th,
+.project-table td{
+    padding:15px;
+    border:1px solid #ddd;
+    vertical-align:middle;
+}
+
+.activity-img{
+    width:350px;
+    height:240px;
+    object-fit:contain;
+    object-position:center;
+    background:#fff;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+.activity-img:hover{
+    box-shadow:0 8px 18px rgba(0,0,0,.2);
+}
+.sem-body table td[rowspan]{
+vertical-align:middle;
+text-align:center;
+background:#fafafa;
+}
+
+th{
+background:#C5A267;
+color:white;
+}
+
+/* Contact Section */
+
+.contact-section{
+    width:95%;
+    margin:35px auto;
+    background:#f8f8f8;
+}
+
+.contact-title{
+    background:#c8a566;
+    text-align:center;
+    padding:12px 0;
+}
+
+.contact-title h2{
+    color:#fff;
+    margin:0;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.contact-content{
+    text-align:center;
+    padding:28px 15px;
+}
+
+.contact-content h3{
+    margin:0 0 15px;
+    font-size:18px;
+    font-weight:700;
+}
+
+.contact-content p{
+    margin:6px 0;
+    font-size:15px;
+    line-height:1.6;
+    color:#333;
+}
+.mou-images{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin:20px 0;
+}
+
+.mou-images img{
+    width:48%;
+    max-width:500px;
+    height:320px;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+.conference-gallery{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    margin-top:20px;
+}
+
+.conference-gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.conference-gallery img:hover{
+    transform:scale(1.03);
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+@media (max-width:900px){
+    .conference-gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width:600px){
+    .conference-gallery{
+        grid-template-columns:1fr;
+    }
+}
+
+.contact-section{
+    width:95%;
+    margin:40px auto 35px;
+    background:#f7f7f7;
+    border:1px solid #ddd;
+}
+
+.contact-title{
+    background:#c9a663;
+    padding:14px 0;
+    text-align:center;
+}
+
+.contact-title h2{
+    margin:0;
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+.contact-content{
+    text-align:center;
+    padding:45px 20px 55px;
+}
+
+.contact-content h3{
+    margin:0 0 22px;
+    font-size:18px;
+    font-weight:700;
+}
+
+.contact-content p{
+    margin:10px 0;
+    font-size:16px;
+    color:#222;
+    line-height:1.6;
+}
+
+.footer{
+    width:95%;
+    margin:0 auto 25px;
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:16px 15px;
+    font-size:15px;
+}
+
+.course-tabs{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:30px;
+border-bottom:3px solid #e5e5e5;
+padding-bottom:8px;
+background:none;
+flex-wrap:wrap;
+}
+
+.course-tabs button{
+padding:12px 22px;
+border:1px solid #ddd;
+background:#f7f7f7;
+color:#333;
+font-weight:600;
+cursor:pointer;
+letter-spacing:.5px;
+border-radius:4px 4px 0 0;
+transition:.3s;
+}
+
+.course-tabs button:hover{
+background:#eee;
+}
+
+.course-tabs button.active{
+background:#C5A267;
+color:white;
+border-color:#C5A267;
+}
+.sem-dropdown{
+margin-top:25px;
+border:1px solid #ddd;
+background:#fafafa;
+border-radius:8px;
+overflow:hidden;
+}
+
+.sem-head{
+padding:15px;
+font-weight:600;
+cursor:pointer;
+background:#C5A267;
+color:white;
+}
+
+.sem-body{
+display:none;
+padding:20px;
+background:#fff;
+}
+
+.award-card{
+background:#fff8e7;
+border-left:5px solid #C5A267;
+padding:20px;
+margin:20px 0;
+border-radius:8px;
+}
+.pdf-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.pdf-list li {
+    margin-bottom: 10px;
+}
+
+.pdf-list a {
+    color: #c89b52;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.pdf-list a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+<div class="logo" onclick="goHome()">PSG POLYTECHNIC COLLEGE</div>
+<div class="menu">
+<a onclick="goHome()">Home</a>
+<a href="#admission">Admission</a>
+<a href="#examination">Examination</a>
+<a href="#campus">Campus</a>
+<a href="#union">Union</a>
+<a href="#alumni_sec">Alumni</a>
+<a href="#career">Career</a>
+<a href="#helpdesk">Helpdesk</a>
+</div>
+</div>
+
+<div id="apparelPage">
+<div class="hero">
+<h1>Apparel Technology</h1>
+<div class="divider"></div>
+<p>Fashioning the Future | Since 1999</p>
+</div>
+
+<div class="section">
+
+<h2 class="section-title">About Department</h2>
+<div class="about-box">
+The Department of Apparel Technology was established in the year 1999, to facilitate the young Diploma Apparel Technocrats to acquire the technical expertise in the field of Apparel Technology, enabling them to manage the existing & developing technologies and acquire the skills necessary to face and manage the challenges emerging in the industry. It is also intended to infuse creativeness and self-confidence to handle the affairs of the industry and to hone their skills to compete in the emerging globalization scenario.
+</div>
+
+<h2 class="section-title">Programmes</h2>
+<table>
+<tr><th>Programme</th><th>Established</th><th>Duration</th></tr>
+<tr><td>Diploma in Apparel Technology (DAT)</td><td>1999</td><td>3 Years</td></tr>
+</table>
+
+<h2 class="section-title">Vision</h2>
+<p>The Department facilitates to be the pioneer in the field of apparel and fashion technology for enabling the students to acquire the creativeness and technical expertise and to become a promising Apparel technologist, Designers and Entrepreneurs for being responsible citizen in the global community.</p>
+
+<h2 class="section-title">Mission</h2>
+<ul style="line-height:1.8">
+<li>To infuse the creativity and technical knowledge in the area of apparel and fashion technology</li>
+<li>To administrate, manage the latest industry techniques and practices in the field of apparel technology</li>
+<li>To acquire career skill set needed in apparel workplace for facing technological and managerial demands of the global apparel industry.</li>
+</ul>
+
+<h2 class="section-title">Faculty</h2>
+<div class="faculty-grid">
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436147', '_blank')">
+<img src="https://imgh.in/host/zqx7bv" class="faculty-img">
+<h4>Dr. V. Chandrasekaran, M.Tech., MIE., CE., MISTE, Ph.D</h4>
+<p><strong>Head of the Department</strong></p>
+<p>Teaching Experience: 30 Years | Industry: 9 years</p>
+<p>No. of Journal Publications: 15</p>
+<p>Area: Textile Fibres, Spinning Technology, Textile Testing, Functional Clothing</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436148', '_blank')">
+<img src="https://imgh.in/host/rp45vf" class="faculty-img">
+<h4>Mr. A. N. Sai Krishnan, M.Tech, PDGMT(Ph.D)</h4>
+<p>Lecturer (S.G)</p>
+<p>Teaching Experience: 28 years | Industry: 1 Year</p>
+<p>No. of Journal Publications: 25</p>
+<p>Area: Apparel Marketing and Merchandising, Fashion Designing, Sports Wear Garment Designing</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436149', '_blank')">
+<img src="https://imgh.in/host/bvgxdw" class="faculty-img">
+<h4>Mr. T. Yuvarasu, B.Tech</h4>
+<p>Lecturer</p>
+<p>Teaching Experience: 16 Years | Industry: 11 Years</p>
+<p>Area: Textile Processing & Textile Technology</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/472097', '_blank')">
+<img src="https://imgh.in/host/bpbbxb" class="faculty-img">
+<h4>Ms. R. Karuvelaselvi, B.Tech</h4>
+<p>Lecturer</p>
+<p>Teaching Experience: 4 Years 9 Months</p>
+<p>Area: Garment Construction, Fibre science, Fashion Sketching, Apparel CAD, Pattern Engineering</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/xg9711" class="faculty-img">
+<h4>Mr. J. Jaislin, MBA HR</h4>
+<p>Technical Assistant</p>
+<p>Experience: 6 Years</p>
+<p>Area: Apparel Machinery and Equipment, Garment Construction and Apparel Illustration</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/dun18w" class="faculty-img">
+<h4>Mr. R. Nandheeswaran, B.Tech</h4>
+<p>Instructor</p>
+<p>Teaching: 6 Years 4 Months | Industry: 1 Year 6 Months</p>
+<p>Area: Textile Testing, Weaving, Spinning, Computer Embroidery, Garment Construction, Apparel CAD</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/vd8jm8" class="faculty-img">
+<h4>Mrs. C. Kokilamani, DCE</h4>
+<p>Instructor</p>
+<p>Teaching Experience: 17 Years 4 Months | Industry: 8 Years</p>
+<p>Area: Electronics Circuit Design</p>
+</div>
+
+</div>
+
+<h2 class="section-title">Course Structure</h2>
+<div class="course-tabs">
+<button class="active" onclick="showCourseTab('po')">PROGRAMME OUTCOMES</button>
+<button onclick="showCourseTab('pso')">PROGRAMME SPECIFIC OUTCOMES</button>
+</div>
+<div class="course-content" id="po">
+<table>
+<tr><th style="width:120px">Component</th><th>Outcome</th></tr>
+<tr><td>PO1</td><td>Basic and Discipline specific knowledge: Apply knowledge of basic mathematics, science and engineering fundamentals and engineering specialization to solve the engineering problems.</td></tr>
+<tr><td>PO2</td><td>Problem analysis: Identify and analyze well defined engineering problems using codified standard methods.</td></tr>
+<tr><td>PO3</td><td>Design / development of solutions: Design solutions for well-defined technical problems and assist with the design of systems components or processes to meet specified needs.</td></tr>
+<tr><td>PO4</td><td>Engineering Tools, Experimentation and Testing: Apply modern engineering tools and appropriate technique to conduct standard tests and measurements.</td></tr>
+<tr><td>PO5</td><td>Engineering practices for society, sustainability and environment: Apply appropriate technology in context of society, sustainability, environment and ethical practices.</td></tr>
+<tr><td>PO6</td><td>Project Management: Use engineering management principles individually, as a team member or a leader to manage projects and effectively communicate about well-defined engineering activities.</td></tr>
+<tr><td>PO7</td><td>Life-long learning: Ability to analyse individual needs and engage in updating in the context of technological changes.</td></tr>
+</table>
+</div>
+<div class="course-content" id="pso" style="display:none">
+<table>
+<tr><th style="width:120px">PSO No</th><th>Programme Specific Outcomes</th></tr>
+<tr><td>PSO1</td><td>Ability to apply apparel production techniques, pattern engineering and garment construction skills for manufacturing quality apparel products.</td></tr>
+<tr><td>PSO2</td><td>Expertise in fashion designing, apparel CAD, merchandising and quality evaluation to meet global industry standards.</td></tr>
+</table>
+</div>
+
+<h2 class="section-title">2018 Scheme</h2>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('app1')">Semester 1</div><div class="sem-body" id="app1"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>ENGINEERING MATHEMATICS-I</td><td>PHYSICS LABORATORY</td></tr><tr><td>PHYSICS</td><td>CHEMISTRY LABORATORY I</td></tr><tr><td>CHEMISTRY</td><td>SEWING WORKSHOP PRACTICE</td></tr><tr><td>ENGLISH</td><td>INPLANT TRAINING</td></tr><tr><td>BASIC ENGINEERING GRAPHICS</td><td>PHYSICAL EDUCATION I*</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('app2')">Semester 2</div><div class="sem-body" id="app2"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>ENGINEERING MATHEMATICS-II</td><td>PROPERTIES OF MATERIALS LABORATORY</td></tr><tr><td>CALCULUS AND ITS APPLICATIONS</td><td>CHEMISTRY LABORATORY II</td></tr><tr><td>PROPERTIES OF MATERIALS</td><td>BASICS OF COMPUTING AND INFORMATICS</td></tr><tr><td>APPLIED CHEMISTRY</td><td>COMMUNICATIVE ENGLISH LABORATORY</td></tr><tr><td>TEXTILE ENGINEERING</td><td>PHYSICAL EDUCATION II*</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('app3')">Semester 3</div><div class="sem-body" id="app3"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>PROBABILITY AND STATISTICS</td><td>YARN AND FABRIC MANUFACTURING LABORATORY</td></tr><tr><td>YARN MANUFACTURING TECHNOLOGY</td><td>FABRIC ANALYSIS LABORATORY</td></tr><tr><td>FABRIC MANUFACTURING TECHNOLOGY</td><td>BASIC GARMENT CONSTRUCTION LABORATORY</td></tr><tr><td>APPAREL MACHINERY AND EQUIPMENT</td><td>FASHION SKETCHING PRACTICAL</td></tr><tr><td>-</td><td>TECHNICAL COMMUNICATION LABORATORY</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('app4')">Semester 4</div><div class="sem-body" id="app4"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>CHEMICAL PROCESSING AND TEXTILE TESTING</td><td>CHEMICAL PROCESSING LABORATORY</td></tr><tr><td>FASHION DESIGNING</td><td>TEXTILE TESTING LABORATORY</td></tr><tr><td>PATTERN ENGINEERING</td><td>FASHION DESIGNING PRACTICAL</td></tr><tr><td>GARMENT CONSTRUCTION</td><td>PATTERN MAKING – CHILDREN'S WEAR LABORATORY</td></tr><tr><td>-</td><td>GARMENT CONSTRUCTION – CHILDREN'S WEAR LAB</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('app5')">Semester 5</div><div class="sem-body" id="app5"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>APPAREL PRODUCTION PLANNING AND CONTROL</td><td>PATTERN MAKING - WOMEN'S AND MEN'S WEAR LABORATORY</td></tr><tr><td>APPAREL QUALITY EVALUATION</td><td>GARMENT CONSTRUCTION- WOMEN'S AND MENS WEAR LAB</td></tr><tr><td>ELECTIVE THEORY I</td><td>APPAREL CAD LABORATORY</td></tr><tr><td>-</td><td>CLOTHING COMFORT LABORATORY</td></tr><tr><td>-</td><td>MINI PROJECT AND ENTREPRENEURSHIP</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('app6')">Semester 6</div><div class="sem-body" id="app6"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>APPAREL MARKETING AND MERCHANDISING</td><td>FASHION PRODUCT DEVELOPMENT LABORATORY</td></tr><tr><td>APPAREL COSTING</td><td>FASHION CAD LABORATORY</td></tr><tr><td>ELECTIVE THEORY II</td><td>SURFACE ORNAMENTATION LABORATORY</td></tr><tr><td>-</td><td>FASHION DRAPING LABORATORY</td></tr><tr><td>-</td><td>PROJECT WORK AND VIVA VOCE</td></tr></table></div></div>
+
+<h2 class="section-title">2021 Scheme</h2>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('app21_1')">Semester 1</div><div class="sem-body" id="app21_1"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>ENGINEERING MATHEMATICS-I</td><td>PHYSICS LABORATORY</td></tr><tr><td>PHYSICS</td><td>CHEMISTRY LABORATORY I</td></tr><tr><td>CHEMISTRY</td><td>SEWING WORKSHOP PRACTICE</td></tr><tr><td>ENGLISH</td><td>INPLANT TRAINING</td></tr><tr><td>FIBRE SCIENCE AND TECHNOLOGY</td><td>PHYSICAL EDUCATION I</td></tr></table></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('app21_2')">Semester 2</div><div class="sem-body" id="app21_2"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>ENGINEERING MATHEMATICS -II</td><td>PROPERTIES OF MATERIALS LABORATORY</td></tr><tr><td>CALCULUS AND ITS APPLICATIONS</td><td>APPLIED CHEMISTRY LABORATORY</td></tr><tr><td>PROPERTIES OF MATERIALS</td><td>BASICS OF COMPUTING AND INFORMATICS</td></tr><tr><td>APPLIED CHEMISTRY</td><td>COMMUNICATIVE ENGLISH LABORATORY</td></tr><tr><td>BASIC ENGINEERING GRAPHICS</td><td>PHYSICAL EDUCATION II</td></tr></table></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('app21_3')">Semester 3</div><div class="sem-body" id="app21_3"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>PROBABILITY AND STATISTICS</td><td>BASIC PATTERN MAKING LABORATORY</td></tr><tr><td>YARN MANUFACTURING TECHNOLOGY</td><td>FABRIC ANALYSIS LABORATORY</td></tr><tr><td>FABRIC MANUFACTURING TECHNOLOGY</td><td>BASIC GARMENT CONSTRUCTION LABORATORY</td></tr><tr><td>APPAREL MACHINERY AND EQUIPMENT</td><td>FASHION SKETCHING LABORATORY</td></tr><tr><td>-</td><td>TECHNICAL COMMUNICATION LABORATORY</td></tr></table></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('app21_4')">Semester 4</div><div class="sem-body" id="app21_4"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>CHEMICAL PROCESSING AND TEXTILE TESTING</td><td>CHEMICAL PROCESSING LABORATORY</td></tr><tr><td>FASHION DESIGNING</td><td>TEXTILE TESTING LABORATORY</td></tr><tr><td>PATTERN ENGINEERING</td><td>FASHION DESIGNING LABORATORY</td></tr><tr><td>GARMENT CONSTRUCTION</td><td>PATTERN MAKING – CHILDREN’S WEAR LABORATORY</td></tr><tr><td>-</td><td>GARMENT CONSTRUCTION – CHILDREN’S WEAR LABORATORY</td></tr><tr><td>-</td><td>INTERNSHIP</td></tr></table></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('app21_5')">Semester 5</div><div class="sem-body" id="app21_5"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>APPAREL PRODUCTION PLANNING AND CONTROL</td><td>PATTERN MAKING - WOMEN’S AND MEN’S WEAR LABORATORY</td></tr><tr><td>APPAREL QUALITY EVALUATION</td><td>GARMENT CONSTRUCTION- WOMEN’S AND MENS WEAR LABORATORY</td></tr><tr><td>ELECTIVE THEORY I</td><td>CLOTHING COMFORT LABORATORY</td></tr><tr><td>-</td><td>CLOTHING COMFORT LABORATORY</td></tr><tr><td>-</td><td>MINI PROJECT AND ENTREPRENEURSHIP</td></tr></table></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('app21_6')">Semester 6</div><div class="sem-body" id="app21_6"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>APPAREL MARKETING AND MERCHANDISING</td><td>FASHION PRODUCT DEVELOPMENT LABORATORY</td></tr><tr><td>FUNCTIONAL CLOTHING</td><td>FASHION CAD LABORATORY</td></tr><tr><td>ELECTIVE THEORY II</td><td>SURFACE ORNAMENTATION LABORATORY</td></tr><tr><td>-</td><td>FASHION DRAPING LABORATORY</td></tr><tr><td>-</td><td>PROJECT WORK AND VIVA VOCE</td></tr></table></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('app21_pec')">PROGRAM ELECTIVE COURSES</div><div class="sem-body" id="app21_pec"><table><tr><th>Theory</th></tr><tr><td>DENIM MANUFACTURING</td></tr><tr><td>CLOTHING COMFORT</td></tr><tr><td>HOME TEXTILES</td></tr><tr><td>APPAREL COSTING</td></tr><tr><td>COSTUMES AND APPAREL DESIGN</td></tr><tr><td>SUSTAINABLE FASHION</td></tr><tr><td>COMPUTER INTEGERATED MANUFACTRUING IN APPAREL AND FASHON</td></tr><tr><td>CLOTHING FINISHING AND CARE</td></tr></table></div></div>
+
+<p style="text-align: center; margin-top: 20px; font-style: italic; color: #555;">(Syllabus can be downloaded at intranet.psgpolytech)</p>
+
+<h2 class="section-title">Facilities</h2>
+
+<div class="facility-card" onclick="toggleFacility('f1')">
+    <div class="facility-title">PATTERN MAKING AND GRADING LABORATORY</div>
+    <div class="facility-body" id="f1">
+        <img src="https://imgh.in/host/xffmbt" alt="Pattern Making Laboratory">
+        <p>
+            This laboratory is equipped with the collection of dress forms, Mannequins and cork top tables. The students are trained in this laboratory to develop flat patterns and grading for various styles of garment of knitted and woven.
+        </p>
+    </div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f2')">
+    <div class="facility-title">GARMENT CONSTRUCTION LABORATORY</div>
+    <div class="facility-body" id="f2">
+        <img src="https://imgh.in/host/1hzyud" alt="Garment Construction Laboratory">
+        <p>
+            The laboratory is well equipped with modern heavy duty sewing machines like High Speed Lock Stitch, Overlock, Flat Lock, Button Hole, Button Stitch and Utility Decorative Stitch sewing machines.
+        </p>
+    </div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f3')">
+    <div class="facility-title">APPAREL MACHINERY AND EQUIPMENT LABORATORY</div>
+    <div class="facility-body" id="f3">
+        <img src="https://imgh.in/host/ghx53q" alt="Apparel Machinery Laboratory">
+        <p>
+            This laboratory is equipped with latest heavy duty sewing machines. Students are given hands-on training on various machines to understand their parts and functions.
+        </p>
+    </div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f4')">
+    <div class="facility-title">APPAREL CAD LABORATORY</div>
+    <div class="facility-body" id="f4">
+        <img src="https://imgh.in/host/nexp0n" alt="Apparel CAD Laboratory">
+        <p>
+            The Apparel CAD Laboratory is equipped with Orbito CAD software for pattern making, grading, marker planning and cut planning.
+        </p>
+    </div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f5')">
+    <div class="facility-title">CHEMICAL PROCESSING LABORATORY</div>
+    <div class="facility-body" id="f5">
+        <img src="https://imgh.in/host/eeyelc" alt="Chemical Processing Laboratory">
+        <p>
+            The Textile Chemical Processing Laboratory comprises a wide range of equipment for processing fibres, yarns, fabrics and garments.
+        </p>
+    </div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f6')">
+    <div class="facility-title">TEXTILE TESTING LABORATORY</div>
+    <div class="facility-body" id="f6">
+        <img src="https://imgh.in/host/zzbwl5" alt="Textile Testing Laboratory">
+        <p>
+            The laboratory is equipped with modern textile testing instruments for testing fibres, yarns, fabrics and garments according to industrial standards.
+        </p>
+    </div>
+</div>
+<h2 class="section-title">Activities</h2>
+<div class="academic-frame">
+<div class="course-tabs">
+<button class="active" onclick="showActTab('fundsReceived')">FUNDS RECEIVED</button>
+<button onclick="showActTab('trainingPrograms')">TRAINING PROGRAMS</button>
+<button onclick="showActTab('mouSigned')">MoU SIGNED</button>
+<button onclick="showActTab('cdtpTab')">CDTP</button>
+<button onclick="showActTab('facultyResp')">FACULTY ADDITIONAL RESPONSIBILITY</button>
+</div>
+<div class="course-content" id="fundsReceived">
+<table>
+<tr><th>FUNDS RECEIVED FROM GOVERNMENT AGENCIES</th></tr>
+<tr><td><a href="https://www.psgpolytech.ac.in/dept/FUNDS%20RECEIVED%20FROM%20GOVERNMENT%20AGENCIES.pdf" target="_blank">FUNDS RECEIVED FROM GOVERNMENT AGENCIES</a></td></tr>
+</table>
+</div>
+<div class="course-content" id="trainingPrograms" style="display:none">
+<table>
+<tr><th>Program</th></tr>
+<tr><td>Hands on training were given to the students focusing on the following:</td></tr>
+<tr><td>Diploma in Apparel Marketing and Merchandising</td></tr>
+<tr><td>Diploma in Apparel Quality control and Merchandising</td></tr>
+<tr><td>Computer Aided garment designing</td></tr>
+<tr><td>Free style embroidery & Glass Painting</td></tr>
+<tr><td>Sari Blouse & Salwar Kameez designing</td></tr>
+</table>
+</div>
+<div class="course-content" id="mouSigned" style="display:none">
+<table>
+<tr><th>Company</th><th>Date / Event</th></tr>
+<tr><td>MOU BETWEEN PSG POLYTECHNIC COLLEGE AND AYVA APPARELS PRIVATE LIMITED COIMBATORE</td><td>23.02.2017</td></tr>
+<tr><td>Fabonyx Exports Private Limited, Tirupur</td><td>07.10.2021</td></tr>
+<tr><td>Suriya Garments , Tirupur</td><td>25.01.2022</td></tr>
+<tr><td>Kiruba Garments, Tirupur</td><td>28.01.2022</td></tr>
+<tr><td>Krishna fibers, Tirupur</td><td>08.02.2022</td></tr>
+<tr><td>SB enterprises ,Coimbatore</td><td>15.02.2022</td></tr>
+<div class="mou-images">
+<img src="https://imgh.in/host/80xfpg" alt="mou image 1">
+<img src="https://imgh.in/host/za74rx" alt="mou image 2">
+</div>
+</table>
+</div>
+<div class="course-content" id="cdtpTab" style="display:none">
+<table>
+<tr><th>COMMUNITY DEVELOPMENT THROUGH POLYTECHNIC</th></tr>
+<tr><td><a href="https://psgpolytech.ac.in/dept/images/DAT/facAward/CDTP-NBA.pdf" target="_blank">COMMUNITY DEVELOPMENT THROUGH POLYTECHNIC</a></td></tr>
+</table>
+</div>
+<div class="course-content" id="facultyResp" style="display:none">
+<table>
+<tr><th>Name Of Facility</th><th>Additional Responsibility</th></tr>
+<tr>
+<td>Dr.V.Chandrasekaran</td>
+<td>1)Community Development Through Polytechnic (CDTP) Internal coordinator.<br>
+2)Unnath Bharath Abiyn (UBA)-coordinator.<br>
+3)CIICP-Environment development –Thrust area manager.<br>
+4)SU-faculty adviser –environment development Club.<br>
+5) AICTE –SPICES project-Coordinator.</td>
+</tr>
+<tr>
+<td>A.N.Sai Krishnan</td>
+<td>1) Department Time Table In-charge<br>
+2) ISO Department Coordinator<br>
+3) Back Up manage in CIICP–Environment development<br>
+4)Programme coordinator for Apparel Technology<br>
+5) Fine arts club –Faculty advisor<br>
+6) AICTE –SPICES project ,co-cordinator<br>
+7) Institute innovation council member<br>
+8) Students Welfare committee member<br>
+9) Lab Incharge: Pattern making laboratory</td>
+</tr>
+<tr>
+<td>T.Yuvarasu</td>
+<td>1) Lab Incharge- Apparel Cad laboratory<br>
+2) Lab Incharge- MODROBS laboratory</td>
+</tr>
+<tr>
+<td>Ms. R.Karuvelaselvi</td>
+<td>1) Apparel Technology Association -Faculty Advisor<br>
+2) Department Placement Coordinator<br>
+3) Department Alumni Coordinator<br>
+4) Lab in charge- GC Laboratory<br>
+5) Member in ED Club.</td>
+</tr>
+</table>
+</div>
+</div>
+
+<h2 class="section-title">Awards, Events, Conferences Organized & Paper Publications</h2>
+
+<div class="academic-frame">
+
+    <div class="course-tabs">
+        <button class="active" onclick="showAchTab('facultyAwards')">Faculty Awards</button>
+        <button onclick="showAchTab('events')">Events Organized</button>
+        <button onclick="showAchTab('conference')">Department Conferences</button>
+        <button onclick="showAchTab('facultyConference')">Faculty Conferences</button>
+        <button onclick="showAchTab('paper')">Paper Publications</button>
+    </div>
+
+    <!-- Faculty Awards -->
+    <div class="course-content" id="facultyAwards">
+
+        <table>
+            <tr>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+
+            <tr>
+                <td>Mr. AN. Sai Krishnan received the Best Teacher Award on 05.09.2019.</td>
+                <td>
+                    <img src="https://imgh.in/host/90qp1h"
+                         class="activity-img"
+                         alt="Best Teacher Award">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Dr. V. Chandrasekaran received the 25 Years of Service Award.</td>
+                <td>
+                    <img src="https://imgh.in/host/xv87dx"
+                         class="activity-img"
+                         alt="25 Years Service Award">
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <!-- Events -->
+    <div class="course-content" id="events" style="display:none;">
+
+       <p>
+    <a href="https://www.psgpolytech.ac.in/dept/images/DAT/facAward/PROGRAMS%20ORGANIZED%20BY%20APPAREL%20TECHNOLOGY%20ASSOCIATION.pdf" target="_blank" class="pdf-link">
+        📄 View Events Organized PDF
+    </a>
+</p>
+
+    </div>
+
+    <!-- Conferences Organized -->
+    <div class="course-content" id="conference" style="display:none;">
+<table>
+
+<tr>
+    <th>Title of Activity</th>
+    <th>Seminars / Winter / Summer Schools</th>
+    <th>Duration</th>
+    <th>No. of Participants</th>
+</tr>
+
+<tr>
+    <td>Renewable Energy</td>
+    <td>Two-Day Workshop on <strong>Renewable Energy</strong> for the Environment Development Managers organized by Environment Development Thrust Area, CIICP.</td>
+    <td>19.12.2013 – 20.12.2013</td>
+    <td style="text-align:center;">25</td>
+</tr>
+
+<tr>
+    <td>Green Environment</td>
+    <td>Two-Day Workshop on <strong>Green Environment</strong> for the Environment Development Managers organized by Environment Development Thrust Area, CIICP.</td>
+    <td>12.12.2014 – 13.12.2014</td>
+    <td style="text-align:center;">20</td>
+</tr>
+
+<tr>
+    <td>Think Green and Go Green</td>
+    <td>Two-Day Workshop on <strong>Think Green and Go Green</strong> for the Environment Development Managers organized by Environment Development Thrust Area, CIICP.</td>
+    <td>29.01.2018 – 30.01.2018</td>
+    <td style="text-align:center;">20</td>
+</tr>
+
+</table>
+<div class="conference-gallery">
+
+        <img src="https://imgh.in/host/q2rqz8" alt="Conference Image 1">
+        <img src="https://imgh.in/host/ql0re2" alt="Conference Image 2">
+        <img src="https://imgh.in/host/8du8l7" alt="Conference Image 3">
+        <img src="https://imgh.in/host/s9ani6" alt="Conference Image 4">
+        <img src="https://imgh.in/host/g48fp9" alt="Conference Image 5">
+        <img src="https://imgh.in/host/fuozfu" alt="Conference Image 6">
+
+    </div>
+
+
+</div>
+
+    <!-- Faculty Conferences -->
+    <div class="course-content" id="facultyConference" style="display:none;">
+
+    <p>
+    Faculty members actively participate in National and International Conferences, Faculty Development Programmes (FDPs), workshops and seminars.
+</p>
+
+<p>
+    <a href="https://www.psgpolytech.ac.in/dept/images/DAT/facAward/CONFERENCES%20CONDUCTED%20BY%20THE%20FACULTY.pdf" target="_blank">
+        📄 View Faculty Conferences PDF
+    </a>
+</p></div>
+
+    <!-- Paper Publications -->
+    <div class="course-content" id="paper" style="display:none;">
+<p>
+    <a href="https://www.psgpolytech.ac.in/dept/images/DAT/facAward/PAPER%20PUBLICATION.pdf" target="_blank" class="pdf-link">
+        📄 Paper Publications
+    </a>
+</p>
+</div>
+
+</div>
+<h2 class="section-title">Student Achievements & Industrial Visits</h2>
+<div class="academic-frame">
+<div class="course-tabs">
+<button class="active" onclick="showStudTab('industrialVisit')">Industrial Visits</button>
+<button onclick="showStudTab('studentAchievements')">Student Achievements</button>
+<button onclick="showStudTab('placement')">Placement & Higher Studies</button>
+</div>
+<div class="course-content" id="industrialVisit">
+<table>
+
+<tr>
+    <th>Description</th>
+    <th>Date</th>
+    <th>Image</th>
+</tr>
+
+<tr>
+    <td>Industry Visit to Murugan Mills</td>
+    <td>04.07.2019</td>
+    <td>
+        <img src="https://imgh.in/host/3cram0"
+             class="activity-img"
+             alt="Industry Visit">
+    </td>
+</tr>
+
+<tr>
+    <td>Industry Visit to Vrijesh Overseas Pvt. Ltd., Bengaluru</td>
+    <td>27.07.2019</td>
+    <td>
+        <img src="https://imgh.in/host/5vzpiv"
+             class="activity-img"
+             alt="Industry Visit">
+    </td>
+</tr>
+
+<tr>
+    <td>Visit to Visvesvaraya Industrial and Technological Museum, Bengaluru</td>
+    <td>27.07.2019</td>
+    <td>
+        <img src="https://imgh.in/host/stzrcf"
+             class="activity-img"
+             alt="Industrial Visit">
+    </td>
+</tr>
+
+<tr>
+    <td>Visit to Varatharaja Mills</td>
+    <td>27.06.2019</td>
+    <td>
+        <img src="https://imgh.in/host/4618rl"
+             class="activity-img"
+             alt="Industrial Visit">
+    </td>
+</tr>
+
+<tr>
+    <td>Visit to Mahendra Textiles Weaving and Sizing Sector, Somanur</td>
+    <td>29.06.2019</td>
+    <td>
+        <img src="https://imgh.in/host/jp8mls"
+             class="activity-img"
+             alt="Industrial Visit">
+    </td>
+</tr>
+
+<tr>
+    <td>Visit to SSM Processing Unit, Kumarapalayam &amp; Siva Sakthi Fashion Package, SIPCOT</td>
+    <td>22.02.2020</td>
+    <td>
+        <img src="https://imgh.in/host/qwhiiq"
+             class="activity-img"
+             alt="Industrial Visit">
+    </td>
+</tr>
+
+<tr>
+    <td>Visit to Kasthuri Sreenivasan Art Gallery</td>
+    <td>20.11.2021</td>
+    <td>
+        <img src="https://imgh.in/host/vlruj8"
+             class="activity-img"
+             alt="Art Gallery Visit">
+    </td>
+</tr>
+
+</table>
+</div>
+<div class="course-content" id="studentAchievements" style="display:none">
+    <p>Students have won awards in fashion design competitions and technical symposiums.</p>
+
+    <p>
+        <strong>Student Achievements:</strong>
+        <a href="https://www.psgpolytech.ac.in/dept/images/DAT/stuaward/STUDENTS%20ACHIEVEMENTS.pdf" target="_blank">
+            View PDF
+        </a>
+    </p>
+</div>
+
+<div class="course-content" id="placement" style="display:none">
+    <p>Graduates are placed in leading apparel industries and garment export houses.</p>
+
+    <p>
+        <strong>Higher Studies:</strong>
+        <a href="https://www.psgpolytech.ac.in/dept/images/DAT/stuaward/STUDENTS%20HIGHER%20STUDIES.pdf" target="_blank">
+            View PDF
+        </a>
+    </p>
+
+    <p>
+        <strong>Placements:</strong>
+        <a href="https://www.psgpolytech.ac.in/dept/images/DAT/stuaward/STUDENTS%20PLACEMENT.pdf" target="_blank">
+            View PDF
+        </a>
+    </p>
+</div>
+
+<section class="contact-section">
+
+    <div class="contact-title">
+        <h2>CONTACT US</h2>
+    </div>
+
+    <div class="contact-content">
+
+        <h3>Dr. V. Chandrasekaran, M.Tech., MIE., CE., MISTE, Ph.D.</h3>
+
+        <p>Head of the Department</p>
+
+        <p>Department of Apparel Technology</p>
+
+        <p>PSG Polytechnic College</p>
+
+        <p>Peelamedu, Coimbatore - 641004</p>
+
+        <p>Tamil Nadu, India</p>
+
+        <!-- Uncomment if you have these details -->
+        <!--
+        <p><strong>Email :</strong> hodapparel@psgpolytech.ac.in</p>
+        <p><strong>Phone :</strong> +91-422-2572177</p>
+        -->
+
+    </div>
+
+</section>
+
+<footer class="footer">
+    Designed and Developed by PSG Polytechnic College |
+    © 2026 All Rights Reserved.
+</footer>
+<script>
+function showCourseTab(tab){
+document.getElementById("po").style.display="none";
+document.getElementById("pso").style.display="none";
+document.getElementById(tab).style.display="block";
+let buttons = document.querySelectorAll(".course-tabs button");
+buttons.forEach(btn => btn.classList.remove("active"));
+event.target.classList.add("active");
+}
+
+function goHome(){
+window.location.href = "departments.html";
+}
+
+function toggleSem(id){
+let x = document.getElementById(id);
+if(x) x.style.display = x.style.display == "block" ? "none" : "block";
+}
+
+function toggleFacility(id){
+let x = document.getElementById(id);
+if(x) x.style.display = x.style.display == "block" ? "none" : "block";
+}
+
+function showActTab(tab){
+document.getElementById("fundsReceived").style.display = "none";
+document.getElementById("trainingPrograms").style.display = "none";
+document.getElementById("mouSigned").style.display = "none";
+document.getElementById("cdtpTab").style.display = "none";
+document.getElementById("facultyResp").style.display = "none";
+document.getElementById(tab).style.display = "block";
+let btns = document.querySelectorAll(".academic-frame .course-tabs button");
+// Filter targets to limit execution scope uniquely for activities component tabs
+let activeContainerButtons = event.target.parentElement.querySelectorAll("button");
+activeContainerButtons.forEach(b => b.classList.remove("active"));
+event.target.classList.add("active");
+}
+
+function showAchTab(tab){
+
+    const tabs = [
+        "facultyAwards",
+        "events",
+        "conference",
+        "facultyConference",
+        "paper"
+    ];
+
+    tabs.forEach(id=>{
+        document.getElementById(id).style.display="none";
+    });
+
+    document.getElementById(tab).style.display="block";
+
+    document.querySelectorAll(".academic-frame .course-tabs button")
+        .forEach(btn=>btn.classList.remove("active"));
+
+    event.target.classList.add("active");
+}
+
+function showStudTab(tab){
+document.getElementById("industrialVisit").style.display = "none";
+document.getElementById("studentAchievements").style.display = "none";
+document.getElementById("placement").style.display = "none";
+document.getElementById(tab).style.display = "block";
+let btns = document.querySelectorAll(".academic-frame .course-tabs button");
+let activeContainerButtons = event.target.parentElement.querySelectorAll("button");
+activeContainerButtons.forEach(b => b.classList.remove("active"));
+event.target.classList.add("active");
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+document.getElementById("po").style.display = "block";
+document.getElementById("pso").style.display = "none";
+document.getElementById("facultyAwards").style.display = "block";
+document.getElementById("events").style.display = "none";
+document.getElementById("mou").style.display = "none";
+document.getElementById("training").style.display = "none";
+document.getElementById("industrialVisit").style.display = "block";
+document.getElementById("studentAchievements").style.display = "none";
+document.getElementById("placement").style.display = "none";
+});
+</script>
+</body>
+</html>

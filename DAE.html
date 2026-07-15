@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automobile Engineering Department</title>
+
+<style>
+/* === GLOBAL STYLE (MATCHED) === */
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;
+margin:0;
+background:#fff;
+color:#1A1A1A;
+}
+
+.navbar{
+background:#1c1c1c;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items: center;
+}
+
+.logo{
+color:white;
+font-weight:600;
+cursor:pointer;
+font-size: 20px;
+}
+
+.menu{display:flex;gap:20px;flex-wrap:wrap;}
+.menu a{color:#ddd;text-decoration:none;cursor:pointer;font-size:14px;}
+.menu a:hover{color:#C5A267}
+
+.hero{
+background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.96)),
+url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a'); /* Background from reference */
+background-size:cover;
+padding:100px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-family:Georgia;
+font-size:45px;
+margin:0;
+}
+
+.divider{
+width:80px;
+height:3px;
+background:#C5A267;
+margin:20px auto;
+}
+
+.section{
+padding:60px 40px;
+max-width:1100px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-family:Georgia;
+font-size:35px;
+margin-bottom:40px;
+}
+
+/* === ABOUT BOX === */
+.about-box{
+background:#fafafa;
+padding:25px;
+border:1px solid #eee;
+line-height:1.7;
+}
+
+/* === FACULTY === */
+.faculty-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.faculty-card{
+border:1px solid #eee;
+padding:20px;
+text-align:center;
+background:white;
+transition: 0.3s;
+cursor: pointer;
+}
+
+.faculty-card:hover {
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+border-color: #C5A267;
+}
+
+/* Faculty Name Gold Color */
+.faculty-card h4 {
+    color: #C5A267;
+    margin: 10px 0 5px;
+}
+
+/* Faculty Image Circle Frame */
+.faculty-img{
+width:100px;
+height:100px;
+border-radius:50%;
+border:3px solid #C5A267;
+margin-bottom:10px;
+object-fit: cover;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* === TABLE === */
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th,td{
+border:1px solid #ddd;
+padding:10px;
+}
+
+th{
+background:#C5A267;
+color:white;
+}
+
+/* === TABS === */
+.course-tabs, .activity-tabs{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:30px;
+border-bottom:3px solid #eee;
+padding-bottom:8px;
+}
+
+.course-tabs button, .activity-tabs button{
+padding:10px 18px;
+border:1px solid #ddd;
+background:#f7f7f7;
+cursor:pointer;
+}
+
+.course-tabs button.active, .activity-tabs button.active{
+background:#C5A267;
+color:white;
+}
+
+/* === SEM DROPDOWN === */
+.sem-dropdown{
+margin-top:20px;
+border:1px solid #ddd;
+}
+
+.sem-head{
+padding:15px;
+background:#C5A267;
+color:white;
+cursor:pointer;
+font-weight: bold;
+}
+
+.sem-body{
+display:none;
+padding:15px;
+}
+
+/* === FACILITY === */
+.facility-card{
+border:1px solid #ddd;
+margin-top:15px;
+cursor:pointer;
+}
+
+.facility-title{
+background:#C5A267;
+color:white;
+padding:12px;
+}
+
+.facility-body{
+display:none;
+padding:15px;
+background:#fafafa;
+line-height: 1.6;
+}
+
+/* Academic Frame for added sections */
+.academic-frame{
+max-width:950px;
+margin:40px auto;
+border:1px solid #e5e5e5;
+background:#fff;
+padding:30px;
+box-shadow:0 4px 14px rgba(0,0,0,.04);
+}
+
+/* === CONTACT SECTION === */
+.contact-container {
+    background: #fafafa;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+/* === FOOTER === */
+footer{
+background:#F5F5F5;
+padding:25px;
+text-align:center;
+margin-top:40px;
+color: #888;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<div class="logo" onclick="location.reload()">PSG POLYTECHNIC COLLEGE</div>
+<div class="menu">
+    <a href="#">Home</a>
+    <a href="#admission">Admission</a>
+    <a href="#examination">Examination</a>
+    <a href="#campus">Campus</a>
+    <a href="#union">Students Union</a>
+    <a href="#alumni">Alumni</a>
+    <a href="#career">Career</a>
+    <a href="#helpdesk">Helpdesk</a>
+</div>
+</div>
+
+<div class="hero">
+<h1>Automobile Engineering</h1>
+<div class="divider"></div>
+<p>Excellence in Automotive Technology & Innovation</p>
+</div>
+
+<div class="section">
+
+<h2 class="section-title">About Department</h2>
+<div class="about-box">
+Department of Automobile Engineering was started in the year 2004. With a good team of faculty members and young Alumni support, the department is progressing towards excellence in the field of teaching and placement in various companies. The department focuses on creating skilled professionals who can supplement the needs and demands of the rapidly evolving automotive industry and society.
+</div>
+
+<h2 class="section-title">Vision</h2>
+<p style="text-align:center;">Department of Automobile Engineering aspires to be a centre of excellence for creating skilled and talented professionals who supplement the needs and demands of the industry and society.</p>
+
+<h2 class="section-title">Mission</h2>
+<p>The mission of the department is to create opportunities for the students to fine-tune their interest and talent in Automobile Engineering through:</p>
+<ul>
+<li>Exposure to current technological development.</li>
+<li>Involvement in fostering industry institute interaction.</li>
+<li>Developing technical skill and confidence to become an entrepreneur.</li>
+</ul>
+
+<h2 class="section-title">Faculty</h2>
+
+<div class="faculty-grid">
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436105')">
+<img src="https://imgh.in/host/aalfsn" class="faculty-img" alt="HOD">
+<h4>Dr. S Shanmugasundaram</h4>
+<p>HOD In-Charge</p>
+<p>23 yrs Teaching</p>
+<p>Automotive Engineering & Fuel Cell</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436106')">
+<img src="https://imgh.in/host/r7egri" class="faculty-img">
+<h4>Dr. D. Rekha</h4>
+<p>Lecturer (Sr.Gr)</p>
+<p>17 yrs Teaching</p>
+<p>Automobile Engineering</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436108')">
+<img src="https://imgh.in/host/a4ne32" class="faculty-img">
+<h4>Mr. K Saravanakumar</h4>
+<p>Lecturer</p>
+<p>5.5 yrs Teaching</p>
+<p>EV & Manufacturing Tech</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/471955')">
+<img src="https://imgh.in/host/v66hh3" class="faculty-img">
+<h4>Mr. R. Gokulakrishnan</h4>
+<p>Lecturer</p>
+<p>10.5 yrs Teaching</p>
+<p>Design & Manufacturing</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/jrkfq3" class="faculty-img">
+<h4>Mr. M. Venkatesh</h4>
+<p>Lecturer</p>
+<p>8 yrs Teaching</p>
+<p>Mechanical & Thermal Engineering</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/z4yjum" class="faculty-img">
+<h4>Mr. D Ramesh</h4>
+<p>Instructor</p>
+<p>15 yrs Experience</p>
+<p>Engines & CAD/CREO</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/h0x37f" class="faculty-img">
+<h4>Mr. M Chandrakumar</h4>
+<p>Technical Assistant</p>
+<p>14 yrs Exp | 4 yrs Industry</p>
+<p>Thermal & Chassis Lab</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/oomsc1" class="faculty-img">
+<h4>Mr. A Muthuramalingam</h4>
+<p>Technical Assistant</p>
+<p>4 yrs Exp | 16 yrs Industry</p>
+<p>Servicing & Maintenance Lab</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/gpgm5u" class="faculty-img">
+<h4>Mrs. S Jaya</h4>
+<p>Junior Assistant</p>
+<p>7 Years Experience</p>
+<p>Office Administration</p>
+</div>
+
+</div>
+
+<h2 class="section-title">Course Structure</h2>
+
+<div class="course-tabs">
+<button class="active" onclick="showTab('po',this)">PO</button>
+<button onclick="showTab('pso',this)">PSO</button>
+<button onclick="showTab('peo',this)">PEO</button>
+</div>
+
+<div id="po">
+<table>
+<tr><th>Code</th><th>Description</th></tr>
+<tr><td>PO1</td><td>Basic and Discipline specific knowledge: Apply knowledge of basic mathematics, science and engineering fundamentals and engineering specialization to solve the engineering problems.</td></tr>
+<tr><td>PO2</td><td>Problem analysis: Identify and analyse well-defined engineering problems using codified standard methods.</td></tr>
+<tr><td>PO3</td><td>Design/ development of solutions: Design solutions for well-defined technical problems and assist with the design of systems components or processes to meet specified needs.</td></tr>
+<tr><td>PO4</td><td>Engineering Tools, Experimentation and Testing: Apply modern engineering tools and appropriate technique to conduct standard tests and measurements.</td></tr>
+<tr><td>PO5</td><td>Engineering practices for society: Apply appropriate technology in context of society, sustainability, environment and ethical practices.</td></tr>
+<tr><td>PO6</td><td>Project Management: Use engineering management principles individually or as a team to manage projects and communicate activities.</td></tr>
+<tr><td>PO7</td><td>Life-long learning: Ability to analyse individual needs and engage in updating in the context of technological changes.</td></tr>
+</table>
+</div>
+
+<div id="pso" style="display:none">
+    <table>
+        <tr><th>Code</th><th>Description</th></tr>
+        <tr><td>PSO1</td><td>Apply the knowledge of manufacturing, assembly and testing in automotive industry</td></tr>
+        <tr><td>PSO2</td><td>Adapt to work in an automotive industry as service and maintenance engineer.</td></tr>
+    </table>
+</div>
+
+<div id="peo" style="display:none">
+    <table>
+        <tr><th>Code</th><th>Description</th></tr>
+        <tr><td>PEO1</td><td>Pursue a successful career in the field of automobile engineering or a relevant field</td></tr>
+        <tr><td>PEO2</td><td>Be able to develop new innovative solutions for problems faced in the industry by continuously updating their knowledge about latest technologies</td></tr>
+        <tr><td>PEO3</td><td>Be able to work effectively in multi-disciplinary and multi-cultural teams contributing to the needs of the industry and society at large.</td></tr>
+    </table>
+</div>
+
+<h2 class="section-title">Semester Structure</h2>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('s1')">Semester 1</div>
+<div class="sem-body" id="s1">
+<table>
+<tr><th>Theory</th><th>Practicals</th></tr>
+<tr><td>Engineering Mathematics - I</td><td>Physics Laboratory</td></tr>
+<tr><td>Physics</td><td>Chemistry Laboratory - I</td></tr>
+<tr><td>Chemistry</td><td>Fitting, Sheet Metal & Wiring Workshop</td></tr>
+<tr><td>English</td><td>Inplant Training / Physical Education - I</td></tr>
+<tr><td>Engineering Drawing - I</td><td></td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('s2')">Semester 2</div>
+<div class="sem-body" id="s2">
+<table>
+<tr><th>Theory</th><th>Practicals</th></tr>
+<tr><td>Engineering Mathematics - II</td><td>Engineering Physics Laboratory</td></tr>
+<tr><td>Calculus and its Applications</td><td>Chemistry Laboratory - II</td></tr>
+<tr><td>Engineering Physics</td><td>Basics of Computing and Informatics</td></tr>
+<tr><td>Industrial Chemistry</td><td>Communicative English Laboratory</td></tr>
+<tr><td>Engineering Drawing - II</td><td>Physical Education II</td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('s3')">Semester 3</div>
+<div class="sem-body" id="s3">
+<table>
+<tr><th>Theory</th><th>Practicals</th></tr>
+<tr><td>Probability and Statistics</td><td>Foundry and Welding Laboratory</td></tr>
+<tr><td>Thermal Engineering</td><td>Thermal Engineering Laboratory</td></tr>
+<tr><td>Automobile Engines</td><td>Automobile Engines Laboratory</td></tr>
+<tr><td>Production Technology</td><td>Machine Shop Practice / Tech Comm Lab</td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('s4')">Semester 4</div>
+<div class="sem-body" id="s4">
+<table>
+<tr><th>Theory</th><th>Practicals</th></tr>
+<tr><td>Mechanics of Materials</td><td>Strength of Materials Laboratory</td></tr>
+<tr><td>Fluid Mechanics and Fluid Power</td><td>Fluid Mechanics Laboratory</td></tr>
+<tr><td>Automobile Transmission Systems</td><td>Automobile Transmission Service Lab</td></tr>
+<tr><td>Machine Elements Design</td><td>Automation Laboratory / CAMD</td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('s5')">Semester 5</div>
+<div class="sem-body" id="s5">
+<table>
+<tr><th>Theory</th><th>Practicals</th></tr>
+<tr><td>Metrology & Quality Management</td><td>Metrology Laboratory / Solid Modeling</td></tr>
+<tr><td>CAD/CAM/CIM</td><td>CNC Laboratory / Two Wheeler Lab</td></tr>
+<tr><td>Elective Theory - I</td><td>Mini Project and Entrepreneurship</td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('s6')">Semester 6</div>
+<div class="sem-body" id="s6">
+<table>
+<tr><th>Theory</th><th>Practicals</th></tr>
+<tr><td>Vehicle Body Engineering</td><td>Four Wheeler Servicing Laboratory</td></tr>
+<tr><td>Autotronics</td><td>Auto Electrical & Electronics Lab</td></tr>
+<tr><td>Elective Theory - II</td><td>Assembly & Power Tools / PLC Lab</td></tr>
+<tr><td></td><td>Project Work and Viva Voce</td></tr>
+</table>
+</div>
+</div>
+
+<h2 class="section-title">Facilities</h2>
+
+<div class="facility-card" onclick="toggleFacility('f1')">
+    <div class="facility-title">Automobile Chassis & Transmission Lab</div>
+    <div class="facility-body" id="f1">
+        <img src="https://imgh.in/host/k6ucq5" alt="Chassis Lab" style="width:100%;max-width:500px;display:block;margin:15px auto;border-radius:8px;">
+        <p>
+            Comprises of all types of transmission systems like clutch assembly,
+            gear box assembly and differential unit for hands-on learning.
+        </p>
+    </div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f2')">
+    <div class="facility-title">Automobile Engines Lab</div>
+    <div class="facility-body" id="f2">
+        <img src="https://imgh.in/host/dk0lq5" alt="Engine Lab" style="width:100%;max-width:500px;display:block;margin:15px auto;border-radius:8px;">
+        <p>
+            Students perform testing, troubleshooting, overhauling,
+            dismantling and assembling process of various engines.
+        </p>
+    </div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f3')">
+    <div class="facility-title">Thermal Engineering Lab</div>
+    <div class="facility-body" id="f3">
+        <img src="https://imgh.in/host/nnrv13" alt="Thermal Lab" style="width:100%;max-width:500px;display:block;margin:15px auto;border-radius:8px;">
+        <p>
+            Equipped with Petrol & Diesel engines (2 & 4 stroke),
+            Refrigeration & Air Conditioning tutors, Morse Test setup,
+            and Air Compressor rigs.
+        </p>
+    </div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f4')">
+    <div class="facility-title">Automobile Electrical and Electronics Lab</div>
+    <div class="facility-body" id="f4">
+        <img src="https://imgh.in/host/2pj6ja" alt="Electrical Lab" style="width:100%;max-width:500px;display:block;margin:15px auto;border-radius:8px;">
+        <p>
+            Focuses on developing skills in electrical and electronic
+            devices like starter motors, battery systems, alternators,
+            and modern automotive sensors.
+        </p>
+    </div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f5')">
+    <div class="facility-title">Two Wheeler Servicing Laboratory</div>
+    <div class="facility-body" id="f5">
+        <img src="https://imgh.in/host/m715p5" alt="Two Wheeler Lab" style="width:100%;max-width:500px;display:block;margin:15px auto;border-radius:8px;">
+        <p>
+            Provides practical training in the inspection, adjustment,
+            and servicing of major components specifically for
+            two-wheelers.
+        </p>
+    </div>
+</div>
+<h2 class="section-title">Activities</h2>
+<div class="activity-tabs">
+    <button class="active" onclick="showActivity('assoc', this)">Association Activities</button>
+    <button onclick="showActivity('training', this)">Training Programs</button>
+    <button onclick="showActivity('mou', this)">MoU Signed</button>
+</div>
+
+<div id="assoc">
+    <table>
+        <tr><th>Program</th><th>Chief Guest / Details</th></tr>
+        <tr><td>MG CAR Unveil & Teacher’s Day (05/09/2023)</td><td>Dr.B.Giriraj (Principal), Mr.Hajmal R (PPS Motors)</td></tr>
+        <tr><td>Micro Electronics in Automobiles (21/07/2023)</td><td>Mr.K.B Sibimon AGM, Sree Saradhambal Automobiles</td></tr>
+        <tr><td>LIFE SKILL (29/03/2023)</td><td>Thiru.C.Ayyarsamy & Thiru.M.Ravichandar (Commandants)</td></tr>
+        <tr><td>Overview of Electric Vehicles (24/02/2023)</td><td>Mr.P.Gokul, Founder & CEO, Retfitt Energy</td></tr>
+        <tr><td>Automotive Transmission System (08/11/2022)</td><td>Dr.M.Karthikeyan, PSG College of Technology</td></tr>
+        <tr><td>Hybrid Vehicles (23.09.2022)</td><td>Mr.B.Baladhandayuthapani, Anaamalais Toyota</td></tr>
+        <tr><td>Introduction to CAD Fusion 360 (25.05.2022)</td><td>Mr.R.Rohit Chandran, Autodesk Education</td></tr>
+        <tr><td>Entrepreneurship Guidance (24.03.2022)</td><td>Mr.K.Muruganandam, Alagappaa Engineering</td></tr>
+        <tr><td>Roles of Castings In Auto Industry (27.11.2021)</td><td>Mr. Prabhu Dharmarajan, Origin Cadd Infotech</td></tr>
+        <tr><td>A Perspective after Diploma (15.09.2021)</td><td>Mr. A. Niranjan, Caterpillar Inc.</td></tr>
+        <tr><td>Future of Automotive Industries (15.09.2021)</td><td>Mr. Sourav Rakshit, Logiczap Technologies</td></tr>
+        <tr>
+    <td>Guest Lecture on "Automatic Transmission" (27.04.2021)</td>
+    <td>Dr. M. Karthikeyan, Assistant Professor (Sr.Gr.), Department of Automobile Engineering, PSG College of Technology, Coimbatore</td>
+</tr>
+
+<tr>
+    <td>Guest Lecture on Competitiveness in Auto Industry</td>
+    <td>Mr. C. V. Ganapathi Subramanian, Chairman &amp; CEO, Bharat Balancing Weights Pvt. Ltd.</td>
+</tr>
+
+<tr>
+    <td>Valedictory Function cum Guest Lecture on Industrial Mannerism</td>
+    <td>Mr. A. Krishnamoorthy, Quality Head, M/s Bull Machines, Coimbatore</td>
+</tr>
+
+<tr>
+    <td>Alumni Interaction Meeting with Guest Lecture</td>
+    <td>Mr. P. M. Logesh Kumar, Assistant Manager, Ashok Leyland, Chennai</td>
+</tr>
+
+<tr>
+    <td>Guest Lecture on Entrepreneurship</td>
+    <td>Mr. Jayachandran, Co-Founder, Bestomech Industries, Coimbatore</td>
+</tr>
+
+<tr>
+    <td>Valedictory Function cum Guest Lecture on Modern Technologies in Automobiles</td>
+    <td>Mr. A. Sasikumar, Assistant General Manager, Engine &amp; Vehicle Testing, Jeyam Automotives, Coimbatore</td>
+</tr>
+
+<tr>
+    <td>Guest Lecture on Vehicle Insurance (Needs and Claims)</td>
+    <td>Mr. K. Damodaran, Deputy Manager, Technical Training Centre, Jeyam Automotives, Coimbatore</td>
+</tr>
+
+<tr>
+    <td>Guest Lecture on Industrial Expectation from Young Engineers</td>
+    <td>Dr. K. Rajasekar, Manager, Research &amp; Development, BEML Limited, Mysore</td>
+</tr>
+    </table>
+</div>
+
+<div id="training" style="display:none">
+    <table>
+        <tr><th>Program Name / Details</th></tr>
+        <tr><td>“Automotive systems, safety and Maintenance” for 70 members of Tamilnadu special police - 4th battalion kovaipudur, Coimbatore from 01/02/2023 to 06/02/2023</td></tr>
+        <tr><td>“Automotive Systems, Safety and Maintenance” for 60 Drivers of PSG Institutions from 05/04/2023 to 06/04/2023 and 11/04/2023 to 12/04/2023</td></tr>
+        <tr><td>Certificate course in Assembly Techniques</td></tr>
+        <tr><td>Certificate course in CNC</td></tr>
+        <tr><td>Vocational Training on Assembly Techniques, Welding and Auto Electricals (Phase-I certificate Program), Daimler India Commercial Vehicle Private Limited</td></tr>
+        <tr><td>Coimbatore City Police Drivers Three days Training Programme on “Automobile Systems, Safety & Maintenance”</td></tr>
+        <tr><td>Coimbatore City Police Officers one day Training Programme on Automobile Systems, Safety & Maintenance</td></tr>
+    </table>
+</div>
+
+<div id="mou" style="display:none">
+    <table>
+        <tr><th>Partner Institution / Company</th><th>Details</th></tr>
+        <tr><td>PPS Motors Private limited, Coimbatore</td><td>Dr.B.Giriraj (PSG Polytechnic) & Mr.Hajmal R on 05/09/2023</td></tr>
+        <tr><td>Suryabala Motors, Coimbatore</td><td>MoU signed on 28/07/2023</td></tr>
+        <tr><td>Sree Saradhambal Automobiles Pvt Ltd, Coimbatore</td><td>MoU signed on 21/07/2023</td></tr>
+        <tr><td>T V S & Sons Ltd</td><td>To conduct Vocational Diploma Programme in Automobile Engineering</td></tr>
+        <tr><td>ATS ELGI Limited</td><td>To impart Vocational Training for fresh technicians in Manufacturing</td></tr>
+        <tr><td>Daimler India Commercial Vehicles Private Limited</td><td>To impart Vocation Training Programmes for associates</td></tr>
+        <tr><td>ELGI Equipments Limited</td><td>To impart Vocational Training for fresh technicians in Manufacturing & Assembly</td></tr>
+    </table>
+</div>
+<div class="contact-container">
+
+    <div style="background:#C5A267;color:white;padding:15px;text-align:center;">
+        <h2 style="margin:0;">CONTACT US</h2>
+    </div>
+
+    <div style="padding:30px;text-align:center;line-height:1.5;">
+
+        <h3 style="margin-bottom:5px;">Dr. S. Shanmugasundaram M.Tech., Ph.D.</h3>
+        <p>Head in Charge</p>
+        <p>Department of Automobile Engineering</p>
+        <p>PSG Polytechnic College</p>
+        <p>Peelamedu, Coimbatore - 641004</p>
+        <p>Tamil Nadu, India</p>
+
+
+    </div>
+
+</div>
+
+<footer style="background:#1c1c1c;color:#fff;text-align:center;padding:20px;">
+    Designed and Developed by PSG Polytechnic College | © 2026 All Rights Reserved.
+</footer>
+
+</div>
+</div>
+
+<footer>
+Designed And Developed by PSG PTC . Copyright © 2026. All Rights Reserved.
+</footer>
+
+<script>
+function showTab(tab, el){
+document.getElementById("po").style.display="none";
+document.getElementById("pso").style.display="none";
+document.getElementById("peo").style.display="none";
+
+document.getElementById(tab).style.display="block";
+
+let btns=document.querySelectorAll(".course-tabs button");
+btns.forEach(b=>b.classList.remove("active"));
+
+el.classList.add("active");
+}
+
+function toggleSem(id){
+let x=document.getElementById(id);
+x.style.display = (x.style.display=="block") ? "none":"block";
+}
+
+function toggleFacility(id){
+let x=document.getElementById(id);
+x.style.display = (x.style.display=="block") ? "none":"block";
+}
+
+/* NEW SCRIPT FOR ACTIVITIES TABS */
+function showActivity(id, btn){
+    document.getElementById('assoc').style.display = "none";
+    document.getElementById('training').style.display = "none";
+    document.getElementById('mou').style.display = "none";
+    document.getElementById(id).style.display = "block";
+    
+    let btns = document.querySelectorAll(".activity-tabs button");
+    btns.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+}
+</script>
+
+</body>
+</html>

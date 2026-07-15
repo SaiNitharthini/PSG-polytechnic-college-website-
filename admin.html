@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Union | PSG Polytechnic College</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #FFFFFF;
+            color: #1A1A1A;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Navigation */
+        .navbar {
+            padding: 24px 0;
+            border-bottom: 1px solid #E5E5E5;
+            background-color: #FFFFFF;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #1A1A1A;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #4A4A4A;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #C5A267;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.95)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover;
+            padding: 100px 0;
+            text-align: center;
+            border-bottom: 1px solid #E5E5E5;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-subtitle {
+            color: #C5A267;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .hero-title {
+            font-size: 56px;
+            font-weight: 400;
+            font-family: 'Times New Roman', Georgia, serif;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #1A1A1A;
+        }
+
+        .hero-divider {
+            width: 80px;
+            height: 2px;
+            background: #C5A267;
+            margin: 30px auto;
+        }
+
+        .hero-text {
+            font-size: 18px;
+            color: #4A4A4A;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 80px 0;
+            border-bottom: 1px solid #E5E5E5;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-chapter {
+            color: #C5A267;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: 400;
+            font-family: 'Times New Roman', Georgia, serif;
+            margin-bottom: 20px;
+            color: #1A1A1A;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 2px;
+            background: #C5A267;
+            margin: 20px auto;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #4A4A4A;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* About Grid */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            color: #4A4A4A;
+            font-size: 16px;
+        }
+
+        .about-highlight {
+            background: #F9F9F9;
+            padding: 40px;
+            border-left: 3px solid #C5A267;
+        }
+
+        .about-highlight h3 {
+            color: #C5A267;
+            font-size: 24px;
+            font-weight: 400;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 20px;
+        }
+
+        .about-highlight ul {
+            list-style: none;
+        }
+
+        .about-highlight li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            color: #4A4A4A;
+        }
+
+        .about-highlight li::before {
+            content: "—";
+            color: #C5A267;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .team-card {
+            text-align: center;
+        }
+
+        .team-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: #F0F0F0;
+            border: 2px solid #C5A267;
+            padding: 4px;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .team-name {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: #1A1A1A;
+        }
+
+        .team-role {
+            color: #C5A267;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .team-id {
+            font-size: 13px;
+            color: #888888;
+        }
+
+        /* Category Grid */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .category-item {
+            background: #F9F9F9;
+            border: 1px solid #E5E5E5;
+            padding: 20px 15px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .category-item:hover {
+            border-color: #C5A267;
+            background: #FFFFFF;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .category-item h4 {
+            color: #1A1A1A;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .category-item p {
+            font-size: 13px;
+            color: #888888;
+        }
+
+        /* Club Cards */
+        .club-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .club-card {
+            background: #F9F9F9;
+            border: 1px solid #E5E5E5;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+
+        .club-card:hover {
+            border-color: #C5A267;
+            background: #FFFFFF;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .club-icon {
+            width: 50px;
+            height: 50px;
+            background: #FFFFFF;
+            border: 1px solid #C5A267;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #C5A267;
+            font-size: 22px;
+        }
+
+        .club-name {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #1A1A1A;
+        }
+
+        .club-objective {
+            font-size: 14px;
+            color: #4A4A4A;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .club-faculty {
+            border-top: 1px solid #E5E5E5;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        .club-faculty h5 {
+            color: #C5A267;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .club-faculty p {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #1A1A1A;
+        }
+
+        .club-bearers {
+            margin-top: 15px;
+        }
+
+        .bearer {
+            font-size: 14px;
+            color: #4A4A4A;
+            margin-bottom: 5px;
+        }
+
+        .bearer strong {
+            color: #1A1A1A;
+            font-weight: 500;
+        }
+
+        /* Timeline */
+        .timeline {
+            margin: 40px 0;
+        }
+
+        .timeline-year {
+            margin-bottom: 40px;
+        }
+
+        .year-header {
+            font-size: 28px;
+            font-family: 'Times New Roman', serif;
+            color: #1A1A1A;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #C5A267;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .year-events {
+            list-style: none;
+        }
+
+        .year-events li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: #4A4A4A;
+        }
+
+        .year-events li::before {
+            content: "•";
+            color: #C5A267;
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+        }
+
+        /* Achievements */
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .achievement-category {
+            background: #F9F9F9;
+            padding: 25px;
+            border: 1px solid #E5E5E5;
+        }
+
+        .achievement-category h3 {
+            color: #C5A267;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #E5E5E5;
+            padding-bottom: 10px;
+        }
+
+        .achievement-list {
+            list-style: none;
+        }
+
+        .achievement-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 14px;
+            color: #4A4A4A;
+        }
+
+        .achievement-list li::before {
+            content: "→";
+            color: #C5A267;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: #F5F5F5;
+            padding: 50px 0;
+            margin-top: 60px;
+            border-top: 1px solid #E5E5E5;
+        }
+
+        .footer-content {
+            text-align: center;
+            color: #888888;
+            font-size: 14px;
+        }
+
+        .footer-quote {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #C5A267;
+            font-style: italic;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 38px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">PSG POLYTECHNIC COLLEGE</a>
+            <div class="nav-links">
+                <a href="#">HOME</a>
+                <a href="#">ABOUT</a>
+                <a href="#">ACADEMICS</a>
+                <a href="#">STUDENTS UNION</a>
+                <a href="#">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-subtitle">Since 1939</div>
+            <h1 class="hero-title">Students Union</h1>
+            <div class="hero-divider"></div>
+            <p class="hero-text">Empowered by an ardent set of cabinet members, providing a platform to encourage technical, social, cultural skills and nurturing innovation.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-chapter">Chapter 01</div>
+                <h2 class="section-title">About PSG Polytechnic College</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p>PSG POLYTECHNIC COLLEGE, established in the year 1939, a pioneer Institute in the field of Technical Education and Research is a Government aided, ISO 9001 certified institution with Autonomous status from 1976. This aids it to have a flexible curriculum and updated syllabi. The Polytechnic College has the best laboratories with free access to the students and prepares them with the latest method of learning Industrial practices.</p>
+                    <p>The Industry attachment programme, compulsory for all courses provides the students an exposure for current Industrial practices. The college is located in the same campus as the PSG Industrial Institute.</p>
+                    <p><strong>Dr.B. Giriraj</strong> is the Principal of the Institution.</p>
+                </div>
+                <div class="about-highlight">
+                    <h3>Mission</h3>
+                    <ul>
+                        <li>To create a dynamic platform that fosters the development of technical skills and professional knowledge through active engagement in affiliated associations.</li>
+                        <li>To encourage holistic growth by promoting social, cultural, and literacy activities through various clubs and student initiatives.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Students Union -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-chapter">Chapter 02</div>
+                <h2 class="section-title">About Students Union</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 17px; margin-bottom: 25px; color: #4A4A4A;">The Students Union, generally abbreviated as the SU, is the official student organization at PSG Polytechnic College. The SU is the main representative body of the students and helps in the establishment of a healthy relationship between all the student activities and the administration.</p>
+                <p style="font-size: 16px; color: #666666;">In addition to NSS and NCC, all the twelve clubs, twelve associations and two student chapters in the college work under its triumphant banner. The Students Union has its own unique set of cabinet members who are selected by the college authorities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-chapter">Chapter 03</div>
+                <h2 class="section-title">Our Team</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <!-- Chief Patron & Patron -->
+            <div style="margin-bottom: 50px;">
+                <h3 style="color: #C5A267; font-size: 22px; font-weight: 400; font-family: 'Times New Roman', serif; margin-bottom: 30px; text-align: center; letter-spacing: 1px;">PATRONS</h3>
+                <div style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;">
+                    <div class="team-card" style="max-width: 250px;">
+                        <div class="team-image"></div>
+                        <div class="team-name">Shri.L.GOPALAKRISHNAN</div>
+                        <div class="team-role">Managing Trustee</div>
+                        <div class="team-id">PSG & Sons' Charity</div>
+                    </div>
+                    <div class="team-card" style="max-width: 250px;">
+                        <div class="team-image"></div>
+                        <div class="team-name">Dr.B.GIRIRAJ</div>
+                        <div class="team-role">Principal</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advisors -->
+            <div style="margin-bottom: 50px;">
+                <h3 style="color: #C5A267; font-size: 22px; font-weight: 400; font-family: 'Times New Roman', serif; margin-bottom: 30px; text-align: center;">ADVISORS & TREASURER</h3>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-image"></div>
+                        <div class="team-name">Dr.V.MOHAN SIVAKUMAR</div>
+                        <div class="team-role">Chief Advisor</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-image"></div>
+                        <div class="team-name">Mr.S.THIRUMALAI RAJAN</div>
+                        <div class="team-role">Faculty Advisor</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-image"></div>
+                        <div class="team-name">Ms.M.SASIKALA</div>
+                        <div class="team-role">Faculty Advisor</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-image"></div>
+                        <div class="team-name">Dr.T.KUMARESAN</div>
+                        <div class="team-role">Treasurer</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Office Bearers -->
+            <div>
+                <h3 style="color: #C5A267; font-size: 22px; font-weight: 400; font-family: 'Times New Roman', serif; margin-bottom: 30px; text-align: center;">OFFICE BEARERS 2024-25</h3>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-image"></div>
+                        <div class="team-name">Keshav Kanna T</div>
+                        <div class="team-role">Chairperson</div>
+                        <div class="team-id">(23DG24)</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-image"></div>
+                        <div class="team-name">Monikkasri B G</div>
+                        <div class="team-role">Vice Chairperson</div>
+                        <div class="team-id">(23DX26)</div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-image"></div>
+                        <div class="team-name">Sarwin Krishna N</div>
+                        <div class="team-role">Secretary (Men)</div>
+                        <div class="team-id">(24M023)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Associations & Chapters -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-chapter">Chapter 04</div>
+                <h2 class="section-title">Associations & Bodies</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <h3 style="color: #C5A267; font-size: 20px; font-weight: 500; margin: 40px 0 20px;">Academic Associations</h3>
+            <div class="category-grid">
+                <div class="category-item"><h4>Mechanical Engineering Association</h4></div>
+                <div class="category-item"><h4>Electrical & Electronics Engineering Association </h4></div>
+                <div class="category-item"><h4>Textile Technology Association</h4></div>
+                <div class="category-item"><h4>Foundry Technology Association</h4></div>
+                <div class="category-item"><h4>Mechatronics Association</h4></div>
+                <div class="category-item"><h4>Apparel Technology Association</h4></div>
+                <div class="category-item"><h4>Computer Networking Association</h4></div>
+                <div class="category-item"><h4>Computer Engineering Association</h4></div>
+                <div class="category-item"><h4>Automobile Engineering Association</h4></div>
+                <div class="category-item"><h4>ECE Association</h4></div>
+                <div class="category-item"><h4>Information Technology Association</h4></div>
+                <div class="category-item"><h4>Science Association</h4></div>
+            </div>
+
+            <h3 style="color: #C5A267; font-size: 20px; font-weight: 500; margin: 40px 0 20px;">Student Chapters</h3>
+            <div class="category-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="category-item"><h4>Institution of Engineers</h4></div>
+                <div class="category-item"><h4>Institute of Indian Foundrymen</h4></div>
+            </div>
+
+            <h3 style="color: #C5A267; font-size: 20px; font-weight: 500; margin: 40px 0 20px;">Wings</h3>
+            <div class="category-grid">
+                <div class="category-item"><h4>National Service Scheme</h4><p>NSS</p></div>
+                <div class="category-item"><h4>National Cadet Corps</h4><p>NCC</p></div>
+                <div class="category-item"><h4>Rover Crew & Ranger Team</h4></div>
+                <div class="category-item"><h4>Students Rapid Response Force</h4></div>
+            </div>
+
+            <h3 style="color: #C5A267; font-size: 20px; font-weight: 500; margin: 40px 0 20px;">Clubs</h3>
+            <div class="category-grid">
+                <div class="category-item"><h4>Brains Trust</h4></div>
+                <div class="category-item"><h4>Tamil Mandram</h4></div>
+                <div class="category-item"><h4>Fine Arts Club</h4></div>
+                <div class="category-item"><h4>Character & Personality Development</h4></div>
+                <div class="category-item"><h4>Women Development Cell</h4></div>
+                <div class="category-item"><h4>Environment Development Club</h4></div>
+                <div class="category-item"><h4>Youth Red Cross</h4></div>
+                <div class="category-item"><h4>Entrepreneur Club</h4></div>
+                <div class="category-item"><h4>Music Club</h4></div>
+                <div class="category-item"><h4>Road Safety Patrol</h4></div>
+                <div class="category-item"><h4>Rangers & Rovers</h4></div>
+                <div class="category-item"><h4>Photographic Club</h4></div>
+                <div class="category-item"><h4>Interact Club</h4></div>
+                <div class="category-item"><h4>Readers Club</h4></div>
+                <div class="category-item"><h4>Cyber Club</h4></div>
+                <div class="category-item"><h4>Music & Band</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-chapter">Chapter 05</div>
+                <h2 class="section-title">News & Events</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-year">
+                    <h3 class="year-header">2024 - 2025</h3>
+                    <ul class="year-events">
+                        <li>First Year & Lateral Entry Orientation: 12th - 14th June 2024</li>
+                        <li>Students' Union Inauguration: 15th July 2024</li>
+                        <li>Independence Day Celebration: 15th August 2024</li>
+                        <li>Teachers' Day: 5th September 2024</li>
+                        <li>Polyfest 2K24: 14th September 2024</li>
+                        <li>Talentrek 2K24: 24th August 2024</li>
+                        <li>Pongal Festival: 11th January 2025</li>
+                        <li>Republic Day: 26th January 2025</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-year">
+                    <h3 class="year-header">2023 - 2024</h3>
+                    <ul class="year-events">
+                        <li>Orientation Program: 19th - 21st June 2023</li>
+                        <li>SU Inauguration: 19th July 2023</li>
+                        <li>Independence Day: 15th August 2023</li>
+                        <li>Teachers Day: 5th September 2023</li>
+                        <li>Polyfest 2023-24: 23rd September 2023</li>
+                        <li>Talentrek: 14th October 2023</li>
+                        <li>Republic Day: 26th January 2024</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-year">
+                    <h3 class="year-header">2022 - 2023</h3>
+                    <ul class="year-events">
+                        <li>Orientation: 1st - 3rd August 2022</li>
+                        <li>Independence Day: 15th August 2022</li>
+                        <li>Teachers Day: 5th September 2022</li>
+                        <li>SU Inauguration: 16th September 2022</li>
+                        <li>Polyfest: 18th November 2022</li>
+                        <li>Republic Day: 26th January 2023</li>
+                        <li>Talentrek: 25th February 2023</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-chapter">Chapter 06</div>
+                <h2 class="section-title">Achievements</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Recognizing excellence and outstanding contributions</p>
+            </div>
+
+            <div class="achievement-grid">
+                <div class="achievement-category">
+                    <h3>2020-2021</h3>
+                    <ul class="achievement-list">
+                        <li><strong>Student of The Year:</strong> Swetha S (18DX24) - Computer Engineering</li>
+                        <li><strong>Best Sportsperson (Men):</strong> Prasanna Kumar S (18DM31)</li>
+                        <li><strong>Best Sportsperson (Women):</strong> Sneha Mithra H (18DM42)</li>
+                        <li><strong>Best NCC Cadet:</strong> D. Vivek Narayanan (18MO38)</li>
+                        <li><strong>Best NSS Volunteer:</strong> Ranjith Ram R (17LM18)</li>
+                    </ul>
+                </div>
+
+                <div class="achievement-category">
+                    <h3>Alumni Awards 2020-21</h3>
+                    <ul class="achievement-list">
+                        <li>Mechanical: Gowthem Krishnan D.K (18DM010)</li>
+                        <li>Electrical: S. Jayakrishna (18E011)</li>
+                        <li>Textile: K. Darshini (18TO05)</li>
+                        <li>Computer: D. Sai Pravin (18DX17)</li>
+                        <li>Automobile: P. Vijay (18DB34)</li>
+                    </ul>
+                </div>
+
+                <div class="achievement-category">
+                    <h3>2018-2019</h3>
+                    <ul class="achievement-list">
+                        <li><strong>Student of The Year:</strong> Swetha S (18DX24)</li>
+                        <li><strong>Best Sportspersons:</strong> Prasanna Kumar S & Sneha Mithra H</li>
+                        <li><strong>Best NCC Cadet:</strong> D. Vivek Narayanan</li>
+                        <li><strong>Best NSS Volunteer:</strong> Ranjith Ram R</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2026 PSG Polytechnic College. All Rights Reserved.</p>
+                <div class="footer-quote">"Let there be charity so that others can share my family's prosperity" — Shri P S Govindaswamy Naidu</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

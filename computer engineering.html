@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSG Polytechnic | Computer Engineering</title>
+
+<style>
+
+.dept-title{
+background:#C5A267;
+color:white;
+padding:12px 18px;
+font-weight:700;
+letter-spacing:.5px;
+}
+
+.dept-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
+padding:20px;
+background:#fafafa;
+}
+
+.dept-card{
+background:white;
+border:1px solid #e5e5e5;
+padding:16px;
+font-size:15px;
+font-weight:600;
+transition:.3s;
+cursor:pointer;
+}
+
+.dept-card:hover{
+border-color:#C5A267;
+box-shadow:0 6px 18px rgba(0,0,0,.12);
+transform:translateY(-4px);
+}
+.contact-section{
+margin-top:60px;
+background:#fff;
+padding:0;
+}
+.helpdesk-box{
+text-align:center;
+padding:20px 0 40px;
+}
+
+.contact-section{
+margin:0;
+padding:0;
+background:none;
+}
+
+.contact-frame{
+background:#fff;
+padding:0;
+}
+
+.contact-frame h2{
+background:#C5A267;
+color:#fff;
+padding:18px;
+margin:0;
+font-size:22px;
+font-weight:700;
+}
+
+.contact-frame p{
+text-align:center;
+padding:35px 0;
+line-height:1.8;
+font-size:17px;
+margin:0;
+}
+.contact-container{
+background:#fff;
+border:1px solid #eee;
+margin-top:30px;
+overflow:hidden;
+}
+.main-footer{
+background:#1f1f1f;
+color:#fff;
+text-align:center;
+padding:22px;
+margin:0;
+font-size:16px;
+}
+
+
+.main-footer strong{
+color:#fff;
+font-weight:700;
+}
+
+.facility-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.facility-card{
+border:1px solid #ddd;
+cursor:pointer;
+background:white;
+transition:.3s;
+border-radius:6px;
+overflow:hidden;
+margin-bottom:20px;
+}
+
+.facility-card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.facility-title{
+background:#C5A267;
+color:white;
+padding:14px;
+font-weight:600;
+}
+
+.facility-body{
+display:none;
+padding:18px;
+line-height:1.7;
+background:#fafafa;
+}
+
+
+.faculty-img{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #C5A267;
+margin-bottom:12px;
+background:#e9ecef;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;
+margin:0;
+background:#fff;
+color:#1A1A1A;
+}
+
+.navbar{
+background:#1c1c1c;
+padding:18px 40px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+color:white;
+font-size:20px;
+cursor:pointer;
+font-weight:600;
+letter-spacing:.5px;
+}
+
+.menu{display:flex;gap:20px;flex-wrap:wrap;}
+.menu a{color:#ddd;text-decoration:none;cursor:pointer;font-size:14px;}
+.menu a:hover{color:#C5A267}
+
+.hero{
+background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.96)),
+url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a');
+background-size:cover;
+padding:100px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-family:Georgia;
+font-size:50px;
+margin:0;
+}
+
+.divider{
+width:90px;
+height:3px;
+background:#C5A267;
+margin:20px auto;
+}
+
+.section{
+padding:70px 40px;
+max-width:1150px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-family:Georgia;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.about-box{
+background:#fafafa;
+padding:30px;
+border:1px solid #eee;
+line-height:1.7;
+margin-bottom:40px;
+}
+
+.faculty-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.faculty-card{
+border:1px solid #eee;
+padding:20px;
+background:white;
+border-radius:8px;
+transition:0.2s;
+cursor:pointer;
+}
+
+.faculty-card:hover{
+border-color:#C5A267;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transform:translateY(-4px);
+}
+
+.faculty-card h4{
+color:#C5A267;
+margin:0 0 8px;
+font-size:1.1rem;
+}
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:25px;
+}
+
+table th{
+background:#C5A267;
+color:#fff;
+padding:16px;
+text-align:center;
+font-size:18px;
+font-weight:600;
+}
+
+table td{
+border:1px solid #ddd;
+padding:18px;
+vertical-align:middle;
+font-size:17px;
+line-height:1.5;
+}
+
+table td:first-child{
+width:48%;
+}
+
+table td:nth-child(2){
+width:30%;
+}
+
+table td:last-child{
+width:22%;
+text-align:center;
+}
+.award-table{
+    width:90%;
+    max-width:1280px;
+    margin:30px auto;
+    border-collapse:collapse;
+}
+.award-table th{
+    background:#C5A267;
+    color:#fff;
+    padding:14px;
+    border:1px solid #ddd;
+    text-align:left;
+}
+
+.award-table td{
+    border:1px solid #ddd;
+    padding:12px 16px;      /* smaller padding */
+    line-height:1.4;
+    vertical-align:middle;
+}
+
+.award-table td:first-child{
+    width:45%;
+}
+
+.award-table td:nth-child(2){
+    width:35%;
+}
+
+.award-table td:last-child{
+    width:20%;
+    text-align:center;
+}
+.award-img{
+    width:80px;
+    height:100px;
+    object-fit:cover;
+}
+.activity-table{
+    width:90%;
+    max-width:1200px;
+    margin:30px auto;
+}
+
+.activity-table th{
+    background:#C5A267;
+    color:#fff;
+    text-align:left;
+    padding:15px;
+    font-size:18px;
+}
+
+.activity-table td{
+    padding:14px 18px;
+    line-height:1.5;
+}
+
+.activity-table tr:hover{
+    background:#fafafa;
+}
+.activity-img{
+    width:120px;
+    height:90px;
+    object-fit:cover;
+    border-radius:6px;
+    border:1px solid #ddd;
+    display:block;
+    margin:auto;
+}
+#mou .activity-table td{
+    text-align:center;
+    vertical-align:middle;
+}
+
+#mou .activity-table td:nth-child(3){
+    text-align:left;
+    padding-left:25px;
+    font-weight:500;
+}
+.activity-table tbody tr:hover{
+    background:#faf8f2;
+    transition:.25s;
+}
+.newsletter-link{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 18px;
+    background:#C5A267;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:6px;
+    transition:.3s;
+}
+
+.newsletter-link:hover{
+    background:#b18f56;
+    transform:translateY(-2px);
+}
+#journal .activity-table{
+    table-layout:auto;
+}
+
+#journal .activity-table td{
+    text-align:left;
+    vertical-align:top;
+    line-height:1.6;
+    font-size:15px;
+}
+
+#journal .activity-table th{
+    text-align:center;
+}
+#alumni .activity-table a{
+    color:#0A66C2;
+    text-decoration:none;
+    font-weight:600;
+}
+
+#alumni .activity-table a:hover{
+    text-decoration:underline;
+}
+.course-tabs{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:30px;
+border-bottom:3px solid #e5e5e5;
+padding-bottom:8px;
+background:none;
+flex-wrap:wrap;
+}
+
+.course-tabs button{
+padding:12px 22px;
+border:1px solid #ddd;
+background:#f7f7f7;
+color:#333;
+font-weight:600;
+cursor:pointer;
+letter-spacing:.5px;
+border-radius:4px 4px 0 0;
+transition:.3s;
+}
+
+.course-tabs button:hover{
+background:#eee;
+}
+
+.course-tabs button.active{
+background:#C5A267;
+color:white;
+border-color:#C5A267;
+}
+.sem-dropdown{
+margin-top:25px;
+border:1px solid #ddd;
+background:#fafafa;
+border-radius:8px;
+overflow:hidden;
+}
+
+.sem-head{
+padding:15px;
+font-weight:600;
+cursor:pointer;
+background:#C5A267;
+color:white;
+}
+
+.sem-body{
+display:none;
+padding:20px;
+background:#fff;
+}
+
+.award-card{
+background:#fff8e7;
+border-left:5px solid #C5A267;
+padding:20px;
+margin:20px 0;
+border-radius:8px;
+}
+.award-img{
+    width:120px;
+    height:150px;
+    object-fit:cover;
+    border:2px solid #ddd;
+    border-radius:6px;
+    display:block;
+    margin:auto;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+<div class="logo" onclick="goHome()">PSG POLYTECHNIC COLLEGE</div>
+<div class="menu">
+<a onclick="goHome()">Home</a>
+<a href="#admission">Admission</a>
+<a href="#examination">Examination</a>
+<a href="#campus">Campus</a>
+<a href="#union">Student Union</a>
+<a href="#alumni">Alumni</a>
+<a href="#career">Career</a>
+<a href="#helpdesk">Helpdesk</a>
+</div>
+</div>
+
+<div id="computerPage">
+<div class="hero">
+<h1>Computer Engineering</h1>
+<div class="divider"></div>
+<p>Shaping Digital Innovators | Since 1999</p>
+</div>
+
+<div class="section">
+
+<h2 class="section-title">About Department</h2>
+<div class="about-box">
+The Department of Computer Engineering was started in the year 1999 and offers 3 years diploma course in Computer Engineering to provide an excellent knowledge to the students in Computer Engineering in order to meet the challenges of the future, including employment in high technology workforce and the ability to pursue higher studies. Provide technocrats with basic knowledge in both theory and practice in Computer Science, including current emerging technologies and experimental learning.
+</div>
+
+<h2 class="section-title">Programmes</h2>
+<table>
+<tr><th>Programme</th><th>Established</th><th>Duration</th></tr>
+<tr><td>Diploma in Computer Engineering (DCE)</td><td>1999</td><td>3 Years</td></tr>
+</table>
+
+<h2 class="section-title">Vision</h2>
+<p>The vision of Computer Engineering department is to achieve and evolve as a centre of academic excellence in the frontier areas of computer engineering that responds swiftly to the challenges of the 21st century for the benefit of society.</p>
+
+<h2 class="section-title">Mission</h2>
+<ul style="line-height:1.8">
+<li>Impart technical education and knowledge through quality training, hands on experience in the field of computer engineering.</li>
+<li>Effectively apply this education to solve real-world problems.</li>
+<li>Groom students with social responsibility needed for career advancement and entrepreneurship.</li>
+</ul>
+
+<h2 class="section-title">Faculty</h2>
+<div class="faculty-grid">
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436135', '_blank')">
+<img src="https://imgh.in/host/yu6xvd" class="faculty-img">
+<h4>Ms. T.P. Kamatchi, M.E (Biometrics & Cyber Security), (Ph.D)</h4>
+<p><strong>Head of Department</strong></p>
+<p>Teaching Experience: 16 Years</p>
+<p>No. of Journal Publications: 17</p>
+<p>Area: Computer Hardware, Linux Admin, Mobile App Development, Python, Cyber Security, AI tools</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436141', '_blank')">
+<img src="https://imgh.in/host/e9s1il" class="faculty-img">
+<h4>Ms. P. Thilakaveni, M.E(SE)</h4>
+<p>Lecturer</p>
+<p>Teaching Experience: 16 Years</p>
+<p>No. of Journal Publications: 7</p>
+<p>Area: Programming languages, Software Engineering, Cloud Computing, Data Structures, Computer Networks</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436140', '_blank')">
+<img src="https://imgh.in/host/332ous" class="faculty-img">
+<h4>Ms. R. Uma, B.E., M.E</h4>
+<p>Lecturer</p>
+<p>Teaching: 17 Years | Industry: 7 Years</p>
+<p>No. of Journal Publications: 9</p>
+<p>Area: Programming Languages, DBMS, Operating Systems, Software Engineering, UI Design</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436143', '_blank')">
+<img src="https://imgh.in/host/vy0e9j" class="faculty-img">
+<h4>Ms. M. Krithika, ME(CSE)</h4>
+<p>Lecturer</p>
+<p>Teaching Experience: 6 Years 4 Months</p>
+<p>No. of Journal Publications: 14</p>
+<p>Area: Programming Languages, Information Security, Data Analytics, Web programming, Computer Networks</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/592859', '_blank')">
+<img src="https://imgh.in/host/6rmk4a" class="faculty-img">
+<h4>Ms. J. Suganya, B.E(CSE)</h4>
+<p>Lecturer</p>
+<p>Teaching Experience: 2 Years 4 Months</p>
+<p>Area: Programming Languages, Operating Systems, RDBMS, Computer Hardware</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/0uf9tl" class="faculty-img">
+<h4>Ms. M. Keerthana, B.E(CSE)</h4>
+<p>Lecturer</p>
+<p>Teaching Experience: 3 Years</p>
+<p>Area: Operating System, Computer Networks, Data Structures, Web Programming</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/7fl0a6" class="faculty-img">
+<h4>Mr. S. Thanikaivel, M.Sc(CSE)</h4>
+<p>Technical Assistant</p>
+<p>Teaching Experience: 4 Years</p>
+<p>Area: C, MS Office, Hardware</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/pbrfcx" class="faculty-img">
+<h4>Ms. M. Dhanalakshmi, M.Com</h4>
+<p>Junior Assistant</p>
+<p>Experience: 12 Years</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/y13wb5" class="faculty-img">
+<h4>Mr. T. Krishnaraj, DCE, B.E.</h4>
+<p>Instructor</p>
+<p>Experience: 16 Years</p>
+<p>Area: Computer Hardware and Networks, Internet of Things</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/bgj8hk" class="faculty-img">
+<h4>Ms. S. Shunmathi</h4>
+<p>Instructor</p>
+<p>Experience: 1 Year</p>
+<p>Area: Web Programming, Python & SQL</p>
+</div>
+
+</div>
+
+<h2 class="section-title">Course Structure</h2>
+<div class="course-tabs">
+<button class="active" onclick="showCourseTab('po')">PROGRAMME OUTCOMES</button>
+<button onclick="showCourseTab('pso')">PROGRAMME SPECIFIC OUTCOMES</button>
+<button onclick="showCourseTab('peo')">PROGRAMME EDUCATIONAL OBJECTIVES</button>
+</div>
+<div class="course-content" id="po">
+<table>
+<tr><th style="width:90px">PO No</th><th>Programme Outcomes</th></tr>
+<tr><td>PO1</td><td>Basic and Discipline specific knowledge: Apply knowledge of basic mathematics, science and engineering fundamentals and engineering specialization to solve the engineering problems.</td></tr>
+<tr><td>PO2</td><td>Problem analysis: Identify and analyze well-defined engineering problems using codified standard methods.</td></tr>
+<tr><td>PO3</td><td>Design/ development of solutions: Design solutions for well-defined technical problems and assist with the design of systems components or processes to meet specified needs.</td></tr>
+<tr><td>PO4</td><td>Engineering Tools, Experimentation and Testing: Apply modern engineering tools and appropriate technique to conduct standard tests and measurements.</td></tr>
+<tr><td>PO5</td><td>Engineering practices for society, sustainability and environment: Apply appropriate technology in context of society, sustainability, environment and ethical practices.</td></tr>
+<tr><td>PO6</td><td>Project Management: Use engineering management principles individually, as a team member or a leader to manage projects and effectively communicate about well-defined engineering activities.</td></tr>
+<tr><td>PO7</td><td>Life-long learning: Ability to analyze individual needs and engage in updating in the context of technological changes.</td></tr>
+</table>
+</div>
+<div class="course-content" id="pso" style="display:none">
+<table>
+<tr><th style="width:90px">PSO No</th><th>Programme Specific Outcomes</th></tr>
+<tr><td>PSO1</td><td>To build a solid foundation in Computer Engineering to develop analytical, problem Solving and programming skills.</td></tr>
+<tr><td>PSO2</td><td>To demonstrate the ability in using modern computer languages and platforms to create opportunities for entrepreneurship, career and higher education.</td></tr>
+</table>
+</div>
+<div class="course-content" id="peo" style="display:none">
+<table>
+<tr><th style="width:90px">PEO No</th><th>Programme Educational Objectives</th></tr>
+<tr><td>PEO1</td><td>Gain knowledge to solve a wide range of computing related problems to cater to the needs of both industry and society.</td></tr>
+<tr><td>PEO2</td><td>Be able to adapt to the evolving technical challenges and changing career opportunities with the capability to work in multidisciplinary environment subsuming ethical values.</td></tr>
+<tr><td>PEO3</td><td>Enhance the required skills to pursue higher education to excel in industry and entrepreneurship.</td></tr>
+</table>
+</div>
+
+<h2 class="section-title">2021 Scheme (Syllabus can be downloaded at intranet.psgpolytech)</h2>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('cse1')">Semester 1</div><div class="sem-body" id="cse1"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>ENGINEERING MATHEMATICS -I</td><td>PHYSICS LABORATORY</td></tr><tr><td>PHYSICS</td><td>CHEMISTRY LABORATORY</td></tr><tr><td>CHEMISTRY</td><td>PROBLEM SOLVING AND C PROGRAMMING LABORATORY</td></tr><tr><td>ENGLISH</td><td>INPLANT TRAINING</td></tr><tr><td>PROBLEM SOLVING AND C PROGRAMMING</td><td>PHYSICAL EDUCATION -I</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('cse2')">Semester 2</div><div class="sem-body" id="cse2"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>ENGINEERING MATHEMATICS -II</td><td>APPLIED PHYSICS LABORATORY</td></tr><tr><td>CALCULUS AND ITS APPLICATIONS</td><td>ENGINEERING CHEMISTRY LABORATORY</td></tr><tr><td>APPLIED PHYSICS</td><td>PC HARDWARE AND PERIPHERALS LABORATORY</td></tr><tr><td>APPLIED PHYSICS</td><td>MULTIMEDIA LABORATORY</td></tr><tr><td>BASIC ENGINEERING GRAPHICS</td><td>PHYSICAL EDUCATION -II</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('cse3')">Semester 3</div><div class="sem-body" id="cse3"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>STATISTICS AND PROBABILITY MODELS</td><td>DIGITAL ELECTRONICS LABORATORY</td></tr><tr><td>DIGITAL ELECTRONICS</td><td>RELATIONAL DATABASE MANAGEMENT SYSTEM LABORATORY</td></tr><tr><td>RELATIONAL DATABASE MANAGEMENT SYSTEM</td><td>DATA STRUCTURES LABORATORY</td></tr><tr><td>DATA STRUCTURES</td><td>PYTHON PROGRAMMING LABORATORY</td></tr><tr><td>-</td><td>COMMUNICATIVE ENGLISH LABORATORY</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('cse4')">Semester 4</div><div class="sem-body" id="cse4"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>JAVA PROGRAMMING</td><td>JAVA PROGRAMMING LABORATORY</td></tr><tr><td>OPERATING SYSTEMS</td><td>SOFTWARE PRODUCT DESIGN AND DEVELOPMENT LABORATORY</td></tr><tr><td>SOFTWARE ENGINEERING</td><td>LINUX SYSTEM ADMINISTRATION LABORATORY</td></tr><tr><td>EMBEDDED SYSTEM AND INTERNET OF THINGS</td><td>INTERNET OF THINGS LABORATORY</td></tr><tr><td>-</td><td>TECHNICAL COMMUNICATION LABORATORY<br>INTERNSHIP#</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('cse5')">Semester 5</div><div class="sem-body" id="cse5"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>COMPUTER NETWORKS</td><td>COMPUTER NETWORKS LABORATORY</td></tr><tr><td>INFORMATION SECURITY</td><td>ETHICAL HACKING AND PENETRATION TESTING LABORATORY</td></tr><tr><td>ELECTIVE THEORY -I</td><td>WEB TECHNOLOGY LABORATORY</td></tr><tr><td>-</td><td>MOBILE APPLICATION DEVELOPMENT LABORATORY</td></tr><tr><td>-</td><td>MINI PROJECT AND ENTREPRENEURSHIP</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('cse6')">Semester 6</div><div class="sem-body" id="cse6"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>CLOUD COMPUTING CONCEPTS</td><td>CLOUD COMPUTING LABORATORY</td></tr><tr><td>DATA ANALYTICS</td><td>DATA ANALYTICS LABORATORY</td></tr><tr><td>ELECTIVE THEORY -II</td><td>CONTENT MANAGEMENT SYSTEM LABORATORY</td></tr><tr><td>-</td><td>SERVER SYSTEM ADMINISTRATION LABORATORY</td></tr><tr><td>-</td><td>PROJECT WORK AND VIVA VOCE</td></tr></table><p><strong>Elective Courses (Two Theory to be opted):</strong> BLOCK CHAIN TECHNOLOGY, USER INTERFACE DESIGN, INFORMATION STORAGE MANAGEMENT, DEEP LEARNING, CYBER SECURITY</p></div></div>
+
+<h2 class="section-title">2024 Scheme (Syllabus can be downloaded at intranet.psgpolytech)</h2>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('cse24_1')">Semester 1</div><div class="sem-body" id="cse24_1"><table><tr><th>Theory</th><th>Theory Cum Practical</th><th>Practicals</th><th>Audit Courses</th></tr><tr><td>PHYSICS</td><td>APPLIED ENGLISH</td><td>PHYSICS LABORATORY</td><td>INTEGRATED LEARNING EXPERIENCE-I</td></tr><tr><td>CHEMISTRY</td><td></td><td>CHEMISTRY LABORATORY</td><td></td></tr><tr><td>BASIC MATHEMATICS</td><td></td><td>PROBLEM SOLVING AND C PROGRAMMING LABORATORY</td><td></td></tr><tr><td>PROBLEM SOLVING AND C PROGRAMMING</td><td></td><td></td><td></td></tr></table></div></div>
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('cse24_2')">Semester 2</div>
+<div class="sem-body" id="cse24_2">
+
+<table>
+<tr>
+<th>Theory</th>
+<th>Theory Cum Practical</th>
+<th>Practicals</th>
+<th>Audit Courses</th>
+</tr>
+
+<tr>
+<td>APPLIED PHYSICS</td>
+<td>ENGINEERING GRAPHICS</td>
+<td>APPLIED PHYSICS LABORATORY</td>
+<td>INTEGRATED LEARNING EXPERIENCE-II</td>
+</tr>
+
+<tr>
+<td>APPLIED CHEMISTRY</td>
+<td></td>
+<td>APPLIED CHEMISTRY LABORATORY</td>
+<td></td>
+</tr>
+
+<tr>
+<td>CALCULUS AND ITS APPLICATIONS</td>
+<td></td>
+<td>PC HARDWARE AND PERIPHERALS LABORATORY</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td>MULTIMEDIA LABORATORY</td>
+<td></td>
+</tr>
+
+</table>
+
+</div>
+</div>
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('cse24_3')">Semester 3</div>
+
+<div class="sem-body" id="cse24_3">
+
+<table>
+
+<tr>
+<th>Theory</th>
+<th>Theory Cum Practical</th>
+<th>Practicals</th>
+<th>Audit Courses</th>
+</tr>
+
+<tr>
+<td>STATISTICS AND PROBABILITY MODELS</td>
+<td>PYTHON PROGRAMMING</td>
+<td>DIGITAL LOGIC DESIGN LABORATORY</td>
+<td>INTEGRATED LEARNING EXPERIENCE-III</td>
+</tr>
+
+<tr>
+<td>DIGITAL LOGIC DESIGN</td>
+<td></td>
+<td>DATABASE MANAGEMENT SYSTEMS LABORATORY</td>
+<td></td>
+</tr>
+
+<tr>
+<td>DATABASE MANAGEMENT SYSTEMS</td>
+<td></td>
+<td>DATA STRUCTURES LABORATORY</td>
+<td></td>
+</tr>
+
+<tr>
+<td>DATA STRUCTURES</td>
+<td></td>
+<td>WEB TECHNOLOGY LABORATORY</td>
+<td></td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('cse24_4')">Semester 4</div>
+
+<div class="sem-body" id="cse24_4">
+
+<table>
+
+<tr>
+<th>Theory</th>
+<th>Theory Cum Practical</th>
+<th>Practicals</th>
+<th>Audit Courses</th>
+</tr>
+
+<tr>
+<td>JAVA PROGRAMMING</td>
+<td>SOFTWARE PRODUCT DESIGN AND DEVELOPMENT</td>
+<td>JAVA PROGRAMMING LABORATORY</td>
+<td>INTEGRATED LEARNING EXPERIENCE-IV</td>
+</tr>
+
+<tr>
+<td>OPERATING SYSTEMS</td>
+<td></td>
+<td>LINUX ADMINISTRATION LABORATORY</td>
+<td></td>
+</tr>
+
+<tr>
+<td>SOFTWARE ENGINEERING</td>
+<td></td>
+<td>COMPUTER NETWORKS LABORATORY</td>
+<td></td>
+</tr>
+
+<tr>
+<td>COMPUTER NETWORKS</td>
+<td></td>
+<td>ADVANCED COMMUNICATION SKILLS</td>
+<td></td>
+</tr>
+
+</table>
+
+</div>
+</div>
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('cse24_5')">Semester 5</div>
+
+<div class="sem-body" id="cse24_5">
+
+<table>
+
+<tr>
+<th>Theory</th>
+<th>Theory Cum Practical</th>
+<th>Practicals</th>
+<th>Audit Courses</th>
+</tr>
+
+<tr>
+<td>CLOUD COMPUTING CONCEPTS</td>
+<td>BUILDING INTERNET OF THINGS</td>
+<td>CLOUD COMPUTING LABORATORY</td>
+<td>INTEGRATED LEARNING EXPERIENCE-V</td>
+</tr>
+
+<tr>
+<td>CRYPTOGRAPHY AND CYBER SECURITY</td>
+<td></td>
+<td>ETHICAL HACKING AND PENETRATION TESTING LABORATORY</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ELECTIVE THEORY - I</td>
+<td></td>
+<td>MINI PROJECT</td>
+<td></td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('cse24_6')">Semester 6</div>
+
+<div class="sem-body" id="cse24_6">
+
+<table>
+
+<tr>
+<th>Theory</th>
+<th>Theory Cum Practical</th>
+<th>Practicals</th>
+<th>Audit Courses</th>
+</tr>
+
+<tr>
+<td>DATA SCIENCE</td>
+<td>AUGMENTED AND VIRTUAL REALITY</td>
+<td>DATA SCIENCE LABORATORY</td>
+<td>INTEGRATED LEARNING EXPERIENCE-VI</td>
+</tr>
+
+<tr>
+<td>COMPUTATIONAL INTELLIGENCE</td>
+<td></td>
+<td>COMPUTATIONAL INTELLIGENCE LABORATORY</td>
+<td></td>
+</tr>
+
+<tr>
+<td>ELECTIVE THEORY - II</td>
+<td></td>
+<td>PROJECT WORK</td>
+<td></td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+<div class="sem-dropdown">
+
+    <div class="sem-head" onclick="toggleSem('cse24_elective')">
+        Elective Courses (Two Theory to be opted)
+    </div>
+
+    <div class="sem-body" id="cse24_elective">
+
+        <table>
+
+            <tr>
+                <th>Theory</th>
+            </tr>
+
+            <tr>
+                <td>BLOCK CHAIN TECHNOLOGY</td>
+            </tr>
+
+            <tr>
+                <td>BIG DATA FRAMEWORKS</td>
+            </tr>
+
+            <tr>
+                <td>USER INTERFACE / USER EXPERIENCE</td>
+            </tr>
+
+            <tr>
+                <td>DESIGN AND ANALYSIS OF ALGORITHMS</td>
+            </tr>
+
+            <tr>
+                <td>DIGITAL FORENSICS</td>
+            </tr>
+
+            <tr>
+                <td>FULL STACK WEB DEVELOPMENT</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+<h2 class="section-title">Facilities</h2>
+
+<div class="facility-card" onclick="toggleFacility('f1')">
+    <div class="facility-title">Computer Laboratory</div>
+    <div class="facility-body" id="f1">
+        <img src="https://i.postimg.cc/tJQtt3CD/computerlab.jpg" alt="Computer Laboratory"
+             style="width:100%;max-width:500px;display:block;margin:15px auto;border-radius:8px;">
+        <p>
+            The laboratory provides programming skills in languages like C, C++, SQL,
+            Java, VB.NET, ASP.NET and Open Source software. Windows and Linux operating
+            systems are available along with Internet facilities for students.
+        </p>
+    </div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f2')">
+    <div class="facility-title">Multimedia Laboratory</div>
+    <div class="facility-body" id="f2">
+        <img src="https://i.postimg.cc/QxnC2XcK/multimedialab.jpg" alt="Multimedia Laboratory"
+             style="width:100%;max-width:500px;display:block;margin:15px auto;border-radius:8px;">
+        <p>
+            The Multimedia Laboratory helps students develop animation and multimedia
+            skills. The lab is equipped with modern computer systems and software such
+            as Photoshop, Flash, Dreamweaver, MATLAB, and other multimedia tools.
+        </p>
+    </div>
+</div>
+</div>
+
+<h2 class="section-title">Student Achievements & Awards</h2>
+<div class="academic-frame">
+<div class="course-tabs">
+<button class="active" onclick="showStudTab('awards2324')">Award 2023-2024</button>
+<button onclick="showStudTab('awards2223')">Award 2022-2023</button>
+<button onclick="showStudTab('awards2122')">Award 2021-2022</button>
+<button onclick="showStudTab('awards2021')">Award 2020-2021</button>
+</div>
+<div class="course-content" id="awards2324">
+<table class="award-table">
+<tr>
+    <th>Name of the Award</th>
+    <th>Name of the Student</th>
+    <th>Image</th>
+</tr>
+
+<tr>
+    <td>Best Outgoing Student for Department</td>
+    <td>Thejaswini V S (22DX28)</td>
+    <td>
+        <img src="https://imgh.in/host/349krn" class="award-img">
+    </td>
+</tr>
+
+<tr>
+    <td>Best Outgoing Student for Department</td>
+    <td>M. Ramanan (21DX17)</td>
+    <td>
+        <img src="https://imgh.in/host/vcmqwq" class="award-img">
+    </td>
+</tr>
+
+<tr>
+    <td>Achievement Award</td>
+    <td>Shelvaaathithyan V.K.V (21DX19)</td>
+    <td>
+        <img src="https://imgh.in/host/23s8nx" class="award-img">
+    </td>
+</tr>
+
+<tr>
+    <td>Best Outgoing Sportsman</td>
+    <td>Swasthik S (21DX22)</td>
+    <td>
+        <img src="https://imgh.in/host/q3hoco" class="award-img">
+    </td>
+</tr>
+
+</table>
+</div>
+<div class="course-content" id="awards2223" style="display:none">
+<table class="award-table">
+<tr>
+    <th>Name of the Award</th>
+    <th>Name of the Student</th>
+    <th>Image</th>
+</tr>
+
+<tr>
+    <td>Best Outgoing Student for Department</td>
+    <td>M. Siddiq (21XH06)</td>
+    <td>
+        <img src="https://imgh.in/host/tqnja2" class="award-img">
+    </td>
+</tr>
+
+<tr>
+    <td>Achievement Award</td>
+    <td>A. Nithin Sri (20DX13)</td>
+    <td>
+        <img src="https://imgh.in/host/s80f9f" class="award-img">
+    </td>
+</tr>
+
+</table>
+</div>
+<div class="course-content" id="awards2122" style="display:none">
+<table class="award-table">
+
+<tr>
+    <th>Name of the Award</th>
+    <th>Name of the Student</th>
+    <th>Image</th>
+</tr>
+
+<tr>
+    <td>Best Outgoing Student for Department</td>
+    <td>Raghul Prasanth S P (19DX17)</td>
+    <td>
+        <img src="https://imgh.in/host/hetili" class="award-img">
+    </td>
+</tr>
+
+<tr>
+    <td>Achievement Award</td>
+    <td>V V Vasanth (19DX27)</td>
+    <td>
+        <img src="https://imgh.in/host/lb0hif" class="award-img">
+    </td>
+</tr>
+
+</table>
+</div>
+<div class="course-content" id="awards2021" style="display:none">
+<table class="award-table">
+<tr>
+    <th>Name of the Award</th>
+    <th>Name of the Student</th>
+    <th>Image</th>
+</tr>
+
+<tr>
+    <td>Best Outgoing Student for Department</td>
+    <td>S Swetha (18DX24)</td>
+    <td>
+        <img src="https://imgh.in/host/y8fusn" class="award-img">
+    </td>
+</tr>
+
+<tr>
+    <td>Best NSS Volunteers</td>
+    <td>S Swetha (18DX24)</td>
+    <td>
+        <img src="https://imgh.in/host/y8fusn" class="award-img">
+    </td>
+</tr>
+
+<tr>
+    <td>Best Outgoing Student for Alumni</td>
+    <td>Sai Pravin D (18DX17)</td>
+    <td>
+        <img src="https://imgh.in/host/e0wpb8" class="award-img">
+    </td>
+</tr>
+
+</table>
+</div>
+<h2 class="section-title">Activities</h2>
+
+<div class="academic-frame">
+
+<div class="course-tabs">
+    <button class="active" onclick="showActivityTab('association')">Association Activities</button>
+    <button onclick="showActivityTab('training')">Training Programs</button>
+    <button onclick="showActivityTab('mou')">MOU Signed</button>
+    <button onclick="showActivityTab('newsletter')">Newsletter</button>
+    <button onclick="showActivityTab('industry')">Industry Visit</button>
+    <button onclick="showActivityTab('journal')">Journal Publications</button>
+    <button onclick="showActivityTab('alumni')">Distinguished Alumni</button>
+</div>
+
+<!-- ================= ASSOCIATION ================= -->
+
+<div class="course-content" id="association">
+
+<table class="activity-table">
+
+<tr>
+    <th>Program</th>
+    <th>Chief Guest</th>
+</tr>
+
+<tr>
+    <td>Guest Lecture on "Power of Networking"</td>
+    <td>Mr. Vaidhiya Balaji<br>Refinement Software Solutions</td>
+</tr>
+
+<tr>
+    <td>Guest Lecture on "Android Application Development"</td>
+    <td>Mr. T. Vigneshwaran<br>Sculptechlat Solutions</td>
+</tr>
+
+<tr>
+    <td>Guest Lecture on "Exploring Hardware"</td>
+    <td>Mr. S. Sankar Raj<br>Prompt Info Tech</td>
+</tr>
+
+<tr>
+    <td>Guest Lecture on "Networking as a Career"</td>
+    <td>Mr. Baldev Krish<br>A2B2 IT Services</td>
+</tr>
+
+<tr>
+    <td>Guest Lecture on "Overcome Procrastination"</td>
+    <td>Ms. J. Prabhavathi<br>PSG College of Technology</td>
+</tr>
+
+<tr>
+    <td>Guest Lecture cum Valedictory on "Professional Ethics"</td>
+    <td>
+        S. Harikrishnan<br>
+        Hersenen Technologies
+        <br><br>
+        A.K. Rajendren<br>
+        Former Special Public Prosecutor,
+        Bomb Blast Court
+    </td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- ================= TRAINING ================= -->
+
+<div class="course-content" id="training" style="display:none">
+
+<table class="activity-table">
+
+<tr>
+    <th style="width:6%">S.No</th>
+    <th style="width:28%">Event Name</th>
+    <th style="width:30%">Guest</th>
+    <th style="width:10%">Date</th>
+    <th style="width:10%">Participants</th>
+    <th style="width:16%">Image</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Data to Decisions: A Guest Lecture on Data Analytics</td>
+<td>
+Mr. K. Gowtham Kumar<br>
+Subject Matter Expert,<br>
+Skillfloor, Coimbatore
+</td>
+<td>22.12.2025</td>
+<td style="text-align:center;">60</td>
+<td><img src="https://imgh.in/host/avk34w" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Industry Trends in UI/UX</td>
+<td>
+Mr. S. M. Aravinth<br>
+UI/UX & Graphic Designer,<br>
+Accent Techno Soft, Coimbatore
+</td>
+<td>01.08.2025</td>
+<td style="text-align:center;">110</td>
+<td><img src="https://imgh.in/host/5o8k1d" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Cyber Security and Its Future Ahead</td>
+<td>
+Mr. Deepak Krishnamoorthy<br>
+Cyber Security Delivery Head,<br>
+Tata Consultancy Services, Chennai
+</td>
+<td>18.07.2025</td>
+<td style="text-align:center;">106</td>
+<td><img src="https://imgh.in/host/n5kjpx" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Hands on Training on Codeless Web Design</td>
+<td>
+Mr. Y. Sridharshan<br>
+Full Stack Web Developer,<br>
+NETTEL Solutions, Coimbatore
+</td>
+<td>20.02.2025</td>
+<td style="text-align:center;">56</td>
+<td><img src="https://imgh.in/host/zsh7qv" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Startup and Innovation</td>
+<td>
+Mr. R. Navaneethakrishnan<br>
+Director,<br>
+Metasage Alliance
+</td>
+<td>01.02.2025</td>
+<td style="text-align:center;">106</td>
+<td><img src="https://imgh.in/host/n98g37" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Network Security</td>
+<td>
+Ms. R. Srimuga Preethi<br>
+Consultant,<br>
+Wipro Technologies, Coimbatore
+</td>
+<td>01.02.2025</td>
+<td style="text-align:center;">106</td>
+<td><img src="https://imgh.in/host/c809n7" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>AI Paradigm & Entrepreneurial Ecosystem</td>
+<td>
+Mr. M. Siddiq<br>
+Co-Founder & CEO,<br>
+aXtrLabs
+</td>
+<td>31.01.2025</td>
+<td style="text-align:center;">106</td>
+<td><img src="https://imgh.in/host/c00gs4" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Project Foundations: How To Start, Plan, And Manage Your Projects</td>
+<td>
+Mr. Vikram Aruchamy<br>
+CEO,<br>
+Thinksolv Technologies
+</td>
+<td>25.09.2024</td>
+<td style="text-align:center;">60</td>
+<td><img src="https://imgh.in/host/im0tjr" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Accelerating DevOps Adoption: Strategies, Tools, and Best Practices</td>
+<td>
+Ms. Rohini Ashok – PPSM Manager, Accenture, Coimbatore<br><br>
+Mr. D. Manikandan – Chief Technology Officer, IDevOpz<br><br>
+Mr. M. Mohammed Arief – AWS Associate DevOps Engineer,<br>
+One Data Software Solution Pvt. Ltd.<br><br>
+Ms. S. Geetha – Co-Founder & DevOps Lead,<br>
+IDevOpz
+</td>
+<td>13.08.2024</td>
+<td style="text-align:center;">120</td>
+<td><img src="https://imgh.in/host/no190r" class="activity-img"></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Evolving Computing Trends</td>
+<td>
+Mr. M. Vignesh<br>
+Profenaa Technologies,<br>
+Coimbatore
+</td>
+<td>02.08.2024</td>
+<td style="text-align:center;">50</td>
+<td><img src="https://imgh.in/host/p9fqot" class="activity-img"></td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- ================= MOU ================= -->
+
+<div class="course-content" id="mou" style="display:none">
+
+<table class="activity-table">
+
+<tr>
+    <th style="width:8%">S.No</th>
+    <th style="width:25%">Date of MoU Signed</th>
+    <th>Company / Research Center</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>20.02.2025</td>
+    <td>NETTEL Solutions</td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td>12.04.2024</td>
+    <td>ONEDATA Software Solutions Pvt. Ltd., Coimbatore</td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>15.03.2023</td>
+    <td>Justo Merchantz Pvt. Ltd., Coimbatore</td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td>20.10.2021</td>
+    <td>Zacco Cyber Security Pvt. Ltd., Coimbatore</td>
+</tr>
+
+</table>
+
+</div>
+<!-- ================= NEWSLETTER ================= -->
+
+<div id="newsletter" class="course-content" style="display:none;">
+
+<table class="activity-table">
+
+<tr>
+    <th style="width:10%">S.No</th>
+    <th style="width:55%">Newsletter</th>
+    <th style="width:35%">View</th>
+</tr>
+
+<tr>
+    <td style="text-align:center;">1</td>
+    <td>Department Newsletter 2023–2024</td>
+    <td style="text-align:center;">
+        <a href="https://www.psgpolytech.ac.in/dept/files/newsletter/dce_newsletter2023-2024.pdf"
+           target="_blank"
+           class="newsletter-link">
+            📄 View PDF
+        </a>
+    </td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- ================= INDUSTRY ================= -->
+<div class="course-content" id="industry" style="display:none">
+
+<table class="activity-table">
+
+<tr>
+    <th style="width:6%">S.No</th>
+    <th style="width:14%">Date</th>
+    <th style="width:40%">Industry</th>
+    <th style="width:15%">No. of Students Visited</th>
+    <th style="width:25%">Image</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>24.12.2025</td>
+    <td>PSG GRD Museum, Neelambur, Coimbatore</td>
+    <td>58</td>
+    <td><img src="https://imgh.in/host/m4bm0g" class="activity-img"> , <img src="https://imgh.in/host/ndhe3t" class="activity-img"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td>15.09.2025</td>
+    <td>PSG GRD Museum, Neelambur, Coimbatore</td>
+    <td>55</td>
+    <td><img src="https://imgh.in/host/sqgf2f" class="activity-img"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>05.09.2025<br>06.09.2025</td>
+    <td>TECHCENTRIX, Mysore</td>
+    <td>87</td>
+    <td><img src="https://imgh.in/host/uc1t7j" class="activity-img"> , <img src = "https://imgh.in/host/dzd41w" class="activity-img"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td>08.08.2025<br>13.08.2025</td>
+    <td>Information Technology Department, PSG Hospitals, Coimbatore</td>
+    <td>64</td>
+    <td><img src="https://imgh.in/host/ca9bal" class="activity-img"></td>
+</tr>
+
+<tr>
+    <td>5</td>
+    <td>06.08.2025</td>
+    <td>RND Softech Private Ltd., Coimbatore</td>
+    <td>54</td>
+    <td><img src="https://imgh.in/host/o9a7hy" class="activity-img"></td>
+</tr>
+
+<tr>
+    <td>6</td>
+    <td>04.08.2025</td>
+    <td>Central IT, PSG College of Technology, Coimbatore</td>
+    <td>64</td>
+    <td><img src="https://imgh.in/host/8dw7g0" class="activity-img"></td>
+</tr>
+
+<tr>
+    <td>7</td>
+    <td>04.08.2025</td>
+    <td>Central IT, PSG College of Technology, Coimbatore</td>
+    <td>64</td>
+    <td><img src="https://imgh.in/host/8dw7g0" class="activity-img"></td>
+</tr>
+
+<tr>
+    <td>8</td>
+    <td>28.02.2025</td>
+    <td>Lams Automation Private Limited, Ooty</td>
+    <td>20</td>
+    <td><img src="https://imgh.in/host/md7wmt" class="activity-img"></td>
+</tr>
+
+<tr>
+    <td>9</td>
+    <td>12.02.2025</td>
+    <td>KGISL</td>
+    <td>96</td>
+    <td><img src="https://imgh.in/host/zwkm12" class="activity-img"></td>
+</tr>
+
+<tr>
+    <td>10</td>
+    <td>08.02.2025</td>
+    <td>KPRIET</td>
+    <td>16</td>
+    <td><img src="https://imgh.in/host/ff398o" class="activity-img"></td>
+</tr>
+
+<tr>
+    <td>11</td>
+    <td>26.07.2024</td>
+    <td>RND Softech Private Ltd., Coimbatore</td>
+    <td>58</td>
+    <td><img src="https://imgh.in/host/w87riu" class="activity-img"></td>
+</tr>
+
+<tr>
+    <td>12</td>
+    <td>20.09.2024</td>
+    <td>Kaynes Technology India Ltd., Mysore</td>
+    <td>51</td>
+    <td><img src="https://imgh.in/host/s94oxd" class="activity-img"></td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- ================= JOURNAL ================= -->
+<div class="course-content" id="journal" style="display:none">
+
+<table class="activity-table">
+
+<tr>
+    <th style="width:5%">S.No</th>
+    <th style="width:18%">Author(s)</th>
+    <th style="width:22%">Title of the Publication</th>
+    <th style="width:25%">Conference / Journal</th>
+    <th style="width:30%">Volume No. & Publication Date</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>Dr. Brindha S, Mrs. Uma R, Karthick S, Akilesh A K, Akilesh S, Kavya Kannan, Hamdan Basha</td>
+    <td>AI-Powered Personalized Financial Planner</td>
+    <td>International Journal of Research Publication and Reviews</td>
+    <td>February 2025, Volume 6, Issue 2, ISSN 2582-7421</td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td>Dr. S. Brindha, Mrs. J. Suganya, S.I. Harshavardhini, K.M. Kaviya Sri, S. Lakshaya, V.S. Thejaswini</td>
+    <td>Curate: Digital Museum Using Augmented Reality</td>
+    <td>International Journal of Research And Analytical Reviews (IJRAR)</td>
+    <td>January 2025, Volume 5, E-ISSN 2348-1269, P-ISSN 2349-5138</td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>Mrs. M. Krithika, S. Parthiv Srinivaas, D.J. Hem Anuruth, M. Mukilan, M. Gowsik Jeshva, P. Priya Dharshini</td>
+    <td>Adaptive Automation System</td>
+    <td>International Journal for Research in Applied Science & Engineering Technology (IJRASET)</td>
+    <td>February 2025, Volume 13, Issue II, ISSN 2321-9653, DOI: 10.22214/IJRASET.2025.66737</td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td>Dr. S. Brindha, Mrs. M. Krithika, M.S. Nikash, J. Paul Jesray, P. Sanjeevi Raj, B.V. Deepthi Bala</td>
+    <td>Advanced Image Segmentation for Historical Artifact Preservation</td>
+    <td>International Journal of Research And Analytical Reviews (IJRAR)</td>
+    <td>February 2025, Volume 12, Issue 1, E-ISSN 2348-1269, P-ISSN 2349-5138</td>
+</tr>
+
+<tr>
+    <td>5</td>
+    <td>Mrs. P. Thilakaveni, D. Jayanthan, S. Jeevan Prasad, M. Pranesh Sachin, Z. Muhammad Thouseef, B. Siva Sruthi</td>
+    <td>Agrinova – An Agriculture Support Platform</td>
+    <td>International Research Journal of Engineering and Technology (IRJET)</td>
+    <td>February 2025, Volume 12, Issue II, E-ISSN 2395-0056, P-ISSN 2395-0072</td>
+</tr>
+
+<tr>
+    <td>6</td>
+    <td>Vinu M, Priya S, Kanaga P, Thilakaveni P, Ashforn Hermina J.M., Prashanthini K, Misba M</td>
+    <td>Lighting the Smart Way: A Technological Odyssey in Urban Street Illumination</td>
+    <td>International Conference on Advanced Computing and Communication Systems (ICACCS)</td>
+    <td>pp.1596-1601, Year 2024, DOI:10.1109/ICACCS60874.2024.10717247</td>
+</tr>
+
+<tr>
+    <td>7</td>
+    <td>Kanaga Priya P, Kirupa P, Thilakaveni P, Nisha Devi K, Mahabooba M, Jayachitra S</td>
+    <td>DeepRiceTransfer: Exploiting CNN Transfer Learning for Effective Rice Variety Classification</td>
+    <td>International Conference on Social and Sustainable Innovations in Technology and Engineering (SASI-ITE)</td>
+    <td>pp.102-107, Year 2024, DOI:10.1109/SASI-ITE58663.2024.00025</td>
+</tr>
+
+<tr>
+    <td>8</td>
+    <td>M. Krithika, P. Rajeswari, P. Thilakaveni</td>
+    <td>College Virtual Tour Using Virtual Reality</td>
+    <td>International Journal for Research in Applied Science and Engineering Technology (IJRASET)</td>
+    <td>Volume 12, Issue II, February 2024, ISSN 2321-9653, DOI:10.22214/ijraset.2024.58403</td>
+</tr>
+
+<tr>
+    <td>9</td>
+    <td>P. Thilakaveni, M. Krithika, P. Rajeswari</td>
+    <td>Yoga Posture Detection Using Machine Learning</td>
+    <td>International Journal of Research and Analytical Reviews</td>
+    <td>February 2024, E-ISSN 2348-1269, P-ISSN 2349-5138</td>
+</tr>
+
+<tr>
+    <td>10</td>
+    <td>Siddiq Moideen, Haritha Deepthi, Jacquline Dorothy</td>
+    <td>Augmenting Cyber Physical Systems Through Data Collection and Machine Learning: A Perspective</td>
+    <td>International Journal of Digital Technologies (IJDT)</td>
+    <td>Volume 2, Issue 1, 2023, ISSN 2583-6099</td>
+</tr>
+
+<tr>
+    <td>11</td>
+    <td>Rajeswari P, Sathishkumar V, Chunduru Anilkumar, P. Thilakaveni, Usha Moorthy</td>
+    <td>Big Data Analytics and Implementation Challenges of Machine Learning in Big Data</td>
+    <td>International Conference on Computing and Data Science (CONF-CDS)</td>
+    <td>pp.533-538, Year 2023, DOI:10.54254/2755-2721/2/20220584</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="course-content" id="alumni" style="display:none;">
+
+<table class="activity-table">
+
+<tr>
+    <th style="width:5%">S.No</th>
+    <th style="width:18%">Name</th>
+    <th style="width:25%">Organization</th>
+    <th style="width:22%">Designation</th>
+    <th style="width:30%">LinkedIn</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Vishnupriya D</td>
+<td>Safran Data Systems India Pvt. Ltd.</td>
+<td>Assistant Manager</td>
+<td><a href="https://linkedin.com/in/vishnupriya-d-65867098" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Aadhithiya Chakravarthi</td>
+<td>Bosch Global Software Technology</td>
+<td>Senior Software Engineer</td>
+<td><a href="https://linkedin.com/in/aadhithiya-chakravarthi-a1a353128" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Gayathri S</td>
+<td>Cognizant Technology Solutions</td>
+<td>Associate</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Gowtham S</td>
+<td>Wipro Limited</td>
+<td>Principal Consultant</td>
+<td><a href="https://linkedin.com/in/gowtham-s-6551b7a5" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Shevannth R</td>
+<td>Fidelity Investments</td>
+<td>Software Engineer</td>
+<td><a href="https://linkedin.com/in/shevannth-r-9b3739172" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Saravana Kumar</td>
+<td>Zerp Labs India Pvt. Ltd.</td>
+<td>Software Developer</td>
+<td><a href="https://linkedin.com/in/saravanakumar-velmurugan-69744990" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Srimuga Preethi R</td>
+<td>Wipro Technologies</td>
+<td>Consultant</td>
+<td><a href="https://linkedin.com/in/srimuga-preethi-rajendran-806bba64" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Navaneetha Krishnan Ramanathan</td>
+<td>Metasage Alliance</td>
+<td>Director – Innovation & Corporate Affairs</td>
+<td><a href="https://linkedin.com/in/navaneethakrishnan-ramanathan" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Siddiq Moideen</td>
+<td>aXtrLabs</td>
+<td>Co-Founder & CEO</td>
+<td><a href="https://linkedin.com/in/siddiqmoideen07" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>I. Rajakumar</td>
+<td>Visa Inc.</td>
+<td>Software Engineer</td>
+<td><a href="https://linkedin.com/in/rajakumar0503" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>Samyuktha S</td>
+<td>Caterpillar</td>
+<td>Software Engineer</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>Mohan Kumar V</td>
+<td>Wipro Technologies</td>
+<td>Principal Consultant</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>Naveen Kumar M</td>
+<td>KPR Institute of Engineering and Technology</td>
+<td>AP II</td>
+<td><a href="https://linkedin.com/in/naveenkumar-m-8332a596" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>Guruprasath A</td>
+<td>TCS</td>
+<td>DevOps Engineer</td>
+<td><a href="https://linkedin.com/in/guruprasath-a-70846320a" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>Aravindhan V</td>
+<td>Zoho Corporation</td>
+<td>Software Developer</td>
+<td><a href="https://linkedin.com/in/sridararavind" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>16</td>
+<td>Sangeetha Saminathan</td>
+<td>Pricol Corporate Pvt. Ltd.</td>
+<td>Testing Trainee</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>17</td>
+<td>Kabilan K</td>
+<td>SNS College of Engineering</td>
+<td>CSE (IoT)</td>
+<td><a href="https://linkedin.com/in/kabilan-k-3704b2213" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>18</td>
+<td>Abdul Shaheen</td>
+<td>P A Food and Beverages</td>
+<td>Proprietor</td>
+<td><a href="https://linkedin.com/in/shaheen-a-8623a395" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>19</td>
+<td>Harshita Kumaravel</td>
+<td>Yahoo</td>
+<td>Associate Production Engineer</td>
+<td><a href="https://linkedin.com/in/harshita-kumaravel-9272281a9" target="_blank">View Profile</a></td>
+</tr>
+
+<tr>
+<td>20</td>
+<td>Arunkumar M.</td>
+<td>TCS</td>
+<td>Senior Network Engineer</td>
+<td>-</td>
+</tr>
+
+</table>
+
+</div>
+</div>
+
+</div>
+
+<div class="section">
+
+<h2 class="section-title">Faculty Awards & Publications</h2>
+
+<div class="academic-frame">
+
+<p><strong>Faculty Achievements:</strong> Ms. T.P. Kamatchi received Best Teacher Award from Institute of Scholars. Faculty members have published numerous research papers in national and international journals in areas of Cyber Security, Cloud Computing, Data Analytics, and Machine Learning.</p>
+
+<p><strong>Newsletter:</strong> Department publishes regular newsletters highlighting student achievements, industry interactions, and departmental activities.</p>
+
+<p><strong>Distinguished Alumni:</strong> Our alumni are placed in top MNCs like Google, Microsoft, Amazon, Infosys, TCS, and many successful entrepreneurs in the IT sector.</p>
+
+</div>
+
+
+<div class="contact-container">
+
+<div style="background:#C5A267;color:#fff;padding:18px 0;text-align:center;">
+<h2 style="margin:0;">CONTACT US</h2>
+</div>
+
+<div style="padding:50px 20px;text-align:center;background:#fafafa;">
+
+<h3>Ms. T.P. Kamatchi, M.E (Biometrics & Cyber Security), (Ph.D)</h3>
+
+<p>Head of Department</p>
+
+<p>Department of Computer Engineering</p>
+
+<p>PSG Polytechnic College</p>
+
+<p>Peelamedu, Coimbatore - 641004</p>
+
+<p>Tamil Nadu, India</p>
+
+</div>
+
+<footer class="main-footer">
+Designed and Developed by <strong>PSG Polytechnic College</strong> | © 2026 All Rights Reserved.
+</footer>
+
+</div>
+
+</div>
+
+</div>
+<script>
+function showCourseTab(tab){
+document.getElementById("po").style.display="none";
+document.getElementById("pso").style.display="none";
+document.getElementById("peo").style.display="none";
+document.getElementById(tab).style.display="block";
+let buttons = document.querySelectorAll(".course-tabs button");
+buttons.forEach(btn => btn.classList.remove("active"));
+event.target.classList.add("active");
+}
+
+function goHome(){
+window.location.href = "departments.html";
+}
+
+function toggleSem(id){
+let x = document.getElementById(id);
+if(x) x.style.display = x.style.display == "block" ? "none" : "block";
+}
+
+function toggleFacility(id){
+let x = document.getElementById(id);
+if(x) x.style.display = x.style.display == "block" ? "none" : "block";
+}
+function showActivityTab(tab){
+
+    const tabs = [
+        "association",
+        "training",
+        "mou",
+        "newsletter",
+        "industry",
+        "journal",
+        "alumni"
+    ];
+
+    tabs.forEach(function(id){
+        document.getElementById(id).style.display = "none";
+    });
+
+    document.getElementById(tab).style.display = "block";
+
+    const buttons = event.target.parentElement.querySelectorAll("button");
+
+    buttons.forEach(function(btn){
+        btn.classList.remove("active");
+    });
+
+    event.target.classList.add("active");
+}
+function showStudTab(tab){
+document.getElementById("awards2324").style.display = "none";
+document.getElementById("awards2223").style.display = "none";
+document.getElementById("awards2122").style.display = "none";
+document.getElementById("awards2021").style.display = "none";
+document.getElementById(tab).style.display = "block";
+let btns = document.querySelectorAll(".academic-frame .course-tabs button");
+btns.forEach(b => b.classList.remove("active"));
+event.target.classList.add("active");
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+
+document.getElementById("po").style.display = "block";
+document.getElementById("pso").style.display = "none";
+document.getElementById("peo").style.display = "none";
+
+document.getElementById("association").style.display = "block";
+document.getElementById("training").style.display = "none";
+document.getElementById("mou").style.display = "none";
+document.getElementById("newsletter").style.display = "none";
+document.getElementById("industry").style.display = "none";
+document.getElementById("journal").style.display = "none";
+document.getElementById("alumni").style.display = "none";
+
+document.getElementById("awards2324").style.display = "block";
+document.getElementById("awards2223").style.display = "none";
+document.getElementById("awards2122").style.display = "none";
+document.getElementById("awards2021").style.display = "none";
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSG Polytechnic | Mechatronics</title>
+
+<style>
+.dept-title{
+background:#C5A267;
+color:white;
+padding:12px 18px;
+font-weight:700;
+letter-spacing:.5px;
+}
+
+.dept-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
+padding:20px;
+background:#fafafa;
+}
+
+.dept-card{
+background:white;
+border:1px solid #e5e5e5;
+padding:16px;
+font-size:15px;
+font-weight:600;
+transition:.3s;
+cursor:pointer;
+}
+
+.dept-card:hover{
+border-color:#C5A267;
+box-shadow:0 6px 18px rgba(0,0,0,.12);
+transform:translateY(-4px);
+}
+
+
+.contact-section{
+margin-top:60px;
+background:#f4f4f4;
+padding:40px 0;
+}
+
+.contact-frame{
+max-width:950px;
+margin:auto;
+background:white;
+padding:35px;
+text-align:center;
+border:1px solid #e5e5e5;
+box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
+.contact-frame h2{
+background:#C5A267;
+color:white;
+padding:12px;
+margin:-35px -35px 25px -35px;
+font-size:20px;
+letter-spacing:.5px;
+}
+
+.contact-frame p{
+line-height:1.8;
+font-size:15px;
+color:#444;
+}
+
+.footer-note{
+margin-top:20px;
+font-size:13px;
+color:#777;
+}
+
+
+/* ⭐ Academic content frame like PO PSO PEO */
+.academic-frame{
+max-width:950px;
+margin:40px auto;
+border:1px solid #e5e5e5;
+background:#fff;
+padding:30px;
+box-shadow:0 4px 14px rgba(0,0,0,.04);
+}
+
+
+.facility-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.facility-card{
+border:1px solid #ddd;
+cursor:pointer;
+background:white;
+transition:.3s;
+border-radius:6px;
+overflow:hidden;
+margin-bottom:20px;
+}
+
+.facility-card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.facility-title{
+background:#C5A267;
+color:white;
+padding:14px;
+font-weight:600;
+}
+
+.facility-body{
+display:none;
+padding:25px;
+background:#fafafa;
+text-align:center;
+line-height:1.8;
+}
+
+.facility-body img{
+display:block;
+margin:0 auto 20px;
+width:100%;
+max-width:450px;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+border:none;           /* Removes the golden border */
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.faculty-img{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #C5A267;
+margin-bottom:12px;
+background:#e9ecef;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;
+margin:0;
+background:#fff;
+color:#1A1A1A;
+}
+
+.navbar{
+background:#1c1c1c;
+padding:18px 40px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+color:white;
+font-size:20px;
+cursor:pointer;
+font-weight:600;
+letter-spacing:.5px;
+}
+
+/* Updated Menu gap for many links */
+.menu{display:flex;gap:15px;flex-wrap:wrap;}
+.menu a{color:#ddd;text-decoration:none;cursor:pointer; font-size: 14px;}
+.menu a:hover{color:#C5A267}
+
+.hero{
+background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.96)),
+url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a');
+background-size:cover;
+padding:100px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-family:Georgia;
+font-size:50px;
+margin:0;
+}
+
+.divider{
+width:90px;
+height:3px;
+background:#C5A267;
+margin:20px auto;
+}
+
+.section{
+padding:70px 40px;
+max-width:1150px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-family:Georgia;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.about-box{
+background:#fafafa;
+padding:30px;
+border:1px solid #eee;
+line-height:1.7;
+margin-bottom:40px;
+}
+
+.faculty-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.faculty-card{
+border:1px solid #eee;
+padding:20px;
+background:white;
+border-radius:8px;
+transition:0.2s;
+cursor:pointer;
+}
+
+.faculty-card:hover{
+border-color:#C5A267;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transform:translateY(-4px);
+}
+
+.faculty-card h4{
+color:#C5A267;
+margin:0 0 8px;
+font-size:1.1rem;
+}
+
+/* Activity Tables */
+table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+    margin-bottom:30px;
+}
+
+table th,
+table td{
+    padding:15px;
+    border:1px solid #ddd;
+    vertical-align:middle;
+    word-wrap:break-word;
+}
+
+table th{
+    background:#C5A267;
+    color:#fff;
+    text-align:left;
+}
+
+/* Image Column */
+table th:last-child,
+table td:last-child{
+    width:400px;
+    text-align:center;
+}
+
+.project-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.project-table th,
+.project-table td{
+    padding:15px;
+    border:1px solid #ddd;
+    vertical-align:middle;
+}
+
+.activity-img{
+    width:350px;
+    height:240px;
+    object-fit:contain;
+    object-position:center;
+    background:#fff;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+.activity-img:hover{
+    box-shadow:0 8px 18px rgba(0,0,0,.2);
+}
+.sem-body table td[rowspan]{
+vertical-align:middle;
+text-align:center;
+background:#fafafa;
+}
+
+th{
+background:#C5A267;
+color:white;
+}
+.contact-section{
+    width:95%;
+    margin:40px auto 35px;
+    background:#f7f7f7;
+    border:1px solid #ddd;
+}
+
+.contact-title{
+    background:#c9a663;
+    padding:14px 0;
+    text-align:center;
+}
+
+.contact-title h2{
+    margin:0;
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+.contact-content{
+    text-align:center;
+    padding:45px 20px 55px;
+}
+
+.contact-content h3{
+    margin:0 0 22px;
+    font-size:18px;
+    font-weight:700;
+}
+
+.contact-content p{
+    margin:10px 0;
+    font-size:16px;
+    color:#222;
+    line-height:1.6;
+}
+
+.footer{
+    width:95%;
+    margin:0 auto 25px;
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:16px 15px;
+    font-size:15px;
+}
+
+.course-tabs{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:30px;
+border-bottom:3px solid #e5e5e5;
+padding-bottom:8px;
+background:none;
+flex-wrap:wrap;
+}
+
+.course-tabs button{
+padding:12px 22px;
+border:1px solid #ddd;
+background:#f7f7f7;
+color:#333;
+font-weight:600;
+cursor:pointer;
+letter-spacing:.5px;
+border-radius:4px 4px 0 0;
+transition:.3s;
+}
+
+.course-tabs button:hover{
+background:#eee;
+}
+
+.course-tabs button.active{
+background:#C5A267;
+color:white;
+border-color:#C5A267;
+}
+.sem-dropdown{
+margin-top:25px;
+border:1px solid #ddd;
+background:#fafafa;
+border-radius:8px;
+overflow:hidden;
+}
+
+.sem-head{
+padding:15px;
+font-weight:600;
+cursor:pointer;
+background:#C5A267;
+color:white;
+}
+
+.sem-body{
+display:none;
+padding:20px;
+background:#fff;
+}
+
+.award-card{
+background:#fff8e7;
+border-left:5px solid #C5A267;
+padding:20px;
+margin:20px 0;
+border-radius:8px;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+<div class="logo" onclick="goHome()">PSG POLYTECHNIC COLLEGE</div>
+<div class="menu">
+<a onclick="goHome()">Home</a>
+<a>About</a>
+<a>Academic</a>
+<a>Admission</a>
+<a>Examination</a>
+<a>Campus</a>
+<a>Contact</a>
+</div>
+</div>
+
+<div id="mechatronicsPage">
+<div class="hero">
+<h1>Mechatronics</h1>
+<div class="divider"></div>
+<p>Integrated Automation | Smart Systems since 1996</p>
+</div>
+
+<div class="section">
+
+<h2 class="section-title">About Department</h2>
+<div class="about-box">
+The Department of Mechatronics was started in the year 1996. Diploma in Mechatronics course was designed specially to cater to the needs of modern industries with the requirement of knowledge in Electronics, Mechanical and Automation Technologies. The Laboratories are continuously updated with the latest equipments to enable the students to have "Hands on Training" on state of the art equipment.
+</div>
+
+<h2 class="section-title">Programmes</h2>
+<table>
+<tr><th>Programme</th><th>Established</th><th>Duration</th></tr>
+<tr><td>Diploma in Mechatronics (DMt)</td><td>1996</td><td>3 Years</td></tr>
+</table>
+
+<h2 class="section-title">Vision</h2>
+<p>Department of Mechatronics aspires to be a pioneer in imparting technical knowledge and multi disciplinary skills in the young minds to develop and implement applied automation solutions in the industries and contribute to the development of the society.</p>
+
+<h2 class="section-title">Mission</h2>
+<ul style="line-height:1.8">
+<li>Provide fundamental knowledge in multi disciplinary fields of Engineering and instigate skills to develop innovative Mechatronics systems.</li>
+<li>Expose the students to latest technologies through continual improvement in the curriculum.</li>
+<li>Encourage Entrepreneurship and nurture quest for knowledge.</li>
+</ul>
+
+<h2 class="section-title">Faculty</h2>
+<div class="faculty-grid">
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436109', '_blank')">
+<img src="https://imgh.in/host/eiis7x" class="faculty-img">
+<h4>Mrs D Sujatha, ME</h4>
+<p><strong>Head of the Department</strong></p>
+<p>13 yrs Teaching | 15 yrs Industry</p>
+<p>Robotics, Industrial Automation, PLC and SCADA</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436110', '_blank')">
+<img src="https://imgh.in/host/uu6dpi" class="faculty-img">
+<h4>Mr S Thirumalairajan, ME</h4>
+<p>Lecturer</p>
+<p>14 yrs Teaching | 1 yr Industry</p>
+<p>Embedded System, Embedded Wireless Automation</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436113', '_blank')">
+<img src="https://imgh.in/host/k35t21" class="faculty-img">
+<h4>Mr R Anguraj, M.E</h4>
+<p>Lecturer</p>
+<p>13 yrs Teaching | 2 yrs Industry</p>
+<p>Electrical Machines and Drives</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436112', '_blank')">
+<img src="https://imgh.in/host/989wtw" class="faculty-img">
+<h4>Ms G Hemalatha</h4>
+<p>Lecturer</p>
+<p>10 yrs Teaching | 3 yrs Industry</p>
+<p>Analog and Digital Electronics, Measurements and Instrumentation</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436111', '_blank')">
+<img src="https://imgh.in/host/jno0hn" class="faculty-img">
+<h4>Mr R Kailasam</h4>
+<p>Lecturer</p>
+<p>9 yrs Teaching | 1 yr Industry</p>
+<p>Applied Mechanics, Manufacturing Technology, Design of Machine Elements</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436100', '_blank')">
+<img src="https://imgh.in/host/f3gyox" class="faculty-img">
+<h4>Mr S Prabhu, M.E</h4>
+<p>Lecturer</p>
+<p>10 yrs Teaching | 5 yrs Research</p>
+<p>Advanced Manufacturing Technology</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://www.psgpolytech.ac.in/dept/profile/eee/Mrs.%20R.%20Lavanya%20Profile.pdf', '_blank')">
+<img src="https://imgh.in/host/lkmfzw" class="faculty-img">
+<h4>Mrs R Lavanya Rajan, M.Tech</h4>
+<p>Lecturer</p>
+<p>7 yrs 4 Months Teaching</p>
+<p>Energy Engineering</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/w8wzoh" class="faculty-img">
+<h4>Ms. A Anjugam B.E., (EEE)</h4>
+<p>Instructor</p>
+<p>2 yrs Industry (Software)</p>
+<p>Embedded Systems, Digital Electronics, Robotics, PLC</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/sv37gt" class="faculty-img">
+<h4>Mr. S Surendiren, B.E.</h4>
+<p>Instructor</p>
+<p>7 yrs Industry Experience</p>
+<p>Fluid Automation, PLC, CNC</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/5rd10l" class="faculty-img">
+<h4>L Gokul, B.E., (Mechatronics)</h4>
+<p>Instructor</p>
+<p>5 yrs Industry Experience</p>
+<p>Robotics, PLC</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://imgh.in/host/u4m765" class="faculty-img">
+<h4>Mrs M Divya</h4>
+<p>Office Assistant</p>
+<p>13 Years Experience</p>
+</div>
+
+</div>
+
+<h2 class="section-title">Course Structure</h2>
+<div class="course-tabs">
+<button class="active" onclick="showCourseTab(event,'po')">PROGRAMME OUTCOMES</button>
+
+<button onclick="showCourseTab(event,'pso')">PROGRAMME SPECIFIC OUTCOMES</button>
+
+<button onclick="showCourseTab(event,'peo')">PROGRAMME EDUCATIONAL OBJECTIVES</button>
+</div>
+<div class="course-content" id="po">
+<table>
+<tr><th style="width:90px">Code</th><th>Programme Outcomes</th></tr>
+<tr><td>PO1</td><td>Basic and Discipline specific knowledge: Apply knowledge of basic mathematics, science and engineering fundamentals and engineering specialization to solve the engineering problems.</td></tr>
+<tr><td>PO2</td><td>Problem analysis: Identify and analyse well-defined engineering problems using codified standard methods.</td></tr>
+<tr><td>PO3</td><td>Design/ development of solutions: Design solutions for well-defined technical problems and assist with the design of systems components or processes to meet specified needs.</td></tr>
+<tr><td>PO4</td><td>Engineering Tools, Experimentation and Testing: Apply modern engineering tools and appropriate technique to conduct standard tests and measurements.</td></tr>
+<tr><td>PO5</td><td>Engineering practices for society, sustainability and environment: Apply appropriate technology in context of society, sustainability, environment and ethical practices.</td></tr>
+<tr><td>PO6</td><td>Project Management: Use engineering management principles individually, as a team member or a leader to manage projects and effectively communicate about well-defined engineering activities.</td></tr>
+<tr><td>PO7</td><td>Life-long learning: Ability to analyse individual needs and engage in updating in the context of technological changes.</td></tr>
+</table>
+</div>
+<div class="course-content" id="pso" style="display:none">
+<table>
+<tr><th style="width:90px">Code</th><th>Programme Specific Outcomes</th></tr>
+<tr><td>PSO1</td><td>Ability to design and implement integrated mechatronic systems combining mechanical, electronics and control engineering principles.</td></tr>
+<tr><td>PSO2</td><td>Apply industrial automation technologies including PLC, SCADA, Robotics and CNC for manufacturing and process industries.</td></tr>
+</table>
+</div>
+<div class="course-content" id="peo" style="display:none">
+<table>
+<tr><th style="width:90px">Code</th><th>Programme Educational Objectives</th></tr>
+<tr><td>PEO1</td><td>To produce skilled mechatronics engineers capable of handling multidisciplinary automation challenges in modern industries.</td></tr>
+<tr><td>PEO2</td><td>To develop innovative thinking and entrepreneurial skills for implementing automation solutions.</td></tr>
+<tr><td>PEO3</td><td>To prepare students for higher education and continuous learning in emerging technologies like AI, IoT and Industry 4.0.</td></tr>
+</table>
+</div>
+
+<h2 class="section-title">2024 REGULATION SCHEME</h2>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('m24s1')">Semester 1</div><div class="sem-body" id="m24s1"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>PHYSICS</td><td>PHYSICS LABORATORY</td></tr><tr><td>CHEMISTRY</td><td>CHEMISTRY LABORATORY</td></tr><tr><td>BASIC MATHEMATICS</td><td>C PROGRAMMING LABORATORY</td></tr><tr><td>ALGEBRA AND ANALYTICAL GEOMETRY</td><td>–</td></tr><tr><td colspan="2"><strong>PRACTICUM:</strong> Engineering Graphics I &nbsp;&nbsp;|&nbsp;&nbsp; <strong>AUDIT:</strong> Integrated Learning Experience I</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('m24s2')">Semester 2</div><div class="sem-body" id="m24s2"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>CALCULUS AND ITS APPLICATIONS</td><td>APPLIED PHYSICS LABORATORY</td></tr><tr><td>APPLIED PHYSICS</td><td>INDUSTRIAL CHEMISTRY LABORATORY</td></tr><tr><td>CHEMISTRY OF ENGINEERING MATERIALS</td><td>BASIC ENGINEERING PRACTICE</td></tr><tr><td>TECHNICAL ENGLISH</td><td>–</td></tr><tr><td colspan="2"><strong>PRACTICUM:</strong> Engineering Graphics II &nbsp;&nbsp;|&nbsp;&nbsp; <strong>AUDIT:</strong> Integrated Learning Experience II</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('m24s3')">Semester 3</div><div class="sem-body" id="m24s3"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>ELECTRONIC DEVICES AND CIRCUITS</td><td>ELECTRONIC DEVICES AND CIRCUITS LAB</td></tr><tr><td>APPLIED MECHANICS</td><td>ANALOG AND DIGITAL ELECTRONICS LAB</td></tr><tr><td>ANALOG AND DIGITAL ELECTRONICS</td><td>MACHINE SHOP LABORATORY</td></tr><tr><td>MANUFACTURING TECHNOLOGY</td><td>ADVANCED COMMUNICATION SKILLS</td></tr><tr><td colspan="2"><strong>PRACTICUM:</strong> Computer Aided Design &nbsp;&nbsp;|&nbsp;&nbsp; <strong>AUDIT:</strong> Integrated Learning Experience III</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('m24s4')">Semester 4</div><div class="sem-body" id="m24s4"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>PROBABILITY AND STATISTICS</td><td>SENSORS AND INSTRUMENTATION LAB</td></tr><tr><td>SENSORS AND INSTRUMENTATION</td><td>ELECTRICAL MACHINES LABORATORY</td></tr><tr><td>ELECTRICAL MACHINES AND DRIVES</td><td>FLUID AUTOMATION LABORATORY</td></tr><tr><td>HYDRAULICS AND PNEUMATICS</td><td>TECHNICAL 3D MODELLING LAB</td></tr><tr><td colspan="2"><strong>PRACTICUM:</strong> Basic Python Programming &nbsp;&nbsp;|&nbsp;&nbsp; <strong>AUDIT:</strong> Integrated Learning Experience IV</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('m24s5')">Semester 5</div><div class="sem-body" id="m24s5"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>MICROPROCESSOR & MICROCONTROLLER</td><td>MICROPROCESSOR & MICROCONTROLLER LAB</td></tr><tr><td>ROBOTICS</td><td>EMBEDDED SYSTEM LABORATORY</td></tr><tr><td>ELECTIVE THEORY – I</td><td>MINI PROJECT</td></tr><tr><td colspan="2"><strong>PRACTICUM:</strong> Programmable Logic Control &nbsp;&nbsp;|&nbsp;&nbsp; <strong>AUDIT:</strong> Integrated Learning Experience V</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('m24s6')">Semester 6</div><div class="sem-body" id="m24s6"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>ARTIFICIAL INTELLIGENCE IN AUTOMATION</td><td>CNC LABORATORY</td></tr><tr><td>CNC TECHNOLOGY</td><td>ROBOTICS LABORATORY</td></tr><tr><td>ELECTIVE THEORY – II</td><td>PROJECT WORK</td></tr><tr><td colspan="2"><strong>PRACTICUM:</strong> Industrial Automation &nbsp;&nbsp;|&nbsp;&nbsp; <strong>AUDIT:</strong> Integrated Learning Experience VI</td></tr></table><p><strong>Elective Courses (Two Theory to be opted):</strong> AUTOMOTIVE MECHATRONICS, CAD/CAM AND FMS, KINEMATICS AND DYNAMICS, MACHINE VISION IN AUTOMATION, MOBILE ROBOTICS, EMBEDDED SYSTEM PROGRAMMING</p></div></div>
+
+<h2 class="section-title">2021 REGULATION SCHEME</h2>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('m21s1')">Semester 1</div><div class="sem-body" id="m21s1"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>ENGINEERING MATHEMATICS I</td><td>PHYSICS LABORATORY</td></tr><tr><td>PHYSICS</td><td>CHEMISTRY LABORATORY</td></tr><tr><td>CHEMISTRY</td><td>FITTING SHEET METAL & WIRING WORKSHOP</td></tr><tr><td>ENGLISH</td><td>INPLANT TRAINING</td></tr><tr><td>ENGINEERING GRAPHICS I</td><td>PHYSICAL EDUCATION – I</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('m21s2')">Semester 2</div><div class="sem-body" id="m21s2"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>ENGINEERING MATHEMATICS II</td><td>ENGINEERING PHYSICS LABORATORY</td></tr><tr><td>CALCULUS AND ITS APPLICATIONS</td><td>CHEMISTRY OF ENGINEERING MATERIALS LABORATORY</td></tr><tr><td>ENGINEERING PHYSICS</td><td>FOUNDRY AND WELDING WORKSHOP</td></tr><tr><td>CHEMISTRY OF ENGINEERING MATERIALS</td><td>COMMUNICATION ENGLISH LABORATORY</td></tr><tr><td>ENGINEERING GRAPHICS II</td><td>PHYSICAL EDUCATION – II</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('m21s3')">Semester 3</div><div class="sem-body" id="m21s3"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>PROBABILITY AND STATISTICS</td><td>CAD LABORATORY</td></tr><tr><td>APPLIED MECHANICS</td><td>STRENGTH OF MATERIALS LABORATORY</td></tr><tr><td>BASIC ELECTRICAL AND ELECTRONICS ENGINEERING</td><td>ELECTRICAL CIRCUITS AND ELECTRONIC DEVICES LABORATORY</td></tr><tr><td>MANUFACTURING TECHNOLOGY</td><td>WORKSHOP – LATHE AND SPECIAL MACHINES</td></tr><tr><td>–</td><td>PROGRAMMING IN C & PYTHON LABORATORY</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('m21s4')">Semester 4</div><div class="sem-body" id="m21s4"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>ANALOG AND DIGITAL ELECTRONICS</td><td>ANALOG AND DIGITAL ELECTRONICS LABORATORY</td></tr><tr><td>SENSORS AND INTERFACING</td><td>SENSORS AND INTERFACING LABORATORY</td></tr><tr><td>ELECTRICAL MACHINES AND DRIVES</td><td>CIRCUIT SIMULATION LABORATORY</td></tr><tr><td>HYDRAULICS AND PNEUMATICS</td><td>FLUID AUTOMATION LABORATORY</td></tr><tr><td>–</td><td>TECHNICAL COMMUNICATION LABORATORY</td></tr><tr><td colspan="2"><em>*INTERNSHIP</em></td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('m21s5')">Semester 5</div><div class="sem-body" id="m21s5"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>MICROCONTROLLER</td><td>MICROCONTROLLER LABORATORY</td></tr><tr><td>ROBOTICS</td><td>EMBEDDED SYSTEM PROGRAMMING LABORATORY</td></tr><tr><td>ELECTIVE THEORY I</td><td>PLC LABORATORY</td></tr><tr><td>–</td><td>ELECTRICAL MACHINES LABORATORY</td></tr><tr><td>–</td><td>MINI PROJECT AND ENTREPRENEURSHIP</td></tr></table></div></div>
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('m21s6')">Semester 6</div><div class="sem-body" id="m21s6"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>INDUSTRIAL AUTOMATION</td><td>INDUSTRIAL AUTOMATION LABORATORY</td></tr><tr><td>CNC TECHNOLOGY</td><td>CNC LABORATORY</td></tr><tr><td>ELECTIVE THEORY II</td><td>TECHNICAL 3D MODELLING LAB</td></tr><tr><td>–</td><td>ROBOTICS LABORATORY</td></tr><tr><td>–</td><td>PROJECT WORK AND VIVA VOCE</td></tr></table><p><strong>Elective Courses (Two Theory to be opted):</strong> CAD/CAM AND FMS, ARTIFICIAL INTELLIGENCE AND ITS APPLICATION, MACHINE VISION IN AUTOMATION, AUTOMOTIVE MECHATRONICS, EMBEDDED SYSTEM PROGRAMMING<br><em>*Internship will be arranged for 4 weeks during the vacation at the end of 4th semester</em></p></div></div>
+
+<h2 class="section-title">Facilities</h2>
+
+<div class="facility-card" onclick="toggleFacility('f1')">
+<div class="facility-title">INTEGRATED AUTOMATION SYSTEMS LAB</div>
+<div class="facility-body" id="f1">
+    <img src="https://imgh.in/host/8t77rb" alt= "IAS Lab">
+<p>Centre was set up in association with SIEMENS AUTOMATION limited in 2000 and is equipped with modern automation systems like PLC, CNC SYSTEMS, INDUSTRIAL DRIVES, HMI panels to train the students in the field of automation.
+    </p>
+</div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f2')">
+<div class="facility-title">MECHATRONICS SYSTEM DESIGN LAB</div>
+<div class="facility-body" id="f2">
+    <img src="https://imgh.in/host/ypi931" alt="Mechatronics System Design Lab">
+    <p>
+This lab is equipped with Electronic components, Digital Trainer kits, Sensor Kits, Micro processors and Micro controllers for teaching basic Electronic courses.</p></div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f3')">
+<div class="facility-title">YUKEN HYDRAULICS LAB</div>
+<div class="facility-body" id="f3"> 
+ <img src="https://imgh.in/host/vlqbw3" alt="YUKEN Lab">   
+<p>
+This Lab, setup in Collaboration with M/s. Yuken India Ltd, provides students with hands on experience in oil hydraulics and pneumatics. The facilities include manually operated hydraulic simulation kit, Electro hydraulic simulation kit, PLC based hydraulic simulation kit.
+</p>
+</div>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f4')">
+<div class="facility-title">E-YANTRA ROBOTICS LAB</div>
+<div class="facility-body" id="f4">
+     <img src="https://imgh.in/host/1y6u97" alt="YANTRA ssLab">   
+    <p>
+This Lab, sponsored by DOTE, provides students with hands on experience to program and work with robot kits. The facilities include robotic kits and simulation software.
+</p></div>
+</div>
+
+<h2 class="section-title">Awards / Achievements</h2>
+
+<div class="academic-frame">
+<div class="course-tabs">
+<button class="active" onclick="showAchTab(event,'awards')">AWARD/ACHIEVEMENT</button>
+
+<button onclick="showAchTab(event,'mou')">MoU SIGNED</button>
+
+<button onclick="showAchTab(event,'activities')">ASSOCIATION ACTIVITIES</button>
+
+<button onclick="showAchTab(event,'training')">TRAINING PROGRAMS</button>
+</div>
+
+<div class="course-content" id="awards">
+<table>
+<tr><th style="width:250px">Faculty</th><th>Title</th><th>Image</th></tr>
+<tr><td>Mr. S. Thirumalairajan</td><td>Teacher of Year 2019</td><td><img src="https://imgh.in/host/o1dluv" alt="award" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td></tr>
+</table>
+</div>
+
+<div class="course-content" id="mou" style="display:none">
+<table>
+<tr><th>S.No</th><th>Collaborating Organization</th><th>Scope of MoU</th><th>Image</th></tr>
+<tr><td>1.</td><td>B.J. ELECTRONICS PVT LTD</td><td>—</td><td><img src="https://imgh.in/host/k2xokd" alt="award" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td></td></tr>
+<tr><td>2.</td><td>RD AUTOMATION</td><td>—</td><td><img src="https://imgh.in/host/z42a78" alt="award" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td></td></tr>
+<tr><td>3.</td><td>M/s.Synetics Automation Soluions (P) Ltd., Coimbatore</td><td>To provide an opportunity for the students to get exposed to current industrial scenario from this leading manufacturer of CNC autoloaders, food dispensing systems and Robotic machine tending solutions,etc.</td><td><img src="https://imgh.in/host/m9fr9j" alt="award" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td></td></tr>
+<tr><td>4.</td><td>M/s.Mahesh Engineering Industries , Coimbatore</td><td>To provide internship opportunity and Alma matter.</td><td><img src="https://imgh.in/host/341ygp" alt="award" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td></td></tr>
+<tr><td>5.</td><td>DoT World Technologies , Coimbatore</td><td>To provide internship opportunity</td><td><img src="https://imgh.in/host/1b9bsy" alt="award" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td></td></tr>
+</table>
+<p style="margin-top:20px;"><strong>Industry Collaborations:</strong> SIEMENS Automation Limited, Yuken India Ltd, and various automation industries for student training and skill development programs.</p>
+</div>
+
+<div class="course-content" id="activities" style="display:none">
+<table>
+<tr>
+    <th>S.No</th>
+    <th>Event Nature</th>
+    <th>Event Title</th>
+    <th>Date</th>
+    <th>Image</th>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>Guest Lecture</td>
+    <td>Building Your First Campus Start-Up</td>
+    <td>23.09.2025</td>
+    <td><img src="https://imgh.in/host/auubhq" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>2</td>
+    <td>Guest Lecture</td>
+    <td>Engineering Expectations – A Mechanical Insight</td>
+    <td>30.07.2025</td>
+    <td><img src="https://imgh.in/host/gd723w" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>One Day Training Program</td>
+    <td>Low-Cost Automation</td>
+    <td>27.03.2025<br><small>Mr. G. Ragesh Kumar, Product Manager – Low Cost Automation, IGUS® (India) Pvt. Ltd., Bangalore</small></td>
+    <td><img src="https://imgh.in/host/pjt0ms" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td>Guest Lecture</td>
+    <td>Mindful Journey in VUCA World</td>
+    <td>10.08.2024<br><small>Mr. V. Sivaganesh, Head - Supply Chain and Business Process Management, FANUC India Pvt. Ltd.</small></td>
+    <td><img src="https://imgh.in/host/lmrmf0" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>5</td>
+    <td>Guest Lecture</td>
+    <td>Role of Augmented Reality in Industry 4.0</td>
+    <td>20.03.2024<br><small>Mr. M. Kamal Prasath Balaji, CEO, Dot World Technologies</small></td>
+    <td><img src="https://imgh.in/host/lows0w" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>6</td>
+    <td>Guest Lecture</td>
+    <td>Advancements and Applications of Pneumatic Automation</td>
+    <td>06.02.2024<br><small>Mr. R. Sasikumar, Asst. Manager, Janatics India Pvt. Ltd., Coimbatore</small></td>
+    <td><img src="https://imgh.in/host/7p1qto" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>7</td>
+    <td>One Day Seminar</td>
+    <td>Smart Factories Transforming Manufacturing through Automation and AI</td>
+    <td>09.12.2023<br><small>Mr. Janradhan Tyagi, General Manager - Sales, Schneider Electric India Pvt. Ltd.</small></td>
+    <td><img src="https://imgh.in/host/l25qeq" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>8</td>
+    <td>Guest Lecture</td>
+    <td>Facts and Future of Industrial Automation</td>
+    <td>06.10.2023<br><small>Mr. Kanakaraj & Mr. Boobalan, Spectrum Control System, Coimbatore</small></td>
+    <td><img src="https://imgh.in/host/gstjo7" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>9</td>
+    <td>Guest Lecture</td>
+    <td>Emerging Technologies in Industrial Automation</td>
+    <td>09.08.2023<br><small>Mr. K. Dinesh Kumar, Managing Director, RD Automation</small></td>
+    <td><img src="https://imgh.in/host/cwf4un" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>10</td>
+    <td>Guest Lecture</td>
+    <td>Role of Mechatronics in Condition Based Monitoring</td>
+    <td>12.04.2023<br><small>Mr. V. S. Mani Shastha, Chief Business Development Officer, Dyna4cast Technologies Pvt. Ltd.</small></td>
+    <td><img src="https://imgh.in/host/10kmo2" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>11</td>
+    <td>Guest Lecture</td>
+    <td>Industry 4.0</td>
+    <td>24.03.2023</td>
+    <td><img src="https://imgh.in/host/nykod2" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>12</td>
+    <td>Webinar</td>
+    <td>Process Automation Simulation using Automation Studio</td>
+    <td>11.11.2022<br><small>Mr. Madhujit Nandkumar Kulkarni, Mr. Akshay Vedpathak</small></td>
+    <td><img src="https://imgh.in/host/k8v6er" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>13</td>
+    <td>Guest Lecture</td>
+    <td>Startup Entrepreneurship</td>
+    <td>07.10.2022<br><small>Mr. G. Jayaprakash, CEO, Mahesh Engineering Industries</small></td>
+    <td><img src="https://imgh.in/host/yb564o" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>14</td>
+    <td>Guest Lecture</td>
+    <td>Industrial Internet of Things (IIoT)</td>
+    <td>21.04.2022<br><small>Mr. S. Gopala Krishnan, Schlumberger India Pvt. Ltd.</small></td>
+    <td><img src="https://imgh.in/host/n93jvo" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>15</td>
+    <td>Guest Lecture</td>
+    <td>Employability Skills</td>
+    <td>14.05.2022</td>
+    <td><img src="https://imgh.in/host/4nog8f" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>16</td>
+    <td>Guest Lecture</td>
+    <td>Industrial IoT</td>
+    <td>21.04.2022</td>
+    <td><img src="https://imgh.in/host/2q0smg" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>17</td>
+    <td>Guest Lecture</td>
+    <td>The Journey of an Entrepreneur</td>
+    <td>26.11.2021</td>
+    <td><img src="https://imgh.in/host/nlmu2a" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>18</td>
+    <td>Guest Lecture</td>
+    <td>The Autonomous Way to Industry 4.0</td>
+    <td>12.11.2021</td>
+    <td><img src="https://imgh.in/host/sk3axw" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>19</td>
+    <td>Guest Lecture</td>
+    <td>Python Programming</td>
+    <td>09.04.2021</td>
+    <td><img src="https://imgh.in/host/hk5mtj" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>20</td>
+    <td>Guest Lecture</td>
+    <td>Future Scope of Industrial Robotics & Automation</td>
+    <td>13.03.2021</td>
+    <td><img src="https://imgh.in/host/qjjux0" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>21</td>
+    <td>Guest Lecture</td>
+    <td>Latest Trends in 3D Printing Technology</td>
+    <td>23.02.2021</td>
+    <td><img src="https://imgh.in/host/w9u2or" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>22</td>
+    <td>Guest Lecture</td>
+    <td>Mechatronics in Automobile</td>
+    <td>29.10.2020</td>
+    <td><img src="https://imgh.in/host/ayrky4" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>23</td>
+    <td>Guest Lecture</td>
+    <td>Industrial Automation</td>
+    <td>14.08.2019</td>
+    <td><img src="https://imgh.in/host/m1agku" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>24</td>
+    <td>Guest Lecture</td>
+    <td>Entrepreneurship</td>
+    <td>03.07.2019</td>
+    <td><img src="https://imgh.in/host/fn0u9z" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>25</td>
+    <td>Valedictory Function cum Guest Lecture</td>
+    <td>Current Industry Scenario</td>
+    <td>07.03.2019</td>
+    <td><img src="https://imgh.in/host/w2tsli" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+<tr>
+    <td>26</td>
+    <td>Guest Lecture</td>
+    <td>Lean Startup</td>
+    <td>07.09.2018</td>
+    <td><img src="https://imgh.in/host/1y1pzo" alt="Association Activity" style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;"></td>
+</tr>
+
+</table>
+<p style="margin-top:20px;">Regular association activities include guest lectures by industry experts, workshops on industrial automation, robotics competitions, and technical symposiums. Students actively participate in national level technical events and project exhibitions.</p>
+</div>
+
+<div class="course-content" id="training" style="display:none">
+
+<p>
+    <strong>CNC Operator – Turning:</strong>
+    <a href="https://www.psgpolytech.ac.in/dept/images/DMT/1.CNC%20Operator%20%E2%80%93%20Turning.pdf" target="_blank">
+        <strong>CNC Operator – Turning.pdf</strong>
+        <a href="https://www.psgpolytech.ac.in/dept/images/DMT/2.CNC%20Operator%20%E2%80%93%20Turning.pdf" target="_blank"></a>
+    </a>
+</p>
+
+<table>
+
+<tr>
+    <th>S.No</th>
+    <th>Training Program</th>
+    <th>Date</th>
+    <th>Image</th>
+</tr>
+
+<tr>
+    <td>1.</td>
+    <td>One-Week FDP on Industrial Automation at GCT</td>
+    <td>04.08.2025 to 08.08.2025</td>
+    <td>
+        <img src="https://imgh.in/host/3rozw9"
+             alt="Training Program"
+             style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;">
+    </td>
+</tr>
+
+<tr>
+    <td>2.</td>
+    <td>One-Week FDP on Industrial Automation at GCT</td>
+    <td>07.07.2025 to 11.07.2025</td>
+    <td>
+        <img src="https://imgh.in/host/ma7pv7"
+             alt="Training Program"
+             style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;">
+    </td>
+</tr>
+
+<tr>
+    <td>3.</td>
+    <td>A Two-Day Faculty Development Programme (FDP) on "Intelligent Systems and Immersive Technologies for Industry 4.0"</td>
+    <td>21.02.2025 and 22.02.2025</td>
+    <td>
+        <img src="https://imgh.in/host/8qbu2i"
+             alt="Training Program"
+             style="width:100%; max-width:350px; height:auto; object-fit:cover; display:block; margin:auto; border-radius:8px;">
+    </td>
+</tr>
+
+</table>
+
+<p style="margin-top:20px;">
+    Specialized training programs on PLC programming, SCADA systems, Robotics, CNC machining, and Industrial Automation conducted in collaboration with industry partners.
+</p>
+
+</div>
+
+<h2 class="section-title">Student Achievements</h2>
+
+<div class="academic-frame">
+<div class="course-tabs">
+<button class="active" onclick="showStudTab(event,'batch2526')">Batch 2025-2026</button>
+
+<button onclick="showStudTab(event,'batch2425')">Batch 2024-2025</button>
+
+<button onclick="showStudTab(event,'extraActivities')">EXTRACURRICULAR ACTIVITIES</button>
+
+<button onclick="showStudTab(event,'publications')">PUBLICATIONS</button>
+
+<button onclick="showStudTab(event,'paperPresentation')">PAPER PRESENTATION</button>
+</div>
+
+<div class="course-content" id="batch2526">
+<table>
+<tr><th>S.No</th><th>Roll Nos</th><th>Name of the Students</th><th>Awards / Trophy</th><th>Programme</th></tr>
+<tr><td>1.</td><td>24DM31,24DM47,24LH03,24DM42</td><td>Niranjan C, Tarun M I, MohanRaj S, Shrijith R</td><td>First prize</td><td>Handball at the IPAA Divisional Level Tournament held on 19.09.2025 @ Nachimuthu Polytechnic College, Pollachi</td></tr>
+</table>
+</div>
+
+<div class="course-content" id="batch2425" style="display:none">
+<table>
+<tr><th>S.No</th><th>Details of the Activity</th><th>Date</th><th>Organized by</th><th>Students</th></tr>
+<tr><td>1.</td><td>SREC Inter polytechnic Innovation Championship 2025</td><td>30.01.2025</td><td>SREC Collaborative Innovation Center</td><td>R.Gowtham, V.Sanjaikumar, S.Viswaharshan, S.M.Sanjay</td></tr>
+<tr><td>2.</td><td>Online Course on "Introduction to Management"</td><td>Feb 2024</td><td>Great Learning Academy</td><td>DwaragaPrasath S (21DM12)</td></tr>
+<tr><td>3.</td><td>Product Design Workshop</td><td>27-28 Jan 2024</td><td>Petrichor'24, IIT Palakkad</td><td>Adharsh S (22DM03)</td></tr>
+<tr><td>4.</td><td>Speaker at AIR element 'Research Review on CO2 Reduction'</td><td>14.09.2024</td><td>IGEN ENVIRONTHON-2024</td><td>BharathiSenthilkumar (22DM10)</td></tr>
+<tr><td>5.</td><td>Apsara Conference 2024 AI Journey with Alibaba Cloud</td><td>28.11.2024</td><td>Alibaba cloud certification</td><td>Thiyaneshwaran S (22DM49)</td></tr>
+<tr><td>6.</td><td>International Tai chi conference – ITCC 2024</td><td>20.09.2024</td><td>Dr Paul Lam</td><td>Sivachalapathy V</td></tr>
+</table>
+</div>
+
+<div class="course-content" id="extraActivities" style="display:none">
+<table>
+<tr><th>S.No</th><th>Details of the Activity</th><th>Date</th><th>Organized by</th><th>No. of students participated</th></tr>
+<tr><td>1.</td><td>State Republic Day Parade Camp -2025, held at Vellore Institute of Technology, Chennai.</td><td>17th to 26th January 2025</td><td>Government of Tamil Nadu Youth Welfare and Sports Development Department Tamil Nadu state NSS Cell Directorate of Collegiate Education</td><td>T.V.Kanish II year DMT</td></tr>
+<tr><td>2.</td><td>EK Bharat Shreshtha Bharat Camp – II</td><td>18.01.2025 to 29.01.2025</td><td>NCC Group HQ, Tiruchirappalli at NCC Training Area, Idayapatti (Madurai)</td><td>R.S.Naresh</td></tr>
+<tr><td>3.</td><td>NCC-Annual Training Camp</td><td>03.06.2024 to 12.06.2024</td><td>4 Tamilnadu Battalion NCC,Coimbatore</td><td>V.Aswaddhaman, R.S.Naresh</td></tr>
+<tr><td>4.</td><td>Most people performing viparitaKaraniyogasna simultaneously the world Record “most people performing viparitakaraniyogasana simultaneously”</td><td>16.01.2024</td><td>Mahamaharishi Foundation MahayogamZenskar Healing Martial Arts at Madurai</td><td>S.Atitya Ram III year DMT</td></tr>
+<tr><td>5.</td><td>Secured First place in IPPA Divisional Athletic Meet for Men 2023-24 1st -110 m hurdles</td><td>21.02.2024</td><td>Government of Tamil Nadu, Directorate of Technical Education Inter Polytechnic Athletic Association Tamil Nadu-Puducherry</td><td>Narendhirakumar. A (22DM30)</td></tr>
+<tr><td>6.</td><td>Secured First place in IPPA Divisional Athletic Meet for Men 2023-24 1st -400 m hurdles</td><td>22.02.2024</td><td>Government of Tamil Nadu, Directorate of Technical Education Inter Polytechnic Athletic Association Tamil Nadu-Puducherry</td><td>Narendhirakumar. A (22DM30)</td></tr>
+<tr><td>7.</td><td>Secured First Place in IPAA divisional Badminton Tournament for women</td><td>05.02.2024</td><td>PSG Polytechnic College</td><td>Vivinyaa R (22DM52)</td></tr>
+<tr><td>8.</td><td>Secured Second Place in IPAA divisional volley ball Tournament for women</td><td>07.02.2024</td><td>Hindusthan polytechnic Coimbatore</td><td>Vivinyaa R (22DM52)</td></tr>
+<tr><td>9.</td><td>NSS South Zone pre-republic day parade camp-2024</td><td>5th to 14th Nov 2024</td><td>Regional Directorate of NSS, Bangalore at Davangere University</td><td>T.V.Kanish II year DMT</td></tr>
+<tr><td>10.</td><td>Directorate level Centralized Selection of NSS Volunters</td><td>26.09.2024</td><td>Auspices of NSS Cell, Directorate of Technical Education, Chennai</td><td>T.V.Kanish II year DMT</td></tr>
+</table>
+</div>
+
+<div class="course-content" id="publications" style="display:none">
+<table>
+<tr><th>S.No.</th><th>Roll Number</th><th>Name of the student</th><th>Title of the paper</th><th>Name of the Journal/Conference</th><th>ISSN/ISBN No.</th><th>Date of publication</th></tr>
+<tr><td>1.</td><td>22DM05</td><td>Adstan Patrick Albert</td><td>PC(Personal Computer) Components-Predictive Maintenance</td><td>International Journal of Scientific Research in Engineering & Management</td><td>2582-3930</td><td>January,2025</td></tr>
+<tr><td>2.</td><td>22DM49</td><td>Thiyaneshwaran S</td><td>PC(Personal Computer) Components-Predictive Maintenance</td><td>International Journal of Scientific Research in Engineering & Management</td><td>2582-3930</td><td>January,2025</td></tr>
+<tr><td>3.</td><td>22DM29</td><td>Nantha Kumar N</td><td>PC(Personal Computer) Components-Predictive Maintenance</td><td>International Journal of Scientific Research in Engineering & Management</td><td>2582-3930</td><td>January,2025</td></tr>
+</table>
+</div>
+
+<div class="course-content" id="paperPresentation" style="display:none">
+<table>
+<tr><th>S.No.</th><th>Roll Number</th><th>Name and place of the event</th><th>Date of participation</th><th>National level/State level</th></tr>
+<tr><td>1.</td><td>22DM52</td><td>Sankara PTC<br><small>R.Vivinyaa III year DMT</small></td><td>31.01.2025 and 1.02.2025</td><td>National Level Technical SympasiumSantekfest, 2k25</td></tr>
+<tr><td>2.</td><td>22DM37</td><td>Sankara PTC<br><small>D.Rakshitha III year DMT</small></td><td>31.01.2025 and 1.02.2025</td><td>National Level Technical SympasiumSantekfest, 2k25</td></tr>
+<tr><td>3.</td><td>22DM03</td><td>Sankara PTC<br><small>S.Adharsh III year DMT</small></td><td>31.01.2025 and 1.02.2025</td><td>National Level Technical SympasiumSantekfest, 2k25</td></tr>
+<tr><td>4.</td><td>22DM10</td><td>Sankara PTC<br><small>BharathiSenthilkumar</small></td><td>31.01.2025 and 1.02.2025</td><td>National Level Technical SympasiumSantekfest, 2k25</td></tr>
+</table>
+</div>
+</div>
+
+
+<section class="contact-section">
+
+    <div class="contact-title">
+        <h2>CONTACT US</h2>
+    </div>
+
+    <div class="contact-content">
+
+        <h3>Ms. D. Sujatha, M.E.</h3>
+
+        <p>Head of the Department</p>
+
+        <p>Department of Mechatronics Engineering</p>
+
+        <p>PSG Polytechnic College</p>
+
+        <p>Peelamedu, Coimbatore - 641004</p>
+
+        <p>Tamil Nadu, India</p>
+
+        <!-- Uncomment if you have these details -->
+        <!--
+        <p><strong>Email :</strong> hodmechatronics@psgpolytech.ac.in</p>
+        <p><strong>Phone :</strong> +91-422-2572177</p>
+        -->
+
+    </div>
+
+</section>
+
+<footer class="footer">
+    Designed and Developed by PSG Polytechnic College |
+    © 2026 All Rights Reserved.
+</footer>
+
+<script>
+function showCourseTab(event, tab) {
+
+    document.getElementById("po").style.display = "none";
+    document.getElementById("pso").style.display = "none";
+    document.getElementById("peo").style.display = "none";
+
+    document.getElementById(tab).style.display = "block";
+
+    document.querySelectorAll(".course-tabs")[0]
+        .querySelectorAll("button")
+        .forEach(btn => btn.classList.remove("active"));
+
+    event.currentTarget.classList.add("active");
+}
+
+function goHome(){
+window.location.href = "departments.html";
+}
+
+function toggleSem(id){
+let x = document.getElementById(id);
+if(x) x.style.display = x.style.display == "block" ? "none" : "block";
+}
+
+function toggleFacility(id){
+let x = document.getElementById(id);
+if(x) x.style.display = x.style.display == "block" ? "none" : "block";
+}
+
+function showAchTab(event, tab) {
+
+    document.getElementById("awards").style.display = "none";
+    document.getElementById("mou").style.display = "none";
+    document.getElementById("activities").style.display = "none";
+    document.getElementById("training").style.display = "none";
+
+    document.getElementById(tab).style.display = "block";
+
+    document.querySelectorAll(".academic-frame")[0]
+        .querySelectorAll(".course-tabs button")
+        .forEach(btn => btn.classList.remove("active"));
+
+    event.currentTarget.classList.add("active");
+}
+
+function showStudTab(event, tab) {
+
+    document.getElementById("batch2526").style.display = "none";
+    document.getElementById("batch2425").style.display = "none";
+    document.getElementById("extraActivities").style.display = "none";
+    document.getElementById("publications").style.display = "none";
+    document.getElementById("paperPresentation").style.display = "none";
+
+    document.getElementById(tab).style.display = "block";
+
+    document.querySelectorAll(".academic-frame")[1]
+        .querySelectorAll(".course-tabs button")
+        .forEach(btn => btn.classList.remove("active"));
+
+    event.currentTarget.classList.add("active");
+}
+
+// NEW FUNCTION FOR SERVICES TAB
+function showServiceTab(event, tab) {
+
+    const serviceIds = [
+        "admission",
+        "examination",
+        "campus",
+        "union",
+        "alumni",
+        "career",
+        "helpdesk"
+    ];
+
+    serviceIds.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) element.style.display = "none";
+    });
+
+    const current = document.getElementById(tab);
+    if (current) current.style.display = "block";
+
+    const frames = document.querySelectorAll(".academic-frame");
+    if (frames.length > 2) {
+        frames[2]
+            .querySelectorAll(".course-tabs button")
+            .forEach(btn => btn.classList.remove("active"));
+    }
+
+    event.currentTarget.classList.add("active");
+}
+// Initialize display
+document.addEventListener("DOMContentLoaded", function(){
+document.getElementById("po").style.display = "block";
+document.getElementById("pso").style.display = "none";
+document.getElementById("peo").style.display = "none";
+document.getElementById("awards").style.display = "block";
+document.getElementById("mou").style.display = "none";
+document.getElementById("activities").style.display = "none";
+document.getElementById("training").style.display = "none";
+document.getElementById("batch2526").style.display = "block";
+document.getElementById("batch2425").style.display = "none";
+document.getElementById("extraActivities").style.display = "none";
+document.getElementById("publications").style.display = "none";
+document.getElementById("paperPresentation").style.display = "none";
+// Initialize new section
+document.getElementById("admission").style.display = "block";
+});
+</script>
+</body>
+</html>

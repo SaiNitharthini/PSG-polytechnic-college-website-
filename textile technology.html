@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSG Polytechnic | Textile Technology</title>
+
+<style>
+.facility-image{
+    text-align:center;
+    margin:20px 0;
+}
+
+.facility-image img{
+    width:600px;          /* Adjust as needed */
+    max-width:100%;
+    height:400px;
+    object-fit:cover;
+    border-radius:5px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
+.dept-title{
+background:#C5A267;
+color:white;
+padding:12px 18px;
+font-weight:700;
+letter-spacing:.5px;
+}
+
+.dept-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
+padding:20px;
+background:#fafafa;
+}
+
+.dept-card{
+background:white;
+border:1px solid #e5e5e5;
+padding:16px;
+font-size:15px;
+font-weight:600;
+transition:.3s;
+cursor:pointer;
+}
+
+.dept-card:hover{
+border-color:#C5A267;
+box-shadow:0 6px 18px rgba(0,0,0,.12);
+transform:translateY(-4px);
+}
+
+
+.contact-section{
+margin-top:60px;
+background:#f4f4f4;
+padding:40px 0;
+}
+
+.contact-frame{
+max-width:950px;
+margin:auto;
+background:white;
+padding:35px;
+text-align:center;
+border:1px solid #e5e5e5;
+box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
+.contact-frame h2{
+background:#C5A267;
+color:white;
+padding:12px;
+margin:-35px -35px 25px -35px;
+font-size:20px;
+letter-spacing:.5px;
+}
+
+.contact-frame p{
+line-height:1.8;
+font-size:15px;
+color:#444;
+}
+
+.footer-note{
+margin-top:20px;
+font-size:13px;
+color:#777;
+}
+
+
+/* ⭐ Academic content frame like PO PSO PEO */
+.academic-frame{
+max-width:950px;
+margin:40px auto;
+border:1px solid #e5e5e5;
+background:#fff;
+padding:30px;
+box-shadow:0 4px 14px rgba(0,0,0,.04);
+}
+
+
+.facility-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.facility-card{
+border:1px solid #ddd;
+cursor:pointer;
+background:white;
+transition:.3s;
+border-radius:6px;
+overflow:hidden;
+margin-bottom:20px;
+}
+
+.facility-card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.facility-title{
+background:#C5A267;
+color:white;
+padding:14px;
+font-weight:600;
+}
+
+.facility-body{
+display:none;
+padding:18px;
+line-height:1.7;
+background:#fafafa;
+}
+
+
+.faculty-img{
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #C5A267;
+margin-bottom:12px;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto;
+margin:0;
+background:#fff;
+color:#1A1A1A;
+}
+
+.navbar{
+background:#1c1c1c;
+padding:18px 40px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+color:white;
+font-size:20px;
+cursor:pointer;
+font-weight:600;
+letter-spacing:.5px;
+}
+
+.menu{display:flex;gap:20px;flex-wrap:wrap;}
+.menu a{color:#ddd;text-decoration:none;cursor:pointer;font-size:14px;}
+.menu a:hover{color:#C5A267}
+
+.hero{
+background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.96)),
+url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a');
+background-size:cover;
+padding:100px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-family:Georgia;
+font-size:50px;
+margin:0;
+}
+
+.divider{
+width:90px;
+height:3px;
+background:#C5A267;
+margin:20px auto;
+}
+
+.section{
+padding:70px 40px;
+max-width:1150px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-family:Georgia;
+font-size:40px;
+margin-bottom:50px;
+}
+
+.about-box{
+background:#fafafa;
+padding:30px;
+border:1px solid #eee;
+line-height:1.7;
+margin-bottom:40px;
+}
+
+.faculty-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.faculty-card{
+border:1px solid #eee;
+padding:20px;
+background:white;
+border-radius:8px;
+transition:0.2s;
+cursor:pointer;
+}
+
+.faculty-card:hover{
+border-color:#C5A267;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transform:translateY(-4px);
+}
+
+.faculty-card h4{
+color:#C5A267;
+margin:0 0 8px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:25px;
+}
+
+th,td{
+border:1px solid #ddd;
+padding:12px;
+}
+
+th{
+background:#C5A267;
+color:white;
+}
+
+footer{
+background:#F5F5F5;
+padding:30px;
+text-align:center;
+margin-top:60px;
+color:#888;
+}
+
+.course-tabs{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:30px;
+border-bottom:3px solid #e5e5e5;
+padding-bottom:8px;
+background:none;
+flex-wrap:wrap;
+}
+
+.course-tabs button{
+padding:12px 22px;
+border:1px solid #ddd;
+background:#f7f7f7;
+color:#333;
+font-weight:600;
+cursor:pointer;
+letter-spacing:.5px;
+border-radius:4px 4px 0 0;
+transition:.3s;
+}
+
+.course-tabs button:hover{
+background:#eee;
+}
+
+.course-tabs button.active{
+background:#C5A267;
+color:white;
+border-color:#C5A267;
+}
+.sem-dropdown{
+margin-top:25px;
+border:1px solid #ddd;
+background:#fafafa;
+border-radius:8px;
+overflow:hidden;
+}
+
+.sem-head{
+padding:15px;
+font-weight:600;
+cursor:pointer;
+background:#C5A267;
+color:white;
+}
+
+.sem-body{
+display:none;
+padding:20px;
+background:#fff;
+}
+
+.award-card{
+background:#fff8e7;
+border-left:5px solid #C5A267;
+padding:20px;
+margin:20px 0;
+border-radius:8px;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+<div class="logo" onclick="goHome()">PSG POLYTECHNIC COLLEGE</div>
+<div class="menu">
+<a onclick="goHome()">Home</a>
+<a>About</a>
+<a>Academic</a>
+<a>Admission</a>
+<a>Examination</a>
+<a>Campus</a>
+<a>Contact</a>
+</div>
+</div>
+
+<div id="textilePage">
+<div class="hero">
+<h1>Textile Technology</h1>
+<div class="divider"></div>
+<p>Legacy of Excellence since 1944 | Weaving the Future</p>
+</div>
+
+<div class="section">
+
+<h2 class="section-title">About Department</h2>
+<div class="about-box">
+Department of Textile Technology, PSG Polytechnic College has its origin as LTM during 1944. After few years it was revived as Diploma in Textile Technology in the year 1977 and in the same year PSG Polytechnic College had its autonomy. The sandwich programme in this field was started during the year 1983.<br><br>
+The course was planned with the main objective as to equip the students mainly to handle shop floor management as supervisors and to solve day to day technical problems in Textile Mills.<br><br>
+The curriculum imparts both theoretical and practical knowledge to the students in core areas like Spinning, Weaving, Knitting, Chemical Processing, Garment Manufacturing, Textile Testing and Textile CAD.<br><br>
+Apart from their theoretical input, the students will undergo weekly industrial visits and six weeks advanced industrial training during their vacation period. This will facilitate them to get exposed to practical working in textile industry. During their final year of this programme, students will carry out a project work related to problem solving in Textile industry.
+</div>
+
+<h2 class="section-title">Programmes</h2>
+<table>
+<tr><th>Programme</th><th>Established</th><th>Duration</th></tr>
+<tr><td>Diploma in Textile Technology (DTT)</td><td>1977</td><td>3 Years</td></tr>
+<tr><td>DTT (Sandwich)</td><td>1983</td><td>4 Years</td></tr>
+</table>
+
+<h2 class="section-title">Vision</h2>
+<p>Department of Textile Technology of PSG Polytechnic College endeavors to emerge as a leader in imparting technical skills essentials for shop floor management and day-to-day problem solving in Textile Industry.</p>
+
+<h2 class="section-title">Mission</h2>
+<ul style="line-height:1.8">
+<li>Promote entrepreneurship drive among the students</li>
+<li>Build Industrial Institute Interaction for providing hands-on-training in Industry, Industrial visits & projects</li>
+<li>Provide employment opportunity for the students for the betterment of Textile Industry</li>
+</ul>
+
+<h2 class="section-title">Faculty</h2>
+<div class="faculty-grid">
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/472042', '_blank')">
+<img src="https://i.postimg.cc/15zPzc69/Senthilkumar.jpg" class="faculty-img" style="object-position:center top">
+<h4>Dr. M. Senthilkumar M.Tech, PhD</h4>
+<p>Head of the Department</p>
+<p>18 yrs Teaching | 2 yrs Industry</p>
+<p>Knitting Technology</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436144', '_blank')">
+<img src="https://i.postimg.cc/02NxNdST/Mr-B-Sathish-babu-3-Copy.jpg" class="faculty-img"style="object-position:center top">
+<h4>Dr. B. Sathish Babu, M.Tech, PhD</h4>
+<p>Lecturer (Sr.Grade)</p>
+<p>25 yrs Teaching | 2.5 yrs Industry</p>
+<p>Textile Chemical Processing, Knitting Technology</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436145', '_blank')">
+<img src="https://i.postimg.cc/bNv8vHbX/Mr-A-Sivakumar-4.jpg" class="faculty-img"style="object-position:center top">
+<h4>Dr. A. Sivakumar, M.Tech, PhD</h4>
+<p>Lecturer (Sr.Grade)</p>
+<p>15 yrs Teaching | 11 yrs Industry</p>
+<p>Technical Textiles, Spinning Technology</p>
+</div>
+
+<div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436146', '_blank')">
+<img src="https://i.postimg.cc/5Nt1tqvJ/R-Brindha.jpg" class="faculty-img"style="object-position:center top">
+<h4>Ms. R. Brindha, M.Tech</h4>
+<p>Lecturer</p>
+<p>4 yrs Teaching | 1.7 yrs Industry</p>
+<p>Spinning Technology, Shuttleless Weaving</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/KvYFYrLc/Mr-Rajasekaran.jpg" class="faculty-img"style="object-position:center top">
+<h4>Mr. T. K. Rajasekaran M.Tech., MBA</h4>
+<p>Lecturer</p>
+<p>18 yrs Teaching | 8.5 yrs Industry</p>
+<p>Spinning, Wet Processing, Weaving</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/9FfVftTM/Wilson-Jacob-G.png" class="faculty-img">
+<h4>Mr. G. Wilson Jacob, B. Tech</h4>
+<p>Instructor</p>
+<p>9 Years Experience</p>
+<p>Textile Machinery Operations</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/ncLZLY7n/S-Ramkumar.jpg" class="faculty-img"style="object-position:center top">
+<h4>Mr. S. Ramkumar</h4>
+<p>Instructor</p>
+<p>Knitting, Textile CAD</p>
+</div>
+
+<div class="faculty-card">
+<img src="https://i.postimg.cc/L6sRsBf8/uruvasi.jpg" class="faculty-img" style="object-position:center top">
+<h4>Ms. R. Uvasri B.Com (PA), M.Com</h4>
+<p>Junior Assistant</p>
+<p>4 Years Experience</p>
+</div>
+
+</div>
+
+<h2 class="section-title">Course Structure</h2>
+<div class="course-tabs">
+<button class="active" onclick="showCourseTab('po')">PROGRAMME OUTCOMES</button>
+<button onclick="showCourseTab('pso')">PROGRAMME SPECIFIC OUTCOMES</button>
+<button onclick="showCourseTab('peo')">PROGRAMME EDUCATIONAL OBJECTIVES</button>
+</div>
+<div class="course-content" id="po">
+<table>
+<tr><th style="width:90px">Code</th><th>Programme Outcomes</th></tr>
+<tr><td>PO1</td><td>Basic and Discipline specific knowledge: Apply knowledge of basic mathematics, science and textile engineering fundamentals to solve textile processing and manufacturing problems.</td></tr>
+<tr><td>PO2</td><td>Problem analysis: Identify and analyse well-defined textile engineering problems using standard methods in spinning, weaving, processing and garmenting.</td></tr>
+<tr><td>PO3</td><td>Design/development of solutions: Design solutions for textile manufacturing processes, fabric structures and quality control systems.</td></tr>
+<tr><td>PO4</td><td>Engineering Tools, Experimentation and Testing: Apply modern textile testing instruments, CAD software and appropriate techniques for fiber, yarn and fabric analysis.</td></tr>
+<tr><td>PO5</td><td>Engineering practices for society, sustainability: Apply sustainable practices in textile processing, waste management and ethical manufacturing.</td></tr>
+<tr><td>PO6</td><td>Project Management: Manage textile production projects individually or as a team member, effectively communicate in industrial environment.</td></tr>
+<tr><td>PO7</td><td>Life-long learning: Engage in continuous learning in emerging areas like technical textiles, smart textiles and automation.</td></tr>
+</table>
+</div>
+<div class="course-content" id="pso" style="display:none">
+<table>
+<tr><th style="width:90px">Code</th><th>Programme Specific Outcomes</th></tr>
+<tr><td>PSO1</td><td>Ability to manage shop floor operations in spinning, weaving, processing and garment manufacturing units with technical competence.</td></tr>
+<tr><td>PSO2</td><td>Apply modern textile technologies including CAD, automation and quality control systems to enhance productivity and product quality.</td></tr>
+</table>
+</div>
+<div class="course-content" id="peo" style="display:none">
+<table>
+<tr><th style="width:90px">Code</th><th>Programme Educational Objectives</th></tr>
+<tr><td>PEO1</td><td>To produce technically skilled diploma engineers capable of handling supervisory roles in textile and garment industries.</td></tr>
+<tr><td>PEO2</td><td>To develop entrepreneurial skills and innovative thinking for contributing to the growth of textile sector.</td></tr>
+<tr><td>PEO3</td><td>To prepare students for higher education and lifelong learning in emerging textile technologies.</td></tr>
+</table>
+</div>
+
+<h2 class="section-title">2018 Scheme – Course Structure (Regular)</h2>
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('txt1')">DTT – Semester 1</div>
+<div class="sem-body" id="txt1">
+<table><tr><th>Theory</th><th>Practicals</th></tr>
+<tr><td>ENGINEERING MATHEMATICS-I</td><td>PHYSICS LABORATORY</td></tr>
+<tr><td>PHYSICS</td><td>CHEMISTRY LABORATORY I</td></tr>
+<tr><td>CHEMISTRY</td><td>BASICS OF COMPUTING AND INFORMATICS</td></tr>
+<tr><td>ENGLISH</td><td>INPLANT TRAINING</td></tr>
+<tr><td>BASIC ENGINEERING GRAPHICS</td><td>PHYSICAL EDUCATION I*</td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('txt2')">DTT – Semester 2</div>
+<div class="sem-body" id="txt2">
+<table><tr><th>Theory</th><th>Practicals</th></tr>
+<tr><td>ENGINEERING MATHEMATICS-II</td><td>PROPERTIES OF MATERIALS LABORATORY</td></tr>
+<tr><td>CALCULUS AND ITS APPLICATIONS</td><td>CHEMISTRY LABORATORY II</td></tr>
+<tr><td>PROPERTIES OF MATERIALS</td><td>FITTING, SHEET METAL & WIRING WORKSHOP</td></tr>
+<tr><td>APPLIED CHEMISTRY</td><td>COMMUNICATIVE ENGLISH LABORATORY</td></tr>
+<tr><td>FIBRE SCIENCE</td><td>PHYSICAL EDUCATION II*</td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('txt3')">DTT – Semester 3</div>
+<div class="sem-body" id="txt3">
+<table><tr><th>Theory</th><th>Practicals</th></tr>
+<tr><td>PROBABILITY AND STATISTICS</td><td>FIBRE ANALYSIS LABORATORY</td></tr>
+<tr><td>SPINNING TECHNOLOGY I</td><td>TEXTILE MACHINE DRAWING</td></tr>
+<tr><td>WEAVING TECHNOLOGY I</td><td>WEAVING TECHNOLOGY LABORATORY I</td></tr>
+<tr><td>TEXTILE TESTING</td><td>TEXTILE TESTING LABORATORY I</td></tr>
+<tr><td>–</td><td>SPINNING TECHNOLOGY LABORATORY</td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('txt4')">DTT – Semester 4</div>
+<div class="sem-body" id="txt4">
+<table><tr><th>Theory</th><th>Practicals</th></tr>
+<tr><td>SPINNING TECHNOLOGY II</td><td>WEAVING TECHNOLOGY LABORATORY II</td></tr>
+<tr><td>WEAVING TECHNOLOGY II</td><td>TEXTILE CHEMICAL PROCESSING LABORATORY I</td></tr>
+<tr><td>TEXTILE CHEMICAL PROCESSING</td><td>TEXTILE TESTING LABORATORY II</td></tr>
+<tr><td>KNITTING TECHNOLOGY</td><td>KNITTING LABORATORY</td></tr>
+<tr><td>–</td><td>TECHNICAL COMMUNICATION LABORATORY<br>INTERNSHIP#</td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('txt5')">DTT – Semester 5</div>
+<div class="sem-body" id="txt5">
+<table><tr><th>Theory</th><th>Practicals</th></tr>
+<tr><td>NEW SPINNING SYSTEMS AND SHUTTLELESS WEAVING</td><td>GARMENT MANUFACTURING LABORATORY I</td></tr>
+<tr><td>FABRIC STRUCTURE</td><td>WOVEN FABRIC ANALYSIS LABORATORY</td></tr>
+<tr><td>ELECTIVE THEORY-I</td><td>TEXTILE CHEMICAL PROCESSING LABORATORY II</td></tr>
+<tr><td>–</td><td>SEWING PRACTICE LABORATORY</td></tr>
+<tr><td>–</td><td>MINI PROJECT AND ENTREPRENEURSHIP</td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('txt6')">DTT – Semester 6</div>
+<div class="sem-body" id="txt6">
+<table><tr><th>Theory</th><th>Practicals</th></tr>
+<tr><td>PROCESS AND QUALITY CONTROL</td><td>SHUTTLELESS WEAVING LABORATORY</td></tr>
+<tr><td>TECHNICAL TEXTILES</td><td>TEXTILE CAD LABORATORY</td></tr>
+<tr><td>ELECTIVE THEORY-II</td><td>KNITTED FABRIC ANALYSIS LABORATORY</td></tr>
+<tr><td>–</td><td>GARMENT MANUFACTURING LABORATORY II</td></tr>
+<tr><td>–</td><td>PROJECT WORK AND VIVA VOCE</td></tr>
+</table>
+</div>
+</div>
+
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('txtElec')">DTT – Elective Subjects</div>
+<div class="sem-body" id="txtElec">
+<table><tr><th>Elective Theory Subjects</th></tr>
+<tr><td>TEXTILE MILL ORGANISATION</td></tr>
+<tr><td>GARMENT MANUFACTURING TECHNOLOGY</td></tr>
+<tr><td>HOME TEXTILES</td></tr>
+<tr><td>MECHANICAL PROCESSING OF MAN-MADE FIBRES</td></tr>
+<tr><td>TEXTILE MACHINERY MAINTENANCE</td></tr>
+</table>
+</div>
+</div>
+
+<h2 class="section-title">2018 Scheme – Sandwich Programme</h2>
+<div class="sem-dropdown">
+<div class="sem-head" onclick="toggleSem('sand1')">Sandwich – Semester 1</div>
+<div class="sem-body" id="sand1"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>ENGINEERING MATHEMATICS-I</td><td>PHYSICS LABORATORY</td></tr><tr><td>PHYSICS</td><td>CHEMISTRY LABORATORY I</td></tr><tr><td>CHEMISTRY</td><td>FITTING, SHEETMETAL & WIRING WORKSHOP</td></tr><tr><td>ENGLISH</td><td>INPLANT TRAINING</td></tr><tr><td>INDUSTRIAL TRAINING I</td><td>PHYSICAL EDUCATION I*</td></tr></table></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sand2')">Sandwich – Semester 2</div><div class="sem-body" id="sand2"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>ENGINEERING MATHEMATICS-II</td><td>PROPERTIES OF MATERIALS LABORATORY</td></tr><tr><td>CALCULUS AND ITS APPLICATIONS</td><td>CHEMISTRY LABORATORY II</td></tr><tr><td>PROPERTIES OF MATERIALS</td><td>COMMUNICATIVE ENGLISH LABORATORY</td></tr><tr><td>APPLIED CHEMISTRY</td><td>INDUSTRIAL TRAINING II</td></tr><tr><td>PHYSICAL EDUCATION II*</td><td>–</td></tr></table></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sand3')">Sandwich – Semester 3</div><div class="sem-body" id="sand3"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>PROBABILITY AND STATISTICS</td><td>BASICS OF COMPUTER AND INFORMATICS</td></tr><tr><td>ENGINEERING GRAPHICS</td><td>FIBRE ANALYSIS LABORATORY</td></tr><tr><td>SPINNING TECHNOLOGY I</td><td>TECHNICAL COMMUNICATION LABORATORY</td></tr><tr><td>INDUSTRIAL TRAINING III</td><td>–</td></tr></table></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sand4')">Sandwich – Semester 4</div><div class="sem-body" id="sand4"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>FIBRE SCIENCE</td><td>TEXTILE MACHINE DRAWING</td></tr><tr><td>WEAVING TECHNOLOGY I</td><td>WEAVING TECHNOLOGY LABORATORY I</td></tr><tr><td>TEXTILE TESTING</td><td>TEXTIL TESTING LABORATORY I</td></tr><tr><td>INDUSTRIAL TRAINING IV</td><td>–</td></tr></table></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sand5')">Sandwich – Semester 5</div><div class="sem-body" id="sand5"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>SPINNING TECHNOLOGY II</td><td>SPINNING TECHNOLOGY LABORATORY</td></tr><tr><td>WEAVING TECHNOLOGY II</td><td>WEAVING TECHNOLOGY LABORATORY II</td></tr><tr><td>TEXTILE CHEMICAL PROCESSING</td><td>TEXTILE CHEMICAL PROCESSING LABORATORY I</td></tr><tr><td>–</td><td>TEXTILE TESTING LABORATORY II</td></tr><tr><td>–</td><td>INDUSTRIAL TRAINING V</td></tr></table></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sand6')">Sandwich – Semester 6</div><div class="sem-body" id="sand6"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>KNITTING TECHNOLOGY</td><td>KNITTING LABORATORY</td></tr><tr><td>NEW SPINNING SYSTEMS AND SHUTTLELESS WEAVING</td><td>SHUTTLELESS WEAVING LABORATORY</td></tr><tr><td>FABRIC STRUCTURE</td><td>TEXTILE CHEMICAL PROCESSING LABORATORY II</td></tr><tr><td>–</td><td>INTERNSHIP #</td></tr></table></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sand7')">Sandwich – Semester 7</div><div class="sem-body" id="sand7"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>PROCESS AND QUALITY CONTROL</td><td>GARMENT MANUFACTURING LABORATORY I</td></tr><tr><td>ELECTIVE THEORY I</td><td>WOVEN FABRIC ANALYSIS LABORATORY</td></tr><tr><td>–</td><td>MINI PROJECT AND ENTREPRENEURSHIP</td></tr><tr><td>–</td><td>SUPERVISORY SKILL TRAINING</td></tr></table></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sand8')">Sandwich – Semester 8</div><div class="sem-body" id="sand8"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>TECHNICAL TEXTILES</td><td>TEXTILE CAD LABORATORY</td></tr><tr><td>ELECTIVE THEORY II</td><td>KNITTED FABRIC ANALYSIS LABORATORY</td></tr><tr><td>–</td><td>GARMENT MANUFACTURING LABORATORY II</td></tr><tr><td>–</td><td>PROJECT WORK AND VIVA VOCE</td></tr></table><p><strong>Elective Courses:</strong> TEXTILE MILL ORGANISATION, GARMENT MANUFACTURING TECHNOLOGY, HOME TEXTILES, MECHANICAL PROCESSING OF MAN-MADE FIBRES, TEXTILE MACHINERY MAINTENANCE</p></div></div>
+
+<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sandElec')">Sandwich – Elective Subjects</div><div class="sem-body" id="sandElec"><table><tr><th>Elective Theory Subjects</th></tr><tr><td>TEXTILE MILL ORGANISATION</td></tr><tr><td>GARMENT MANUFACTURING TECHNOLOGY</td></tr><tr><td>HOME TEXTILES</td></tr><tr><td>MECHANICAL PROCESSING OF MAN-MADE FIBRES</td></tr><tr><td>TEXTILE MACHINERY MAINTENANCE</td></tr></table></div></div>
+
+
+<h2 class="section-title">Facilities</h2>
+
+<div class="facility-card" onclick="toggleFacility('f1')">
+<div class="facility-title">CHEMICAL PROCESSING LAB</div>
+<div class="facility-body facility-image" id="f1">
+<img src="https://i.postimg.cc/CLVBQT6g/CHEMICAL-PROCESSING-LAB.png" alt="CADD Laboratory">
+            <!-- OR use your Imgur/Postimages URL -->
+            <!-- <img src="" alt="CADD Laboratory"> -->
+        </div>
+The Textile Chemical Processing Laboratory comprises of wide range of equipments for processing fibers, yarns, fabrics and garments. Salient features: Padding Mangle, Digital Oven Chamber, Weighting Balance, Magnetic Stirrer, Stainless Steel rectangular water bath. The laboratory has varieties of natural dyes and mordant chemicals.<br><br>
+<strong>Laboratory In charge : Dr. B. Sathish Babu</strong>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f2')">
+<div class="facility-title">TEXTILE TESTING LABORATORY</div>
+<div class="facility-body facility-image" id="f2">
+<img src="https://i.postimg.cc/CLVBQTr2/TEXTILE-TESTING.jpg" alt="CADD Laboratory">
+            <!-- OR use your Imgur/Postimages URL -->
+            <!-- <img src="" alt="CADD Laboratory"> -->
+        </div>
+The Textile Testing Laboratory is equipped with the entire range of testing equipments which include sophisticated instruments like Microprocessor based Twist Tester and Electronic Evenness Tester with Spectrogram. It also possesses Electronic Tensile Strength Tester from Mesdan, Italy to determine the tensile characteristics of yarn and fabric.<br><br>
+<strong>Laboratory In charge : Ms. Shri Pradha</strong>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f3')">
+<div class="facility-title">SPINNING & KNITTING LABORATORY</div>
+<div class="facility-body facility-image" id="f3">
+<img src="https://i.postimg.cc/wTdyG8bd/KNITTING-LABORATORY.jpg" alt="CADD Laboratory">
+            <!-- OR use your Imgur/Postimages URL -->
+            <!-- <img src="" alt="CADD Laboratory"> -->
+        </div>
+The Spinning Laboratory is bestowed with complete range of machinery, which includes the carding, speed frame, ring frame, comber and cone winding. Knitting section features circular knitting machines and flat knitting equipment.<br><br>
+<strong>Laboratory In charge : Dr. M. Senthilkumar</strong>
+</div>
+
+<div class="facility-card" onclick="toggleFacility('f4')">
+<div class="facility-title">TEXTILE CAD CENTRE</div>
+<div class="facility-body facility-image" id="f4">
+<img src="https://i.postimg.cc/Nfw9zqCz/TEXTILE-CAD.jpg" alt="CADD Laboratory">
+            <!-- OR use your Imgur/Postimages URL -->
+            <!-- <img src="" alt="CADD Laboratory"> -->
+        </div>
+The department owns the pride of possessing the Textile CAD Centre with the latest software's on woven design technology and Apparel design technology. The facilities include Pentium systems, Scanners, Plotters, and software’s such as Win Cad Vantage, TCS Jacquard and TCS Dobby, Textronics.<br><br>
+<strong>Laboratory In charge : Dr. B. Sathish Babu</strong>
+</div>
+
+<h2 class="section-title">Awards / Achievements</h2>
+
+<div class="academic-frame">
+<div class="course-tabs">
+<button class="active" onclick="showAchTab('awards')">Awards Received</button>
+<button onclick="showAchTab('mou')">MoU Signed</button>
+<button onclick="showAchTab('activities')">Association Activities</button>
+<button onclick="showAchTab('training')">Training Programs</button>
+</div>
+
+<div class="course-content" id="awards">
+<table>
+<tr><th style="width:200px">Recipient</th><th>Award / Achievement</th><th>Year</th></tr>
+<tr><td>Dr. M. Senthilkumar</td><td>IEI Young Engineer Award under Textile Engineering discipline by The Institution of Engineers (India), Kolkata</td><td>2014</td></tr>
+<tr><td>Mr. A. Sivakumar</td><td>Best NSS Program Officer Award from Commissioner of Technical Education, Chennai</td><td>2017</td></tr>
+<tr><td>Dr. B. Sathish Babu</td><td>PhD Degree from Anna University, Chennai</td><td>2018</td></tr>
+</table>
+</div>
+
+<div class="course-content" id="mou" style="display:none">
+<table><tr><th>S.No</th><th>Collaborating Organization</th><th>Scope of MoU</th><th>Month & Year</th></tr>
+<tr><td>1.</td><td>Sree Narasimha Textiles, Sulur, Coimbatore</td><td>Signed MoU for five years</td><td>Aug 2013</td></tr>
+<tr><td>2.</td><td>M/S Prabhu Textiles, Coimbatore</td><td>-</td><td>June 2019</td></tr>
+<tr><td>3.</td><td>M/S Sri Selvam Textiles, Coimbatore</td><td>-</td><td>	June 2019</td></tr>
+</table>
+</div>
+
+<div class="course-content" id="activities" style="display:none">
+<table><tr><th>S.No</th><th>Date</th><th>Topic</th><th>Chief Guest</th><th>Image</th></tr>
+<tr><td>1.</td><td>28.08.2019</td><td>Total Quality Management in Textiles</td><td>Mr.S.Manikandan
+Management Consultant Textiles Committee Officer (Retd.)
+Ministry of Textiles, GOI</td>
+<td></td>
+</tr>
+<tr><td>2.</td><td>20.03.2018</td><td>Valedictory Function</td><td>Mr.R.Saravanakumar
+Manager- Sales & Servies, Sourer Textile Solutions Pvt Limited, Coimbatore.</td>
+<td></td>
+</tr>
+<tr><td>3.</td><td>2.03.2018</td><td>Technical Textiles</td><td>Dr. T. Senthilram
+Consultant (Product Development),
+PSG Tech COE Indutech, Coimbatore</td>
+<td></td>
+</tr>
+<tr><td>4.</td><td>30.08.2018</td><td>Duties & Responsibilities of the Supervisor in Textile industry</td><td>Prof. R. Rahagopalan
+Chartered Textile Engineer, Coimbatore</td>
+<td></td>
+</tr>
+</table>
+</div>
+
+<div class="course-content" id="training" style="display:none">
+<table><tr><th>Program</th></tr>
+<tr><td>
+1.TIFAC - Department of Science and Technology (DST) sponsored Rs. Three lakhs for the workshop on "Productivity improvement through IE techniques for Apparel Industries" which was organized on 17th and 18th September 2014 at Netaji Apparel Park, New Tirupur</td></tr>
+<tr><td>
+2. TIFAC - Department of Science and Technology (DST) sponsored Rs. Three lakhs for the workshop on "Supply Chain Management for Apparel Industry" which was organized on 8th and 9th January 2015 at Tirupur Exporters Association (TEA), Tirupur</td></tr>
+</table>
+</div>
+</div>
+
+</div>
+
+<section class="contact-section">
+<div class="contact-frame">
+<h2>CONTACT US</h2>
+<p><strong>Dr. M. Senthilkumar, M.Tech, Ph.D</strong><br>
+Head of Department<br>
+Department of Textile Technology<br>
+PSG Polytechnic College<br>
+Peelamedu, Coimbatore – 641004<br>
+Tamil Nadu, India</p>
+<hr>
+<p class="footer-note">
+Designed And Developed by PSG PTC .<br>
+Copyright © 2025. All Rights Reserved.
+</p>
+</div>
+</section>
+</div>
+</div>
+
+<footer>
+© 2026 PSG Polytechnic College | Textile Technology
+</footer>
+
+<script>
+function showCourseTab(tab){
+document.getElementById("po").style.display="none";
+document.getElementById("pso").style.display="none";
+document.getElementById("peo").style.display="none";
+document.getElementById(tab).style.display="block";
+let buttons = document.querySelectorAll(".course-tabs:first-of-type button");
+buttons.forEach(btn => btn.classList.remove("active"));
+event.target.classList.add("active");
+}
+
+function goHome(){
+window.location.href = "departments.html";
+}
+
+function toggleSem(id){
+let x = document.getElementById(id);
+if(x) x.style.display = x.style.display == "block" ? "none" : "block";
+}
+
+function toggleFacility(id){
+let x = document.getElementById(id);
+if(x) x.style.display = x.style.display == "block" ? "none" : "block";
+}
+
+function showAchTab(tab){
+document.getElementById("awards").style.display = "none";
+document.getElementById("mou").style.display = "none";
+document.getElementById("activities").style.display = "none";
+document.getElementById("training").style.display = "none";
+document.getElementById(tab).style.display = "block";
+let btns = document.querySelectorAll(".academic-frame:nth-of-type(1) .course-tabs button");
+btns.forEach(b => b.classList.remove("active"));
+event.target.classList.add("active");
+}
+
+// NEW FUNCTION FOR SERVICES TAB
+function showServiceTab(tab){
+    const serviceIds = ['admission', 'examination', 'campus', 'union', 'alumni', 'career', 'helpdesk'];
+    serviceIds.forEach(id => {
+        document.getElementById(id).style.display = "none";
+    });
+    document.getElementById(tab).style.display = "block";
+    let btns = document.querySelectorAll(".academic-frame:nth-of-type(2) .course-tabs button");
+    btns.forEach(b => b.classList.remove("active"));
+    event.target.classList.add("active");
+}
+
+// Initialize display
+document.addEventListener("DOMContentLoaded", function(){
+document.getElementById("po").style.display = "block";
+document.getElementById("pso").style.display = "none";
+document.getElementById("peo").style.display = "none";
+document.getElementById("awards").style.display = "block";
+document.getElementById("mou").style.display = "none";
+document.getElementById("activities").style.display = "none";
+document.getElementById("training").style.display = "none";
+// Initialize new section
+document.getElementById("admission").style.display = "block";
+});
+</script>
+</body>
+</html>

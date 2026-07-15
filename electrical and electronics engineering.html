@@ -1,0 +1,2438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSG Polytechnic | Electrical and Electronics Engineering</title>
+<style>
+
+/* Base Styles matching Mechanical page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.event-img {
+    width: 150px;      /* Same width for all */
+    height: 200px;     /* Same height for all */
+    object-fit: cover; /* Crop image to fit */
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #1A1A1A;
+    line-height: 1.5;
+}
+
+.navbar {
+    background: #1c1c1c;
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px; /* Reduced gap to accommodate more links */
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: #ddd;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: #C5A267;
+}
+
+.hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.96)), url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a');
+    background-size: cover;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    margin: 0;
+}
+
+.divider {
+    width: 90px;
+    height: 3px;
+    background: #C5A267;
+    margin: 20px auto;
+}
+
+.section {
+    padding: 70px 40px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #1e2a3a;
+}
+
+.about-box {
+    background: #fafafa;
+    padding: 30px;
+    border: 1px solid #eee;
+    line-height: 1.8;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+/* Faculty Grid */
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.faculty-card {
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    transition: 0.25s;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.faculty-card:hover {
+    border-color: #C5A267;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+.faculty-img {
+    width: 90px;
+    height: 90px;
+    margin: 20px auto;         /* Center the card */
+    border-radius: 50%;
+    object-fit: cover;
+    object-position:center center;
+    object-position: center top;   /* Move image down */
+    border: 3px solid #C5A267;
+    margin-bottom: 12px;
+    background: #e9ecef;
+}
+
+.faculty-card h4 {
+    color: #C5A267;
+    margin: 0 0 6px 0;
+    font-size: 1.2rem;
+}
+
+.faculty-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    vertical-align: top;
+}
+
+th {
+    background: #C5A267;
+    color: white;
+    font-weight: 600;
+}
+
+/* Course tabs */
+.course-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0 20px;
+    flex-wrap: wrap;
+}
+
+.course-tabs button {
+    padding: 10px 24px;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.2s;
+    font-size: 0.9rem;
+}
+
+.course-tabs button.active, .course-tabs button:hover {
+    background: #C5A267;
+    color: white;
+    border-color: #C5A267;
+}
+
+.course-content {
+    background: #fff;
+    padding: 10px 0;
+}
+
+/* Semester dropdown */
+.sem-dropdown {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sem-head {
+    padding: 14px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    background: #C5A267;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.sem-body {
+    display: none;
+    padding: 20px;
+    background: #fefef7;
+}
+
+/* Facility cards */
+.facility-card {
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background: white;
+    transition: 0.2s;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.facility-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.facility-title {
+    background: #C5A267;
+    color: white;
+    padding: 14px 20px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.facility-body {
+    display: none;
+    padding: 18px;
+    line-height: 1.7;
+    background: #fafaf5;
+}
+.facility-image{
+    text-align:center;
+    margin:20px 0;
+}
+
+.facility-image img{
+    width:600px;          /* Adjust as needed */
+    max-width:100%;
+    height:auto;
+    border-radius:5px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+/* contact */
+.contact-section {
+    margin-top: 60px;
+    background: #f4f4f4;
+    padding: 50px 0;
+}
+
+.contact-frame {
+    max-width: 950px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.contact-frame h2 {
+    background: #C5A267;
+    color: white;
+    padding: 14px;
+    margin: -35px -35px 25px -35px;
+    font-size: 22px;
+    border-radius: 20px 20px 0 0;
+}
+
+footer {
+    background: #F5F5F5;
+    padding: 25px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+
+ul, .about-box ul {
+    margin-left: 25px;
+    line-height: 1.8;
+}
+
+.gallery-img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin: 10px 0;
+}
+
+hr {
+    margin: 20px 0;
+}
+/* Association Activities - Year Tabs (added, does not alter existing rules) */
+.year-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0 20px;
+    flex-wrap: wrap;
+}
+
+.year-tabs button {
+    padding: 10px 22px;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.2s;
+    font-size: 0.85rem;
+    color: #1e2a3a;
+}
+
+.year-tabs button.active,
+.year-tabs button:hover {
+    background: #C5A267;
+    color: white;
+    border-color: #C5A267;
+}
+
+.year-content {
+    display: none;
+}
+
+.year-content.active {
+    display: block;
+}
+
+.year-content h3 {
+    text-align: center;
+    font-family: Georgia, serif;
+    color: #1e2a3a;
+    margin: 10px 0 20px;
+    font-size: 1.4rem;
+}
+
+.assoc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.assoc-table th, .assoc-table td {
+    border: 1px solid #ddd;
+    padding: 14px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.92rem;
+}
+
+.assoc-table th {
+    background: #C5A267;
+    color: white;
+    font-weight: 700;
+}
+
+.assoc-table td {
+    background: #fff;
+}
+
+.assoc-table tr:nth-child(even) td {
+    background: #fafafa;
+}
+
+.no-data-box {
+    text-align: center;
+    color: #888;
+    padding: 40px 20px;
+    font-style: italic;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+/* Centre of Excellence - Gallery (added, does not alter existing rules) */
+.coe-section {
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.coe-section p {
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 14px;
+}
+
+.gallery-btn-wrap {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.gallery-btn {
+    background: linear-gradient(135deg, #C5A267, #b08d4f);
+    color: white;
+    border: none;
+    padding: 13px 32px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0 6px 16px rgba(197, 162, 103, 0.4);
+}
+
+.gallery-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(197, 162, 103, 0.5);
+}
+
+.gallery-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.78);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery-modal.open {
+    display: flex;
+}
+
+.gallery-modal-content {
+    background: #fff;
+    max-width: 920px;
+    width: 100%;
+    max-height: 88vh;
+    overflow-y: auto;
+    border-radius: 18px;
+    padding: 34px;
+    position: relative;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.35);
+    animation: coeGalleryIn 0.35s ease;
+}
+
+@keyframes coeGalleryIn {
+    from { transform: translateY(35px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.gallery-modal h3 {
+    font-family: Georgia, serif;
+    color: #1e2a3a;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1.4rem;
+    padding-right: 30px;
+}
+
+.gallery-close {
+    position: absolute;
+    top: 16px;
+    right: 22px;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    color: #999;
+    transition: 0.2s;
+    font-weight: 300;
+}
+
+.gallery-close:hover {
+    color: #C5A267;
+    transform: rotate(90deg);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+/* Gallery Card */
+.gallery-item {
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: 0.25s;
+    display: flex;
+    flex-direction: column;
+    height: 420px;      /* Fixed card height */
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+    border-color: #C5A267;
+}
+
+/* Image */
+.gallery-item img {
+    width: 100%;
+    height: 220px;      /* Fixed image height */
+    object-fit: cover;  /* Crop without stretching */
+    display: block;
+}
+
+/* Caption */
+.gallery-caption {
+    padding: 16px;
+    font-size: 0.88rem;
+    color: #444;
+    line-height: 1.55;
+    flex: 1;
+}
+
+/* Optional Placeholder */
+.gallery-placeholder {
+    height: 220px;
+    background: linear-gradient(135deg, #C5A267 0%, #e9d9b8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 46px;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo" onclick="goHome()">PSG POLYTECHNIC COLLEGE</div>
+    <div class="menu">
+        <a onclick="goHome()">Home</a>
+        <a href="#admission">Admission</a>
+        <a href="#examination">Examination</a>
+        <a href="#campus">Campus</a>
+        <a href="#union">Union</a>
+        <a href="#alumni">Alumni</a>
+        <a href="#career">Career</a>
+        <a href="#helpdesk">Helpdesk</a>
+    </div>
+</div>
+
+<div id="eeePage">
+    <div class="hero">
+        <h1>Electrical and Electronics Engineering</h1>
+        <div class="divider"></div>
+        <p>Powering Innovation | Excellence since 1939</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-box">
+            The Department of Electrical and Electronics Engineering was started in the year 1939. The Department maintains good rapport with industries. This Department offers three year Diploma Programme in Electrical and Electronics Engineering which was accredited by NBA in 2005 and 2011 and four year Diploma Programme in Electrical and Electronics Engineering (Sandwich). The Department is equipped with laboratories for teaching both basic and applied courses in Electrical and Electronics Engineering like Electrical Machines, Power Electronics, Microprocessor and Microcontroller, Computer Simulation, Analog and Digital Electronics.<br><br>
+            Apart from the curriculum, experts are invited for specialised topics to add additional skills for the students. Guest lectures are arranged through associations for the students in order to be in-line with the industries. Students are visiting reputed industries during their course of study. Students are provided opportunities to undergo internship, Inplant training in PSG Industrial Institute. This Department offers well equipped faculty members.
+        </div>
+
+        <h2 class="section-title">Vision</h2>
+        <div class="about-box" style="">
+            Department of Electrical and Electronics Engineering aspires to be a recognized centre for imparting the state of the art knowledge in the field of Electrical and Electronics Engineering for the development of the society.
+        </div>
+
+        <h2 class="section-title">Mission</h2>
+        <div class="about-box">
+            The mission of Department of Electrical and Electronics Engineering is to impart application oriented technical education to<br><br>
+            • Develop students to meet industry requirements<br>
+            • Evolve innovative applications of technology<br>
+            • Create career advancement opportunities<br>
+            • Disseminate the knowledge and skills acquired
+        </div>
+
+        <h2 class="section-title">Faculty</h2>
+        <div class="faculty-grid">
+            <div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436118', '_blank')">
+                <img src="https://i.postimg.cc/8shcm45J/S-SASIKALA.jpg" class="faculty-img">
+                <h4>Dr. S. Sasikala M.E., Ph.D</h4>
+                <p><strong>Head of the Department</strong></p>
+                <p>Teaching Experience: 25 years</p>
+                <p>Industry Experience: 3 Years</p>
+                <p>No. of Publications: 11</p>
+                <p>Area of Specialisation: Applied Electronics</p>
+                <small>Profile: https://psgpolytech.irins.org/profile/436118</small>
+            </div>
+            <div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436119', '_blank')">
+                <img src="https://i.postimg.cc/nMvrG2zV/MOHAMED-NAZEER.jpg" class="faculty-img">
+                <h4>Mr. A. Mohamed Nazeer M.E.,</h4>
+                <p>Lecturer (SG – I)</p>
+                <p>Teaching Experience: 20 Years</p>
+                <p>No. of Publications: 10</p>
+                <p>Area of Specialisation: Electrical Machines</p>
+                <small>Profile: https://psgpolytech.irins.org/profile/436119</small>
+            </div>
+            <div class="faculty-card">
+                <img src="https://i.postimg.cc/pyDrJCT8/umamaheswari.jpg" class="faculty-img">
+                <h4>S. Uma Maheswari M.E., (Ph.D)</h4>
+                <p>Lecturer</p>
+                <p>Teaching Experience: 19 Years 2 Months</p>
+                <p>No. of Publications: 5</p>
+                <p>Area of Specialisation: Process Control, Industrial Instrumentation</p>
+            </div>
+            <div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436120', '_blank')">
+                <img src="https://i.postimg.cc/kDxGvs4D/RAJAMANI.jpg" class="faculty-img" style="object-fit:cover; object-position:right;">
+                <h4>Dr. A. Rajamani M.E., PhD.,</h4>
+                <p>HoD</p>
+                <p>Teaching Experience: 23 years</p>
+                <p>Industry Experience: 11 Years</p>
+                <p>No of Publications: 20</p>
+                <p>Area of Specialisation: Applied Electronics</p>
+                <small>Profile: https://psgpolytech.irins.org/profile/436120</small>
+            </div>
+            <div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436122', '_blank')">
+                <img src="https://i.postimg.cc/XXwqkLJ7/KRISHNAMOORTHI.jpg" class="faculty-img">
+                <h4>Mr. S. Krishnamoorthi M.E.,</h4>
+                <p>Lecturer</p>
+                <p>Teaching Experience: 15 years</p>
+                <p>Industry Experience: 15 Years</p>
+                <p>Area of Specialisation: Electrical Machines</p>
+                <small>Profile: https://psgpolytech.irins.org/profile/436122</small>
+            </div>
+            <div class="faculty-card" onclick="window.open('https://psgpolytech.irins.org/profile/436123', '_blank')">
+                <img src="https://i.postimg.cc/hh9v1sjT/VALARMATHI.jpg" class="faculty-img">
+                <h4>Mrs. S. Valarmathi M.E.,</h4>
+                <p>Lecturer</p>
+                <p>Teaching Experience: 9 Years 9 Months</p>
+                <p>Industry Experience: 4 Years</p>
+                <p>Area of Specialisation: Energy Engineering</p>
+                <small>Profile: https://psgpolytech.irins.org/profile/436123</small>
+            </div>
+            <div class="faculty-card">
+                <img src="https://i.postimg.cc/PNmJQyx1/V-Karthikeyan.jpg" class="faculty-img">
+                <h4>Mr. V. Karthikeyan B.E</h4>
+                <p>Lecturer</p>
+                <p>Teaching Experience: 5 Years 8 Months</p>
+                <p>Area of Specialisation: DC Machines and Transformer, Digital Electronics</p>
+            </div>
+            <div class="faculty-card">
+                <img src="https://i.postimg.cc/rzSsNjms/priya.png" class="faculty-img">
+                <h4>Mrs. S. Priya B.E.</h4>
+                <p>Lecturer</p>
+                <p>Teaching Experience: 10 Years 6 Months</p>
+                <p>Industry Experience: 2 Years 6 Months</p>
+                <p>Area of Specialisation: Digital Electronics, Electrical Estimation & Energy Auditing, PLC, Control of Electrical Machines, Power System, Electrical Machines</p>
+            </div>
+            <div class="faculty-card">
+                <img src="https://i.postimg.cc/7bghn96T/SManotherasa.jpg" class="faculty-img">
+                <h4>Mrs. S. Manotherasa, B.E</h4>
+                <p>Lecturer</p>
+                <p>Teaching Experience: 8 Years</p>
+                <p>Industry Experience: 1 Years 6 Months</p>
+                <p>Area of Specialisation: Microcontroller, Digital Electronics</p>
+            </div>
+            <div class="faculty-card">
+                <img src="https://i.postimg.cc/6Tdqfc3p/pondivya.png" class="faculty-img">
+                <h4>Mrs. E. Pondhivya B.E</h4>
+                <p>Instructor</p>
+                <p>Industry Experience: 1 Year</p>
+                <p>Area of Specialisation: Digital Electronics, Electrical Machines</p>
+            </div>
+            <div class="faculty-card">
+                <img src="https://i.postimg.cc/c6QCBhHt/Sanjeevprasanna.jpg" class="faculty-img">
+                <h4>Mr. B. Sanjeevprasanna</h4>
+                <p>Instructor</p>
+                <p>Experience: 10 Years</p>
+                <p>Area of Specialisation: Electric Circuits, Electrical Machines, Digital Electronics, Power Electronics</p>
+            </div>
+            <div class="faculty-card">
+                <img src="https://i.postimg.cc/PNmJQyxD/SUNDARASAMY.jpg" class="faculty-img">
+                <h4>Mr. P. Sundarasamy B.E</h4>
+                <p>Lab Assistant (Spl.Gr.)</p>
+                <p>Experience: 25 Years | Industry: 6 years</p>
+                <p>Area of Specialisation: Electrical Machines, Wiring, Power Electronics, Measurement & Instrument, Control of Electrical Machines, Trouble Shooting</p>
+            </div>
+            <div class="faculty-card">
+                <img src="https://i.postimg.cc/8shcm45R/VENKATESH.jpg" class="faculty-img">
+                <h4>Mr. P. R. Venkatesh MCA., MPhil.</h4>
+                <p>Lab Assistant (Spl.Gr.)</p>
+                <p>Experience: 29 Years</p>
+                <p>Area of Specialisation: Microcontroller, Networks, C- Programming</p>
+            </div>
+            <div class="faculty-card">
+                <img src="https://i.postimg.cc/MXyHm5TG/Mr-J-Sivakumar.png" class="faculty-img">
+                <h4>Mr. J. Sivakumar ITI</h4>
+                <p>Skilled Assistant (Spl. Gr.)</p>
+                <p>Experience: 26 Years | Industry: 10 Years</p>
+                <p>Area of Specialisation: Lathe and Special Machines</p>
+            </div>
+            <div class="faculty-card">
+                <img src="https://i.postimg.cc/QVpCJmtB/Ramakrishnan.jpg" class="faculty-img">
+                <h4>Mr. A. Ramakrishnan</h4>
+                <p>Experience: 31 Years</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Course Structure</h2>
+        <div class="course-tabs">
+            <button class="active" onclick="showCourseTab('poTab')">Programme Outcomes</button>
+            <button onclick="showCourseTab('psoTab')">Programme Specific Outcomes</button>
+            <button onclick="showCourseTab('peoTab')">Program Educational Objectives</button>
+        </div>
+        <div id="poTab" class="course-content">
+            <table>
+                <tr><th>PO</th><th>Description</th></tr>
+                <tr><td>PO</td><td>Basic and Discipline specific knowledge : Apply knowledge of basic mathematics, science and engineering fundamentals and engineering specialization to solve the engineering problems.</td></tr>
+                <tr><td>PO</td><td>Problem analysis: Identify and analyse well-defined engineering problems using codified standard methods.</td></tr>
+                <tr><td>PO</td><td>Design/ development of solutions: Design solutions for well-defined technical problems and assist with the design of systems components or processes to meet specified needs.</td></tr>
+                <tr><td>PO</td><td>Engineering Tools, Experimentation and Testing: Apply modern Engineering tools and appropriate technique to conduct standard tests and Measurements.</td></tr>
+                <tr><td>PO</td><td>practices for society, sustainability and environment: Apply technology context in context of society, sustainability, environment and ethical practices.</td></tr>
+                <tr><td>PO</td><td>Project Management: Use engineering management principles individually,as a team member or a leader to manage projects and effectively communicate about well-defined engineering activities.</td></tr>
+                <tr><td>PO</td><td>Life-long learning: Ability to analyse individual needs and engage in updating in the context of technological changes</td></tr>
+            </table>
+        </div>
+        <div id="psoTab" class="course-content" style="display:none">
+            	 <table>
+                <tr><th>PSO</th><th>Description</th></tr>
+                <tr><td>PSO1</td><td>Apply principles of Electrical and Electronics Engineering for constructing, operating, testing and maintenance of Electrical and Electronics systems</td></tr>
+                <tr><td>PSO2</td><td>Students will be able to work and implement the practical skill set in Electronics, Electrical machines, Power systems, Measurements and Instrumentation and Embedded systems.</td></tr>
+            </table>    
+        </div>
+        <div id="peoTab" class="course-content" style="display:none">
+	<table>
+                <tr><th>PEO</th><th>Description</th></tr>
+                <tr><td>PEO</td><td>Provide strong technical foundation and practical skills in the field of Electrical and Electronics Engineering to meet the demand of industry.</td></tr>
+                <tr><td>PEO</td><td>	
+Empower with creative skill set to implement, analyze and troubleshoot problems in Electrical and Electronics field.</td></tr>
+                <tr><td>PEO</td><td>	
+Emphasis with emerging technologies, to innovate, enhances ethics, lifelong learning and provide solution for the improvement</td></tr>
+        </table>    
+        </div>
+
+        <h2 class="section-title">2024 SCHEME FOR REGULAR</h2>
+        <div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sem1')"> Semester 1</div><div class="sem-body" id="sem1"><table><tr><th>Theory</th><th>Practicals</th><th>Practicum</th><th>Audit Courses</th></tr><tr><td>Physics</td><td>Physics Laboratory</td><td>Basic Engineering Graphics</td><td>Integrated Learning Experience - I</td></tr><tr><td>Chemistry</td><td>Chemistry Laboratory</td><td></td><td></td></tr><tr><td>Basic Mathematics</td><td>Fitting, Plumbing and Wiring Workshop</td><td></td><td></td></tr><tr><td>Technical English</td><td></td><td></td><td></td></tr></table></div></div>
+        <div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sem2')"> Semester 2</div><div class="sem-body" id="sem2"><table><tr><th>Theory</th><th>Practicals</th><th>Practicum</th><th>Audit</th></tr><tr><td>Calculus and its Applications</td><td>Engineering Chemistry Laboratory</td><td>Basics of Mechanical Engineering</td><td>Integrated Learning Experience - II</td></tr><tr><td>Applied Physics</td><td>Engineering Chemistry Laboratory</td><td>Office Automation Tools</td><td></td></tr><tr><td>Chemistry of Electronic Materials</td><td></td><td></td><td></td></tr><tr><td>Technical Mathematics</td><td></td><td></td><td></td></tr></table></div></div>
+        <div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sem3')"> Semester 3</div><div class="sem-body" id="sem3"><table><tr><th>Theory</th><th>Practicals</th><th>Practicum</th></tr><tr><td>Electric Circuits</td><td>Electric Circuits and Wiring Laboratory</td><td>PCB Design Fabrication and Troubleshooting</td></tr><tr><td>DC Machines and Transformer</td><td>DC Machines and Transformer Laboratory</td><td></td></tr><tr><td>Analog Electronics</td><td>Analog Electronics Laboratory</td><td></td></tr><tr><td>Measurements and Instrumentation</td><td>Measurements and Instrumentation Laboratory</td><td></td></tr></table></div></div>
+        <div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sem4')"> Semester 4</div><div class="sem-body" id="sem4"><table><tr><th>Theory</th><th>Practicals</th><th>Practicum</th></tr><tr><td>AC Machines</td><td>AC Machines Laboratory</td><td>Fundamentals of C</td></tr><tr><td>Digital Electronics</td><td>Digital Electronics Laboratory</td><td></td></tr><tr><td>Power Systems</td><td>Circuit Simulation Laboratory</td><td></td></tr><tr><td>Distribution and Utilization</td><td>Advanced Communication Skills Laboratory</td><td></td></tr></table></div></div>
+        <div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sem5')"> Semester 5</div><div class="sem-body" id="sem5"><table><tr><th>Theory</th><th>Practicals</th><th>Practicum</th></tr><tr><td>Microcontrollers</td><td>Microcontroller Laboratory</td><td>Estimating and Costing</td></tr><tr><td>Control of Electrical Machines</td><td>Control of Electrical Machines Laboratory</td><td></td></tr><tr><td>Elective Theory -I</td><td>Mini Project</td><td></td></tr></table></div></div>
+        <div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sem6')"> Semester 6</div><div class="sem-body" id="sem6"><table><tr><th>Theory</th><th>Practicals</th><th>Practicum</th></tr><tr><td>Power Electronics</td><td>Power Electronics Laboratory</td><td>Electrical Maintenance and Appliance Servicing</td></tr><tr><td>Internet of Things and Applications</td><td>Internet of Things and Applications Laboratory</td><td></td></tr><tr><td>Elective Theory -II</td><td>Project Work</td><td></td></tr></table></div></div>
+	<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('sem7')"> Elective Course (Two to be opted)</div><div class="sem-body" id="sem7"><table><tr><td>Green Energy Sources</td></tr><tr><td>E - Vehicles</td></tr><tr><td>Artificial Intelligence Fundamentals</td></tr><tr><td>Embedded Systems and Applications</td></tr><tr><td>Electrical Safety and Standards</td></tr><tr><td>Special Electrical Machines</td></tr><tr><td>*Internship will be arranged for 4 weeks during the vacation at the end of 4th semester</td></tr></table></div></div>
+        
+        <h2 class="section-title">2021 Scheme for Regular</h2>
+        <div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('old1')"> Semester 1 </div><div class="sem-body" id="old1"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>Engineering Mathematics - I</td><td>Physics Laboratory</td></tr><tr><td>Physics</td><td>Chemistry Laboratory</td></tr><tr><td>Chemistry</td><td>Fitting Sheet Metal & wiring Workshop</td></tr><tr><td>English</td><td>Inplant Training</td></tr><tr><td>Basic Engineering Graphics</td><td>Physical Education – I</td></tr></table></div></div>
+	<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('old2')"> Semester 2 </div><div class="sem-body" id="old2"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>Engineering Mathematics - II</td><td>Applied Physics Laboratory</td></tr><tr><td>Calculus and its Applications</td><td>	Engineering Chemistry Laboratory</td></tr><tr><td>Applied Physics</td><td>Office tools and Python Programming</td></tr><tr><td>Chemistry of Electronic Materials</td><td>Communicative English Laboratory</td></tr><tr><td>C Programming</td><td>Physical Education – II</td></tr></table></div></div>
+
+	<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('old3')"> Semester 3 </div><div class="sem-body" id="old3"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>Statistics and Probability Models</td><td>Wiring and Winding Laboratory</td></tr><tr><td>Electric Circuits</td><td>	DC Machines and Transformer Laboratory</td></tr><tr><td>DC Machines and Transformer</td><td>Analog Electronics Laboratory</td></tr><tr><td>Analog Electronics</td><td>PCB Laboratory</td></tr><tr><td></td><td>Technical Communication Laboratory</td></tr></table></div></div>
+
+	<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('old4')"> Semester 4 </div><div class="sem-body" id="old4"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>Basics of Mechanical Engineering</td><td>Machine Shop Technology Laboratory</td></tr><tr><td>Measurements and Instrumentation</td><td>Measurements and Instrumentation Laboratory</td></tr><tr><td>AC Machines</td><td>AC Machines Laboratory</td></tr><tr><td>Digital Electronics</td><td>Digital Electronics Laboratory</td></tr><tr><td></td><td>Circuit Simulation Laboratory</td></tr><tr><td></td><td>Internship*</td></tr></table></div></div>
+
+	<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('old5')"> Semester 5 </div><div class="sem-body" id="old5"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>Power System</td><td>Estimation & Costing Laboratory</td></tr><tr><td>Microcontrollers</td><td>Microcontroller Laboratory</td></tr><tr><td>Elective Theory – I</td><td>Troubleshooting Laboratory</td></tr><tr><td></td><td>Smart Sensors and IoT Laboratory</td></tr><tr><td></td><td>Mini Project and Entrepreneurship</td></tr></table></div></div>
+
+	<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('old6')"> Semester 6 </div><div class="sem-body" id="old6"><table><tr><th>Theory</th><th>Practicals</th></tr><tr><td>Power Electronics</td><td>Power Electronics Laboratory</td></tr><tr><td>Control of Electrical Machines</td><td>Control of Electrical Machines Laboratory</td></tr><tr><td>Elective Theory – II</td><td>MATLAB and Simulation Laboratory</td></tr><tr><td></td><td>Virtual Instrumentation Laboratory</td></tr><tr><td></td><td>Project Work and Viva Voce</td></tr></table></div></div>
+
+	<div class="sem-dropdown"><div class="sem-head" onclick="toggleSem('old7')"> Elective Course (Two to be opted)</div><div class="sem-body" id="old7"><table><tr><td>Distribution and Utilisation</td></tr><tr><td>Non-Conventional Energy Sources</td></tr><tr><td>Special Electrical Machines</td></tr><tr><td>Smart Sensors and IoT</td></tr><tr><td>Embedded System and RTOS</td></tr><tr><td>Special Electrical Machines</td></tr><tr><td>*Internship will be arranged for 4 weeks during the vacation at the end of 4th semester</td></tr></table></div></div>
+
+        
+        <h2 class="section-title">Facilities</h2>
+        <div class="facility-card" onclick="toggleFacility('labMachines')"><div class="facility-title"> ELECTRICAL MACHINES LABORATORY</div>
+<div class="facility-body" id="labMachines">
+<div class="facility-image">
+            <img src="https://i.postimg.cc/GTmzL2gv/eee-1.jpg" alt="CADD Laboratory">
+            <!-- OR use your Imgur/Postimages URL -->
+            <!-- <img src="" alt="CADD Laboratory"> -->
+        </div>
+This lab is installed with transformers, AC and DC Motors and generators to conduct various load tests and predetermination tests. Motor testing as per BIS Facilities are also available.<br>Hall No: I 101 – B<br>Staff In Charge : Mrs. S. Priya<br>Supporting Staff : Mr. A. Ramakrishnan</div></div>
+
+        <div class="facility-card" onclick="toggleFacility('labElectronics')"><div class="facility-title"> ELECTRONICS LABORATORY</div>
+<div class="facility-body" id="labElectronics">
+<div class="facility-image">
+            <img src="https://i.postimg.cc/GTmzL2gx/eee-2.jpg" alt="CADD Laboratory">
+            <!-- OR use your Imgur/Postimages URL -->
+            <!-- <img src="" alt="CADD Laboratory"> -->
+        </div>
+This Lab has Electronics and Digital trainer kits and circuit boards, discrete analog and digital components to construct, test, verify and simulate the analog and digital electronic circuits.<br>Hall No: I 101 - A<br>Staff In Charge : Mrs. S. Uma Maheswari<br>Supporting Staff : Mr. J. Sivakumar</div></div>
+
+        <div class="facility-card" onclick="toggleFacility('labWiring')"><div class="facility-title"> WIRING AND WINDING LABORATORY</div><div class="facility-body" id="labWiring">
+<div class="facility-image">
+            <img src="https://i.postimg.cc/wRjFqv4c/eee-3.jpg" alt="CADD Laboratory">
+            <!-- OR use your Imgur/Postimages URL -->
+            <!-- <img src="" alt="CADD Laboratory"> -->
+        </div>
+Various types of wiring tools are equipped to perform the different types of wiring and winding experiments.<br>Hall No. : I 101 – C<br>Staff In Charge : Mr. S. Krishnamoorthi & Mrs. S. Valarmathi<br>Supporting Staff : Mr. P. Sundarasamy & Mr. A. Ramakrishnan</div></div>
+
+        <div class="facility-card" onclick="toggleFacility('labPower')"><div class="facility-title"> POWER ELECTRONICS LABORATORY</div><div class="facility-body" id="labPower">
+<div class="facility-image">
+            <img src="https://i.postimg.cc/sGgKjXHm/eee-4.jpg" alt="CADD Laboratory">
+            <!-- OR use your Imgur/Postimages URL -->
+            <!-- <img src="" alt="CADD Laboratory"> -->
+        </div>
+This lab has facilities to conduct performance characteristics of power electronic devices, power converters and power electronic utilities. AC and DC drives, stepper motor drives are also available.<br>Hall No. : I 602 – A<br>Staff In Charge : Mr. A. Mohamed Nazeer<br>Supporting Staff : Mr. P. Sundarasamy</div></div>
+
+        <div class="facility-card" onclick="toggleFacility('labMicro')"><div class="facility-title"> MICROPROCESSOR AND MICROCONTROLLER LABORATORY</div><div class="facility-body" id="labMicro">
+<div class="facility-image">
+            <img src="https://i.postimg.cc/dZVns1N9/EEE-Microcontroller-lab.jpg" alt="CADD Laboratory">
+            <!-- OR use your Imgur/Postimages URL -->
+            <!-- <img src="" alt="CADD Laboratory"> -->
+        </div>
+This lab is equipped with 8085 Microprocessor kits, 8051 Microcontroller kits, 8051 Development Board, Universal Programmer, PIC controller kits, Arduino Microcontroller board and various interfacing kits such as keyboard, LCD display, stepper motor, DC motor interface A/D and D/A conversion kits and simulation tools.<br>Hall No. : I 602 – B<br>Staff In Charge : Mr. V. Karthikeyan<br>Supporting Staff : Mr. P.R. Venkatesh</div></div>
+
+        <div class="facility-card" onclick="toggleFacility('labSchneider')"><div class="facility-title"> PSG - SCHNEIDER ELECTRICIAN TRAINING CENTRE</div><div class="facility-body" id="labSchneider">
+<div class="facility-image">
+            <img src="https://i.postimg.cc/n9hTFzST/PIC-3.jpg" alt="CADD Laboratory">
+            <!-- OR use your Imgur/Postimages URL -->
+            <!-- <img src="" alt="CADD Laboratory"> -->
+        </div>
+Hall No. : I 521<br>Staff In Charge : Mrs. S. Valarmathi<br>Supporting Staff : Mr. P. Sundarasamy<br><strong>Fuji Lab</strong> Staff In Charge : Mr. A. Mohamed Nazeer & Mr. V. Karthikeyan</div></div>
+
+        <h2 class="section-title">PSG - Fuji Centre of Excellence in Energy and Automation</h2>
+        <div class="coe-section">
+            <p><strong>Inauguration</strong></p>
+            <p>PSG - Fuji Centre of Excellence in Energy and Automation, established in the Department of Electrical and Electronics Engineering at PSG Polytechnic College. Fuji Electric India Pvt. Ltd. has sponsored equipment under CSR initiative. The new centre of excellence (CoE) is armed with Programmable Logic Controller (PLCs), Human Machine Interface (HMI) and various modern control electric drives to enhance the knowledge and skills of students in Energy and Automation.</p>
+            <p>It aims to bridge the gap between academic learning and industrial requirements by providing advanced training facilities in industrial automation, energy management, and control systems. Through this initiative, students gain hands-on experience with modern industrial equipment. The company also supports skill development by conducting workshops, technical training programs and faculty development sessions. This collaboration helps students to improve their practical knowledge, develop industry-relevant skills and enhance their employability in the field of Electrical and Automation Engineering.</p>
+            <div class="gallery-btn-wrap">
+                <button class="gallery-btn" onclick="openGallery('fujiGalleryModal')"> View Gallery</button>
+            </div>
+        </div>
+
+        <div id="fujiGalleryModal" class="gallery-modal" onclick="if(event.target===this) closeGallery('fujiGalleryModal')">
+            <div class="gallery-modal-content">
+                <span class="gallery-close" onclick="closeGallery('fujiGalleryModal')">&times;</span>
+                <h3>PSG - Fuji Centre of Excellence in Energy and Automation — Inauguration Gallery</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/CzK7Fq3j/fuji-Inauguration1.jpg" alt="Event photo" class="event-img">
+
+                        <div class="gallery-caption">PSG - Fuji Centre of Excellence in Energy and Automation – Ribbon cutting by Chief Guest Mr. Deenathayalan K. G (left) with PSG PTC - Principal Dr. B. Giriraj (right) and HoD-EEE Dr. S. Sasikala (middle). Inauguration of PSG - Fuji Centre of Excellence in Energy and Automation.</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/XB451Rb6/fuji-Inauguration3.jpg" alt="Event photo" class="event-img">
+
+                        <div class="gallery-caption">Memento presented to Chief Guest Mr. Deenathayalan K. G by Principal Dr. B. Giriraj. HoD Dr. S. Sasikala, EEE staff, HoDs and Staff members from various departments of PSG PTC along with Fuji team members were also present. Inauguration of PSG - Fuji Centre of Excellence in Energy and Automation.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">PSG-Schneider Electrician Training Centre Inauguration</h2>
+        <div class="coe-section">
+            <p>PSG Polytechnic College, Department of Electrical and Electronics Engineering along with Schneider Electric India, Bengaluru jointly established "PSG-Schneider Electrician Training Centre" at PSG Polytechnic College. This lab is sponsored by Schneider India Foundation Limited, Bengaluru. Laboratory is equipped with all Electrical Wiring and demo boards with necessary accessories and tools. This centre will be utilised by the students of EEE and allied branches, PSG Polytechnic College, PSG Industrial Institute and Skill Training Students.</p>
+            <p>An objective of the partnership with Schneider Electric India Foundation and PSG PTC is to train the students for the need of the industry. Skillful training will be provided to gain more practical knowledge in Electrical wiring from well trained faculty members from Schneider and PSG Polytechnic College with an enriched equipment in the centre. Trainees who are school or college drop outs would be made job ready in just 3 – 4 months of holistic training.</p>
+            <div class="gallery-btn-wrap">
+                <button class="gallery-btn" onclick="openGallery('schneiderGalleryModal')">View Gallery</button>
+            </div>
+        </div>
+
+        <div id="schneiderGalleryModal" class="gallery-modal" onclick="if(event.target===this) closeGallery('schneiderGalleryModal')">
+            <div class="gallery-modal-content">
+                <span class="gallery-close" onclick="closeGallery('schneiderGalleryModal')">&times;</span>
+                <h3>PSG-Schneider Electrician Training Centre — Inauguration Gallery</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/fy49H95H/Lighting-by-Principal.jpg" alt="Event photo" class="event-img">
+
+                        <div class="gallery-caption">PSG-Schneider Electrician Training Centre — Dr. B. Giriraj, Principal, PSG Polytechnic College lighting kuthu vilaku during PSG – Schneider training centre inauguration.</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/XZCnz4w1/Opening-ceremony-by-chief-guest.jpg" alt="Event photo" class="event-img">
+                        <div class="gallery-caption">Inauguration of PSG-Schneider Electrician Training Centre.</div>
+                    </div>
+                    <div class="gallery-item">
+                         <img src="https://i.postimg.cc/1gqyjspT/Training-centre-photo.jpg" alt="Event photo" class="event-img">
+                        <div class="gallery-caption">PSG-Schneider Electrician Training Centre at I 521.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Association Activities</h2>
+
+        <div class="year-tabs" id="assocYearTabs">
+            <button class="active" onclick="showYearTab('year2025_2026', this)">2025 - 2026</button>
+            <button onclick="showYearTab('year2024_2025', this)">2024 - 2025</button>
+            <button onclick="showYearTab('year2023_2024', this)">2023 - 2024</button>
+            <button onclick="showYearTab('year2022_2023', this)">2022 - 2023</button>
+            <button onclick="showYearTab('year2021_2022', this)">2021 - 2022</button>
+            <button onclick="showYearTab('year2020_2021', this)">2020 - 2021</button>
+            <button onclick="showYearTab('year2019_2020', this)">2019 - 2020</button>
+            <button onclick="showYearTab('year2018_2019', this)">2018 - 2019</button>
+            <button onclick="showYearTab('year2017_2018', this)">2017 - 2018</button>
+            <button onclick="showYearTab('year2016_2017', this)">2016 - 2017</button>
+            <button onclick="showYearTab('year2015_2016', this)">2015 - 2016</button>
+            <button onclick="showYearTab('year2014_2015', this)">2014 - 2015</button>
+            <button onclick="showYearTab('year2013_2014', this)">2013 - 2014</button>
+        </div>
+
+        <div id="year2025_2026" class="year-content active">
+            <h3>Academic Year 2025-2026</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Nature</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>No. of Participants</th>
+                    <th>Chief Guest / Judge</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Valedictory cum Guest Lecture</td>
+                    <td>Innovation Mindset</td>
+                    <td>11.03.2026</td>
+                    <td>180</td>
+                    <td>Mrs. S. Gayathridevi,<br>Deputy General Manager, Schneider Electric India Pvt. Ltd.</td>
+                      <td><img src="https://i.postimg.cc/G4DfSXBD/Valedictory-11032026.jpg" alt="Event photo" class="event-img"> </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Inauguration of PSG - FUJI Centre of Excellence</td>
+                    <td>Corporate Presentation</td>
+                    <td>10.03.2026</td>
+                    <td>180</td>
+                    <td>Dr. Divyaa Raman,<br>Senior Manager, Fuji Electric India Pvt. Ltd.</td>
+                     <td><img src="https://i.postimg.cc/bssW1yqh/FUJICentre-Excellence1.jpg" alt="Event photo" class="event-img"> </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Inauguration of PSG - FUJI Centre of Excellence</td>
+                    <td>Technical Presentation on Energy</td>
+                    <td>10.03.2026</td>
+                    <td>180</td>
+                    <td>Mr. E. Vimal Kumar, Sales Manager, Fuji Electric India Pvt. Ltd.<br>Mr. Kakkum Perumal, Area Manager, Fuji Electric India Pvt. Ltd.</td>
+                    <td> <img src="https://i.postimg.cc/kgYdGZqZ/FUJICentre-Excellence2.jpg" alt="Event photo" class="event-img"> </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Inauguration of PSG - FUJI Centre of Excellence</td>
+                    <td>Technical Presentation on Automation</td>
+                    <td>10.03.2026</td>
+                    <td>180</td>
+                    <td>Mr. C. Nirmal Kumar, Senior Manager,<br>Fuji Electric India Pvt. Ltd.</td>
+                     <td><img src="https://i.postimg.cc/nrKJLhhY/FUJICentre-Excellence3.jpg" alt="Event photo" class="event-img"> </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Guest Lecture</td>
+                    <td>Basics on Electronic Governing and Electric Train Working System</td>
+                    <td>27.02.2026</td>
+                    <td>180</td>
+                    <td>Mr. G. Sivaraj, Consultant,<br>Bangalore Hydro Engineers & Consultants</td>
+                     <td><img src="https://i.postimg.cc/Hn0gLkkv/guest-Lecture-sivaraj.jpg" alt="Event photo" class="event-img"> </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Guest Lecture (Online Session)</td>
+                    <td>Overview of Artificial Intelligence in Engineering</td>
+                    <td>09.01.2026</td>
+                    <td>120</td>
+                    <td>Mr. Karthik Kailash,<br>CEO & Co-Founder of M/s. Skalix AI.</td>
+                     <td><img src="https://i.postimg.cc/25pFmkMg/Pic-39012026.jpg" alt="Event photo" class="event-img"> </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Guest Lecture</td>
+                    <td>Developing a Positive Attitude for Professional Success</td>
+                    <td>08.01.2026</td>
+                    <td>120</td>
+                    <td>Mr. A. Pandiyan,<br>Regional Manager of M/s. Caution Swastik.</td>
+                     <td><img src="https://i.postimg.cc/Qdd3XsGK/Pic-28012026.jpg" alt="Event photo" class="event-img"> </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Guest Lecture</td>
+                    <td>Thriving in the Corporate World as an Engineer</td>
+                    <td>08.01.2026</td>
+                    <td>120</td>
+                    <td>Mr. C. Nirmal Kumar,<br>Manager of M/s. Fuji Electric India Pvt. Ltd.</td>
+                    <td><img src="https://i.postimg.cc/Z5shng4d/Pic-1-8012026.jpg" alt="Event photo" class="event-img"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Inauguration cum Guest Lecture</td>
+                    <td>Empowering Grids</td>
+                    <td>01.08.2025</td>
+                    <td>180</td>
+                    <td>Mr.N.Jayabal, Director of M/s. Salzer Electronics, Coimbatore.<br>Mr.D.Rajanayagam, Asst. General Manager from M/s. Salzer Electronics, Coimbatore.</td>
+                     <td><img src="https://i.postimg.cc/3xxTK753/Mr-NJayabal.jpg" alt="Event photo" class="event-img"> </td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="year2024_2025" class="year-content">
+            <h3>Academic Year 2024-2025</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Nature</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>No. of Participants</th>
+                    <th>Chief Guest / Judge</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>Valedictory and Guest Lecture</td>
+                    <td>Enhancing Placement Frameworks with Industry Needs</td>
+                    <td>24.03.2025</td>
+                    <td>180</td>
+                    <td>Mr. S.V. Krisnaganth,<br>Passionate Drone Pilot, Founder of M/s. Sri Krisna Digital, Coimbatore.</td>
+                    <td><img src="https://i.postimg.cc/tg0tyq8b/Valedictory-Guest-Lecture-24-03-2025.jpg" alt="Event photo" class="event-img"></td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Young Alumni Meet 2025</td>
+                    <td>Knowledge Connect Session</td>
+                    <td>01.02.2025</td>
+                    <td>100</td>
+                    <td>Mr.T.Velumani, Senior Manager - Software from M/s. Celastica, Chennai<br>Mr.A.Pandiyan, Business Head - Naren Group of Companies, Coimbatore</td>
+                    <td><img src="https://i.postimg.cc/ZqkFZb2g/Mr-T-Velumani-Senior-Eng.jpg" alt="Event photo" class="event-img"></td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Guest Lecture</td>
+                    <td>Electrical Protection System Design</td>
+                    <td>06.12.2024</td>
+                    <td>120</td>
+                    <td>Mr.K.Natarajan, DGM-Manufacturing From M/s. Schneider Electric India Pvt. Ltd</td>
+                    <td><img src="https://i.postimg.cc/mrxNRLJn/Guest-Lecture-1.jpg" alt="Event photo" class="event-img"style="object-position:center left"></td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Guest Lecture</td>
+                    <td>Electrical Safety</td>
+                    <td>06.12.2024</td>
+                    <td>120</td>
+                    <td>Mr.M.Mohamed Abdul Quadir, Senior Manager - R & D From M/s. Schneider Electric India Pvt. Ltd</td>
+                    <td><img src="https://i.postimg.cc/zfmS5z6c/Guest-Lecture-2.jpg" alt="Event photo" class="event-img"></td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>Inauguration and Guest Lecture</td>
+                    <td>“Emerging Trends in Wires and Cables”</td>
+                    <td>25.07.2024</td>
+                    <td>170</td>
+                    <td>Mr. N. Subbarao, General Manager,<br>Sales and Marketing from M/s. KEI Industries Ltd.,</td>
+                    <td><img src="https://i.postimg.cc/MGkbx6NC/Pic-2.jpg" alt="Event photo" class="event-img"style="object-position:center left"></td>
+
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>Department of EEE & Training and Placement Cell</td>
+                    <td>Personality Development</td>
+                    <td>10.07.2024</td>
+                    <td>250</td>
+                    <td>Mr. K. Hariprasad, DGMHR<br>ESE & NPD from M/s. Schneider Electric India Pvt. Ltd.,</td>
+                    <td><img src="https://i.postimg.cc/zfmS5z69/Pic-1.jpg" alt="Event photo" class="event-img"></td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>One Day Workshop</td>
+                    <td>Professional Electrical Wiring</td>
+                    <td>29.06.2024</td>
+                    <td>27</td>
+                    <td>Mr.S.Hariharan, Deputy General Manager, Supply Chain Planning, Schneider Electric India Pvt. Ltd., Coimbatore</td>
+                    <td><img src="https://i.postimg.cc/3wMC78z5/Pic-3.jpg" alt="Event photo" class="event-img" ></td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="year2023_2024" class="year-content">
+            <h3>Academic Year 2023-2024</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Nature</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>No. of Participants</th>
+                    <th>Chief Guest / Judge</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>Inauguration cum Guest Lecture</td>
+                    <td>Emerging trends in E-Vehicles</td>
+                    <td>23.08.2023</td>
+                    <td>120</td>
+                    <td>Mr. V. S. Sudhakar, Managing Director, Anuswaryaa Enterprises, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Memorandum of Understanding (MoU)</td>
+                    <td>M/s. Vasantha Advanced Systems</td>
+                    <td>28.08.2023</td>
+                    <td>20</td>
+                    <td>Dr. S. Chidambaranathan, Managing Director, Vasantha Advanced Systems Private Limited, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Valedictory and Guest Lecture</td>
+                    <td>New Age Engineers</td>
+                    <td>23.03.2024</td>
+                    <td>106</td>
+                    <td>Mr. S.V. Krisnaganth, Passionate Drone Pilot, Founder of Sri Krisna Digital, Coimbatore.<br>Mr. Azeez Mohideen Mohamed Nazeer, Chief Visionary Officer, Ikasle Group of Companies, Coimbatore.</td>
+                    <td><img src="https://i.postimg.cc/L6K1nCNV/Pic-2-Valedictory-GL.jpg" alt="Event photo" class="event-img"style="object-position:center left"></td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="year2022_2023" class="year-content">
+            <h3>Academic Year 2022-2023</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Nature</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>No. of Participants</th>
+                    <th>Chief Guest / Judge</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>Guest Lecture</td>
+                    <td>Entrepreneurship Development program</td>
+                    <td>09.09.2022</td>
+                    <td>75</td>
+                    <td>Mr. B. Vinoth Kumar, Project Executive from Schneider Electric, Bengaluru</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Guest Lecture</td>
+                    <td>Guest Lecture on Lean & Manufacturing – Industry 4.0</td>
+                    <td>19.10.2022</td>
+                    <td>90</td>
+                    <td>Mr.B Vinoth kumar, Deputy General Manager – Production, Schneider Electric India Pvt. Ltd.</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Guest Lecture</td>
+                    <td>Arduino & Sensor</td>
+                    <td>19.10.2022</td>
+                    <td>90</td>
+                    <td>Mr. Arun Giridhar, Manager – R&D Schneider Electric India Pvt. Ltd.</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Poster presentation</td>
+                    <td>Value of Education in Life</td>
+                    <td>11.11.2022</td>
+                    <td>25</td>
+                    <td>Dr. B. Giriraj, Principal, PSG Polytechnic College</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>Technical Quiz</td>
+                    <td>Arduino & Sensor</td>
+                    <td>18.11.2022</td>
+                    <td>60</td>
+                    <td>Mrs. S. Sasikala, HoD, EEE Department, PSG Polytechnic College</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>Polyfest 2022</td>
+                    <td>Circuit Debugging</td>
+                    <td>18.11.2022</td>
+                    <td>60</td>
+                    <td>Mrs. S. Sasikala, HoD, EEE Department, PSG Polytechnic College</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>Guest Lecture</td>
+                    <td>Opportunities after Diploma</td>
+                    <td>21.06.2023</td>
+                    <td>90</td>
+                    <td>Mr. Manimohan Trinaths. S, ACE Academy, Hyderabad</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="year2021_2022" class="year-content">
+            <h3>Academic Year 2021-2022</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Nature</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>No. of Participants</th>
+                    <th>Chief Guest / Judge</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>Guest Lecture</td>
+                    <td>How to Prepare Effective CV and How to Improve Communication Skills & Interview Techniques</td>
+                    <td>21.10.2021</td>
+                    <td>60</td>
+                    <td>Ms. R. Shobhana, Senior Manager – Learning Coordinator, Human Resources, Schneider Electric India Pvt. Ltd., Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Guest Lecture</td>
+                    <td>Managing Personal Finances</td>
+                    <td>17.11.2021</td>
+                    <td>65</td>
+                    <td>Ms. Aryashree Anand, Schneider Electric</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Guest Lecture</td>
+                    <td>MCB and Wire Selection</td>
+                    <td>03.12.2021</td>
+                    <td>150</td>
+                    <td>Mr. D. Mahesh Kumar, General Manager, Schneider Electric India Pvt. Ltd., Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Guest Lecture</td>
+                    <td>MCB and Wire Selection</td>
+                    <td>03.12.2021</td>
+                    <td>150</td>
+                    <td>Mr. Vivek Sasi, Senior Manager – R&D, Schneider Electric India Pvt. Ltd., Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>Guest Lecture</td>
+                    <td>Basics of Electrical Protection System</td>
+                    <td>04.12.2021</td>
+                    <td>120</td>
+                    <td>Mr. Jagadeesh Kandhaswamy, Senior Manager – Design and Development, Schneider Electric India Pvt. Ltd., Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>Guest Lecture</td>
+                    <td>Smart Grid Home Energy Management</td>
+                    <td>14.12.2021</td>
+                    <td>95</td>
+                    <td>Dr. V. Gayathri, Senior Assistant Professor, CO2 Research and Green Technologies Centre, VIT, Vellore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>Guest Lecture</td>
+                    <td>Overview of L&T EduTech</td>
+                    <td>09.05.2022</td>
+                    <td>60</td>
+                    <td>Mrs. M. F. Febin M.E., Head – College Connect, L&T EduTech, Chennai</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>Guest Lecture</td>
+                    <td>Electrical Product Manufacturing and Career Options &amp; Driving Quality Through Digitalization</td>
+                    <td>19.05.2022</td>
+                    <td>180</td>
+                    <td>Mr. R. Veerasamy, Deputy General Manager – R&D, Schneider Electric India Pvt. Ltd., Coimbatore<br>Mr. K. Raja, Deputy General Manager, Customer Satisfaction & Quality, Schneider Electric India Pvt. Ltd., Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>Training Program for Teaching Faculty and Technical Staff</td>
+                    <td>Electrical Wiring and Protection System</td>
+                    <td>08.06.2022 to 10.06.2022</td>
+                    <td>15</td>
+                    <td>Mr. B. Govind Prasad<br>Mr. John Emanuel D’Silva, Trainers, Schneider Electric India Pvt. Ltd., Bangalore</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="year2020_2021" class="year-content">
+            <h3>Academic Year 2020-2021</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Nature</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>No. of Participants</th>
+                    <th>Chief Guest / Judge</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>Guest Lecture</td>
+                    <td>Industrial Automation in Textile Industries</td>
+                    <td>18.11.2020</td>
+                    <td>100</td>
+                    <td>Mr. K. Subramanian, Proprietor, Noyyal Textile Service, Director, Noyyal Industries, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Workshop</td>
+                    <td>Hands-on Training on Proteus with Arduino Simulation</td>
+                    <td>21.11.2020</td>
+                    <td>75</td>
+                    <td>Mr. Ranjithkumar Mahalingam, Founder and Director, Crystal Clear Technology and Innovation, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Workshop</td>
+                    <td>Hands-on Training on PCB Design using Altium Designer</td>
+                    <td>23.03.2021</td>
+                    <td>85</td>
+                    <td>Mr. D. Ramesh M.Sc., Chief Technical Officer, Chip Craft, Peelamedu, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Guest Lecture</td>
+                    <td>Expectations of Industries from Young Engineers</td>
+                    <td>05.05.2021</td>
+                    <td>100</td>
+                    <td>Mr. R. Satish B.E., MS., MBA, (PhD), Senior Manager, Salem Steel Plant (SAIL), Salem</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="year2019_2020" class="year-content">
+            <h3>Academic Year 2019-2020</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Nature</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>No. of Participants</th>
+                    <th>Chief Guest / Judge</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>Workshop</td>
+                    <td>One Day IV cum Workshop – PCB Designing and Manufacturing Process</td>
+                    <td>20.07.2019</td>
+                    <td>70</td>
+                    <td>Mr. K. Moorthi B.E., Director of Business Development, Enthu Technology, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Guest Lecture</td>
+                    <td>Recent Trends in Power Systems</td>
+                    <td>14.08.2019</td>
+                    <td>185</td>
+                    <td>Er. K. Balasubramanium B.E., M.E., Assistant Executive Engineer, TANGEDCO, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Guest Lecture</td>
+                    <td>Life Skill</td>
+                    <td>11.02.2020</td>
+                    <td>200</td>
+                    <td>Mr. G. Vijay Babu, 5S Consultant, AGAM Training Resources, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>04</td>
+                    <td>Technovation 2020</td>
+                    <td>Poster Presentation Event Process</td>
+                    <td>21.02.2020</td>
+                    <td>45</td>
+                    <td>Dr. R. Neelaveni, Professor & Dr. P. Sweety Jose, Assistant Professor (Sr.Gr), PSG CT, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>05</td>
+                    <td>Guest Lecture</td>
+                    <td>Job Opportunities for Diploma Holders</td>
+                    <td>13.03.2020</td>
+                    <td>210</td>
+                    <td>Mr. S. N. Panneer Selvam B.E., Assistant Executive Engineer, TANTRANSCO, Palladam, Tirupur</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="year2018_2019" class="year-content">
+            <h3>Academic Year 2018-2019</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Nature</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>No. of Participants</th>
+                    <th>Chief Guest / Judge</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>06</td>
+                    <td>Guest Lecture</td>
+                    <td>Special Energy Efficient Electric Motors</td>
+                    <td>24.07.2018</td>
+                    <td>180</td>
+                    <td>Mr. P. Krishnamurthi B.E., MBA., Managing Director, K-TECH Motors, Avarampalayam, Coimbatore – 06</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>07</td>
+                    <td>Workshop</td>
+                    <td>Half Day Workshop on Awareness about IoT</td>
+                    <td>14.09.2018</td>
+                    <td>78</td>
+                    <td>Mr. B. Karthikeyan B.E., Founder and Director<br>Mr. M. Ranjith Kumar, Manager, Thick India Pvt. Limited, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>08</td>
+                    <td>Guest Lecture</td>
+                    <td>Solar Plant Installation, Testing and Maintenance</td>
+                    <td>20.02.2019</td>
+                    <td>175</td>
+                    <td>Mr. M.M. Sanjay Kumar B.Tech., M.Sc., Managing Director, Yuvraj Energy Solutions, Coimbatore – 04</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>09</td>
+                    <td>Guest Lecture</td>
+                    <td>Opportunities in Government Sector</td>
+                    <td>07.03.2019</td>
+                    <td>200</td>
+                    <td>Dr. B. Giriraj M.E., PhD., Principal, PSG Polytechnic College, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="year2017_2018" class="year-content">
+            <h3>Academic Year 2017-2018</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Nature</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>No. of Participants</th>
+                    <th>Chief Guest / Judge</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Guest Lecture</td>
+                    <td>Opportunities in TNEB</td>
+                    <td>26.07.2017</td>
+                    <td>175</td>
+                    <td>Mr. A. Muruga Samy B.E., Chairman, Shiva Sakthi Paper Mills, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Workshop</td>
+                    <td>One Day Workshop on IoT based Application Development using PLC and SCADA</td>
+                    <td>23.12.2017</td>
+                    <td>40</td>
+                    <td>Mr. B. Soma Sundram B.E., Plant Engineering & Maintenance, ZF Wind Power Limited, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Guest Lecture</td>
+                    <td>Soft Skill</td>
+                    <td>05.03.2018</td>
+                    <td>120</td>
+                    <td>Lt. E. Justin Ruben M.A., M.Phil., Assistant Professor, Dept. of Humanities, CIT, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Guest Lecture</td>
+                    <td>Opportunities in Electronics Industry</td>
+                    <td>09.03.2018</td>
+                    <td>200</td>
+                    <td>Mr. B. Karthikeyan B.E., Founder and Director, Thick India Pvt. Limited, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="year2016_2017" class="year-content">
+            <h3>Academic Year 2016-2017</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Nature</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>No. of Participants</th>
+                    <th>Chief Guest / Judge</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Guest Lecture</td>
+                    <td>Energy Conservation Measures</td>
+                    <td>20.07.2016</td>
+                    <td>175</td>
+                    <td>Mr. B. Somasundaram B.E., Manager, Plant Engineering and Maintenance, ZF Wind Power, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Guest Lecture</td>
+                    <td>Automotive Electronics</td>
+                    <td>08.09.2016</td>
+                    <td>140</td>
+                    <td>Dr. K.K. Venkataraman B.E., MBA., PhD., Professor, PSG Institute of Advanced Studies, Coimbatore – 4</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Guest Lecture</td>
+                    <td>Expectations of Industries from Young Engineers</td>
+                    <td>12.01.2017</td>
+                    <td>190</td>
+                    <td>Mr. A. Krishnakumar, Senior Training Officer, Training Department, PSG II, Coimbatore – 4</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Guest Lecture</td>
+                    <td>Recent Trends in Electronics Industries</td>
+                    <td>14.03.2017</td>
+                    <td>195</td>
+                    <td>Mr. A. Sundar B.Sc (Elec)., PG, DMIT., MBA., Senior Business Development Manager, Unab Technologies Pvt. Ltd., Coimbatore</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="year2015_2016" class="year-content">
+            <h3>Academic Year 2015-2016</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Nature</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>No. of Participants</th>
+                    <th>Chief Guest / Judge</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Guest Lecture</td>
+                    <td>Recent Trends in Embedded System</td>
+                    <td>18.08.2015</td>
+                    <td>75</td>
+                    <td>Dr. D. Sivaraj M.E., PhD., Assistant Professor, Department of ECE, PSG CT, Coimbatore – 4</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Guest Lecture</td>
+                    <td>Design of Green Vehicles</td>
+                    <td>11.09.2015</td>
+                    <td>155</td>
+                    <td>Mr. S. Karthik, Manager – R&D, Ampere Vehicles Pvt. Ltd., Coimbatore – 402</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Guest Lecture</td>
+                    <td>Role of Electrical Engineers in Industries</td>
+                    <td>04.03.2016</td>
+                    <td>40</td>
+                    <td>Mr. Harihara Sudhan B.Tech., Human Resource Management, Michelin, Chennai</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Guest Lecture</td>
+                    <td>Design Basics and Applications of Toroids</td>
+                    <td>07.03.2016</td>
+                    <td>185</td>
+                    <td>Mr. S. Prabhu B.E., MBA., Product Development Manager – Magnetics, Salzer Electronics Ltd, Unit – II, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Guest Lecture</td>
+                    <td>Recent Trends in Mobile Communications</td>
+                    <td>01.04.2016</td>
+                    <td>200</td>
+                    <td>Mr. V. Shankar B.E., ITS., General Manager (Network Operations – Mobile), Tamil Nadu Circle, Coimbatore – 11</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="year2014_2015" class="year-content">
+            <h3>Academic Year 2014-2015</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Nature</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>No. of Participants</th>
+                    <th>Chief Guest / Judge</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Guest Lecture</td>
+                    <td>PLC SCADA</td>
+                    <td>19.08.2014</td>
+                    <td>185</td>
+                    <td>Ms. Uma M.Tech., Technical Team Head – Production, SIEMENS VI Microsystems, Chennai</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Guest Lecture</td>
+                    <td>PCB Design – Overview</td>
+                    <td>19.09.2014</td>
+                    <td>180</td>
+                    <td>Mr. D. Vijayakumar, Senior Manager – PCB Design, TESSOLVE Semiconductor Pvt. Ltd., Coimbatore – 641 018</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Guest Lecture</td>
+                    <td>Interview Process</td>
+                    <td>03.02.2015</td>
+                    <td>160</td>
+                    <td>Mr. P. Rengasamy B.Sc., B.E., Area Service Manager, CUMMINS India Limited, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Guest Lecture</td>
+                    <td>Bridging Gap Between Institutions & Industry</td>
+                    <td>13.03.2015</td>
+                    <td>165</td>
+                    <td>Mr. Ganesh Rajkumar B.E., MS., Project Manager, Design Centre – 1, Pricol Technologies Private Limited, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="year2013_2014" class="year-content">
+            <h3>Academic Year 2013-2014</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Nature</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>No. of Participants</th>
+                    <th>Chief Guest / Judge</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Guest Lecture</td>
+                    <td>Energy Conservation and Entrepreneurship</td>
+                    <td>23.07.2013</td>
+                    <td>150</td>
+                    <td>Mr. R. Vathirajan, Managing Director, Padmavahini Transformers Pvt. Ltd., Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Guest Lecture</td>
+                    <td>Personal Professional Development</td>
+                    <td>13.09.2013</td>
+                    <td>180</td>
+                    <td>Mrs. K. Rajakumari, Executive Trainer, Nitya Gurukula, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Guest Lecture</td>
+                    <td>Substation Equipment & Use</td>
+                    <td>28.01.2014</td>
+                    <td>175</td>
+                    <td>Mr. V. Narasimhan B.E., MBA., MIE, Executive Engineer, Substation Erection, TNEB, Coimbatore</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Guest Lecture</td>
+                    <td>Leadership Qualities</td>
+                    <td>18.03.2014</td>
+                    <td>200</td>
+                    <td>Mr. Chandrashekar Mark B.E., Managing Director, Pearl Engineering Pvt. Ltd., Coimbatore – 108</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <h2 class="section-title">Student Achievements & Awards</h2>
+
+        <div class="year-tabs" id="achieveTabs">
+            <button class="active" onclick="showAchieveTab('achieveAcademics', this)">Academics</button>
+            <button onclick="showAchieveTab('achieveSports', this)">Sports</button>
+            <button onclick="showAchieveTab('achieveWebinar', this)">Online Webinar</button>
+            <button onclick="showAchieveTab('achieveMoU', this)">MoU Signed</button>
+        </div>
+
+        <div id="achieveAcademics" class="year-content active">
+            <h3>Academics</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>Sl.No</th>
+                    <th>Roll Nos.</th>
+                    <th>Name of the Students</th>
+                    <th>Awards / Trophy</th>
+                    <th>Programme</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td colspan="6" style="background:#f1e6d2; font-weight:700; text-align:left; color:#8a6d2f;">EEE (Regular) – III Year</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>22E021<br>22E056</td>
+                    <td>Sanjay S<br>Logapriyan S U</td>
+                    <td>1st Prize</td>
+                    <td>Project Presentation in Nachimuthu Polytechnic College, Pollachi on 19 Feb 2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>22E004<br>22E005</td>
+                    <td>B.N. Aruncesh<br>A. Abhishek</td>
+                    <td>Participation</td>
+                    <td>Paper Presentation at NGP College of Technology on 28.01.2025 to 29.01.2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>22E004<br>22E005</td>
+                    <td>B.N. Aruncesh<br>A. Abhishek</td>
+                    <td>Participation</td>
+                    <td>Paper Presentation at NGP College of Technology on 28.01.2025 to 29.01.2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>21E012<br>21E032</td>
+                    <td>M. Kiruthika<br>M. Vijayashree</td>
+                    <td>Participation</td>
+                    <td>Volt Warriors at NGP College of Technology on 28.01.2025 to 29.01.2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>21E012<br>21E032</td>
+                    <td>M. Kiruthika<br>M. Vijayashree</td>
+                    <td>3rd Prize</td>
+                    <td>Spark - O - Mania at NGP College of Technology on 28.01.2025 to 29.01.2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>21E012<br>21E032</td>
+                    <td>M. Kiruthika<br>M. Vijayashree</td>
+                    <td>Participation</td>
+                    <td>Mic Masters at NGP College of Technology on 28.01.2025 to 29.01.2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>21E012<br>21E032</td>
+                    <td>M. Kiruthika<br>M. Vijayashree</td>
+                    <td>3rd Prize</td>
+                    <td>Spark - O - Mania at NGP College of Technology on 28.01.2025 to 29.01.2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>22E013<br>22E028</td>
+                    <td>V. Haritbaran<br>K. Sribalan</td>
+                    <td>Participated in Paper Presentation – 2nd Place</td>
+                    <td>Ink and Insights at NGP College of Technology on 28.01.2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="background:#f1e6d2; font-weight:700; text-align:left; color:#8a6d2f;">EEE (Regular) – II Year</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>23E011<br>23E035</td>
+                    <td>D. Harish Jahanathan<br>V. Yukendar</td>
+                    <td>1st Prize</td>
+                    <td>Paper Presentation in Nachimuthu Polytechnic College, Pollachi on 19 Feb 2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>23E011<br>23E035</td>
+                    <td>D. Harish Jahanathan<br>V. Yukendar</td>
+                    <td>2nd Prize</td>
+                    <td>Circuit Debugging in Nachimuthu Polytechnic College, Pollachi on 19 Feb 2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="background:#f1e6d2; font-weight:700; text-align:left; color:#8a6d2f;">EEE (Regular) – I Year</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>24E011</td>
+                    <td>P. Karthick Aravindan</td>
+                    <td>2nd Prize</td>
+                    <td>Project Expo on 25.09.2024 at Hindustan College</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="achieveSports" class="year-content">
+            <h3>Sports</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>Sl.No</th>
+                    <th>Roll Nos.</th>
+                    <th>Name of the Students</th>
+                    <th>Awards / Trophy</th>
+                    <th>Programme</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td colspan="6" style="background:#f1e6d2; font-weight:700; text-align:left; color:#8a6d2f;">EEE (Regular) – III Year</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>22E003<br>22E006</td>
+                    <td>A. Akshaya<br>S. Danya</td>
+                    <td>2nd Prize</td>
+                    <td>IPAA Divisional Tournament - Ball Badminton at PSG Polytechnic College on 10.02.2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>22E003<br>22E006</td>
+                    <td>A. Akshaya<br>S. Danya</td>
+                    <td>3rd Prize</td>
+                    <td>IPAA Divisional Tournament - Volley Ball at Hindustan Polytechnic College, Othakalmandapam on 25.01.2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>22E003<br>22E006</td>
+                    <td>A. Akshaya<br>S. Danya</td>
+                    <td>3rd Prize</td>
+                    <td>Mini Marathon at PSG Polytechnic College on 17.03.2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>22E018</td>
+                    <td>V. Rathish</td>
+                    <td>2nd Prize</td>
+                    <td>Carrom - District Level on August 2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>22E018</td>
+                    <td>V. Rathish</td>
+                    <td>4th Place</td>
+                    <td>Mini Marathon at PSG Polytechnic College on 17.03.2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>22E055<br>23EH33</td>
+                    <td>T. Jeya Pandi<br>N. Sri Dharsan</td>
+                    <td>1st Prize</td>
+                    <td>IPAA Divisional Tournament - Ball Badminton at PSG Polytechnic College on 30.08.2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>22E055<br>23EH33</td>
+                    <td>T. Jeya Pandi<br>N. Sri Dharsan</td>
+                    <td>Participation</td>
+                    <td>IPAA State - Ball Badminton at PSG Polytechnic College on 28 Jan 2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>22E066<br>22E024</td>
+                    <td>N. Vishwak<br>V.RA. Santhosh</td>
+                    <td>2nd Prize</td>
+                    <td>Chess – IPAA State Level on 31 Jan 2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>22E066<br>22E024</td>
+                    <td>N. Vishwak<br>V.RA. Santhosh</td>
+                    <td>1st Prize</td>
+                    <td>Chess – IPAA District Level on 20 Nov 2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>22E066<br>22E024</td>
+                    <td>N. Vishwak<br>V.RA. Santhosh</td>
+                    <td>38th Place</td>
+                    <td>Chess – CM Trophy on 18 Nov 2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>22E066<br>22E024</td>
+                    <td>N. Vishwak<br>V.RA. Santhosh</td>
+                    <td>1st Prize</td>
+                    <td>Chess – Nova 2K24 on 20 Aug 2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>23EH03</td>
+                    <td>B. Priscilla Immaculate</td>
+                    <td>3rd Prize</td>
+                    <td>Tennikoit on September 2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>23EH03</td>
+                    <td>B. Priscilla Immaculate</td>
+                    <td>1st Prize</td>
+                    <td>Volley Ball on March 2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>23EH03</td>
+                    <td>B. Priscilla Immaculate</td>
+                    <td>2nd Prize</td>
+                    <td>Throw Ball on March 2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="background:#f1e6d2; font-weight:700; text-align:left; color:#8a6d2f;">EEE (Regular) – II Year</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>23E005</td>
+                    <td>S. Asathraja</td>
+                    <td>1st Prize</td>
+                    <td>IPAA Divisional Tournament - Ball Badminton at PSG Polytechnic College on 30.08.2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>23E016</td>
+                    <td>M. Karthick</td>
+                    <td>Participation</td>
+                    <td>IPAA Divisional Tournament - Volley Ball at Sri Ramakrishna Polytechnic College on 24.01.2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>23E0027</td>
+                    <td>N. Santhosh</td>
+                    <td>3rd Prize</td>
+                    <td>IPAA Divisional Tournament – Kho-Kho at PSG Polytechnic College on 03.09.2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>23E0027</td>
+                    <td>N. Santhosh</td>
+                    <td>3rd Prize</td>
+                    <td>SRIT Cricket Tournament at Sri Ramakrishna College of Technology on 30.12.2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>23E0027</td>
+                    <td>N. Santhosh</td>
+                    <td>3rd Prize</td>
+                    <td>IPAA Divisional Tournament – Cricket at PSG Polytechnic College on 21.01.2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>23E0057</td>
+                    <td>Karthik Sanjeev</td>
+                    <td>3rd Prize</td>
+                    <td>IPAA Divisional Tournament – Throwball at Nachimuthu Polytechnic College on 13.09.2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="background:#f1e6d2; font-weight:700; text-align:left; color:#8a6d2f;">EEE (Regular) – I Year</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>24E066</td>
+                    <td>T. Rithik Charan</td>
+                    <td>3rd Prize</td>
+                    <td>SRIT Cricket Tournament at Sri Ramakrishna College of Technology on 30.12.2024</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>24E025</td>
+                    <td>M. Ranjani</td>
+                    <td>3rd Prize</td>
+                    <td>Throw Ball at Women’s PTC</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>24E025</td>
+                    <td>M. Ranjani</td>
+                    <td>3rd Prize</td>
+                    <td>Volley Ball at Hindustan College on 25.01.2025</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>24E025</td>
+                    <td>M. Ranjani</td>
+                    <td>2nd Prize</td>
+                    <td>Ball Badminton at PSG Polytechnic College on 10.02.2025</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="achieveWebinar" class="year-content">
+            <h3>Online Webinar</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Event Title</th>
+                    <th>Date</th>
+                    <th>Participant Count</th>
+                    <th>Chief Guest</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Internet of Things</td>
+                    <td>03.07.2020</td>
+                    <td>99</td>
+                    <td>Mr. Vijay Raghavan, Chief Technology Officer (CTO), Spectrum7 Technologies Pvt. Ltd., Chennai – 18</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Thannambikai Ye Vetri</td>
+                    <td>09.07.2020</td>
+                    <td>95</td>
+                    <td>Dr. Kavidasan M.A., B.L., MBA., Ph.D., Director - HR, M/s. Roots Industries India Ltd, Coimbatore</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Recent Trends in Industrial Robotics and IIoT</td>
+                    <td>13.07.2020</td>
+                    <td>142</td>
+                    <td>Mr. R. Rameshbabu, Manager – Training School, Fanuc India Pvt. Ltd, Bangalore<br>Mr. R. Prasanna, Assistant Manager – Training School, Fanuc India Pvt. Ltd, Bangalore</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Education After COVID 19</td>
+                    <td>14.07.2020</td>
+                    <td>78</td>
+                    <td>Mr. B. Karthikeyan, Proprietor, Thick India, Coimbatore</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Connected Vehicles</td>
+                    <td>10.08.2020</td>
+                    <td>174</td>
+                    <td>Dr. M. Kathiresh, Assistant Professor (Sr. Gr.), Department of EEE, PSG College of Technology, Coimbatore</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Next Generation Protocols for Automotive Embedded Systems</td>
+                    <td>11.08.2020</td>
+                    <td>174</td>
+                    <td>Dr. A. Soundarrajan, Professor, Department of EEE, PSG College of Technology, Coimbatore</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Interview Skills</td>
+                    <td>12.08.2020</td>
+                    <td>174</td>
+                    <td>Dr. M. Kalpana, Associate Professor, Department of Humanities, PSG College of Technology, Coimbatore</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Smart Grid and Electric Vehicles</td>
+                    <td>14.08.2020</td>
+                    <td>174</td>
+                    <td>Dr. L. Ashok Kumar, Professor and Associate HoD, Department of EEE, PSG College of Technology</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Simulation of Electrical and Electronics Project using Proteus Software</td>
+                    <td>17.08.2020</td>
+                    <td>130</td>
+                    <td>Dr. M. Muruganandam M.E., PhD., Department of Electrical Engineering, IBRI College of Technology, Sultanate of Oman</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>IoT - LoRA and its Application in Electrical Engineering</td>
+                    <td>01.09.2020</td>
+                    <td>90</td>
+                    <td>Dr. Vimalathithan Rathinasabapathy Ph.D.</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="achieveMoU" class="year-content">
+            <h3>MoU Signed</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Industry Details</th>
+                    <th>Date</th>
+                    <th>Image</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>M/s. Fuji Electric India Pvt. Ltd., Chennai</td>
+                    <td>18 December 2024</td>
+                    <td><img src="https://i.postimg.cc/LgVPd2BM/MOU-Fuji-Electric-India.jpg" alt="Event photo" class="event-img" ></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Energy Control Corporation, Coimbatore</td>
+                    <td>27 September 2023</td>
+                    <td><img src="https://i.postimg.cc/FkxStNgt/Energy-cobtrol-PIC-2.jpg" alt="Event photo" class="event-img" ></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>M/s. Vasantha Advanced Systems, Coimbatore</td>
+                    <td>28 August 2023</td>
+                    <td><img src="https://i.postimg.cc/bdfFjgHQ/Vasantha-Advanced-System-PIC2.jpg" alt="Event photo" class="event-img" ></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Schneider Electric India Foundation, Bangalore – 67</td>
+                    <td>16 September 2021</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>M/s. Salzer Electronics Limited</td>
+                    <td>30 October 2019</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>M/s. Padmavahini Transformers Private Limited</td>
+                    <td>24 October 2019</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>M/s. Intelle Engineers, Ramanathapuram, Coimbatore</td>
+                    <td>27 June 2019</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>M/s. Craftsman's Electric, Ganapathy, Coimbatore</td>
+                    <td>27 June 2019</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>PSG Industrial Institute, Peelamedu, Coimbatore</td>
+                    <td>27 June 2019</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>M/s. Thick India Private Limited</td>
+                    <td>24 August 2017</td>
+                    <td>-</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <h2 class="section-title">Faculty &amp; Student - Special Achievements</h2>
+
+        <div class="year-tabs" id="specialTabs">
+            <button class="active" onclick="showSpecialTab('specialFaculty', this)">Faculty Achievements</button>
+            <button onclick="showSpecialTab('specialStudents', this)">Student Achievements</button>
+        </div>
+
+        <div id="specialFaculty" class="year-content active">
+            <h3>Faculty - Special Achievements / Awards</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>Sl.No</th>
+                    <th>Name of the Faculty/Staff</th>
+                    <th>Designation</th>
+                    <th>Awards</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Dr. S. Sasikala</td>
+                    <td>HoD, EEE</td>
+                    <td>Received ‘Service Award’ for the completion of 25 years of service in PSG Institution on 20th Feb. 2025 during Staff Day</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mr. A. Velupillai</td>
+                    <td>Lab Assistant (Spl. Gr.)</td>
+                    <td>Received ‘Service Award’ for the completion of 25 years of service in PSG Institution on 20th Feb. 2025 during Staff Day</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Mr. P. Sundarasamy</td>
+                    <td>Lab Assistant (Spl. Gr.)</td>
+                    <td>Received ‘Service Award’ for the completion of 25 years of service in PSG Institution on 20th Feb. 2025 during Staff Day</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Mr. J. Sivakumar</td>
+                    <td>Lab Assistant (Spl. Gr.)</td>
+                    <td>Received ‘Service Award’ for the completion of 25 years of service in PSG Institution on 20th Feb. 2025 during Staff Day</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Mr. S. Krishnamoorthi</td>
+                    <td>Lecturer, EEE</td>
+                    <td>Received ‘Service Award’ for the completion of 25 years of service in PSG Institution on 20th Feb. 2024 during Staff Day</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div id="specialStudents" class="year-content">
+            <h3>Students - Special Achievements / Awards</h3>
+            <div style="overflow-x:auto;">
+            <table class="assoc-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Roll No.</th>
+                    <th>Name of the Students</th>
+                    <th>Awards/Trophy</th>
+                    <th>Programme</th>
+                    <th>Images</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>23EH03</td>
+                    <td>B. Priscilla Immaculate</td>
+                    <td>Received Polytechnic Rolling Cup for “MOST OUTSTANDING STUDENT” in PSG Polytechnic College during 2023-2025 batch</td>
+                    <td>Polytech Day 2025 on 12.03.2025</td>
+                    <td><img src="https://i.postimg.cc/5HCfRbwC/image001.jpg" alt="Event photo" class="event-img"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>23EH03</td>
+                    <td>B. Priscilla Immaculate</td>
+                    <td>Best NCC Cadet Award</td>
+                    <td>Polytech Day 2025 on 12.03.2025</td>
+                    <td><img src="https://i.postimg.cc/mPqbjtFN/image002.jpg" alt="Event photo" class="event-img"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>23E012</td>
+                    <td>U. Janani</td>
+                    <td>Participated in 76th Republic Day Parade on 26.01.2025 at Marina, Chennai</td>
+                    <td>National Service Scheme</td>
+                    <td><img src="https://i.postimg.cc/WDksHTMG/image003.jpg" alt="Event photo" class="event-img"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>24E017</td>
+                    <td>A.P.S. Neeldharsan</td>
+                    <td>3rd Prize</td>
+                    <td>National Level Srinivasa Ramanujan Mathematical Competitions 2024</td>
+                    <td><img src="https://i.postimg.cc/HJyThdQt/image004.jpg" alt="Event photo" class="event-img"></td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        
+        <section class="contact-section">
+            <div class="contact-frame">
+                <h2>CONTACT US</h2>
+                <p><strong>Dr. S. Sasikala M.E., Ph.D</strong><br>
+                Head of the Department<br>
+                Department of Electrical and Electronics Engineering<br>
+                PSG Polytechnic College<br>
+                Peelamedu, Coimbatore - 641004, Tamil Nadu, India</p>
+                <hr>
+                <p class="footer-note">Designed And Developed by PSG PTC .<br>Copyright © 2025. All Rights Reserved.</p>
+            </div>
+        </section>
+    </div>
+</div>
+
+<footer>
+    © 2026 PSG Polytechnic College | Electrical and Electronics Engineering
+</footer>
+
+<script>
+    function goHome() {
+        window.location.href = "departments.html";
+    }
+    function showCourseTab(tabId) {
+        document.getElementById('poTab').style.display = 'none';
+        document.getElementById('psoTab').style.display = 'none';
+        document.getElementById('peoTab').style.display = 'none';
+        document.getElementById(tabId).style.display = 'block';
+        let btns = document.querySelectorAll('.course-tabs button');
+        btns.forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+    }
+    function toggleSem(id) {
+        let el = document.getElementById(id);
+        if (el) el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+    function toggleFacility(id) {
+        let el = document.getElementById(id);
+        if (el) el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('poTab').style.display = 'block';
+        document.getElementById('psoTab').style.display = 'none';
+        document.getElementById('peoTab').style.display = 'none';
+    });
+    function showYearTab(id, btn) {
+        document.querySelectorAll('.year-content').forEach(function(el) {
+            el.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+        document.querySelectorAll('#assocYearTabs button').forEach(function(b) {
+            b.classList.remove('active');
+        });
+        btn.classList.add('active');
+    }
+    function showAchieveTab(id, btn) {
+        ['achieveAcademics','achieveSports','achieveWebinar','achieveMoU'].forEach(function(elId) {
+            var el = document.getElementById(elId);
+            if (el) el.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+        document.querySelectorAll('#achieveTabs button').forEach(function(b) {
+            b.classList.remove('active');
+        });
+        btn.classList.add('active');
+    }
+    function showSpecialTab(id, btn) {
+        ['specialFaculty','specialStudents'].forEach(function(elId) {
+            var el = document.getElementById(elId);
+            if (el) el.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+        document.querySelectorAll('#specialTabs button').forEach(function(b) {
+            b.classList.remove('active');
+        });
+        btn.classList.add('active');
+    }
+    function openGallery(id) {
+        var modal = document.getElementById(id);
+        if (modal) modal.classList.add('open');
+    }
+    function closeGallery(id) {
+        var modal = document.getElementById(id);
+        if (modal) modal.classList.remove('open');
+    }
+</script>
+</body>
+</html>

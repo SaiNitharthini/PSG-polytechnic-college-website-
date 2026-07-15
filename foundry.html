@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foundry Technology Department</title>
+
+<style>
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+margin:0;
+background:#fff;
+color:#1A1A1A;
+}
+
+.navbar{
+background:#1c1c1c;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.logo{
+color:white;
+font-weight:600;
+cursor:pointer;
+font-size:20px;
+}
+
+.menu{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.menu a{
+color:#ddd;
+text-decoration:none;
+cursor:pointer;
+font-size:14px;
+}
+
+.menu a:hover{
+color:#C5A267;
+}
+
+.hero{
+background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.96)),
+url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a');
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+padding:100px 20px;
+text-align:center;
+}
+.hero h1{
+font-family:Georgia,serif;
+font-size:45px;
+margin:0;
+}
+
+.divider{
+width:80px;
+height:3px;
+background:#C5A267;
+margin:20px auto;
+}
+
+.section{
+padding:60px 40px;
+max-width:1100px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-family:Georgia,serif;
+font-size:35px;
+margin-bottom:40px;
+}
+
+.about-box{
+background:#fafafa;
+padding:25px;
+border:1px solid #eee;
+line-height:1.7;
+}
+
+.faculty-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.faculty-card{
+border:1px solid #eee;
+padding:20px;
+text-align:center;
+background:white;
+transition:0.3s;
+cursor:pointer;
+}
+
+.faculty-card:hover{
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border-color:#C5A267;
+}
+
+.faculty-card h4{
+color:#C5A267;
+margin:10px 0 5px;
+}
+
+.faculty-img{
+width:100px;
+height:100px;
+border-radius:50%;
+border:3px solid #C5A267;
+margin-bottom:10px;
+object-fit:cover;
+display:block;
+margin-left:auto;
+margin-right:auto;
+background:#f1f1f1;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th,td{
+border:1px solid #ddd;
+padding:10px;
+vertical-align:top;
+}
+
+th{
+background:#C5A267;
+color:white;
+}
+
+.course-tabs, .activity-tabs{
+display:flex;
+justify-content:center;
+gap:8px;
+margin-top:30px;
+border-bottom:3px solid #eee;
+padding-bottom:8px;
+flex-wrap:wrap;
+}
+
+.course-tabs button, .activity-tabs button{
+padding:10px 18px;
+border:1px solid #ddd;
+background:#f7f7f7;
+cursor:pointer;
+}
+
+.course-tabs button.active, .activity-tabs button.active{
+background:#C5A267;
+color:white;
+}
+
+.sem-dropdown{
+margin-top:20px;
+border:1px solid #ddd;
+}
+
+.sem-head{
+padding:15px;
+background:#C5A267;
+color:white;
+cursor:pointer;
+font-weight:bold;
+}
+
+.sem-body{
+display:none;
+padding:15px;
+}
+
+.facility-card{
+border:1px solid #ddd;
+margin-top:15px;
+cursor:pointer;
+}
+
+.facility-title{
+background:#C5A267;
+color:white;
+padding:12px;
+font-weight:600;
+}
+
+.facility-body{
+display:none;
+padding:15px;
+background:#fafafa;
+line-height:1.6;
+}
+.facility-body img{
+display:block;
+margin:0 auto 20px;
+width:100%;
+max-width:450px;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+border:none;           
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.contact-section{
+    width:95%;
+    margin:40px auto 35px;
+    background:#f7f7f7;
+}
+
+.contact-title{
+    background:#c9a663;
+    padding:12px 0;
+    text-align:center;
+}
+
+.contact-title h2{
+    margin:0;
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+.contact-content{
+    text-align:center;
+    padding:45px 20px 55px;
+}
+
+.contact-content h3{
+    margin:0 0 22px;
+    font-size:18px;
+    font-weight:700;
+}
+
+.contact-content p{
+    margin:10px 0;
+    font-size:16px;
+    color:#222;
+    line-height:1.5;
+}
+
+.footer{
+    width:95%;
+    margin:0 auto 25px;
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:16px 15px;
+    font-size:15px;
+    font-weight:500;
+}
+
+@media (max-width:768px){
+.hero h1{
+font-size:34px;
+}
+
+.section{
+padding:40px 20px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.navbar{
+padding:16px 20px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo" onclick="location.reload()">PSG POLYTECHNIC COLLEGE</div>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#faculty">Faculty</a>
+        <a href="#courses">Course Structure</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#activities">Activities</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
+<div class="hero">
+    <h1>Foundry Technology</h1>
+    <div class="divider"></div>
+    <p>Excellence in Foundry and Materials Engineering</p>
+</div>
+
+<div class="section">
+
+    <h2 class="section-title" id="about">About Department</h2>
+    <div class="about-box">
+        The Department of Foundry Technology was established in the year 1996 to cater the manpower and R & D development needs of local foundries. The need for specialized foundry technicians was felt in the late 1990s when the small and medium foundries in Coimbatore started growing rapidly.
+    </div>
+
+    <h2 class="section-title">Vision</h2>
+    <p style="text-align:center;">Department of Foundry Technology aspires to accomplish national recognition in the field of foundry and materials engineering by imparting technical skills to students and industries towards development of society.</p>
+
+    <h2 class="section-title">Mission</h2>
+    <p>The mission of the Department of Foundry Technology is to expose students to industrial requirements by:</p>
+    <ul>
+        <li>Curriculum development fostering industrial needs.</li>
+        <li>Encouraging students to be entrepreneurs.</li>
+        <li>Undertaking industrial projects.</li>
+    </ul>
+
+    <h2 class="section-title" id="faculty">Faculty</h2>
+
+    <div class="faculty-grid">
+        <div class="faculty-card">
+            <img src="https://i.postimg.cc/qB9yWd2T/M-Arasu.jpg" class="faculty-img" >
+            <h4>Dr. M. Arasu</h4>
+            <p>Head of the Department</p>
+            <p>27 Years 4 Months Teaching</p>
+            <p>Production Technology, Materials Engineering, Design of Castings</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="https://i.postimg.cc/nczgSBYn/D-manivel.jpg" class="faculty-img" alt="Dr. D. Manivel">
+            <h4>Dr. D. Manivel</h4>
+            <p>Lecturer (Sr.Gr)</p>
+            <p>23 Years Teaching</p>
+            <p>Physical Metallurgy, Casting Engineering, Heat Treatment</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="https://i.postimg.cc/ydpXDgJs/S-Sivasubramaniam.jpg" class="faculty-img" alt="Mr. S. Sivasubramaniam">
+            <h4>Mr. S. Sivasubramaniam</h4>
+            <p>Lecturer (Sr.Gr)</p>
+            <p>15 Years 6 Months Teaching</p>
+            <p>Energy Engineering, Thermal Engineering, Fluid Mechanics</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="https://i.postimg.cc/5yc55c3W/S-Padmanaban.jpg" class="faculty-img" alt="Dr. S. Padmanaban">
+            <h4>Dr. S. Padmanaban</h4>
+            <p>Lecturer</p>
+            <p>14 Years Teaching | 15 Years Industry</p>
+            <p>Production Engineering, Material Science, Metrology and Quality Control</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="https://i.postimg.cc/bNpkq9Vt/P-Senthilkumar.jpg" class="faculty-img" alt="Mr. P. Senthilkumar">
+            <h4>Mr. P. Senthilkumar</h4>
+            <p>Lecturer</p>
+            <p>12 Years Teaching</p>
+            <p>Foundry Metallurgy, Physical Metallurgy, Production Technology</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="https://i.postimg.cc/6q078Fbh/Hari-Prasad.jpg" class="faculty-img" alt="Mr. R. S. Hari Prasad">
+            <h4>Mr. R. S. Hari Prasad</h4>
+            <p>Lecturer</p>
+            <p>6 Years 5 Months Teaching</p>
+            <p>Automation in Manufacturing, CAD, Solid Modeling</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="https://i.postimg.cc/4yBdfVmX/J-Jayasurya.jpg" class="faculty-img" alt="Mr. J. Jayasurya">
+            <h4>Mr. J. Jayasurya</h4>
+            <p>Lecturer</p>
+            <p>4 Months Teaching</p>
+            <p>Mechanics of Materials, Production Management, Metal Forming</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="https://i.postimg.cc/654J5C7L/Dr-AKarthikeyan.jpg" class="faculty-img" alt="Dr. A. Karthikeyan">
+            <h4>Dr. A. Karthikeyan</h4>
+            <p>Lecturer</p>
+            <p>14 Years Teaching</p>
+            <p>Design & Manufacturing, Forming Simulation, AutoCAD, Creo, Ansys</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="https://i.postimg.cc/zf59jMxF/A-Joseph.jpg" class="faculty-img" alt="Mr. A. Joseph Patrick Arokiam">
+            <h4>Mr. A. Joseph Patrick Arokiam</h4>
+            <p>Instructor</p>
+            <p>25 Years Industry | 2 Years Teaching</p>
+            <p>Metrology Lab, Strength of Materials Lab</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="https://i.postimg.cc/D0tNbYW7/Mr-M-Manoharan.jpg" class="faculty-img" alt="Mr. M. Manoharan">
+            <h4>Mr. M. Manoharan</h4>
+            <p>Mechanic (SG)</p>
+            <p>15 Years Teaching | 13 Years Industry</p>
+            <p>Lathe, Welding, Foundry, Sheet Metal, Machine Maintenance</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="https://i.postimg.cc/DzBYczJZ/T-Divya.jpg" class="faculty-img" alt="Ms. T. Divya">
+            <h4>Ms. T. Divya</h4>
+            <p>Junior Assistant</p>
+            <p>10 Years 6 Months Experience</p>
+            <p>Office Administration</p>
+        </div>
+        <div class="faculty-card">
+            <img src="https://i.postimg.cc/RVdsmFdw/B-Soundararajan.jpg" class="faculty-img" alt="Mr.B.Soundararajan ">
+            <h4>Mr.B.Soundararajan</h4>
+            <p>Technical Assistant</p>
+            <p>2 Month</p>
+
+        </div>
+        <div class="faculty-card">
+            <img src="https://i.postimg.cc/x8hdNYyd/MAmjathkhan.jpg" class="faculty-img" alt="Mr. M. Amjathkhan">
+            <h4>Mr. M. Amjathkhan</h4>
+            <p>Technical Assistant</p>
+            <p>6 Years Teaching | 2 Years Industry</p>
+            <p>AutoCAD, Creo, Metrology, Metallography, NDT Laboratory</p>
+        </div>
+    </div>
+
+
+    <h2 class="section-title" id="courses">Course Structure</h2>
+
+    <div class="course-tabs">
+        <button class="active" onclick="showTab('po',this)">PO</button>
+        <button onclick="showTab('pso',this)">PSO</button>
+        <button onclick="showTab('peo',this)">PEO</button>
+    </div>
+
+    <div id="po">
+        <table>
+            <tr><th>Code</th><th>Description</th></tr>
+            <tr><td>PO1</td><td>Basic and Discipline specific knowledge: Apply knowledge of basic mathematics, science and engineering fundamentals and engineering specialization to solve the engineering problems.</td></tr>
+            <tr><td>PO2</td><td>Problem analysis: Identify and analyse well-defined engineering problems using codified standard methods.</td></tr>
+            <tr><td>PO3</td><td>Design / development of solutions: Design solutions for well-defined technical problems and assist with the design of systems components or processes to meet specified needs.</td></tr>
+            <tr><td>PO4</td><td>Engineering Tools, Experimentation and Testing: Apply modern engineering tools and appropriate technique to conduct standard tests and measurements.</td></tr>
+            <tr><td>PO5</td><td>Engineering practices for society, sustainability and environment: Apply appropriate technology in context of society, sustainability, environment and ethical practices.</td></tr>
+            <tr><td>PO6</td><td>Project Management: Use engineering management principles individually, as a team member or a leader to manage projects and effectively communicate about well-defined engineering activities.</td></tr>
+            <tr><td>PO7</td><td>Life-long learning: Ability to analyse individual needs and engage in updating in the context of technological changes.</td></tr>
+        </table>
+    </div>
+
+    <div id="pso" style="display:none;">
+        <table>
+            <tr><th>Code</th><th>Description</th></tr>
+            <tr><td>PSO1</td><td>Apply the concepts of foundry practices, casting processes and material behaviour in solving industrial problems.</td></tr>
+            <tr><td>PSO2</td><td>Use modern tools, testing methods and simulation techniques in foundry and manufacturing applications.</td></tr>
+        </table>
+    </div>
+
+    <div id="peo" style="display:none;">
+        <table>
+            <tr><th>Code</th><th>Description</th></tr>
+            <tr><td>PEO1</td><td>Build successful careers in foundry, manufacturing and allied engineering industries.</td></tr>
+            <tr><td>PEO2</td><td>Develop technical competence and entrepreneurial ability to meet industrial needs.</td></tr>
+            <tr><td>PEO3</td><td>Pursue lifelong learning and adapt to emerging technologies in foundry and materials engineering.</td></tr>
+        </table>
+    </div>
+
+    <h2 class="section-title">2018 SCHEME (Syllabus can be downloaded at intranet.psgpolytech)</h2>
+
+    <div class="sem-dropdown">
+        <div class="sem-head" onclick="toggleSem('s1')">Semester 1</div>
+        <div class="sem-body" id="s1">
+            <table>
+                <tr><th>Theory</th><th>Practicals</th></tr>
+                <tr><td>Engineering Mathematics - I</td><td>Physics Laboratory</td></tr>
+                <tr><td>Physics</td><td>Chemistry Laboratory - I</td></tr>
+                <tr><td>Chemistry</td><td>Fitting, Sheet Metal & Wiring Workshop</td></tr>
+                <tr><td>English</td><td>Inplant Training</td></tr>
+                <tr><td>Engineering Drawing - I</td><td>Physical Education I</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="sem-dropdown">
+        <div class="sem-head" onclick="toggleSem('s2')">Semester 2</div>
+        <div class="sem-body" id="s2">
+            <table>
+                <tr><th>Theory</th><th>Practicals</th></tr>
+                <tr><td>Engineering Mathematics - II</td><td>Engineering Physics Laboratory</td></tr>
+                <tr><td>Calculus and its Applications</td><td>Chemistry Laboratory - II</td></tr>
+                <tr><td>Engineering Physics</td><td>Basics of Computing and Informatics</td></tr>
+                <tr><td>Industrial Chemistry</td><td>Communicative English Laboratory</td></tr>
+                <tr><td>Engineering Drawing - II</td><td>Physical Education II</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="sem-dropdown">
+        <div class="sem-head" onclick="toggleSem('s3')">Semester 3</div>
+        <div class="sem-body" id="s3">
+            <table>
+                <tr><th>Theory</th><th>Practicals</th></tr>
+                <tr><td>Probability and Statistics</td><td>Applied Thermodynamics Laboratory</td></tr>
+                <tr><td>Applied Thermodynamics</td><td>Material Testing Laboratory</td></tr>
+                <tr><td>Mechanics of Materials</td><td>Workshop - Moulding and Welding</td></tr>
+                <tr><td>Physical Metallurgy and Heat Treatment</td><td>Heat Treatment Laboratory</td></tr>
+                <tr><td></td><td>Computer Aided Design and Drafting Lab</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="sem-dropdown">
+        <div class="sem-head" onclick="toggleSem('s4')">Semester 4</div>
+        <div class="sem-body" id="s4">
+            <table>
+                <tr><th>Theory</th><th>Practicals</th></tr>
+                <tr><td>Machineshop Technology</td><td>Fluid Mechanics and Machinery Laboratory</td></tr>
+                <tr><td>Casting Engineering</td><td>Metallography and NDT Laboratory</td></tr>
+                <tr><td>Foundry Metallurgy</td><td>Sand Testing Laboratory</td></tr>
+                <tr><td>Fluid Mechanics and Machinery</td><td>Machine Drawing</td></tr>
+                <tr><td></td><td>Technical Communication Laboratory</td></tr>
+                <tr><td></td><td>Internship</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="sem-dropdown">
+        <div class="sem-head" onclick="toggleSem('s5')">Semester 5</div>
+        <div class="sem-body" id="s5">
+            <table>
+                <tr><th>Theory</th><th>Practicals</th></tr>
+                <tr><td>Design of Castings</td><td>Workshop - Lathe and Special Machines</td></tr>
+                <tr><td>Special Casting Techniques</td><td>Electrical and Electronics Engineering Lab</td></tr>
+                <tr><td>Elective Theory I</td><td>Solid Modeling Laboratory</td></tr>
+                <tr><td></td><td>Metallurgical Analysis and Fuel Testing Lab</td></tr>
+                <tr><td></td><td>Mini Project and Entrepreneurship</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="sem-dropdown">
+        <div class="sem-head" onclick="toggleSem('s6')">Semester 6</div>
+        <div class="sem-body" id="s6">
+            <table>
+                <tr><th>Theory</th><th>Practicals</th></tr>
+                <tr><td>Metrology and Quality Management System</td><td>Metrology Laboratory</td></tr>
+                <tr><td>Engineering Management</td><td>Casting Design and Simulation Laboratory</td></tr>
+                <tr><td>Elective Theory II</td><td>CNC Programming Laboratory</td></tr>
+                <tr><td></td><td>Hydraulics and Pneumatics Laboratory</td></tr>
+                <tr><td></td><td>Project Work and Viva Voce</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <h2 class="section-title" id="facilities">Facilities</h2>
+
+    <div class="facility-card" onclick="toggleFacility('f1')">
+        <div class="facility-title">Strength of Materials Laboratory</div>
+        <div class="facility-body" id="f1">
+        <img src="https://i.postimg.cc/1XV220xm/Strength-of-Material-Laboratory.jpg" class="facility-image">
+Laboratory facilities are available for testing material strength and related mechanical properties required for engineering applications.
+        </div>
+    </div>
+
+    <div class="facility-card" onclick="toggleFacility('f2')">
+        <div class="facility-title">Sand Testing Laboratory</div>
+        <div class="facility-body" id="f2">
+             <img src="https://i.postimg.cc/k4Lq2gq3/Sand-Testing-Laboratory.jpg" class="facility-image">
+            Foundry sand testing laboratory is equipped with necessary equipment to conduct tests on foundry sand properties. Major equipment includes tensile testing machine, flowability test setup, AFS test, shatter index and permeability test.
+       </div>
+    </div>
+
+    <div class="facility-card" onclick="toggleFacility('f3')">
+        <div class="facility-title">Foundry Simulation Laboratory</div>
+        <div class="facility-body" id="f3">
+            <img src="https://i.postimg.cc/rmM5vM7B/Foundry-Simulation-Laboratory.jpg" class="facility-image">
+            This lab houses 35 networked computers with systems configured for modelling and simulation. Software includes Pro-Engineer (V5.0), AutoCAD 2014 and casting simulation tools to simulate foundry processes.
+    </div>
+
+    <div class="facility-card" onclick="toggleFacility('f4')">
+        <div class="facility-title">Metrology Laboratory</div>
+        <div class="facility-body" id="f4">
+             <img src="https://i.postimg.cc/d1ftG9mQ/Metrology-Laboratory.jpg" class="facility-image">
+            The Metrology lab is equipped with various instruments, gauges and measuring machines. Major equipment includes Optical Profile Projector, Tool Makers Microscope, Surface Roughness Testers, Concentricity Tester and Mechanical Comparator.  
+        </div>
+    </div>
+
+    <div class="facility-card" onclick="toggleFacility('f5')">
+        <div class="facility-title">Metallography Laboratory</div>
+        <div class="facility-body" id="f5">
+<img src="https://i.postimg.cc/xjWL2Grt/Metallography-Laboratory.jpg" class="facility-image">
+            This laboratory contains the equipment needed for viewing microstructural phases present in metals and alloys using a metallurgical microscope. It also supports heat treatment processes for microstructural modification using a muffle furnace.
+        </div>
+    </div>
+
+    <h2 class="section-title" id="activities">Activities</h2>
+
+    <div class="activity-tabs">
+        <button class="active" onclick="showActivity('assoc', this)">Association Activities</button>
+        <button onclick="showActivity('training', this)">Training Programs</button>
+        <button onclick="showActivity('mou', this)">MoU Signed</button>
+    </div>
+
+    <div id="assoc">
+        <table>
+            <tr><th>Date</th><th>Program</th><th>Chief Guest</th></tr>
+            <tr><td>07.02.2019</td><td>Guest Lecture on Pressure Die Casting</td><td>Mr. M. John Philip, Project Manager, PSG Institute of Advanced Studies</td></tr>
+            <tr><td>13.03.2019</td><td>Guest Lecture on Metal Additive Manufacturing</td><td>Dr. P. Chandra Mohan, Professor, Sri Ramakrishna College, Coimbatore</td></tr>
+            <tr><td>01.08.2019</td><td>Guest Lecture on Improved Castability Through Finite Element Analysis</td><td>Mr. S. Sivakumar, Asst. Vice President, PSG Foundry Division, Neelambur</td></tr>
+            <tr><td>07.08.2019</td><td>Guest Lecture on Green Foundry Techniques</td><td>Mr. C. Sathyamurthy, Vice President, Aqua Sub Engineering Foundry Division</td></tr>
+            <tr><td>24.01.2020</td><td>Knowledge Connect</td><td>Mr. K. S. Logesh Kumar, Managing Director, EASY Home Product, Coimbatore</td></tr>
+        </table>
+    </div>
+
+   <div id="training" style="display:none;">
+    <table>
+        <tr><th>Program Name / Details</th></tr>
+
+        <tr>
+            <td>Training Programme on Foundry Technology for the trainees of M/s. ELGI Equipment (P) Ltd., Foundry Division, Coimbatore.</td>
+        </tr>
+
+        <tr>
+            <td>Certificate Course on Basics of Industrial Manufacturing Practices for Operators of M/s. Larsen &amp; Toubro Valves Limited, Coimbatore.</td>
+        </tr>
+
+        <tr>
+            <td>DOTE &amp; TNSDC sponsored Skill Training Programme for Rural Unemployed Youth in Electrical Wiring and Repair of Domestic Appliances.</td>
+        </tr>
+
+        <tr>
+            <td>Skill Training Programme for Rural Unemployed Youth in Welding and Fabrication.</td>
+        </tr>
+
+        <tr>
+            <td>Advanced Foundry Technology Training for Diploma Supervisor Trainees of M/s. Larsen &amp; Toubro, Casting Manufacturing Unit, Coimbatore.</td>
+        </tr>
+
+        <tr>
+            <td>Skill Upgradation Programme in Foundry Engineering for Diploma Supervisor Trainees of M/s. Sanmar Foundries Ltd., Trichy.</td>
+        </tr>
+
+        <tr>
+            <td>Skill Development Training Programme for Rural Unemployed Youth on Melting Assistant.</td>
+        </tr>
+
+        <tr>
+            <td>Training Programme on Certificate Course on Basics of Industrial Manufacturing Practices for Operators of M/s. Larsen &amp; Toubro Valves Limited, Coimbatore.</td>
+        </tr>
+
+        <tr>
+            <td>Certificate Course on Foundry Technology for M/s. ELGI Equipments Ltd., Coimbatore.</td>
+        </tr>
+
+    </table>
+</div>
+
+   <div id="mou" style="display:none;">
+    <table>
+        <tr><th>Company / Details</th></tr>
+
+        <tr>
+            <td>Origin CADD Infotech., Coimbatore – Memorandum of Understanding signed with PSG Polytechnic College, Coimbatore on 04.03.2020.</td>
+        </tr>
+
+        <tr>
+            <td>M/s. TVS - Sundaram Clayton Limited, Chennai – Collaborative Education Programme.</td>
+        </tr>
+
+        <tr>
+            <td>M/s. ELGI Equipments Ltd., Coimbatore – Certificate Course on Foundry Technology.</td>
+        </tr>
+
+        <tr>
+            <td>M/s. Larsen &amp; Toubro Valves Limited, Coimbatore – Certificate Course on Basics of Industrial Manufacturing Practices for Operators.</td>
+        </tr>
+
+        <tr>
+            <td>Larsen &amp; Toubro, Casting Manufacturing Unit, Coimbatore – Advanced Foundry Technology Training for Diploma Supervisor Trainees.</td>
+        </tr>
+
+        <tr>
+            <td>M/s. SE Forge Ltd., Coimbatore – Training Programme for Technicians.</td>
+        </tr>
+
+        <tr>
+            <td>M/s. Centre for Wind Energy Technology – Certificate Course on Blade Manufacturing.</td>
+        </tr>
+
+        <tr>
+            <td>M/s. Sanmar Foundries Ltd., Trichy – Skill Upgradation Programme in Foundry Engineering for Diploma Supervisor Trainees.</td>
+        </tr>
+
+        <tr>
+            <td>IL &amp; FS, New Delhi – Welding Techniques Training Programme.</td>
+        </tr>
+
+    </table>
+</div>
+
+<section id="contact" class="contact-section">
+
+    <div class="contact-title">
+        <h2>CONTACT US</h2>
+    </div>
+
+    <div class="contact-content">
+        <h3>Dr. M. Arasu M.E., Ph.D.</h3>
+
+        <p>Head of the Department</p>
+
+        <p>Department of Foundry Technology</p>
+
+        <p>PSG Polytechnic College</p>
+
+        <p>Peelamedu, Coimbatore - 641004</p>
+
+        <p>Tamil Nadu, India</p>
+
+        <p><strong>Email :</strong> hod.dft@psgpolytech.ac.in</p>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+    Designed and Developed by PSG Polytechnic College |
+    © 2026 All Rights Reserved.
+</footer>
+
+<script>
+function showTab(tab, el){
+document.getElementById("po").style.display="none";
+document.getElementById("pso").style.display="none";
+document.getElementById("peo").style.display="none";
+
+document.getElementById(tab).style.display="block";
+
+let btns=document.querySelectorAll(".course-tabs button");
+btns.forEach(b=>b.classList.remove("active"));
+
+el.classList.add("active");
+}
+
+function toggleSem(id){
+let x=document.getElementById(id);
+x.style.display = (x.style.display=="block") ? "none" : "block";
+}
+
+function toggleFacility(id){
+let x=document.getElementById(id);
+x.style.display = (x.style.display=="block") ? "none" : "block";
+}
+
+function showActivity(id, btn){
+document.getElementById('assoc').style.display = "none";
+document.getElementById('training').style.display = "none";
+document.getElementById('mou').style.display = "none";
+document.getElementById(id).style.display = "block";
+
+let btns = document.querySelectorAll(".activity-tabs button");
+btns.forEach(b => b.classList.remove("active"));
+btn.classList.add("active");
+}
+</script>
+
+</body>
+</html>
